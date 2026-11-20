@@ -1,0 +1,147 @@
+name: Publish Level Up submission
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: levelup-submission-v1.0.2
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TAG: v1.0.2
+      INSTALLER_NAME: CodexLegend-Setup-1.0.2-x64.exe
+      SOURCE_NAME: Codex-Legend-Source-1.0.2.zip
+      INSTALLER_SHA256: 1279ff09d54bb2230bdb4a793febc7eb6fff73c656517311acac7074bef075fe
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Verify destination and refuse existing release or tag
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = 'crynxmartinez/codexlegendlevelup'
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          python3 - <<'PY'
+          import os, urllib.error, urllib.request
+          repo = os.environ['GITHUB_REPOSITORY']
+          tag = os.environ['TAG']
+          for path in (f'releases/tags/{tag}', f'git/ref/tags/{tag}'):
+              request = urllib.request.Request(
+                  f'https://api.github.com/repos/{repo}/{path}',
+                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                           'Accept': 'application/vnd.github+json',
+                           'User-Agent': 'Codex-Legend-submission'})
+              try:
+                  with urllib.request.urlopen(request) as response:
+                      raise SystemExit(f'Refusing to overwrite existing {path}: HTTP {response.status}')
+              except urllib.error.HTTPError as error:
+                  if error.code != 404:
+                      raise SystemExit(f'Unable to verify {path}: HTTP {error.code}')
+          PY
+
+      - name: Fetch and verify the released Windows installer
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/levelup-release"
+          curl --fail --location --retry 4 --retry-delay 2 --retry-all-errors \
+            --output "$RUNNER_TEMP/levelup-release/$INSTALLER_NAME" \
+            "https://github.com/crynxmartinez/codexlegend-downloads/releases/download/v1.0.2/$INSTALLER_NAME"
+          test "$(stat --format=%s "$RUNNER_TEMP/levelup-release/$INSTALLER_NAME")" = '410621979'
+          printf '%s  %s\n' "$INSTALLER_SHA256" "$RUNNER_TEMP/levelup-release/$INSTALLER_NAME" | sha256sum --check --strict
+
+      - name: Archive the exact submission commit and verify its manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git archive --format=zip --prefix=Codex-Legend-Source/ \
+            --output="$RUNNER_TEMP/levelup-release/$SOURCE_NAME" "$GITHUB_SHA"
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, zipfile
+          archive = pathlib.Path(os.environ['RUNNER_TEMP']) / 'levelup-release' / os.environ['SOURCE_NAME']
+          prefix = 'Codex-Legend-Source/'
+          with zipfile.ZipFile(archive) as bundle:
+              assert bundle.testzip() is None, 'ZIP CRC check failed'
+              items = bundle.infolist()
+              assert len({item.filename for item in items}) == len(items), 'Duplicate ZIP paths'
+              assert all(item.filename.startswith(prefix) for item in items), 'Unexpected ZIP root'
+              files = {item.filename[len(prefix):] for item in items if not item.is_dir()}
+              manifest = json.loads(bundle.read(prefix + 'SOURCE-MANIFEST.json'))
+              entries = manifest['files']
+              expected = {entry['path'] for entry in entries}
+              assert len(expected) == len(entries), 'Duplicate manifest paths'
+              assert files == expected | {'SOURCE-MANIFEST.json'}, 'Manifest and ZIP file sets differ'
+              forbidden_parts = {'.git', 'node_modules', '.codex', '.tmp', '__pycache__'}
+              for name in files:
+                  path = pathlib.PurePosixPath(name)
+                  assert not path.is_absolute() and '..' not in path.parts and '\\' not in name, 'Unsafe ZIP path'
+                  assert not forbidden_parts.intersection(path.parts), 'Private or dependency folder in ZIP'
+                  assert path.parts[0] not in {'dist', 'output', 'release-desktop'}, 'Generated output in ZIP'
+                  assert not name.startswith(('game-server/build/', 'desktop/out/')), 'Generated build in ZIP'
+                  assert not (path.name.startswith('.env') and name != '.env.production'), 'Private environment file in ZIP'
+                  assert path.suffix.lower() not in {'.pem', '.pfx', '.p12', '.key'}, 'Private-key file in ZIP'
+              for entry in entries:
+                  data = bundle.read(prefix + entry['path'])
+                  assert len(data) == entry['bytes'], 'Manifest byte-length mismatch: ' + entry['path']
+                  assert hashlib.sha256(data).hexdigest() == entry['sha256'], 'Manifest hash mismatch: ' + entry['path']
+              print(f'Validated one source root and {len(entries)} manifest entries; ZIP CRC and SHA-256 checks passed.')
+          PY
+          cd "$RUNNER_TEMP/levelup-release"
+          sha256sum "$INSTALLER_NAME" "$SOURCE_NAME" > SHA256SUMS-1.0.2.txt
+
+      - name: Create draft release and attach verified downloads
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > "$RUNNER_TEMP/levelup-release/RELEASE-NOTES.md" <<'NOTES'
+          Codex Legend TCG 1.0.2 — public Level Up submission.
+
+          - Windows x64 installer: offline AI battles, Tutorial and local saves. Private online PvP remains available in the browser edition.
+          - Source ZIP: one Codex-Legend-Source folder containing the exact submission commit, required runtime assets, tests and build instructions.
+          - SHA256SUMS-1.0.2.txt contains checksums for both downloads.
+
+          The installer is unsigned and Windows may display an unknown-publisher warning. Its bytes match the previously built and package-verified Windows 1.0.2 release. This workflow does not perform a fresh desktop installation or gameplay playthrough.
+
+          Start with README.md or START-HERE.md for browser, server and desktop instructions. Existing source/asset rights and third-party notices remain unchanged.
+          NOTES
+          printf '\nSubmission commit: `%s`\n' "$GITHUB_SHA" >> "$RUNNER_TEMP/levelup-release/RELEASE-NOTES.md"
+          gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title 'Codex Legend TCG 1.0.2 — Level Up submission' \
+            --notes-file "$RUNNER_TEMP/levelup-release/RELEASE-NOTES.md" --draft
+          gh release upload "$TAG" --repo "$GITHUB_REPOSITORY" \
+            "$RUNNER_TEMP/levelup-release/$INSTALLER_NAME" \
+            "$RUNNER_TEMP/levelup-release/$SOURCE_NAME" \
+            "$RUNNER_TEMP/levelup-release/SHA256SUMS-1.0.2.txt"
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" > "$RUNNER_TEMP/levelup-release/release.json"
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib
+          folder = pathlib.Path(os.environ['RUNNER_TEMP']) / 'levelup-release'
+          release = json.loads((folder / 'release.json').read_text())
+          assert release['draft'], 'Expected an unpublished draft'
+          assert release['target_commitish'] == os.environ['GITHUB_SHA'], 'Unexpected release target'
+          expected = {os.environ['INSTALLER_NAME'], os.environ['SOURCE_NAME'], 'SHA256SUMS-1.0.2.txt'}
+          assets = {asset['name']: asset for asset in release['assets']}
+          assert set(assets) == expected, 'Unexpected release asset set'
+          for name in expected:
+              file = folder / name
+              with file.open('rb') as stream:
+                  digest = hashlib.file_digest(stream, 'sha256').hexdigest()
+              assert assets[name]['size'] == file.stat().st_size, 'Uploaded size mismatch: ' + name
+              assert assets[name]['state'] == 'uploaded', 'Upload incomplete: ' + name
+              assert assets[name]['digest'] == 'sha256:' + digest, 'Uploaded hash mismatch: ' + name
+          print('All three uploaded assets match local sizes and SHA-256 hashes.')
+          PY
+          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest

@@ -1,13 +1,14 @@
 {
   "version": "1.0.2",
   "gameSourceCommit": "8622fbd7c8940daab927c218584a63eca299b153",
-  "createdAt": "2026-11-20T06:04:14.918Z",
+  "createdAt": "2026-11-20T06:27:03.484Z",
   "rootFolder": "Codex-Legend-Source",
   "purpose": "Public Level Up submission snapshot",
   "provenance": {
     "repository": "https://github.com/crynxmartinez/codexlegendlevelup",
     "gameRuntime": "Unchanged from the verified 1.0.2 game source baseline.",
     "documentation": "README.md and START-HERE.md adapted for the public submission. .gitattributes preserves exact submission bytes. These hashes describe this snapshot, not the original commit tree.",
+    "releaseMetadata": ".github/workflows/release-submission.yml publishes verified installer and source archive release assets without changing game runtime.",
     "excludedMarketingFiles": [
       "scripts/generate-story-post.mjs",
       "content/story-posts-log.json"
@@ -29,6 +30,11 @@
       "path": ".github/workflows/quality.yml",
       "bytes": 1328,
       "sha256": "8b7adbc7ce7b9d94f6e31ad404d2b87e6a284348c829c7681b1517d408081ff3"
+    },
+    {
+      "path": ".github/workflows/release-submission.yml",
+      "bytes": 8376,
+      "sha256": "2c7d57f2dcf8da0acb5191d19143c199992a9c1a0f6186713fa73a88e8e16ce7"
     },
     {
       "path": ".gitignore",
