@@ -1,0 +1,63 @@
+body .anime-lobby.pvp-screen{display:block!important;place-items:start;padding:0!important;overflow:auto!important;background:#eaf6ff url('/ui/menu-v1/kit/svg/pale-surface.svg') center/cover}
+body .anime-lobby .pvp-lobby{position:relative;z-index:1;margin:150px 0 95px 3%;width:60%;padding:24px;color:#123756;border:2px solid #f2faff;border-radius:24px;background:linear-gradient(135deg,#ffffffee,#dceffcfa);box-shadow:var(--utility-silver);font-size:16px}
+body .anime-lobby .destination-header{position:absolute;inset:0 0 auto;z-index:3}
+body .anime-lobby .destination-crumb{position:absolute;top:100px;left:3%;margin:0;font-size:16px}
+body .anime-lobby .pvp-lobby>h1{font:900 italic 30px Arial,sans-serif;color:#153e65;margin:6px 0 12px}
+body .anime-lobby .pvp-lobby .eyebrow{color:#164e78;font-size:14px}
+body .anime-lobby .pvp-status{color:#0a5a7a;min-height:0;overflow-wrap:anywhere;border-left:4px solid #00b9db;padding-left:12px}
+body .anime-lobby .pvp-status:empty{display:none}
+body .anime-lobby .pvp-setup{grid-template-columns:1fr 1fr;margin:16px 0;gap:16px}
+body .anime-lobby .pvp-setup label{font:800 italic 20px Arial,sans-serif}
+body .anime-lobby :is(.pvp-setup,.pvp-actions) :is(input,select){min-height:48px;padding:12px;color:#fff;background:linear-gradient(120deg,#17436c,#061f3c);border:2px solid #a6bfd3;box-shadow:0 2px 0 #6c8ca6;border-radius:7px;font:16px Arial,sans-serif}
+body .anime-lobby input::placeholder{color:#c5d8e7}
+body .anime-lobby .pvp-actions{border-top:1px solid #96d1e7;padding-top:18px;gap:12px}
+body .anime-lobby .opening-assets{color:#0b5375;font-size:15px;padding:8px 12px;border-radius:8px;background:#cdeafa;border-left:5px solid #00b9da}
+body .anime-lobby .pvp-seat{border:2px solid #94b3ca;background:linear-gradient(#fff,#d5e9f7);color:#123956;padding:16px;border-radius:12px;min-width:150px}
+body .anime-lobby .pvp-seat strong{font-size:20px;font-style:italic}
+body .anime-lobby .pvp-seat span{color:#21516f;font-size:16px}
+body .anime-lobby .pvp-seat[data-ready=true]{border-color:#00abc9;box-shadow:0 0 0 2px #d3ffff,0 0 12px #00d9ef55}
+body .anime-lobby .pvp-seat[data-ready=true] strong::before{content:'✓ '}
+.lobby-art{position:absolute;right:0;top:90px;width:36%;height:calc(100dvh - 90px);background:#0966c8 url('/ui/menu-v1/sky.webp') center/cover;clip-path:polygon(15% 0,100% 0,100% 100%,0 100%);border-left:4px solid #00d8fa;overflow:hidden}
+.lobby-facing-art{position:absolute;inset:0;background:url('/ui/menu-v1/approved-menu.webp') right -7vw/240% auto no-repeat;clip-path:polygon(15% 0,100% 0,100% 56%,0 56%)}
+.lobby-art-copy{position:absolute;left:8%;right:3%;bottom:8%;background:linear-gradient(130deg,#fff,#ddf0ff);border:3px solid #c6fdff;box-shadow:0 0 0 2px #02bedf;padding:18px;transform:skewX(-8deg);color:#12385c}
+.lobby-art-copy>*{transform:skewX(8deg)}
+.lobby-art-copy h2{background:var(--utility-navy);color:#fff;font:900 italic clamp(22px,3vw,40px) Arial,sans-serif;margin:-36px 0 16px;padding:12px}
+.lobby-art-copy p{font:700 italic clamp(16px,1.7vw,23px)/1.5 Arial,sans-serif;margin:0}
+body .anime-lobby:has(.pvp-opening:not([hidden])) .lobby-art{display:none}
+body .anime-lobby:has(.pvp-opening:not([hidden])) .pvp-lobby{width:92%;margin-left:4%;margin-top:135px}
+body .anime-lobby .pvp-opening{color:#103657}
+body .anime-lobby .pvp-opening h2{padding:12px 24px;background:var(--utility-navy);color:#fff;font:900 italic 30px Arial,sans-serif;text-transform:uppercase;border:2px solid #a7c2d5;border-bottom:3px solid #00d1ec;border-radius:5px}
+.anime-lobby .opening-steps{list-style:none;display:flex;justify-content:center;gap:12px;padding:0;margin:8px 0}
+.anime-lobby .opening-steps li{padding:8px 20px;background:#385a79;color:#fff;border:2px solid #bed4e2;transform:skewX(-10deg);font:bold italic 17px Arial,sans-serif;text-transform:uppercase}
+.anime-lobby .opening-steps [aria-current]{background:linear-gradient(120deg,#0085c5,#064aab);border-color:#02daed;box-shadow:0 0 10px #00dcf875}
+body .anime-lobby .opening-order{color:#075c78;font-size:24px;font-weight:800}
+body .anime-lobby .opening-pick{background:transparent;border:2px solid transparent;border-radius:12px;padding:8px}
+body .anime-lobby .opening-pick[aria-pressed=true]{background:#e4fbff;outline:2px solid #00bedc;border-color:white;box-shadow:0 0 14px #00d6eb88}
+body .anime-lobby .opening-pick[aria-pressed=true] figcaption::before{content:'✓ '}
+body .anime-lobby .opening-cards{gap:20px;padding:14px 8px;align-items:start}
+body .anime-lobby .opening-card{flex-basis:190px}
+body .anime-lobby .pvp-opening img{width:175px;max-width:100%;height:auto;aspect-ratio:5/7;object-fit:contain;filter:drop-shadow(0 4px 4px #092a4b45)}
+body .anime-lobby .pvp-opening figcaption{max-width:none;margin-top:8px;background:var(--utility-navy);color:#fff;padding:8px;border:1px solid #c0d5e5;border-radius:6px;font-size:15px;white-space:normal}
+body .anime-lobby .opening-reveal .opening-player{border:2px solid #a7c3d7;border-radius:12px;padding:16px;background:#f8fcff}
+body .anime-lobby .opening-player>strong{background:var(--utility-navy);color:#fff;padding:10px;font:800 italic 22px Arial,sans-serif;border-radius:6px}
+body .anime-lobby .opening-dice{margin:24px 0}
+body .anime-lobby .opening-dice .die{width:100px;height:100px;background:linear-gradient(135deg,#fff,#c0d3e2);border:2px solid #607d95;border-radius:18px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);padding:16px;gap:8px;color:#123553}
+.anime-lobby .die .pip{border-radius:50%;background:#12334c;box-shadow:inset 1px 1px 3px #0008}
+.anime-lobby .die .pip.blank{visibility:hidden}
+@media(max-width:1000px){body .anime-lobby .pvp-lobby{width:63%;margin-left:2%;padding:18px}.lobby-art{width:33%}.lobby-art-copy{padding:14px}.lobby-facing-art{background-size:290% auto}}
+@media(max-height:550px){body .anime-lobby .destination-header{height:65px}body .anime-lobby .destination-crumb{top:71px;font-size:14px}body .anime-lobby .pvp-lobby{margin-top:110px;margin-bottom:24px;width:68%}body .anime-lobby .lobby-art{top:65px;height:calc(100dvh - 65px);width:29%}body .anime-lobby .pvp-lobby>h1{font-size:24px}body .anime-lobby .pvp-setup{grid-template-columns:1fr 1fr}body .anime-lobby:has(.pvp-opening:not([hidden])) .pvp-lobby{margin-top:105px;padding:12px 16px}body .anime-lobby .opening-card{flex-basis:155px}body .anime-lobby .pvp-opening img{width:140px}body .anime-lobby .pvp-opening>.primary{position:sticky;bottom:8px;z-index:2}body .anime-lobby .opening-steps li{font-size:14px;padding:6px 14px}body .anime-lobby .pvp-opening h2{font-size:24px}body .anime-lobby .opening-order{font-size:18px}body .anime-lobby .opening-dice{margin:12px 0}.lobby-art-copy{bottom:4%}.lobby-art-copy h2{font-size:22px}}
+@media(max-width:600px) and (orientation:portrait){body .anime-lobby .lobby-art{display:none}body .anime-lobby .pvp-lobby{width:92%;margin-left:4%}body .anime-lobby .pvp-setup{grid-template-columns:1fr}.anime-lobby .opening-steps{gap:4px}.anime-lobby .opening-steps li{padding:6px;font-size:12px}}
+
+/* Opening has its own stage heading: avoid repeating the lobby introduction. */
+body .anime-lobby:has(.pvp-opening:not([hidden])) .pvp-lobby>.eyebrow,
+body .anime-lobby:has(.pvp-opening:not([hidden])) .pvp-lobby>h1,
+body .anime-lobby:has(.pvp-opening:not([hidden])) .pvp-lobby>p:not(.pvp-status):not(.opening-assets){display:none}
+body .anime-lobby:has(.pvp-opening:not([hidden])) .pvp-lobby{margin-bottom:24px}
+body .anime-lobby .pvp-opening h2{margin:10px 0}
+body .anime-lobby .opening-order{margin:8px 0}
+body .anime-lobby .opening-steps{margin-top:0}
+body .anime-lobby .pvp-opening[data-stage=persona] img,body .anime-lobby .pvp-opening[data-stage=codex] img{width:145px}
+body .anime-lobby .opening-card{flex-basis:165px}
+body .anime-lobby .opening-cards{gap:14px;padding:8px}
+body .anime-lobby .opening-assets{margin:8px 0}
+@media(min-height:650px){body .anime-lobby:has(.pvp-opening:not([hidden])) .pvp-lobby{margin-top:130px;padding:16px 24px}body .anime-lobby .opening-card figcaption{font-size:14px;padding:5px}body .anime-lobby .opening-card>button:not(.opening-pick){min-height:44px;padding:6px 14px}}

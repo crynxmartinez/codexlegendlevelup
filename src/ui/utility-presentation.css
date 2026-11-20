@@ -1,0 +1,134 @@
+/* Approved legacy-theme sheets 01–10. Presentation only, scoped away from
+   card choices and the established battlefield layout. */
+:root{--utility-silver:0 0 0 1px #547087,0 0 0 3px #e8f4fc,0 0 0 5px #8ba6bc,0 14px 45px #00162a55;--utility-navy:linear-gradient(125deg,#194c80,#061a36 62%,#103f72);--utility-light:linear-gradient(125deg,#f7fcff,#e3f3ff);--utility-cyan:#00d7f1}
+/* Outrank the old shared :is(.duel-panel .duel-dialog, ...) surface without
+   changing the approved battlefield decision panels. */
+body dialog.credits-dialog[open],body .devlog-bg .devlog,body aside.feedback,body .modal-bg.menu-utility>div.modal{background:var(--utility-light);color:#10314f;border:2px solid #f3fbff;box-shadow:var(--utility-silver)}
+body .menu-utility{padding:20px;background:#04162c99;backdrop-filter:blur(3px)}
+body .menu-utility>.modal,body .credits-dialog,body .devlog,body .feedback,body .effects-preview>.modal{color:#10314f;background:var(--utility-light);border:2px solid #f3fbff;border-radius:18px;box-shadow:var(--utility-silver);font:16px/1.5 Arial,sans-serif;box-sizing:border-box;scrollbar-color:#2786b4 #d9ecf8}
+body .menu-utility>.modal{width:min(720px,calc(100vw - 40px));max-height:calc(100dvh - 40px);padding:0 22px 20px;overflow:auto}
+body .menu-utility .modal-head,body .credits-dialog header,body .devlog .dl-head,body .feedback .fb-head,body .effects-preview h3{background:var(--utility-navy);color:#fff;border-bottom:3px solid var(--utility-cyan);padding:14px 20px;gap:14px}
+body .menu-utility .modal-head{margin:0 -22px 18px;position:sticky;top:0;z-index:2}
+body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview) :is(h2,h3,.dl-title){color:inherit;font-style:italic;font-weight:900;letter-spacing:0}
+body .menu-utility .modal-head h3,body .credits-dialog h2,body .feedback h2,body .effects-preview h3{font-size:clamp(22px,2.6vw,34px);text-transform:uppercase;margin:0}
+body .menu-utility .modal-head h3{flex:1}
+body .menu-utility :is(.subtle,.sub,.ask-text),body .credits-dialog p,body .effects-preview :is(.subtle,.preview-detail){color:#244764;font-size:16px;line-height:1.5}
+body .menu-utility .row{border-top:1px solid #63c3de;padding-top:16px;gap:12px;flex-wrap:wrap}
+body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview,.duel-utility,.pvp-lobby,.banner) button:where(:not(.st-switch,.opening-pick,.dl-vhead,.dl-patch)){min-height:44px;min-width:44px;padding:10px 20px;border:2px solid #b9cfdf;border-radius:5px;background:var(--utility-navy);color:#fff;box-shadow:inset 0 0 0 1px #587b9a,0 2px 0 #7890a5;font:800 italic 17px/1.2 Arial,sans-serif;letter-spacing:0;text-transform:uppercase;transition:filter .15s,translate .12s,box-shadow .15s}
+body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview,.duel-utility,.pvp-lobby,.banner) button.primary,body .effects-preview .preview-buttons button:first-child{background:linear-gradient(135deg,#008ae8,#053c9b 60%,#092149);border-color:#c6faff;box-shadow:inset 0 0 0 2px #03cde7,0 0 0 2px #008ea9,0 0 12px #00d5ef55}
+body :is(.menu-utility,.duel-utility) button.danger{border-color:#ec8399;background:linear-gradient(130deg,#66253c,#221c36);box-shadow:inset 0 0 0 1px #b8546c}
+body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview,.duel-utility,.pvp-lobby,.banner) button:hover:not(:disabled){filter:brightness(1.18);border-color:#0bdcf1}
+body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview,.duel-utility,.pvp-lobby,.banner) button:active:not(:disabled){translate:0 1px;filter:brightness(.95)}
+body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview,.duel-utility,.pvp-lobby,.banner) button:disabled{opacity:1;color:#dbe6ef;background:#6b8196;box-shadow:inset 0 0 0 1px #c0d0dc;cursor:not-allowed}
+body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview,.duel-utility,.pvp-lobby,.banner) :is(button,input,textarea,select,summary,a):focus-visible{outline:3px dashed #0a9fbe;outline-offset:3px}
+body .menu-utility .utility-close{width:44px;padding:0!important;font-size:30px!important;flex-shrink:0}
+body .menu-utility .modal :is(textarea,input,select):not([type=checkbox]):not([type=range]),body .feedback textarea{background:#fff;color:#10314f;border:2px solid #8ba8bf;border-radius:10px;font-size:16px;box-sizing:border-box;width:100%;padding:12px}
+body .menu-utility textarea::placeholder{color:#506a80}
+body .modal-bg.menu-utility>.modal :is(input,textarea,select):not([type=range]):not([type=checkbox]):not([type=radio]){background:#fff;color:#10314f;border:2px solid #8ba8bf;border-radius:10px;font-size:16px}
+body .menu-utility .deck-code-error{color:#b2243a;min-height:24px}
+body .credits-dialog{width:min(850px,calc(100vw - 36px));max-height:calc(100dvh - 36px)}
+body .credits-dialog .credits-content{padding:18px 24px 24px;font-size:16px}
+body .credits-dialog .credits-content h3{color:#12375a;border-bottom:1px solid #9ccfe2;padding:12px 0 6px;font-size:21px}
+body .credits-dialog .credits-songs button[aria-pressed=true]{border-color:#00d7ef;background:linear-gradient(120deg,#007bbf,#06377c);box-shadow:0 0 0 2px #00d7ef}
+body .credits-dialog .credits-songs button::before{content:'▶ ';color:#c4faff}
+body .credits-dialog a{color:#075d88}
+/* Native top-layer demo: background settings are inert until it closes. */
+body dialog.effects-preview{position:fixed;inset:0;margin:auto;padding:16px;width:100vw;height:100dvh;max-width:none;max-height:none;border:0;background:transparent;box-sizing:border-box;color:#12375a}
+body dialog.effects-preview[open]{display:grid;place-items:center}
+body dialog.effects-preview::backdrop{background:#031429b3;backdrop-filter:blur(3px)}
+body .effects-preview>.modal{width:min(800px,calc(100vw - 40px));height:min(830px,calc(100dvh - 40px));max-height:none;padding:0 22px 16px;display:grid;grid-template-rows:auto auto minmax(0,1fr) auto auto auto;gap:8px;overflow:hidden}
+body dialog.effects-preview.modal-bg>div.modal{color:#10314f;background:var(--utility-light);border:2px solid #f3fbff;box-shadow:var(--utility-silver)}
+body dialog.effects-preview.modal-bg{background:transparent}
+body dialog.effects-preview .modal h3{margin:0 -22px;text-align:left;color:white}
+body .effects-preview .subtle{margin:4px 0;text-align:center}
+body .effects-preview .shatter-stage{height:100%;min-height:0;width:100%;border:2px solid #99bdd3;border-radius:16px;background:radial-gradient(ellipse at 50% 80%,#168db6,#073261 65%,#031629);display:grid;place-items:center;overflow:hidden}
+body .effects-preview .shatter-card{position:relative;inset:auto;height:92%;width:auto;aspect-ratio:5/7;max-width:65%;background-size:contain;background-repeat:no-repeat;background-position:center;border-radius:7px;box-shadow:0 0 25px #24e9f870}
+body .effects-preview strong{display:block;text-align:center;background:var(--utility-navy);color:#fff;padding:5px 16px;border-bottom:2px solid #00d8ee;font:900 italic 24px Arial,sans-serif}
+body .effects-preview .preview-detail{text-align:center;margin:0}
+body .effects-preview .preview-buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;border-top:1px solid #7bc6df;padding-top:10px}
+/* Compact battlefield utilities retain a dark surface and the existing stack. */
+body .duel-utility .duel-dialog{border:2px solid #d8e8f1;box-shadow:var(--utility-silver);background:linear-gradient(135deg,#102b41f5,#051320fa);border-radius:14px}
+body .duel-utility .modal-head{background:var(--utility-navy);border-bottom:2px solid #18d9ee;padding:10px 14px;border-radius:7px 7px 0 0}
+body .duel-utility .modal-head h3{font:bold italic 24px/1.2 Arial,sans-serif;text-transform:uppercase;color:#fff}
+body .duel-utility .set-title{font-size:18px;font-style:italic;color:#e7faff;border-left:4px solid #08cde5;padding-left:10px}
+body .duel-utility .set-choice.on{background:linear-gradient(135deg,#007eaa,#063d78);border-color:#27e5f6;box-shadow:inset 0 0 0 1px #fff,0 0 10px #00cfe64d}
+body .duel-utility .set-choice.on::before{content:'✓ ';color:#fff}
+body .duel-utility .set-choice .sc-hint{font:13px/1.4 Arial,sans-serif;color:#d0e2ee}
+body .duel-utility .settings-body .st-switch::before{background:#293f51;border-color:#9eb9ce}
+body .duel-utility .settings-body .st-switch.on::before{background:#007ba2;border-color:#19e4f2;box-shadow:0 0 8px #00ddf180}
+body .duel-utility .settings-body .st-switch::after{background:linear-gradient(#fff,#a7b7c4);box-shadow:0 0 0 1px #edf7ff}
+body .duel-utility .settings-body{font-size:16px}
+body .duel-utility .set-hint,body .duel-utility .st-hint{font-size:14px}
+body .duel-utility .st-name{font-size:16px}
+body .banner{background:linear-gradient(135deg,#11304af5,#041322fa);border:2px solid #dcebf4;box-shadow:var(--utility-silver);border-radius:15px}
+body .banner:not(.match-end){inset:16px;margin:auto;height:max-content;max-height:calc(100dvh - 32px);width:min(760px,calc(100vw - 32px));padding:24px;overflow:auto;box-sizing:border-box;gap:16px}
+body .banner h1{font-weight:900;font-style:italic;text-transform:uppercase;border-bottom:2px solid #16dcef;padding-bottom:12px}
+body .banner.win .result-word{color:#7ef2ff;font-style:italic}
+body .banner.lose .result-word{color:#ff9bad}
+body .match-end .match-shields{color:#102f49}
+body .match-end .match-shields>*{padding:8px 16px;background:linear-gradient(#fff,#afc7da);border:1px solid #e9faff;border-radius:5px}
+body .match-end .match-recap{border:1px solid #789ab0;border-radius:8px;padding:0 14px;background:#092037}
+body .match-end .final-exchange,body .end-turn-hint{color:#bef3ff}
+body :is(.chain-recap,.mod-popover,.remote-cue,.pvp-disconnected){border:2px solid #bad7e9;background:linear-gradient(135deg,#123b59,#06192c);color:#edfaff;box-shadow:inset 0 0 0 1px #189ab5,0 4px 20px #0007}
+/* Keep completed-effect recaps at mid-right, clear of the utility rail. */
+body .chain-recap{left:auto;right:max(72px,env(safe-area-inset-right));top:50%;bottom:auto;transform:translateY(-50%);max-width:min(320px,calc(100vw - 100px));}
+/* Patch list/document and local feedback retain their original content. */
+body .devlog-bg{z-index:990;padding:20px;background:#04182a99}
+body .devlog{width:min(1200px,100%);max-height:calc(100dvh - 40px);padding:0 20px 20px;gap:12px}
+body .devlog .dl-head{margin:0 -20px;padding:12px 20px;flex-shrink:0}
+body .devlog .dl-title{font-size:30px}
+body .devlog .dl-list{padding:4px;overflow:auto}
+body .devlog .dl-vhead{background:var(--utility-navy);color:#fff;border:2px solid #abc3d5;border-radius:7px;padding:14px;font-size:17px;min-height:54px}
+body .devlog .dl-patch{background:#f6fcff;border:1px solid #a8c5d7;color:#163654;border-radius:6px;min-height:64px}
+body .devlog .dl-patch:hover{background:#d2efff}
+body .devlog :is(.dl-vname,.dl-pid,.dl-ptitle,.dl-caret){color:inherit}
+body .devlog :is(.dl-vsub,.dl-vcount){color:#c4e8f9}
+body .devlog :is(.dl-pdate,.dl-none,.dl-readhint,.dl-dmeta,.dl-plabel,.dl-cname){color:#31546e}
+body .devlog .dl-doc{background:transparent;overflow:auto}
+body .devlog .dl-col{color:#163654}
+body .devlog .dl-mast{background:linear-gradient(120deg,#d1eaff,#fff);border:1px solid #94bbd5;border-radius:12px}
+body .devlog :is(.dl-ver,.dl-dtitle,.dl-summary,.dl-ename,.dl-kicker){color:#103858}
+body .devlog .dl-bar{color:#fff;background:var(--utility-navy);border-left:6px solid #00c5e4}
+body .devlog .dl-entry{background:#ffffffa8;border-color:#a3c4d8}
+body .devlog .dl-bullets,body .devlog .dl-bullets li{color:#173c59;font-size:16px;line-height:1.55}
+body .devlog .dl-bullets li::marker{color:#14799b}
+body .devlog .dl-psel{background:#fff;color:#163654;border:1px solid #759bb8;min-height:44px}
+body .feedback{inset:16px;right:16px;left:auto;width:min(900px,calc(100vw - 32px));padding:0 22px 16px;gap:10px;overflow:hidden;translate:calc(100% + 30px) 0}
+body .feedback.open{translate:0 0}
+body .feedback .fb-head{margin:0 -22px;flex-shrink:0}
+body .feedback .fb-intro{font-size:15px;color:#244d69;margin:4px 0}
+body .feedback .fb-host{overflow:auto;flex:1;min-height:0;padding:10px 2px}
+body .feedback fieldset{border-bottom:1px solid #93c8df;padding-bottom:12px}
+body .feedback :is(legend,.fb-written){color:#103656;font-size:17px;font-weight:700}
+body .feedback .fb-options label{min-height:44px;display:flex;align-items:center;padding:0 10px;border-radius:6px;border:1px solid #9db6cb;background:#fff;color:#193c5a}
+body .feedback .fb-options label:has(:checked){border:2px solid #00bddc;background:#d4f5ff}
+body .feedback input[type=radio]{accent-color:#0672b9;width:18px;height:18px}
+body .feedback :is(.fb-count,.fb-status,.fb-storage-note,.fb-written span){color:#254e6d}
+body .feedback .fb-footer{flex-shrink:0;border-top:2px solid #62c5dd;padding-top:10px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+body .feedback .fb-footer .fb-local-tools{margin:0;display:contents}
+body .fatal-screen{display:grid;place-content:center;gap:16px;padding:32px;background:#e6f4ff url('/ui/menu-v1/kit/svg/pale-surface.svg') center/cover;color:#123a5a}
+body .fatal-screen h2{padding:18px 32px;color:#fff;background:var(--utility-navy);border:2px solid #aec6d8;border-bottom:3px solid #0bd8ef;font:900 italic 32px Arial,sans-serif}
+body .fatal-screen p{max-width:800px;overflow-wrap:anywhere;color:#224d6a;font-size:16px}
+@media(max-height:550px){body .menu-utility{padding:12px}body .menu-utility>.modal{max-height:calc(100dvh - 24px)}body .menu-utility .modal-head{padding:8px 14px}body .menu-utility .modal-head h3{font-size:22px}body .effects-preview>.modal{height:calc(100dvh - 24px);width:min(800px,calc(100vw - 28px));grid-template-columns:minmax(180px,35%) 1fr;grid-template-rows:auto auto minmax(0,1fr) auto auto;padding:0 14px 10px;gap:6px 14px}body .effects-preview h3{grid-column:1/-1;margin:0 -14px;font-size:23px;padding:8px 14px}body .effects-preview .subtle{grid-column:2;font-size:14px}body .effects-preview .shatter-stage{grid-column:1;grid-row:2/6}body .effects-preview .shatter-card{height:90%;max-width:90%}body .effects-preview strong{grid-column:2;font-size:20px;align-self:end}body .effects-preview .preview-detail{grid-column:2;font-size:14px}body .effects-preview .preview-buttons{grid-column:2;gap:5px;padding:4px 0 0}body .effects-preview .preview-buttons button{font-size:14px;padding:7px 9px}body .devlog-bg{padding:12px}body .devlog{max-height:calc(100dvh - 24px)}body .credits-dialog{max-height:calc(100dvh - 24px)}body .feedback{inset:12px 12px 12px auto;width:calc(100vw - 24px)}body .feedback .fb-intro{font-size:14px}body .feedback h2{font-size:24px}body .duel-utility .modal-head h3{font-size:21px}body .banner h1{font-size:28px}}
+@media(prefers-reduced-motion:reduce){body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview,.duel-utility,.pvp-lobby,.banner),body :is(.menu-utility,.credits-dialog,.devlog,.feedback,.effects-preview,.duel-utility,.pvp-lobby,.banner) button{animation:none;transition:none}}
+
+body .devlog.doc{height:calc(100dvh - 40px);border-radius:18px;width:min(1400px,100%);padding:0 20px 12px}
+body .devlog .dl-head .dl-title{flex:1;margin:0}
+body .devlog .dl-reader{display:grid;grid-template-columns:180px minmax(0,1fr);gap:18px;flex:1;min-height:0;overflow:hidden}
+body .devlog .dl-reader-nav{display:flex;flex-direction:column;gap:10px;overflow:auto;padding:4px}
+body .devlog .dl-reader-nav h3{color:#163654;margin:0;font-size:18px}
+body .devlog .dl-reader-choice[aria-current=page]{background:linear-gradient(120deg,#008af0,#073fa2);border-color:#02daef;box-shadow:0 0 0 2px #03cbe5}
+body .devlog .dl-reader .dl-doc{height:100%;min-height:0;border:1px solid #9db9ce;border-radius:12px}
+body .devlog .dl-reader .dl-col{padding:20px;max-width:none}
+body .devlog .dl-reader .dl-mast{padding:16px}
+body .devlog .dl-reader .dl-ver{font-size:42px}
+body .devlog .dl-reader .dl-dtitle{font-size:26px}
+body .devlog .dl-reader-footer{display:flex;justify-content:flex-end;gap:12px;border-top:1px solid #82c5dc;padding-top:10px}
+body .feedback .fb-host fieldset>p{color:#31546e;font-size:14px}
+@media(max-width:900px){body .devlog .dl-reader{grid-template-columns:125px minmax(0,1fr);gap:10px}body .devlog .dl-reader .dl-col{padding:12px}body .devlog .dl-reader .dl-dtitle{font-size:22px}body .devlog .dl-bullets li{font-size:14px}body .devlog.doc{height:calc(100dvh - 24px)}body .devlog .dl-head .dl-title{font-size:22px}}
+body aside.feedback .fb-host{background:transparent;border:0}
+body aside.feedback .fb-footer button:disabled{background:#71889e;color:#e3ecf4;border-color:#b5cad9;box-shadow:none;cursor:not-allowed;filter:none}
+body .devlog.doc .dl-head{background:var(--utility-navy);border-bottom:3px solid #00d7f1}
+
+body .duel-panel.duel-confirmation .duel-dialog{width:min(620px,calc(100vw - 32px));min-height:0;max-height:calc(100dvh - 32px);padding:18px}
+body .duel-confirmation .row{gap:12px}

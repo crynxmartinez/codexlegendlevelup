@@ -1,0 +1,165 @@
+/* Shared access controls use the existing duel palette. */
+body .credits-dialog { color:#e6eef4; background:#0c1420; border:1px solid #a68b50; border-radius:14px; width:min(680px,calc(100vw - 32px)); max-height:calc(100dvh - 24px); padding:0; box-sizing:border-box; overflow:hidden; }
+body .credits-dialog[open] { display:flex; flex-direction:column; }
+.credits-dialog::backdrop { background:#0009; }
+.credits-dialog header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 20px; border-bottom:1px solid #384551; flex-shrink:0; }
+.credits-dialog h2 { margin:0; font-size:21px; }
+.credits-dialog .credits-content { padding:10px 20px 20px; overflow:auto; overscroll-behavior:contain; line-height:1.5; }
+.credits-dialog button { min-height:44px; text-transform:none; letter-spacing:0; }
+.credits-songs { display:grid; gap:8px; }
+.credits-songs button { text-align:left; }
+.credits-songs button[aria-pressed=true] { border-color:#80dee9; background:#15303d; }
+.credits-dialog label { display:flex; align-items:center; gap:16px; margin-block:12px; }
+.credits-dialog input { flex:1; min-width:0; min-height:44px; accent-color:#86d9e2; }
+.credits-dialog h3 { margin-bottom:4px; font-size:15px; color:#e4c57a; }
+.credits-dialog p { font-size:14px; }
+body .ka-links { flex-wrap:wrap; }
+body .pvp-lobby { box-sizing:border-box; }
+body .pvp-lobby [hidden] { display:none!important; }
+.pvp-opening { text-align:center; }
+.pvp-opening h2 { margin:10px 0; }
+.opening-steps,.opening-assets { font-size:12px; color:#afbecb; }
+.opening-order { color:#edd080; font-weight:700; }
+.opening-dice,.opening-reveal { display:flex; justify-content:center; gap:32px; }
+.opening-dice .die { animation:opening-die-settle .45s ease-out; }
+@keyframes opening-die-settle { from { transform:rotate(-12deg) scale(.8); opacity:.4; } to { transform:none; opacity:1; } }
+@media (prefers-reduced-motion:reduce) { .opening-dice .die { animation:none; } }
+.opening-player { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; min-width:0; }
+.opening-player > strong { flex-basis:100%; }
+.opening-cards { display:flex; overflow-x:auto; justify-content:safe center; gap:16px; padding:10px 4px; }
+.opening-card { flex:0 0 160px; display:grid; gap:6px; }
+.pvp-opening figure { margin:0; }
+.pvp-opening img { width:150px; max-width:100%; aspect-ratio:5/7; object-fit:contain; }
+.pvp-opening figcaption { font-size:13px; max-width:160px; margin-top:4px; }
+.pvp-opening .opening-pick { padding:4px; white-space:normal; text-transform:none; }
+.opening-pick[aria-pressed=true] { border-color:#ffe294; background:#373020; outline:2px solid #e0bb64; }
+.pvp-opening button { min-height:44px; }
+.opening-reveal .opening-player { flex:1; }
+@media (max-height:600px) and (orientation:landscape) {
+  .pvp-lobby:has(.pvp-opening:not([hidden])) > h1,
+  .pvp-lobby:has(.pvp-opening:not([hidden])) > .eyebrow { display:none; }
+  .opening-steps,.opening-order,.opening-assets,.opening-opponent { margin:4px 0; }
+  .pvp-opening h2 { font-size:20px; margin:4px 0; }
+  .opening-card { flex-basis:100px; }
+  .pvp-opening img { width:clamp(42px,calc((100dvh - 285px) * .714),90px); }
+  .pvp-opening figcaption { font-size:11px; max-width:100px; }
+  .opening-cards { gap:10px; padding:5px 3px; }
+  .opening-reveal { gap:12px; }
+  .pvp-opening > .primary { position:sticky; bottom:0; z-index:1; background:#403923; }
+}
+.pvp-seat strong,.pvp-seat span { display:block; overflow-wrap:anywhere; }
+.pvp-seat span { margin-top:6px; color:#adc1cf; font-size:13px; }
+.pvp-seat[data-ready=true] { border:1px solid #5ab59c; }
+body .pvp-disconnected { box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; gap:12px; top:max(12px,env(safe-area-inset-top)); }
+.pvp-disconnected button { min-height:44px; flex-shrink:0; }
+body .banner { box-sizing:border-box; max-height:calc(100dvh - 24px); overflow:auto; overscroll-behavior:contain; padding-inline:max(20px,env(safe-area-inset-left)); }
+body .banner-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+.banner-buttons button { min-height:44px; }
+@media (max-height:520px) and (orientation:landscape) {
+  body .pvp-screen { padding:8px max(12px,env(safe-area-inset-left))!important; align-items:start; }
+  body .pvp-lobby { width:min(940px,100%); padding:12px 18px; }
+  body .pvp-lobby h1 { font-size:24px; margin:4px 0; }
+  body .pvp-lobby > p:not(.pvp-status):not(.eyebrow) { display:none; }
+  body .pvp-lobby .pvp-setup { grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:10px 0; }
+  .pvp-setup label { font-size:12px; gap:4px; }
+  .pvp-setup input,.pvp-setup select { min-height:44px; }
+  body .pvp-seats,body .pvp-actions { margin:8px 0; gap:8px; }
+  body .pvp-seat { padding:8px 12px; }
+  .pvp-seat span { margin-top:3px; }
+  body .pvp-lobby button { min-height:44px; padding:8px 12px; font-size:12px; }
+  body .pvp-status { margin:6px 0; font-size:13px; }
+  body .pvp-status:empty { display:none; }
+  body .pvp-lobby .eyebrow { margin:0 0 4px; }
+  body .pvp-lobby .pvp-seats:empty { display:none; }
+  body .pvp-screen {
+    padding-right:max(12px,env(safe-area-inset-right))!important;
+    padding-bottom:max(8px,env(safe-area-inset-bottom))!important;
+    overflow-y:auto;
+  }
+  body .banner { padding-block:16px; }
+  body .banner .result-word { font-size:clamp(30px,8vh,56px); margin:4px 0; }
+  body .banner .match-recap { margin-block:6px; }
+  body .banner .result-line { margin-block:8px; font-size:14px; }
+  body .credits-dialog header { padding:8px 16px; }
+  .credits-songs { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .credits-songs button { padding:8px; font-size:13px; }
+  .journey-screen .journey-completion { margin-block:-4px; }
+  .journey-screen .journey-detail { display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:16px; row-gap:4px; align-content:center; overflow-y:auto; }
+  .journey-screen .journey-detail > * { grid-column:1; max-width:none; }
+  .journey-screen .journey-detail .primary { grid-column:2; grid-row:1 / span 4; margin-top:0; align-self:center; }
+  .journey-screen .journey-detail h2 { font-size:20px; }
+}
+/* Setup uses a horizontal rail, with labels constrained to the artwork width. */
+body .screen.pick-screen { position:fixed; inset:0; height:100dvh; box-sizing:border-box; justify-content:center; gap:14px; padding:20px max(16px,env(safe-area-inset-right)) 20px max(16px,env(safe-area-inset-left)); overflow:hidden; }
+body .screen.pick-screen > .pick-row { --setup-card-width:clamp(72px,min(170px,calc((100vw - 80px) / 5 - 12px),calc((100dvh - 180px) * 5 / 7)),170px); flex:0 1 auto; flex-wrap:nowrap; width:100%; max-width:1150px; min-height:0; gap:12px; padding:10px 6px; box-sizing:border-box; justify-content:safe center; align-items:center; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x proximity; overscroll-behavior:contain; scrollbar-width:thin; }
+body .screen.pick-screen .pick { flex:0 0 auto; width:calc(var(--setup-card-width) + 12px); padding:4px; box-sizing:border-box; text-transform:none; letter-spacing:0; scroll-snap-align:center; transition:border-color 150ms ease,background-color 150ms ease; }
+body .screen.pick-screen .pick img { width:100%; height:auto; aspect-ratio:2 / 3; object-fit:contain; }
+body .screen.pick-screen .pick .cap { font-size:12px; line-height:1.3; min-height:2.6em; max-height:2.6em; margin-top:6px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:anywhere; color:#d3dce5; }
+body .screen.pick-screen .pick:hover { transform:none; }
+body .screen.pick-screen .pick:focus-visible { outline:2px solid #86f4ee; outline-offset:2px; }
+body .screen.pick-screen > button { min-height:44px; min-width:160px; }
+@media (max-height:500px) { body .screen.pick-screen { padding-block:10px; gap:8px; } body .screen.pick-screen > .pick-row { gap:8px; padding-block:6px; } body .screen.pick-screen .pick .cap { font-size:11px; margin-top:4px; } }
+
+/* Informational checks take visual priority over edge turn/phase labels. */
+body:has(.duel-notice) .priority-light, body:has(.duel-notice) .phase-tab { visibility:hidden; }
+.duel-access { display:flex; flex-direction:row; gap:6px; position:fixed; top:12px; right:12px; z-index:1300; }
+body:has(.inspect-bg,.duel-loading) .duel-access { display:none; }
+body:not(:has(.board-wrap)) .duel-access,body:has(.demo-mode) .duel-access { display:none; }
+body:has(.duel-panel:not(.duel-minimized):not(.duel-suspended)) .duel-access { display:none; }
+/* Hide the whole control subtree; child visibility transitions must not cover a choice. */
+body:has(.duel-panel:not(.duel-minimized):not(.duel-suspended)) .journey-controls { display:none; }
+.duel-access button { min-width:58px; min-height:44px; padding:6px; }
+@media (min-width:701px) and (min-height:501px) {
+  body .rail { top:68px; }
+}
+.cc-navigation { display:flex; gap:12px; flex-wrap:wrap; padding:4px 0 8px; }
+.cc-navigation label { display:flex; align-items:center; gap:8px; color:var(--muted,#afbcc9); font-size:13px; }
+.cc-navigation select { min-height:44px; padding:6px 10px; color:#edf4fa; background:#101d28; border:1px solid #3d5361; border-radius:5px; }
+.inspect-live { padding:10px 0; border-block:1px solid #3d5361; margin:10px 0; }
+.inspect-live p { margin:5px 0; }
+.inspect-live .subtle { font-size:13px; }
+.learning-practice { margin-block:20px; padding-block:12px; border-block:1px solid #3d5361; }
+.learning-answers { display:flex; flex-wrap:wrap; gap:8px; }
+.learning-answers button,.learning-practice > button { min-height:44px; text-transform:none; text-align:left; }
+.match-recap { width:min(680px,92vw); margin:12px auto; }
+.match-recap h3 { font-size:15px; margin:6px; }
+.match-moment { display:block; width:100%; min-height:44px; margin-block:6px; padding:10px; text-align:left; text-transform:none; font-size:13px; letter-spacing:0; }
+body:has(.banner) .duel-access { display:none; }
+@media (max-width:700px), (max-height:500px) and (orientation:landscape) {
+  body .rail { height:auto; min-height:44px; top:max(0px,env(safe-area-inset-top)); right:calc(116px + env(safe-area-inset-right)); }
+  .rail-more,.rail-btn { min-width:44px; min-height:44px; }
+  .rail-more .rail-label { display:block; font-size:10px; }
+  .duel-access { top:max(0px,env(safe-area-inset-top)); right:max(4px,env(safe-area-inset-right)); gap:4px; }
+  .duel-access button { min-width:48px; font-size:11px; }
+  body .rail.open { max-width:min(340px,80vw); }
+  body .rail.open .rail-label { display:block; font-size:10px; }
+  body .rail.open .rail-btn { min-width:58px; }
+  body .side.foe { padding-right:160px; }
+  body .log-overlay { display:none; } /* History is available in More, without covering units. */
+  body .side.mine > header { padding-left:0; }
+  .cc-navigation { flex-wrap:nowrap; gap:8px; padding:0; }
+  .cc-navigation label { gap:4px; font-size:11px; }
+  .cc-navigation select { max-width:180px; }
+  .cc-dialog:has(.cc-navigation) .cc-instruction { display:none; }
+  .duel-panel:not(.duel-expanded) .cc-dialog:has(.cc-navigation) { height:min(360px,calc(var(--duel-vh,100dvh) - 16px)); max-height:calc(var(--duel-vh,100dvh) - 16px); }
+  .cc-dialog:has(.cc-navigation) .cc-card { height:min(196px,100cqh); }
+}
+/* Stable cards turn in place; the lunge uses independent translate. */
+body:has(.chain-cue) .tutorial-coach,
+body:has(.chain-cue) .tutorial-coach-minimized { visibility: hidden; opacity: 0 !important; pointer-events: none; }
+.mat .slot > .card {
+  transition: transform 180ms cubic-bezier(.22,.7,.25,1), box-shadow 160ms ease;
+}
+.mat .slot > .card.effect-source-active { outline: 2px solid #79e0ee; outline-offset: 3px; }
+.mat .slot > .card.effect-target-active { outline: 2px solid #e7c36b; outline-offset: 3px; }
+html[data-duel-pace="fast"] .mat .slot > .card { transition-duration: 100ms; }
+html[data-animation-intensity="minimal"] .mat .slot > .card { transition: none; }
+html[data-animation-intensity="minimal"] .card[class*="arrive-"] { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .mat .slot > .card { transition: none; }
+}
+/* No animated blur or perpetual lighting on small landscape screens. */
+@media (max-height: 600px) {
+  .chain-cue-card { box-shadow: 0 0 12px #52dbe344; }
+  .chain-cue-card.foe { box-shadow: 0 0 12px #ed535344; }
+}

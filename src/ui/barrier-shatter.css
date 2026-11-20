@@ -1,0 +1,9 @@
+.barrier-shatter { position:fixed; pointer-events:none; z-index:950; isolation:isolate; }
+/* Same stacking context as the hands (opponent 30, local 45). */
+#app > .barrier-shatter-behind-hand { z-index:29; }
+.barrier-glass-shard { position:absolute; inset:0; background:linear-gradient(130deg,#f1ffffe8 0%,#67cbea99 27%,#142f5366 48%,#b6fff8db 51%,#347fb888 79%,#e1ffffee); }
+.barrier-glass-shard:nth-child(3n) { background:linear-gradient(30deg,#baf2ffbb,#f8ffffef 44%,#729cbe80 46%,#20466099); }
+.barrier-glass-cracks { position:absolute; inset:0; width:100%; height:100%; border:1px solid #c9f8ff; border-radius:4px; }
+.barrier-glass-cracks path { stroke:#f1ffff; stroke-width:1.1; fill:none; }
+.barrier-glass-light { position:absolute; inset:-70%; z-index:-1; background:radial-gradient(ellipse,#d5ffffc9 0%,#6dbfef80 22%,#4983c333 43%,transparent 65%); }
+.unit-shatter .barrier-glass-shard::after { content:''; position:absolute; inset:0; background:linear-gradient(130deg,#e9ffff55,transparent 38%,#b6fff83b 51%,transparent 65%); }

@@ -1,0 +1,47 @@
+{
+  "name": "Babaylan — Visayas Arch",
+  "deck": "Babaylan",
+  "guild": "Visayas Arch",
+  "state": "Andukha",
+  "persona": "babaylan/heart-of-the-twelve-spirits-amaya",
+  "notes": [
+    "Babaylan deck — Spirit/Andukha playstyle (generate and release Spirits in the Heart).",
+    "State: Andukha — thresholds at 6, 9, and 12 Spirits in the Heart.",
+    "3 Personas at 2 copies each = 6. Sentry at 2. Rest distributed to reach 50.",
+    "Forces 4×3=12. Actions 2×2=4. Key cards bumped to 3."
+  ],
+  "main": [
+    { "id": "babaylan/heart-of-the-twelve-spirits-amaya", "copies": 2 },
+    { "id": "babaylan/spear-of-the-emerald-tide-maraya", "copies": 2 },
+    { "id": "babaylan/vessel-beneath-the-moon-lunay", "copies": 2 },
+
+    { "id": "babaylan/lantern-of-the-mangrove-gate-salaya", "copies": 3 },
+    { "id": "babaylan/keeper-of-the-spirit-bowl-ilaya", "copies": 3 },
+    { "id": "babaylan/bell-dancer-of-the-tides-sidlak", "copies": 3 },
+    { "id": "babaylan/spear-between-two-worlds-kadasig", "copies": 3 },
+    { "id": "babaylan/reader-of-moonlit-currents-dalina", "copies": 1 },
+
+    { "id": "babaylan/shell-bell-initiate-yana", "copies": 3 },
+    { "id": "babaylan/reader-of-shallow-waters-nalia", "copies": 3 },
+    { "id": "babaylan/weaver-of-the-spirit-threads-dayaw", "copies": 3 },
+    { "id": "babaylan/keeper-of-the-mangrove-remedies-maliya", "copies": 1 },
+    { "id": "babaylan/drummer-of-the-first-calling-baya", "copies": 3 },
+
+    { "id": "babaylan/smoke-tender-of-the-mangrove-altar-isara", "copies": 3 },
+    { "id": "babaylan/banner-bearer-of-ancestral-path-danira", "copies": 3 },
+    { "id": "babaylan/pearl-diver-of-the-spirit-shoal-sulaya", "copies": 3 },
+    { "id": "babaylan/morning-offering-bearer-hilaya", "copies": 3 },
+
+    { "id": "babaylan/whispers-gather-in-the-heart", "copies": 2 },
+    { "id": "babaylan/the-ancestors-open-the-way", "copies": 2 },
+
+    { "id": "babaylan/warden-of-the-twelfth-tide-bituon", "copies": 2 }
+  ],
+  "codex": [
+    "babaylan/heart-spring-beneath-the-ancient-balete",
+    "babaylan/the-sacred-crown-of-kanlaon",
+    "babaylan/the-healing-grove-of-bandilaan",
+    "babaylan/the-storm-altar-of-madja-as",
+    "babaylan/the-ancestral-caverns-of-samar"
+  ]
+}

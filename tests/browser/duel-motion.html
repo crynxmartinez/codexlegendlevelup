@@ -1,0 +1,69 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Duel movement checks</title><link rel="stylesheet" href="/src/ui/style.css"><style>body{padding:16px;overflow:auto}#stage{height:180px;position:relative}.endpoint{position:absolute;width:60px;height:84px;background:#263f51;border:1px solid #8cecff}#source{left:10px;top:5px}#target{right:10px;top:70px}.hand-bar{--hand-h:100px;width:100%;box-sizing:border-box}#results{white-space:pre-wrap}</style></head><body>
+<h2>Duel movement checks</h2><button id="run">Run checks</button><div id="stage"><div class="endpoint" id="source"></div><div class="endpoint" id="target"></div></div><div class="hand-bar"></div><pre id="results">Ready</pre>
+<script type="module">
+import {flyCard,finishDuelMotion,holdDuelMotion,motionDuration,captureHand,settleHand,attackMotion,batchDelay} from '/src/ui/duel-motion.ts';
+import {syncChildren} from '/src/ui/stable-dom.ts';
+import {presentChainCue,clearChainCues} from '/src/ui/chain-cue.ts';
+import {animateHeartMove} from '/src/ui/heart-motion.ts';
+import {CARD_BACK} from '/src/ui/assets.ts';
+import {openCardChoice} from '/src/ui/card-choice.ts';
+const $=s=>document.querySelector(s),frame=()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+$('#run').onclick=async()=>{
+ const checks=[];const check=(name,value)=>{checks.push(`${value?'PASS':'FAIL'} ${name}`);$('#results').textContent=checks.join('\n');if(!value)throw new Error(name);};
+ const stable=document.createElement('div'),card=document.createElement('button'),badge=document.createElement('span');
+ card.textContent='Stable card';stable.append(card);document.body.append(stable);card.focus();
+ let disconnected=0;const observer=new MutationObserver(records=>{disconnected+=records.reduce((n,r)=>n+[...r.removedNodes].filter(node=>node===card).length,0);});
+ observer.observe(stable,{childList:true});
+ syncChildren(stable,[card,badge]);syncChildren(stable,[card,badge]);await frame();
+ check('Unchanged card updates retain focus and never detach the card',document.activeElement===card&&disconnected===0);
+ observer.disconnect();stable.remove();
+ document.documentElement.dataset.duelPace='learning';
+ const target=$('#target'),from=$('#source').getBoundingClientRect(),to=target.getBoundingClientRect();
+ const flight=flyCard({from,to,target,image:`url("${CARD_BACK}")`});
+ check('Destination stays hidden while its card is travelling',target.style.visibility==='hidden');
+ check('A flight cannot intercept card clicks',getComputedStyle($('.duel-flight')).pointerEvents==='none');
+ check('The caller controls the shown art', $('.duel-flight').style.backgroundImage.includes(CARD_BACK));
+ finishDuelMotion();await flight;
+ check('Fast-forward cleans up the ghost and restores destination',!$('.duel-flight')&&target.style.visibility==='');
+ const cancelled=flyCard({from,to,target,image:'none'});$('.duel-flight').getAnimations()[0].cancel();await cancelled;
+ check('Cancelled travel also restores destination',!$('.duel-flight')&&target.style.visibility==='');
+ const resizing=flyCard({from,to,target,image:'none'});window.dispatchEvent(new Event('resize'));await resizing;
+ check('Resizing settles travel and restores the destination',!$('.duel-flight')&&target.style.visibility==='');
+ const landing=flyCard({from,to,target,image:'none',landing:200});finishDuelMotion();await landing;
+ check('Fast-forward skips the remaining landing beat without stranding a ghost',!$('.duel-flight')&&target.style.visibility==='');
+ let impacts=0,contact='';const strike=attackMotion(target,100,0,()=>{impacts++;contact=target.style.translate;});await strike;
+ check('Attack impact happens at the forward stroke, then returns home',impacts===1&&parseFloat(contact)===16&&target.style.translate==='');
+ check('Twenty cards still fit inside one short stagger',batchDelay(19,20)<=motionDuration()*.45);
+ const chain=presentChainCue({name:'Voice Beneath the Current, Water Tunung',image:CARD_BACK,ordinal:2,total:2,stage:'resolving',opponent:true,source:target});
+ check('Chain cue retains its source highlight and original link number',target.classList.contains('effect-source-active')&&$('.chain-cue-number').textContent==='2');
+ clearChainCues();await chain;
+ check('Cancelled chain cleans its cue and source highlight',!$('.chain-cue')&&!target.classList.contains('effect-source-active'));
+ let read=false;const reading=holdDuelMotion(900).then(()=>{read=true;});
+ document.body.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true}));await frame();
+ check('An unrelated click does not skip a skill explanation',!read);finishDuelMotion();await reading;
+ check('Explicit finish releases the explanation',read);
+ document.documentElement.dataset.duelPace='fast';
+ const src=$('#source');
+ const heart=animateHeartMove({kind:'heartMove',reason:'essence',owner:0,before:0,after:1,cards:[{uid:'heart-test',defId:'test',from:'hand',to:'heart',fromSlot:null,toSlot:null,hidden:false}]},
+  {card:()=>src,zone:zone=>zone==='hand'?src:target,art:()=>CARD_BACK,back:CARD_BACK,viewer:0,reduced:false,duration:ms=>ms});
+ check('Essence hides the source immediately',src.style.visibility==='hidden'&&!!$('.heart-travel'));
+ finishDuelMotion();await heart;
+ check('Heart animation participates in shared cleanup',src.style.visibility===''&&!$('.heart-travel')&&!$('.heart-motion-pulse'));
+ const bar=$('.hand-bar');for(let i=0;i<3;i++){const n=document.createElement('div');n.className='hand-card';n.dataset.uid=`h${i}`;bar.append(n);}
+ let before=captureHand();bar.firstElementChild.remove();settleHand(before);
+ check('Remaining hand cards slide into the new layout',bar.lastElementChild.getAnimations().some(a=>a.effect.getKeyframes().some(f=>f.translate)));
+ finishDuelMotion();await frame();before=captureHand();settleHand(before);
+ check('Unchanged hand renders do not restart movement',!bar.lastElementChild.getAnimations().length);
+ document.documentElement.dataset.animationIntensity='minimal';
+ check('Reduced motion caps travel at 80ms',motionDuration()===80);
+ const reduced=flyCard({from,to,target,image:'none'});
+ check('Reduced motion fades without travelling across the board',$('.duel-flight').getAnimations()[0].effect.getKeyframes().every(k=>!k.transform));
+ finishDuelMotion();await reduced;
+ const choice=openCardChoice({title:'Choose a card',instruction:'One confirmation',cards:[{uid:'a',name:'Test card',image:'',type:'Unit',detail:'',stats:''}],max:1,decline:'Skip'});
+ $('[data-choice]').click();finishDuelMotion();await frame();
+ check('Finishing visuals cannot confirm a decision',!!$('.cc-dialog')&&$('.cc-selected-count').textContent==='1 / 1 selected');
+ $('.cc-actions .primary').click();check('Only confirmation submits the card',(await choice)[0]==='a');
+ document.documentElement.removeAttribute('data-animation-intensity');bar.replaceChildren();
+ $('#results').textContent+=`\n${checks.length} movement checks passed.`;
+};
+</script></body></html>

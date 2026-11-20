@@ -1,0 +1,74 @@
+/* Approved seven-area guide: existing native dialog and menu chrome, real cards. */
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide[open]{position:fixed;inset:0;width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:0;border:0;border-radius:0;overflow:hidden;background:#edf7ff url('/ui/menu-v1/kit/svg/pale-surface.svg') center/cover;color:#103454;font:16px/1.45 Arial,sans-serif;box-shadow:none}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-header{position:absolute;margin:0;padding:0 3.5%;top:0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-content{position:absolute;inset:20% 3.4% 11%;display:flex;flex-direction:column;gap:16px;min-height:0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-plan{position:relative;padding:0 8px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-plan h2{display:inline;color:#103454;font:900 italic 30px/1.15 CodexDestination,Arial,sans-serif}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-region{display:inline-block;vertical-align:middle;margin-left:12px;padding:4px 8px;border-radius:5px;background:#d8ebf7;font:800 italic 12px/1.3 CodexDestination,Arial,sans-serif;color:#163e62}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide :is(p,.subtle,h3,h4){color:#103454}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-plan p{margin:6px 0 0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .learning-sequence{padding:0;border:0;background:none;font-size:14px;line-height:1.4;color:#386183}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-tabs{display:flex;gap:12px;flex:none;padding:4px 8px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-tabs>button:not(.guide-feature-card){min-height:46px;transform:skewX(-13deg);font:800 italic 18px/1.2 CodexDestination,Arial,sans-serif;border:2px solid #a4bfce;border-radius:0;padding:9px 22px;background:linear-gradient(#254b70,#0a2645);box-shadow:0 2px 0 #6e8ea5,inset 0 0 0 1px #d5e7f42b;color:white;letter-spacing:0;text-transform:none;white-space:nowrap}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-tabs>button>span{display:inline-block;transform:skewX(13deg)}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-tabs>button[aria-current=true]{background:linear-gradient(#0a8af6,#074493);color:white;border-color:#3df0ff;box-shadow:0 2px 0 #6e8ea5,inset 0 0 0 1px #8cffff}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-pages{flex:1;min-height:0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-overview{display:grid;grid-template-columns:1.12fr 1fr;gap:24px;height:100%;min-height:0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide :is(.guide-featured,.guide-role-panel){min-width:0;min-height:0;display:flex;flex-direction:column;border:3px solid #a6bfd0;border-radius:8px;background:#f4faff;box-shadow:0 3px #68899f;overflow:hidden}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide :is(.guide-featured,.guide-role-panel)>h3{position:relative;margin:0;padding:14px 22px;color:white;background:linear-gradient(120deg,#173f6e,#052344);border-bottom:3px solid #09cee8;font:900 italic 30px/1.2 CodexDestination,Arial,sans-serif;text-transform:uppercase;flex:none}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide :is(.guide-featured,.guide-role-panel)>h3::before{content:'';position:absolute;left:0;top:0;bottom:0;width:11px;background:#42e6ff;clip-path:polygon(75% 0,100% 0,25% 100%,0 100%);pointer-events:none}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-card-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-content:start;gap:12px;padding:16px;overflow:auto;min-height:0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-featured-note{flex:none;margin:auto 0 0;padding:6px 18px 10px;font:14px/1.4 Arial,sans-serif;color:#345d7b}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide button.guide-feature-card{display:flex;flex-direction:column;gap:8px;min-width:0;background:#fff;color:#123b59;border:2px solid #a8c4d7;border-radius:9px;padding:6px;box-shadow:none;font-style:normal;text-transform:none;text-align:left;white-space:normal}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide button.guide-feature-card.selected{background:#e8faff!important;color:#123b59!important;box-shadow:0 0 0 2px #77e9f5!important;border-color:#04b5d8!important}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-feature-card img{width:100%;aspect-ratio:359/500;object-fit:contain;border-radius:5px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-card-name{font-size:14px;line-height:1.35;min-height:57px;overflow-wrap:anywhere}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-card-badge{margin-top:auto;background:#dbeaf6;color:#153c60;border-radius:4px;padding:6px 4px;font-size:11px;width:100%}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .selected .guide-card-badge{background:#08558a;color:white}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-body{flex:1;min-height:0;overflow:auto;padding:22px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-full-name{font:800 12px/1.45 Arial,sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:#395d7a;margin-top:0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide h4{font-size:23px;line-height:1.2;margin:8px 0 12px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-body p{margin:8px 0 12px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-note{padding:12px 16px;background:#e0f1fb;border-left:3px solid #08b7d6;border-radius:0 7px 7px 0;margin:15px 0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-rules{padding:16px;background:#e8f3fa;border:1px solid #c0d7e7;border-radius:8px;line-height:1.6}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-rules p{white-space:pre-line}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-caution{font-size:14px;color:#345d7b}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-footer{display:flex;align-items:center;gap:14px;justify-content:space-between;padding:14px 20px;border-top:1px solid #bdd1df;flex:none}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-footer small{color:#345d7b}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide button.guide-action{min-height:44px;padding:10px 20px;border:2px solid #9bb5c8;border-radius:7px;background:linear-gradient(#f9fdff,#d1e5f3);color:#103454;font:800 italic 17px/1.2 CodexDestination,Arial,sans-serif;box-shadow:0 2px 0 #5e7e96;text-transform:uppercase;letter-spacing:0}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide button.guide-action.primary{background:linear-gradient(145deg,#087cf1,#03418f)!important;border-color:#65eaff!important;color:white!important;box-shadow:0 0 0 2px #07c7e8!important}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-reading-page{height:100%;overflow:auto;background:#f4faff;border:2px solid #a6bfd0;border-radius:8px;padding:20px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-reading-page :is(details,.learning-advice-grid section,.learning-stats section){background:#e8f3fa;color:#103454;border-color:#b8cfde}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-reading-page summary{color:#103454;min-height:44px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer :is(button,a){min-height:44px;font-size:16px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer>.guide-footer-action{position:relative;transform:skewX(-16deg);border:2px solid #c0d5e3;border-radius:0;padding:10px 24px;background:linear-gradient(145deg,#275777,#0b2948);box-shadow:inset 0 0 0 1px #537b95,0 2px 0 #5f8099;font:800 italic 17px/1.2 CodexDestination,Arial,sans-serif;letter-spacing:0;text-transform:uppercase;color:white;white-space:nowrap;text-decoration:none;min-height:44px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer>.guide-footer-action>span{display:inline-block;transform:skewX(16deg)}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer>.guide-practice{background:linear-gradient(145deg,#087cf1,#03418f);border-color:#d1f7ff}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer span{flex:1}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide :is(button,a):focus-visible{outline:3px dashed #075b84;outline-offset:3px}
+body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer :is(button,a):focus-visible{outline-color:#7bf1ff}
+@media(max-height:550px) and (orientation:landscape){
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide[open]{font-size:14px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-content{inset:16% 2.8% 16%;gap:8px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-plan{display:none}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-tabs{gap:8px;padding:2px 8px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-tabs>button:not(.guide-feature-card){min-height:44px;font-size:14px;padding:6px 14px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-overview{gap:13px;grid-template-columns:1fr 1fr}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide :is(.guide-featured,.guide-role-panel)>h3{font-size:18px;padding:8px 12px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-card-list{display:flex;flex-direction:column;padding:8px;gap:8px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-featured-note{font-size:12px;padding:4px 9px 6px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide button.guide-feature-card{display:grid;grid-template-columns:72px 1fr;grid-template-rows:1fr auto;flex-shrink:0;gap:4px 8px;min-height:116px;padding:5px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-feature-card img{width:72px;height:100px;grid-row:1/3}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-card-name{min-height:0;align-self:center;font-size:14px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-card-badge{font-size:12px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-body{padding:10px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-full-name{display:none}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide h4{font-size:18px;margin-top:0}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-footer{padding:4px 8px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-role-footer small{display:none}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .guide-rules{padding:10px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer{height:14%;gap:8px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer span{font-size:11px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide .destination-footer>.guide-footer-action{font-size:13px;padding:6px 14px}
+ body dialog.deck-learning.anime-deck-learning.approved-deck-guide button.guide-action{font-size:14px;padding:8px 12px}
+}

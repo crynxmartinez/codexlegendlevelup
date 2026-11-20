@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Card status layout check</title>
+<link rel="stylesheet" href="/src/ui/style.css"><link rel="stylesheet" href="/src/ui/game-polish.css">
+<style>
+body{overflow:auto;padding:16px;margin:0}h1{font-size:18px;margin:0 0 8px}p{font-size:12px}
+.samples{display:flex;justify-content:space-around;gap:8px;align-items:center;min-height:150px;padding:12px;border:1px solid #8b7641;margin:12px 0;background:#08151ad9}
+.samples.foe{transform:rotate(180deg)}
+.samples .slot{width:clamp(44px,10vw,96px);height:auto;aspect-ratio:5/7;flex:none}
+.samples .card{width:100%;height:auto;aspect-ratio:5/7}
+.tools{display:flex;gap:8px;align-items:center}.tools button{min-height:44px}
+/* Exercise the phone touch-target rule on desktop browser emulation too. */
+@media(max-width:800px){button{min-height:44px}.samples{min-height:115px;padding:8px}}
+</style></head><body>
+<h1>Card status layout check</h1><p>Opponent above · You below. Green boost, purple passive/skill, red penalty, and current power stay horizontal.</p>
+<div class="tools"><button id="turn">Rotate cards</button><span id="posture">Charged</span></div>
+<div class="samples foe"></div><div class="samples mine"></div><p id="detail" role="status">Select a badge to check its touch target.</p>
+<script type="module">
+import {syncCardHud} from '/src/ui/card-hud.ts';
+import '/src/ui/card-hud.css';
+import art from '/src/data/card-art-v2.json';
+const paths=Object.values(art).slice(0,5).map(c=>'/'+c.art.replace('assets/','').replace('/web/','/board/'));
+const labels=[['buff','+5k'],['buff passive','+2k'],['debuff','−3k'],['granted-skill','✦2'],['buff','+12k']];
+const cards=[];
+for(const side of ['foe','mine']) for(let i=0;i<5;i++){
+ const slot=document.createElement('div');slot.className='slot';
+ const card=document.createElement('div');card.className='card';card.style.backgroundImage=`url("${paths[i]}")`;
+ const chips=document.createElement('div');chips.className='mod-chips';
+ const chip=document.createElement('button');chip.className='mod-chip '+labels[i][0];chip.textContent=labels[i][1];chip.onclick=e=>{e.stopPropagation();document.querySelector('#detail').textContent=`${side}: ${labels[i][1]} effect details selected`;};chips.append(chip);
+ if(i===4){const skill=chip.cloneNode(true);skill.className='mod-chip granted-skill';skill.textContent='✦1';chips.append(skill);}
+ const pw=document.createElement('div');pw.className='pw';pw.textContent=['16k','13k','8k','11k','23k'][i];
+ const ability=document.createElement('div');ability.className='abdot';ability.textContent='1';
+ slot.append(card);document.querySelector('.samples.'+side).append(slot);cards.push({card,side,children:[chips,pw,ability]});
+}
+let sideways=false;
+function render(){for(const {card,side,children} of cards){const angle=(side==='foe'?180:0)+(sideways?90:0);card.style.transform=`rotate(${angle}deg) scale(${sideways?.84:1})`;syncCardHud(card,children,angle);}document.querySelector('#posture').textContent=sideways?'Exhausted':'Charged';}
+document.querySelector('#turn').onclick=()=>{sideways=!sideways;render();};render();
+</script></body></html>

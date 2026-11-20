@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Choice layout verification</title><link rel="stylesheet" href="/src/ui/style.css"></head>
+<body><div id="app"></div><script type="module">
+if (!import.meta.env.DEV) throw new Error('Development verification only');
+const { openCardChoice } = await import('/src/ui/card-choice.ts');
+const { ALL_CARDS } = await import('/src/data/loader.ts');
+const { ALL_SCRIPTS } = await import('/src/core/game.ts');
+const { boardUrl } = await import('/src/ui/assets.ts');
+const mode = new URLSearchParams(location.search).get('mode');
+const effectMode = mode === 'effect' || mode === 'forces';
+const cards = Object.values(ALL_CARDS).filter(c => mode === 'forces' ? c.type === 'Force' && c.id.startsWith('agta/set-1/') : c.type === (mode === 'codex' ? 'Codex' : 'Unit')).slice(0, mode === 'codex' ? 5 : 18).map((c, i) => ({
+  uid: `card-${i}`, name: c.name, image: boardUrl(c.art), type: c.type,
+  summary: mode === 'forces' ? `Pay: Reveal and discard this card · ${ALL_SCRIPTS[c.id].forceModes[1].prepare.describe().effect}` : '',
+  detail: mode === 'forces' ? c.text.split('\n')[0].replace(/\[\/?(?:yellow|Force|Hand)\]/g, '') : 'Choose one of your Units. It gets Power +3000 until end of turn.', stats: '', zone: mode === 'forces' ? 'hand' : 'heart', level: c.level,
+}));
+const result = document.createElement('output'); result.id = 'result'; document.body.append(result);
+const picked = await openCardChoice({ title: mode === 'codex' ? 'Switch Codex? Costs 1 play (2 available).' : effectMode ? 'Your response' : 'Choose cards to Vent',
+  instruction: effectMode ? 'Choose a response, or resolve the chain.' : 'Choose your cards, then confirm.',
+  cards, max: effectMode || mode === 'codex' ? 1 : 6, exact: !effectMode, effectDetails: effectMode, decline: effectMode ? 'Resolve chain' : 'Cancel',
+  confirm: mode === 'forces' ? 'Reveal & discard' : undefined,
+  summary: ids => mode === 'forces' ? ids.length ? cards.find(c => c.uid === ids[0]).summary : '' : mode === 'codex' ? 'Switch costs 1 play · 2 → 1 remaining' : mode === 'effect' ? ids.length ? 'Pay: Vent 3 (5 − 2) · One of your Units gets Power +3000 until end of turn.' : '' : `${ids.length} / 6 cards selected`,
+});
+result.textContent = JSON.stringify(picked);
+</script></body></html>

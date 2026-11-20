@@ -1,0 +1,74 @@
+[
+  {
+    "type": "sentry",
+    "source": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_29_12 PM.png",
+    "original": "originals/sentry.png",
+    "originalSHA256": "C0CB369E12876EE0C2D0248B4E6C8DA281B4D3E59F3C2AC834EA0B6FCA3ADFE2",
+    "master": "masters/sentry.png",
+    "masterSource": "C:\\Users\\Lenovo\\.codex\\generated_images\\01a0807e-e9c2-7060-9f89-ee39aabe40c2\\exec-7e126f0a-90e2-482b-bde4-112b5219fe77.png",
+    "masterSHA256": "EC0173DDD51B77382D929CC00D59B2F91FF459376CE5ADDD65E828ED82954887",
+    "width": 1060,
+    "height": 1484,
+    "note": "Upload retained as received; canonical master uses user's explicit no-power correction."
+  },
+  {
+    "type": "action",
+    "source": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_29_31 PM.png",
+    "original": "originals/action.png",
+    "originalSHA256": "1BF1BB3C2864FF448A682BBBE9E2D742FBB392995867BC4FF81DB34A84CA13EF",
+    "master": "masters/action.png",
+    "masterSource": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_29_31 PM.png",
+    "masterSHA256": "1BF1BB3C2864FF448A682BBBE9E2D742FBB392995867BC4FF81DB34A84CA13EF",
+    "width": 1060,
+    "height": 1484,
+    "note": null
+  },
+  {
+    "type": "unit-defense-master",
+    "source": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_28_51 PM.png",
+    "original": "originals/unit-defense-master.png",
+    "originalSHA256": "2A310DB43AE8E4DE1997737F8C5705E818FDFF8CFFDA6F23F2A70D981927C26F",
+    "master": "masters/unit-defense-master.png",
+    "masterSource": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_28_51 PM.png",
+    "masterSHA256": "2A310DB43AE8E4DE1997737F8C5705E818FDFF8CFFDA6F23F2A70D981927C26F",
+    "width": 1060,
+    "height": 1484,
+    "note": null
+  },
+  {
+    "type": "force",
+    "source": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_28_38 PM.png",
+    "original": "originals/force.png",
+    "originalSHA256": "F3F86AE4DCF476538CF09C1D6F818EEB243878AD94EC562D2B4B483714D05C20",
+    "master": "masters/force.png",
+    "masterSource": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_28_38 PM.png",
+    "masterSHA256": "F3F86AE4DCF476538CF09C1D6F818EEB243878AD94EC562D2B4B483714D05C20",
+    "width": 1060,
+    "height": 1484,
+    "note": null
+  },
+  {
+    "type": "persona",
+    "source": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 01_01_49 PM.png",
+    "original": "originals/persona.png",
+    "originalSHA256": "F0669B6CAD206BFCE5CD74FB5E9981CEEDC249C2712CE44B2E3D49B9B4C05C14",
+    "master": "masters/persona.png",
+    "masterSource": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 01_01_49 PM.png",
+    "masterSHA256": "F0669B6CAD206BFCE5CD74FB5E9981CEEDC249C2712CE44B2E3D49B9B4C05C14",
+    "width": 1060,
+    "height": 1484,
+    "note": "Latest user-supplied red Pah supersedes older blue Persona reference."
+  },
+  {
+    "type": "codex",
+    "source": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_53_07 PM.png",
+    "original": "originals/codex.png",
+    "originalSHA256": "EEE570D05739F6089521B8AC92404959B89BA4EB2C8C4465C75D76A87A3E0D7E",
+    "master": "masters/codex.png",
+    "masterSource": "C:\\Users\\Lenovo\\Downloads\\ChatGPT Image Oct 8, 2026, 12_53_07 PM.png",
+    "masterSHA256": "EEE570D05739F6089521B8AC92404959B89BA4EB2C8C4465C75D76A87A3E0D7E",
+    "width": 1060,
+    "height": 1484,
+    "note": null
+  }
+]

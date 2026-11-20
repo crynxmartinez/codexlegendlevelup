@@ -1,0 +1,169 @@
+// Update Maguindanao cards: add 3 new cards, update all unit/action texts
+const fs = require('fs');
+const cards = JSON.parse(fs.readFileSync('src/data/cards.json', 'utf8'));
+
+const GUILD = 'Mindanao Arch';
+const DECK = 'Maguindanao';
+const SUB = ['Maguindanao'];
+
+function art(name) { return `assets/cards/web/maguindanao/${name}.webp`; }
+function thumb(name) { return `assets/cards/thumb/maguindanao/${name}.webp`; }
+
+function card(id, name, type, level, power, defense, state, abilities, text, flavor) {
+  return {
+    id, name, type, guild: GUILD, deck: DECK, level, power, defense,
+    subtypes: type === 'Unit' ? SUB : [],
+    state: state ?? null,
+    abilities,
+    text,
+    flavor: flavor || '',
+    artist: null,
+    art: art(name),
+    thumb: thumb(name),
+    guildPrinted: GUILD,
+  };
+}
+
+const ab = (category, marker, scope, requiresState, perTurn, text) => ({
+  category, marker, scope, requiresState: requiresState ?? null, perTurn: perTurn ?? null, text,
+});
+
+// --- 3 NEW cards ---
+const newCards = [
+  card('maguindanao/black-standard-oathkeeper-sitti-maira', 'Black-Standard Oathkeeper, Sitti Maira', 'Unit', 1, 6000, 10000, null,
+    [ab('Conditional', 'green', ['Ally'], null, null, '[Ally]: When placed, search the top 5 cards of your deck for a Level 1 Maguindanaon unit and add it to your hand. Shuffle your deck.')],
+    '[green][Ally]: When placed, search the top 5 cards of your deck for a Level 1 Maguindanaon unit and add it to your hand. Shuffle your deck.',
+    'Every name beneath her banner becomes strength for those who remain.'),
+
+  card('maguindanao/kuta-wato-abyssblade-panglima-zafir', 'Kuta Wato Abyssblade, Panglima Zafir', 'Unit', 2, 9000, 5000, null,
+    [ab('Conditional', 'green', ['Ally'], null, null, "[Ally]: When placed, [Cost: Offer 1 of your other units] Damage one of your opponent's exhausted ally units. This unit gets Power +5000, until end of turn.")],
+    "[green][Ally]: When placed, [Cost: Offer 1 of your other units] Damage one of your opponent's exhausted ally units. This unit gets Power +5000, until end of turn.",
+    'His blade does not mourn the fallen; it carries their final oath.'),
+
+  card('maguindanao/bita-eclipse-wing-pah', 'Bita Eclipse-Wing, Pah', 'Unit', 3, 11000, 0, null,
+    [
+      ab('Activated', 'blue', ['Persona'], null, 1, "[Persona] 1/turn: [Cost: Offer 3 of your units] Damage one of your opponent's ally units. This unit gets Power +10000, until end of turn."),
+      ab('Conditional', 'green', ['Persona'], 'Eclipse', 1, '[Eclipse][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your units] This unit gets Power +5000 for each Maguindanaon unit in your Grave, until end of turn.'),
+    ],
+    "[blue][Persona] 1/turn: [Cost: Offer 3 of your units] Damage one of your opponent's ally units. This unit gets Power +10000, until end of turn.\n[green][red][Eclipse][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your units] This unit gets Power +5000 for each Maguindanaon unit in your Grave, until end of turn.",
+    'When Pah spreads its wings, three final oaths are enough to extinguish the sun.'),
+];
+
+// --- Updated texts for existing cards ---
+const updates = {
+  // L3 Personas
+  'maguindanao/blood-moon-bai-a-labi': {
+    abilities: [
+      ab('Activated', 'blue', ['Persona'], null, 1, '[Persona] 1/turn: [Cost: Offer 1 of your units] Special call 1 Level 1 Maguindanaon unit from your Grave.'),
+      ab('Conditional', 'green', ['Persona'], 'Eclipse', 1, '[Eclipse][Persona] 1/turn: [Cost: Offer 1 of your units] This unit gets Power +3000 for each Maguindanaon unit in your Grave, until end of turn.'),
+    ],
+    text: '[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Special call 1 Level 1 Maguindanaon unit from your Grave.\n[green][red][Eclipse][Persona] 1/turn: [Cost: Offer 1 of your units] This unit gets Power +3000 for each Maguindanaon unit in your Grave, until end of turn.',
+  },
+  'maguindanao/kuta-wato-warcaller-datu-salik': {
+    abilities: [
+      ab('Activated', 'blue', ['Persona'], null, 1, '[Persona] 1/turn: [Cost: Offer 1 of your units] Special call 1 unit from your hand. That unit enters charged.'),
+      ab('Conditional', 'green', ['Persona'], 'Eclipse', 1, '[Eclipse][Persona] 1/turn: [Cost: Offer 2 of your units] Draw 2.'),
+    ],
+    text: '[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Special call 1 unit from your hand. That unit enters charged.\n[green][red][Eclipse][Persona] 1/turn: [Cost: Offer 2 of your units] Draw 2.',
+  },
+  'maguindanao/veiled-eclipse-maharaja': {
+    abilities: [
+      ab('Activated', 'blue', ['Persona'], null, 1, "[Persona] 1/turn: [Cost: Offer 1 of your units] Exhaust one opposing Ally. If it is already exhausted, damage it instead."),
+      ab('Conditional', 'green', ['Persona'], 'Eclipse', null, "[Eclipse][Persona]: When this unit's attack misses, [Cost: Offer 3 of your units] Personify into a Level 3 Maguindanaon unit from your hand or Grave."),
+    ],
+    text: "[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Exhaust one opposing Ally. If it is already exhausted, damage it instead.\n[green][red][Eclipse][Persona]: When this unit's attack misses, [Cost: Offer 3 of your units] Personify into a Level 3 Maguindanaon unit from your hand or Grave.",
+  },
+
+  // L2 Units
+  'maguindanao/buluan-inaul-wardkeeper-dayang-nuraya': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, null, '[Ally]: Whenever another of your Allies is Offered, choose one of your units. That unit gets Power +5000 for that battle.'),
+    ],
+    text: '[green][Ally]: Whenever another of your Allies is Offered, choose one of your units. That unit gets Power +5000 for that battle.',
+  },
+  'maguindanao/illana-lantaka-warder-panglima-jamal': {
+    abilities: [
+      ab('Activated', 'blue', ['Ally'], null, 1, "[Ally] 1/turn: If you Offered an Ally this turn, [Cost: 2 Energy] Damage one of your opponent's exhausted ally units."),
+    ],
+    text: "[blue][Ally] 1/turn: If you Offered an Ally this turn, [Cost: 2 Energy] Damage one of your opponent's exhausted ally units.",
+  },
+  'maguindanao/kuta-wato-gate-bulwark-bai-samira': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, null, "[Ally]: When another of your units is attacked, [Cost: Offer this unit] The attacked unit gets Power +5000 for that battle."),
+    ],
+    text: "[green][Ally]: When another of your units is attacked, [Cost: Offer this unit] The attacked unit gets Power +5000 for that battle.",
+  },
+  'maguindanao/liguasan-reed-eye-harun': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, 1, '[Ally] 1/turn: When this unit attacks, if you Offered an Ally this turn, exhaust one opposing Ally.'),
+    ],
+    text: '[green][Ally] 1/turn: When this unit attacks, if you Offered an Ally this turn, exhaust one opposing Ally.',
+  },
+  'maguindanao/pulangi-wake-cleaver-panglima-farid': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, 1, '[Ally] 1/turn: After this unit attacks, [Cost: Offer 1 of your other units] Charge this unit. If charged this way, its next attack loses 3000 Power.'),
+    ],
+    text: '[green][Ally] 1/turn: After this unit attacks, [Cost: Offer 1 of your other units] Charge this unit. If charged this way, its next attack loses 3000 Power.',
+  },
+
+  // L1 Units
+  'maguindanao/buluan-shell-caller-mayla': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, null, '[Last Oath]: When this unit is Offered, draw 1 card, then discard 1 card.'),
+    ],
+    text: '[green][Last Oath]: When this unit is Offered, draw 1 card, then discard 1 card.',
+  },
+  'maguindanao/illana-tide-harpooner-hakim': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, null, '[Last Oath]: When this unit is Offered, exhaust one opposing Ally.'),
+    ],
+    text: '[green][Last Oath]: When this unit is Offered, exhaust one opposing Ally.',
+  },
+  'maguindanao/kuta-wato-banner-keeper-sitti-rahma': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, null, '[Ally]: When your Persona is attacked, [Cost: Offer this unit] Your Persona gets Power +5000 for that battle.'),
+    ],
+    text: '[green][Ally]: When your Persona is attacked, [Cost: Offer this unit] Your Persona gets Power +5000 for that battle.',
+  },
+  'maguindanao/liguasan-mudblade-nasser': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, null, '[Last Oath]: When this unit is Offered, [Cost: 1 Energy] Special call 1 other Level 1 Maguindanaon unit from your Grave, exhausted.'),
+    ],
+    text: '[green][Last Oath]: When this unit is Offered, [Cost: 1 Energy] Special call 1 other Level 1 Maguindanaon unit from your Grave, exhausted.',
+  },
+  'maguindanao/pulangi-ember-spear-kamil': {
+    abilities: [
+      ab('Conditional', 'green', ['Ally'], null, null, '[Last Oath]: When this unit is Offered, choose one of your units. That unit gets Power +3000, until end of turn.'),
+    ],
+    text: '[green][Last Oath]: When this unit is Offered, choose one of your units. That unit gets Power +3000, until end of turn.',
+  },
+
+  // Actions
+  'maguindanao/pulangi-river-unbound': {
+    abilities: [
+      ab('Action', 'blue', [], null, null, "Play with - [Cost: Offer 1 of your units]\nBreak one of your opponent's barriers."),
+    ],
+    text: "Play with - [Cost: Offer 1 of your units]\nBreak one of your opponent's barriers.",
+  },
+  'maguindanao/crimson-agung-resonance': {
+    abilities: [
+      ab('Action', 'blue', [], null, null, 'Play with - [Cost: 2 Energy]\nFor each Maguindanaon unit in your Grave, choose one of your units. That unit gets Power +1000, until end of turn.'),
+    ],
+    text: 'Play with - [Cost: 2 Energy]\nFor each Maguindanaon unit in your Grave, choose one of your units. That unit gets Power +1000, until end of turn.',
+  },
+};
+
+// Apply updates to existing cards
+for (const c of cards) {
+  if (updates[c.id]) {
+    const u = updates[c.id];
+    if (u.abilities) c.abilities = u.abilities;
+    if (u.text) c.text = u.text;
+  }
+}
+
+// Add new cards
+cards.push(...newCards);
+
+fs.writeFileSync('src/data/cards.json', JSON.stringify(cards, null, 2) + '\n');
+console.log(`Updated Maguindanao cards. Added ${newCards.length} new cards. Total: ${cards.length}`);

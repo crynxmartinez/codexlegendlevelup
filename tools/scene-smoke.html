@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Arena verification</title><link rel="stylesheet" href="/src/ui/style.css"></head>
+<body><div id="app"></div><script type="module">
+// Development-only manual smoke harness. Not an entry in the production build.
+if (!import.meta.env.DEV) throw new Error('Development verification only');
+const evidence={captureAttempts:0,replayDatabaseAttempts:0,originalReplayPreserved:false,contextLoss:false,recovery:false};
+const previous=localStorage.getItem('codex-legends.replays.v1');
+window.MediaRecorder=new Proxy(window.MediaRecorder ?? class {},{construct(){evidence.captureAttempts++;throw new Error('Capture is disabled for this test');}});
+const open=indexedDB.open.bind(indexedDB);
+indexedDB.open=(name,...args)=>{if(name==='codex-legends.saved-games'){evidence.replayDatabaseAttempts++;throw new Error('Replay database must remain dormant');}return open(name,...args);};
+await import('/src/ui/main.ts');
+const panel=document.createElement('aside');
+panel.style.cssText='position:fixed;right:8px;top:8px;z-index:10001;background:#07131d;padding:8px;border:1px solid #83b8cd';
+const check=document.createElement('button');check.textContent='Verify graphics recovery';
+const report=document.createElement('output');report.id='verification-results';report.style.cssText='display:block;max-width:250px;font:11px monospace';
+panel.append(check,report);document.body.append(panel);
+const update=()=>{evidence.originalReplayPreserved=localStorage.getItem('codex-legends.replays.v1')===previous;report.textContent=JSON.stringify(evidence);};
+check.onclick=async()=>{
+  const module=await import('/src/ui/scene/SceneHost.ts');
+  const canvas=document.querySelector('.arena-scene');
+  const context=canvas?.getContext('webgl2');
+  const extension=context?.getExtension('WEBGL_lose_context');
+  if(!extension){report.textContent='Context-loss extension unavailable';return;}
+  const before=document.querySelector('.card')?.getAttribute('data-uid');
+  extension.loseContext();
+  await new Promise(r=>setTimeout(r,100));
+  evidence.contextLoss=!document.querySelector('.arena-scene')&&!document.documentElement.classList.contains('arena3d');
+  module.startScene('auto');
+  await new Promise(r=>setTimeout(r,300));
+  evidence.recovery=document.querySelectorAll('.arena-scene').length===1&&before===document.querySelector('.card')?.getAttribute('data-uid');
+  update();
+};
+setInterval(update,1000);update();
+</script></body></html>

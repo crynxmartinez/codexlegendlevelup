@@ -1,0 +1,316 @@
+/* Default BoardUI presentation. Scoped to the battlefield, not the title menu. */
+body.anime-battlefield {
+  --gold:#8fe8f6; --ui-focus:#99efff; --ui-line:#526e80;
+  --anime-hand-h:clamp(80px,19dvh,205px);
+  --anime-field-h:clamp(62px,17.4dvh,190px);
+  --anime-barrier-h:clamp(36px,9.6dvh,104px);
+  --board-tilt:0deg; --board-perspective:none;
+  background:#07131f url('/ui/anime-v1/arena.webp') center / cover fixed no-repeat;
+  color:#edf8ff;
+}
+body.anime-battlefield #app:has(.board-wrap) { display:block; padding:0; isolation:isolate; background:transparent; }
+body.anime-battlefield #app .board-wrap {
+  position:absolute; inset:0; width:100%; height:100%; padding:0; margin:0;
+  perspective:none; background:none; border:0;
+}
+body.anime-battlefield #app .mats {
+  position:absolute; left:14%; right:17%; top:12%; bottom:12%;
+  width:auto; height:auto; grid-template-columns:minmax(0,1fr); margin:0;
+  display:grid; grid-template-rows:minmax(0,1fr) clamp(38px,5.5dvh,64px) minmax(0,1fr);
+  gap:0; padding:0; overflow:visible; transform:none; transform-style:flat;
+}
+body.anime-battlefield #app .mats::after { display:none; }
+body.anime-battlefield #app .mat,
+body.anime-battlefield #app .mat.foe {
+  grid-column:1; width:100%; height:100%; max-width:none; min-height:0;
+  padding:0; margin:0; border:0; border-radius:0; background:none; box-shadow:none; left:auto; right:auto;
+  display:block; transform:none; container-type:normal;
+}
+body.anime-battlefield #app .mat.foe { grid-row:1; }
+body.anime-battlefield #app .mat:not(.foe) { grid-row:3; }
+body.anime-battlefield #app .mat::before,body.anime-battlefield #app .mat::after { display:none; }
+body.anime-battlefield #app .mat.foe .flip { transform:none; }
+body.anime-battlefield #app .mat-side { display:contents; }
+body.anime-battlefield #app .z-units {
+  position:absolute; inset:9% 13% auto; height:var(--anime-field-h); width:auto;
+  display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:center; justify-items:center;
+  gap:clamp(3px,1vw,20px); padding:0; margin:0; container-type:normal;
+}
+body.anime-battlefield #app .mat.foe .z-units { top:auto; bottom:9%; }
+body.anime-battlefield #app .z-units .slot {
+  height:var(--anime-field-h); width:calc(var(--anime-field-h) * 5 / 7); max-width:100%; max-height:none;
+  aspect-ratio:5/7; border:0; border-radius:4px; background:none; box-shadow:none;
+  transition:box-shadow 150ms; overflow:visible; isolation:isolate;
+}
+body.anime-battlefield #app .slot::before {
+  content:''; position:absolute; inset:-8% -28%; z-index:-1; pointer-events:none;
+  /* Approved Solar Crown alpha: tint only its lettering and outlines, never its gaps. */
+  background:#b9cedb; opacity:.5; transform:scale(.9);
+  -webkit-mask:url('/ui/anime-v1/seal-solar-baybayin.webp') center / contain no-repeat;
+  mask:url('/ui/anime-v1/seal-solar-baybayin.webp') center / contain no-repeat;
+}
+body.anime-battlefield #app .slot:has(.card)::before,
+body.anime-battlefield #app .slot.persona::before { background-color:#5beeff; }
+body.anime-battlefield #app .mat.foe .slot:has(.card)::before,
+body.anime-battlefield #app .mat.foe .slot.persona::before { background-color:#ff546e; }
+body.anime-battlefield #app .slot > .card { width:100%; height:100%; max-width:none; max-height:none; }
+body.anime-battlefield #app .slot .stag { opacity:0; }
+body.anime-battlefield #app .slot.drop { outline:2px solid #8fecff; box-shadow:0 0 18px #57d6f078; cursor:pointer; }
+body.anime-battlefield #app .slot.drop .stag { opacity:1; background:#061523de; padding:6px; border-radius:4px; }
+body.anime-battlefield #app .anime-slot-label {
+  position:absolute; top:calc(100% + 17px); left:50%; transform:translateX(-50%);
+  color:#c0d9e5; font:bold italic clamp(10px,1vw,15px) Roboto,sans-serif;
+  white-space:nowrap; text-transform:uppercase; pointer-events:none;
+}
+body.anime-battlefield #app .mat.foe .anime-slot-label { top:auto; bottom:calc(100% + 12px); }
+body.anime-battlefield #app .heart-btn {
+  top:calc(100% + 33px); bottom:auto; left:50%; transform:translateX(-50%);
+  min-height:28px; min-width:44px; border:0; padding:3px 8px; background:#091421a8;
+  color:#9cf0ff; font-size:15px; cursor:pointer;
+}
+body.anime-battlefield #app .heart-btn .spirit-count { color:#9cf0ff; }
+body.anime-battlefield #app .mat.foe .heart-btn { top:auto; bottom:calc(100% + 29px); }
+body.anime-battlefield #app .pilebox {
+  position:absolute; width:11.5%; height:26%; min-height:42px; aspect-ratio:auto;
+  border:0; border-radius:0; opacity:1; box-shadow:none; padding:0;
+  background:url('/ui/anime-v1/pile-frame.svg') center / 100% 100% no-repeat;
+  overflow:visible; text-align:center;
+}
+body.anime-battlefield #app .pilebox .mini { inset:12% auto 12% 8%; width:32%; height:76%; background-size:contain; background-repeat:no-repeat; }
+body.anime-battlefield #app .pilebox .zlabel { display:block; inset:16% 4% auto 43%; padding:0; background:none; color:#e4f3fa; font:bold italic clamp(9px,.9vw,14px) Roboto,sans-serif; letter-spacing:0; }
+body.anime-battlefield #app .pilebox .n { inset:42% 4% auto 43%; padding:0; background:none; color:white; font:bold italic clamp(15px,1.6vw,25px) Roboto,sans-serif; }
+body.anime-battlefield #app .pilebox .codex-reserve { display:none; }
+body.anime-battlefield #app .z-extra,body.anime-battlefield #app .z-codex,body.anime-battlefield #app .z-exile { left:0; }
+body.anime-battlefield #app .z-check,body.anime-battlefield #app .z-deck,body.anime-battlefield #app .z-grave { right:0; }
+body.anime-battlefield #app .z-extra,body.anime-battlefield #app .z-check { top:5%; }
+body.anime-battlefield #app .z-codex,body.anime-battlefield #app .z-deck { top:36%; }
+body.anime-battlefield #app .z-exile,body.anime-battlefield #app .z-grave { top:67%; }
+body.anime-battlefield #app .mat.foe :is(.z-extra,.z-codex,.z-exile) { left:auto; right:0; }
+body.anime-battlefield #app .mat.foe :is(.z-check,.z-deck,.z-grave) { right:auto; left:0; }
+body.anime-battlefield #app .mat.foe :is(.z-extra,.z-check) { top:67%; }
+body.anime-battlefield #app .mat.foe :is(.z-exile,.z-grave) { top:5%; }
+body.anime-battlefield #app .mat > .z-barrier {
+  position:absolute; bottom:-5%; left:13%; right:13%; width:auto; height:var(--anime-barrier-h); min-height:0; justify-self:stretch;
+  border:0; padding:0; background:none; overflow:visible; pointer-events:auto;
+}
+body.anime-battlefield #app .mat.foe .z-barrier { top:-5%; bottom:auto; }
+body.anime-battlefield #app .barrier-row { gap:clamp(3px,.55vw,10px); width:100%; height:100%; justify-content:center; }
+body.anime-battlefield #app .mat > .z-barrier .barrier { height:var(--anime-barrier-h); width:calc(var(--anime-barrier-h)*5/7); flex:none; border-color:#7ca5b5; }
+body.anime-battlefield #app .barrier.broken { opacity:.25; border:1px dashed #9ebeca; }
+body.anime-battlefield #app .defense-zone {
+  grid-row:2; grid-column:1; height:100%; min-height:0; max-width:none; width:100%;
+  padding:0; margin:0; background:none; border:0; z-index:25;
+}
+body.anime-battlefield #app .defense-zone::before { content:''; position:absolute; left:0; right:0; top:50%; border-top:1px solid #73c4d5; pointer-events:none; }
+body.anime-battlefield #app .dz-label { color:white; font:bold italic clamp(12px,1.6vw,23px) Roboto,sans-serif; letter-spacing:0; padding:8px 45px; background:url('/ui/anime-v1/button-cyan.svg') center/100% 100% no-repeat; }
+body.anime-battlefield #app .dz-row .card { max-height:calc(var(--anime-field-h)*.85); }
+body.anime-battlefield #app .foehand {
+  position:fixed; top:calc(var(--anime-hand-h) * -.48); left:14%; right:17%; height:var(--anime-hand-h);
+  min-height:0; margin:0; padding:0; width:auto; display:flex; align-items:flex-start; justify-content:center;
+  transform:none; z-index:30; pointer-events:none;
+}
+body.anime-battlefield #app .hand-bar {
+  position:fixed; bottom:calc(var(--anime-hand-h) * -.24); left:14%; right:17%; height:var(--anime-hand-h);
+  width:auto; margin:0; padding:0; align-items:flex-start; justify-content:center; background:none; border:0;
+  overflow:visible; z-index:45;
+}
+body.anime-battlefield #app :is(.hand-card,.foehand .fb) {
+  height:var(--anime-hand-h); width:calc(var(--anime-hand-h)*5/7); flex-shrink:0;
+  margin-left:calc(var(--anime-hand-h)*-.26); background-size:cover; border:0;
+}
+body.anime-battlefield #app :is(.hand-card,.foehand .fb):first-child { margin-left:0; }
+body.anime-battlefield #app .foehand .fb { transform:rotate(var(--fan)) translateY(calc(var(--arc)*-1)); }
+body.anime-battlefield #app .hand-card:hover,body.anime-battlefield #app .hand-card.sel { transform:translateY(-24px) scale(1.06); }
+body.anime-battlefield #app .side {
+  width:clamp(160px,19vw,310px); border:0; border-radius:0; box-shadow:none; background:none;
+  padding:0; pointer-events:none; z-index:50; overflow:visible; backdrop-filter:none; filter:none; transform:none;
+}
+body.anime-battlefield #app .side.mine { left:1%; bottom:2%; right:auto; top:auto; width:clamp(160px,12.5vw,250px); }
+body.anime-battlefield #app .side.foe { right:1%; top:2%; left:auto; bottom:auto; }
+body.anime-battlefield #app .side header {
+  position:relative; padding:12px 16px; margin:0; background:#081725ee; border:2px solid #83dced;
+  transform:skewX(-6deg); box-shadow:inset 0 0 0 3px #244253,0 4px 20px #0009;
+  pointer-events:auto;
+}
+body.anime-battlefield #app .side.foe header { border-color:#ed6b87; }
+body.anime-battlefield #app .side header > * { transform:skewX(6deg); }
+body.anime-battlefield #app .side h3 { color:white; font:bold italic clamp(16px,1.65vw,25px) Roboto,sans-serif; letter-spacing:0; margin:0 0 7px; }
+body.anime-battlefield #app .side :is(.s-phase,.s-plays,.plays-refresh,.mobile-avatar,.hud-turn) { display:none; }
+body.anime-battlefield #app .side :is(.s-persona,.s-hand) { font-size:11px; display:inline-flex; gap:5px; margin-right:10px; }
+body.anime-battlefield #app .side .s-barriers { margin-block:5px; font-weight:bold; }
+/* Supplemental symbols keep the existing resource labels, values and pips. */
+body #app .side .stat-symbol-label,
+body .inspect .chipstat > .stat-symbol-label { display:inline-flex; align-items:center; gap:4px; }
+body #app .side .stat-symbol-label > .stat-symbol { width:16px; height:16px; flex:0 0 16px; }
+body .inspect .chipstat > .stat-symbol-label > .stat-symbol { width:20px; height:20px; flex:0 0 20px; }
+body.anime-battlefield #app .side .state-progress { width:100%; color:#dcf0f7; border:0; background:transparent; padding:5px 0; font-size:13px; }
+body.anime-battlefield #app .side .chip { color:#c8e7f1; border-color:#699caf; }
+body.anime-battlefield #app .anime-portrait {
+  display:block; position:absolute; width:64%; height:190px; bottom:75%; left:-4%; object-fit:cover; object-position:center 16%;
+  background:#142737; border:3px solid #9abeca; border-radius:3px 20px 3px 20px; box-shadow:0 0 0 2px #18384b,0 0 20px #5ae0f52b;
+}
+body.anime-battlefield #app .side.foe .anime-portrait { left:auto; right:0; top:75%; bottom:auto; border-color:#d7a4af; }
+body.anime-battlefield #app .side.mine .actions { position:fixed; right:1%; bottom:2%; width:15%; pointer-events:auto; }
+body.anime-battlefield #app .side.mine .actions :is(.hint,.mobile-phase,.mobile-match-status) { display:none; }
+body.anime-battlefield #app .turn-btn { min-height:48px; padding:10px 16px; width:100%; color:white; border:0; background:url('/ui/anime-v1/button-cyan.svg') center / 100% 100% no-repeat; font:bold italic clamp(12px,1.3vw,19px) Roboto,sans-serif; }
+body.anime-battlefield #app .turn-btn.waiting { opacity:.65; }
+body.anime-battlefield .anime-chrome { pointer-events:none; }
+body.anime-battlefield .anime-turn { position:fixed; top:10%; left:1.5%; width:12%; color:white; font:bold italic clamp(16px,2vw,32px) Roboto,sans-serif; line-height:1; text-shadow:2px 3px #07121e; }
+body.anime-battlefield .anime-turn strong { display:block; font-size:1.5em; }
+body.anime-battlefield .anime-turn.opponent { color:#ffb9c6; }
+body.anime-battlefield .anime-phases { position:fixed; top:30%; left:0; width:13%; margin:0; padding:0; display:grid; gap:6px; list-style:none; }
+body.anime-battlefield .anime-phases li { padding:10px 14px; color:#94a8b4; font:bold italic clamp(13px,1.7vw,25px) Roboto,sans-serif; text-transform:uppercase; background:url('/ui/anime-v1/button-silver.svg') center/100% 100% no-repeat; }
+body.anime-battlefield .anime-phases li.current { color:white; background-image:url('/ui/anime-v1/button-cyan.svg'); text-shadow:0 0 12px #5aeaff; }
+body.anime-battlefield .anime-plays { position:fixed; bottom:10%; left:24%; padding:8px 16px; font:bold italic 15px Roboto,sans-serif; text-transform:uppercase; background:url('/ui/anime-v1/button-silver.svg') center/100% 100% no-repeat; }
+body.anime-battlefield .log-overlay { display:none; } /* Full history stays in the existing action rail. */
+body.anime-battlefield .rail { top:auto; bottom:10%; right:1%; z-index:70; }
+body.anime-battlefield .duel-access { top:auto; bottom:8px; right:17%; }
+body.anime-battlefield :is(.rail-btn,.rail-more,.duel-access button) { border-color:#6b9aad; color:#d6f6ff; background:#0a1b2aea; }
+body.anime-battlefield .mobile-orientation-tip { display:none; }
+
+/* Reuse the existing prompts, focus/inspection, timing and cancellation. */
+body.anime-battlefield :is(.duel-dialog,.cc-dialog,.modal,.inspect .body) { border-color:#8dbbce; background:linear-gradient(140deg,#142638f7,#07101bf5); box-shadow:inset 0 0 0 3px #223e51,0 12px 45px #000b; }
+body.anime-battlefield :is(.cc-head h3,.modal-head h3,.duel-title) { color:#eefaff; font-style:italic; }
+body.anime-battlefield .duel-panel:not(.duel-expanded):not(.board-decision) .cc-dialog {
+  height:min(440px,calc(var(--duel-vh,100dvh) - 24px)); max-height:calc(var(--duel-vh,100dvh) - 24px);
+}
+body.anime-battlefield .duel-panel:not(.duel-expanded):not(.board-decision) .cc-dialog:has(.cc-grid > .cc-card:only-child) { width:min(640px,calc(100vw - 24px)); }
+body.anime-battlefield :is(.cc-card.selected,.pick.selected,.decision-selected) { border-color:#9af0ff; box-shadow:0 0 12px #71d9ef88; }
+body.anime-battlefield :is(.cc-actions,.modal-actions) button { border-color:#73acc0; color:white; background:#173247; }
+body.anime-battlefield :is(.phase-banner,.turn-banner,.game-start-banner) { border-color:#87dfee; background:linear-gradient(100deg,#071625ee,#16485ded,#071625ee); color:white; font-style:italic; }
+body.anime-battlefield .chain-cue-card { border-color:#90eaff; }
+body.anime-battlefield .chain-cue-card.foe { border-color:#fa7994; }
+body.anime-battlefield :is(.banner,.match-end) { background:radial-gradient(ellipse,#15394de8,#050b16f5); color:white; }
+body.anime-battlefield :is(.duel-notice,.battle-feedback,.check-toast,.auto-desc) { border-color:#8abbd0; background:#091a2cf5; color:#eefaff; }
+body.anime-battlefield .phase-tab { display:none; }
+/* Quiet redundant controls; the main turn heading and existing Settings remain. */
+body.anime-battlefield .duel-access .duel-home,
+body.anime-battlefield .priority-light.turn { display:none; }
+body.anime-battlefield .anime-phases li { text-align:center; }
+/* Eligibility uses the existing legal-action/choice markers, never card type.
+   A steady halo avoids continuous pulsing and preserves reduced-motion behavior. */
+body.anime-battlefield .decision-target:not(.decision-selected),
+body.anime-battlefield:not(:has(.duel-panel)) #app .hand-card:not(.dim):not(.sel),
+body.anime-battlefield:not(:has(.duel-panel)) #app .card.has-ability:not(.sel) {
+  box-shadow:0 0 0 1px #8ee9ffb3,0 0 9px #25cfff80,0 0 19px #25cfff38;
+}
+body.anime-battlefield .cc-card:not(.selected):not(.cc-unavailable):has(.cc-pick[aria-pressed]) .cc-art {
+  box-shadow:0 0 0 1px #8ee9ff99,0 0 10px #25cfff66,0 0 18px #25cfff26;
+}
+body.anime-battlefield #app .card.targetable:not(.decision-selected) {
+  box-shadow:0 0 0 2px #f2777a,0 0 11px #f2777a99,0 0 22px #f2777a40;
+}
+/* A pending choice owns emphasis. Combatants remain context, not competing
+   actions. Keep the original declaration/resolution motion and live source cue. */
+body.anime-battlefield:has(.cc-backdrop[data-choice-mode="decision"]) #app
+  .card:is(.battle-source,.battle-target,.supporting):not(.decision-target):not(.effect-source-active) {
+  box-shadow:none;
+  outline-width:2px;
+  outline-style:solid;
+  outline-offset:2px;
+}
+body.anime-battlefield:has(.cc-backdrop[data-choice-mode="decision"]) #app
+  .card.supporting:not(.decision-target):not(.effect-source-active) { outline:1px solid #7db3ff88; }
+body.anime-battlefield:has(.cc-backdrop[data-choice-mode="decision"]):has(.battle-source)
+  .decision-target:not(.decision-selected) {
+  box-shadow:0 0 8px #25cfff70,0 0 12px #25cfff22;
+}
+body.anime-battlefield:has(.cc-backdrop[data-choice-mode="decision"]):has(.battle-source)
+  .decision-selected {
+  /* Solid outline + existing checkmark convey selection without a large bloom. */
+  box-shadow:0 0 6px #f4cf7255 !important;
+}
+body.anime-battlefield:has(.cc-backdrop[data-choice-mode="decision"]):has(.battle-source)
+  .cc-card:not(.selected):not(.cc-unavailable):has(.cc-pick[aria-pressed]) .cc-art {
+  box-shadow:0 0 8px #25cfff60;
+}
+body.anime-battlefield .duel-panel .duel-controls button,
+body.anime-battlefield .duel-restore {
+  color:#e9faff; border:1px solid #73acc0; background:#173247;
+  box-shadow:inset 0 0 0 1px #294a5c;
+}
+body.anime-battlefield .duel-panel .duel-controls button:hover { background:#255067; }
+body.anime-battlefield #app .anime-zone-plays {
+  position:absolute; top:calc(100% + 8px); left:0; width:100%; box-sizing:border-box;
+  padding:7px 8px; text-align:center; white-space:nowrap; pointer-events:none;
+  color:white; font:bold italic clamp(10px,.9vw,15px) Roboto,sans-serif; text-transform:uppercase;
+  background:url('/ui/anime-v1/button-silver.svg') center/100% 100% no-repeat;
+}
+body.anime-battlefield #app .mat.foe .anime-zone-plays { top:auto; bottom:calc(100% + 8px); }
+body.anime-battlefield .auto-desc { left:14px; right:auto; top:14px; transform:translateX(-32px); max-height:42dvh; overflow:auto; }
+body.anime-battlefield .auto-desc.show { transform:translateX(0); }
+body.anime-battlefield .auto-desc .ad-text:empty { display:none; }
+body.anime-battlefield #app .defense-zone.scored::before { opacity:.25; }
+body.anime-battlefield #app .bb-side {
+  display:grid; grid-template-columns:minmax(0,1fr) auto; gap:3px 14px;
+  width:30%; max-width:30%; padding:9px 16px; box-sizing:border-box;
+  background:#0a1b2af2; border:1px solid #78bbce; border-left:4px solid #86e9f7;
+  border-radius:5px; box-shadow:0 4px 15px #0008;
+}
+body.anime-battlefield #app .bb-side.atkside { left:0; border-color:#ee8598; }
+body.anime-battlefield #app .bb-side.dfnside { right:0; }
+body.anime-battlefield #app .bb-role { grid-column:1; color:#d3e9f3; font:bold italic 12px Roboto,sans-serif; letter-spacing:.08em; }
+body.anime-battlefield #app .bb-side .who { grid-column:1; grid-row:2; display:block; font-size:12px; color:#d3e1eb; letter-spacing:0; }
+body.anime-battlefield #app .bb-side .n { grid-column:2; grid-row:1/3; align-self:center; font:bold italic clamp(20px,2.1vw,34px) Roboto,sans-serif; color:#9aeeff; }
+body.anime-battlefield #app .bb-side.atkside .n { color:#ff9baa; }
+body.anime-battlefield #app .bb-verdict { max-width:34%; padding:6px 12px; text-align:center; background:#081827ee; font-size:clamp(10px,1vw,15px); }
+body.anime-battlefield #app .dz-card.foe { transform:none; }
+body.anime-battlefield .phase-banner {
+  width:min(1050px,84vw); min-height:clamp(70px,15dvh,150px); padding:18px 8%;
+  border:0; border-radius:0; box-shadow:none; box-sizing:border-box;
+  justify-content:center; flex-wrap:wrap; gap:0 16px;
+  background:url('/ui/anime-v1/banner-cyan.svg') center/100% 100% no-repeat;
+}
+body.anime-battlefield .phase-banner.foe { background-image:url('/ui/anime-v1/banner-red.svg'); }
+body.anime-battlefield .phase-banner .phase-text { color:white; font:bold italic clamp(21px,3vw,48px) Roboto,sans-serif; letter-spacing:.02em; }
+body.anime-battlefield .phase-banner .phase-prefix { color:#d7eff8; font:bold italic clamp(11px,1.3vw,20px) Roboto,sans-serif; }
+body.anime-battlefield .side .chip { background-image:url('/ui/anime-v1/lock-closed.svg'); background-position:4px center; background-size:12px; background-repeat:no-repeat; padding-left:20px; }
+body.anime-battlefield .side .state-progress .chip.on { background-image:url('/ui/anime-v1/lock-open.svg'); }
+body.anime-battlefield :is(button,[role=button]):focus-visible { outline:2px solid #a1efff; outline-offset:3px; }
+
+@media (max-height:600px), (max-width:1000px) {
+  body.anime-battlefield { --anime-hand-h:clamp(70px,20dvh,120px); --anime-field-h:clamp(59px,17dvh,102px); --anime-barrier-h:clamp(31px,9dvh,54px); }
+  body.anime-battlefield #app .mats { left:12%; right:15%; top:12%; bottom:12%; grid-template-rows:minmax(0,1fr) 32px minmax(0,1fr); }
+  body.anime-battlefield #app .hand-bar,body.anime-battlefield #app .foehand { left:12%; right:15%; }
+  body.anime-battlefield #app .z-units { inset:0 14% auto; gap:5px; }
+  body.anime-battlefield #app .mat.foe .z-units { top:auto; bottom:0; }
+  body.anime-battlefield #app .pilebox { width:12.5%; min-height:36px; height:28%; }
+  body.anime-battlefield #app .pilebox .zlabel { font-size:9px; }
+  body.anime-battlefield #app .pilebox .n { font-size:16px; }
+  body.anime-battlefield #app .anime-slot-label { top:calc(100% + 2px); font-size:10px; }
+  body.anime-battlefield #app .mat.foe .anime-slot-label { bottom:calc(100% + 4px); }
+  body.anime-battlefield #app .heart-btn { top:calc(100% + 15px); min-height:22px; font-size:12px; padding:2px; background:#07131ed9; }
+  body.anime-battlefield #app .mat.foe .heart-btn { bottom:calc(100% + 16px); top:auto; }
+  body.anime-battlefield #app .side,body.anime-battlefield #app .side.mine { width:11%; min-width:88px; }
+  body.anime-battlefield #app .side.foe { width:13%; }
+  body.anime-battlefield #app .side header { display:block; padding:5px 6px; }
+  body.anime-battlefield #app .side h3 { font-size:14px; margin:0 0 3px; }
+  body.anime-battlefield #app .side :is(.s-persona,.s-hand) { font-size:9px; margin-right:4px; }
+  body.anime-battlefield #app .side .stat { gap:3px; }
+  body.anime-battlefield #app .side .stat.s-barriers { display:flex; font-size:10px; margin:2px 0; }
+  body.anime-battlefield #app .side .state-progress { position:static; display:flex; flex-wrap:wrap; justify-content:space-between; font-size:10px; min-height:30px; padding:0; }
+  body.anime-battlefield #app .side .chip { display:inline; padding:2px 2px 2px 16px; font-size:8px; background-position:2px center; background-size:10px; }
+  body.anime-battlefield #app .anime-portrait { height:54px; width:70%; bottom:92%; }
+  body.anime-battlefield #app .side.foe .anime-portrait { top:92%; }
+  body.anime-battlefield .anime-turn { top:3%; left:1%; font-size:13px; }
+  body.anime-battlefield .anime-phases { width:11%; top:26%; gap:3px; }
+  body.anime-battlefield .anime-phases li { padding:6px 8px; font-size:12px; }
+  body.anime-battlefield .anime-plays { left:18%; bottom:5%; font-size:10px; padding:7px 12px; }
+  body.anime-battlefield #app .side.mine .actions { width:14%; bottom:2%; }
+  body.anime-battlefield #app .turn-btn { min-height:44px; padding:6px; font-size:11px; }
+  body.anime-battlefield .rail { top:auto; bottom:15%; right:1%; height:auto; }
+  body.anime-battlefield .rail.open { bottom:15%; max-width:75vw; }
+  body.anime-battlefield .duel-access { top:auto; bottom:2%; right:16%; }
+  body.anime-battlefield .duel-access button { min-width:44px; padding:6px; font-size:10px; }
+  body.anime-battlefield #app .dz-label { font-size:12px; padding:6px 30px; }
+  body.anime-battlefield #app .bb-side { padding:4px 7px; gap:1px 4px; width:31%; max-width:31%; }
+  body.anime-battlefield #app .bb-role { font-size:9px; }
+  body.anime-battlefield #app .bb-side .who { font-size:9px; }
+  body.anime-battlefield #app .bb-side .n { font-size:19px; }
+  body.anime-battlefield #app .anime-zone-plays { top:calc(100% + 3px); padding:5px 2px; font-size:9px; }
+  body.anime-battlefield #app .mat.foe .anime-zone-plays { top:auto; bottom:calc(100% + 3px); }
+  body.anime-battlefield .auto-desc { left:8px; top:8px; width:min(300px,40vw); max-height:48dvh; }
+}
+@media (prefers-reduced-motion:reduce) {
+  body.anime-battlefield #app .hand-card { transition:none; }
+}

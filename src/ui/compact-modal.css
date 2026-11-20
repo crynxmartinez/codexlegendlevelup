@@ -1,0 +1,212 @@
+/* Compact modal v3: approved silver frame and readable task-sized surfaces.
+   Engine decisions remain in the existing controllers. Board docks and the
+   approved inspector have separate geometry and are deliberately excluded. */
+.modal-v3 {
+  --compact-ink: #0b2b48;
+  --compact-muted: #365b76;
+  --compact-surface: linear-gradient(125deg,#f4fbff,#deedf7);
+  --compact-silver: linear-gradient(125deg,#7996a8,#effaff 13%,#9bafba 31%,#f8fdff 63%,#8ba3b5);
+  --compact-navy: linear-gradient(110deg,#16426c,#061a31);
+  --compact-pad: 20px;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) {
+  align-items:center; padding:20px; background:rgb(3 13 24 / 20%); backdrop-filter:none;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog {
+  position:relative; isolation:isolate; box-sizing:border-box;
+  width:min(900px,calc(var(--duel-vw,100vw) - 40px));
+  height:auto; max-width:100%; max-height:calc(var(--duel-vh,100dvh) - 40px);
+  min-height:0; padding:8px var(--compact-pad) 10px; gap:12px;
+  color:var(--compact-ink); background:var(--compact-silver);
+  border:0; border-radius:0; box-shadow:none; overflow:hidden;
+  clip-path:polygon(16px 0,calc(100% - 16px) 0,100% 16px,100% calc(100% - 16px),calc(100% - 16px) 100%,16px 100%,0 calc(100% - 16px),0 16px);
+  filter:drop-shadow(0 10px 22px #0009); scrollbar-width:thin; scrollbar-color:#7092aa #dceaf4;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog::before,
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog::after {
+  content:''; position:absolute; pointer-events:none; z-index:-1;
+  clip-path:polygon(13px 0,calc(100% - 13px) 0,100% 13px,100% calc(100% - 13px),calc(100% - 13px) 100%,13px 100%,0 calc(100% - 13px),0 13px);
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog::before { inset:4px; background:#285c72; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog::after { inset:7px; background:var(--compact-surface); border:1px solid #f9fdff; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head) {
+  position:relative; top:auto; margin:0 calc(8px - var(--compact-pad)); padding:3px 10px 3px 14px;
+  min-height:48px; box-sizing:border-box; gap:6px 10px; flex-wrap:wrap;
+  color:#fff; background:var(--compact-navy); border:0; border-bottom:2px solid #0acee4; border-radius:0;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head)::before,
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head)::after { display:none; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head) h3 {
+  flex:1 1 210px; font:900 italic 24px/1.15 Arial,sans-serif; color:#fff; letter-spacing:0; margin:0; text-transform:uppercase;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head) button {
+  min-width:44px; min-height:44px; padding:7px 10px; border:2px solid #b6d1df; border-radius:6px;
+  background:linear-gradient(#204d6c,#0a2239); color:#fff; box-shadow:inset 0 0 0 1px #63849c; font-size:14px;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-controls { gap:7px; margin-left:auto; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-controls button { padding:0; width:44px; height:44px; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .cc-selected-count {
+  display:block; padding:0; border:0; background:transparent; color:#fff; font:700 italic 15px/1.25 Arial,sans-serif;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-instruction,.sub,.duel-body,.cc-detail-rules) {
+  color:var(--compact-ink); font-size:17px; line-height:1.45;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-instruction,.sub) { max-height:none; overflow:visible; margin:0; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .cc-instruction:empty { display:none; }
+/* Retain keyword hues, using dark variants on these pale reading surfaces. */
+body .modal-v3 :is(.cc-body,.duel-body,.cc-summary) :is(.text-sipol,.text-grace) { color:#596800; }
+body .modal-v3 :is(.cc-body,.duel-body,.cc-summary) :is(.text-cost,.text-offer,.text-vent) { color:#944409; }
+body .modal-v3 :is(.cc-body,.duel-body,.cc-summary) :is(.text-andukha,.text-ethereal) { color:#096558; }
+body .modal-v3 :is(.cc-body,.duel-body,.cc-summary) .text-garahana { color:#70408d; }
+body .modal-v3 :is(.cc-body,.duel-body,.cc-summary) .text-badge { box-shadow:0 0 0 1px #0b2b4866; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-footer,.duel-dialog>.row) {
+  position:static; flex:none; margin:0; padding:9px 0 0; min-height:44px;
+  border-top:1px solid #9bb4c5; background:transparent; gap:8px; color:var(--compact-ink);
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .cc-actions { width:auto; max-width:100%; margin-left:auto; margin-right:0; gap:8px; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-actions,.duel-dialog>.row) button,
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-read,.cc-browse-action) {
+  min-height:44px; min-width:120px; height:auto; padding:8px 18px; border:3px solid #bdd4e1; border-radius:4px;
+  color:#fff; background:linear-gradient(#194567,#071f33); box-shadow:inset 0 0 0 1px #6e8ea4;
+  font:800 italic 17px/1.2 Arial,sans-serif; letter-spacing:0; text-transform:uppercase;
+  clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-actions,.duel-dialog>.row) button.primary {
+  background:linear-gradient(115deg,#007ba6,#06466c); border-color:#4de5f0; box-shadow:inset 0 0 0 1px #abf9ff;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-actions,.duel-dialog>.row) button.danger { background:linear-gradient(#8b3048,#51172d); border-color:#d9b3c0; }
+body .modal-bg.duel-panel.modal-v3.modal-v2:is(:not(.board-decision),.board-list-open) :is(.cc-actions,.duel-dialog>.row) button:disabled {
+  opacity:1; color:#415b70; background:#d7e3ec; border-color:#a8bfce; box-shadow:none; filter:none; text-shadow:none;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(button,input,select,summary,a):focus-visible {
+  outline:3px dashed #007e9d; outline-offset:2px;
+}
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head) :focus-visible { outline-color:#fff; outline-offset:-5px; }
+body .modal-v3 .duel-restore { color:#fff; background:var(--compact-navy); border:3px solid #c1d8e6; border-right-color:#22d7ea; font-size:16px; }
+/* Non-board selectors: header/footer stay put; the middle is the only reader. */
+body .modal-bg.duel-panel.modal-v3.modal-v2.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog.duel-dialog {
+  --choice-art-width:168px; --choice-art-height:235px;
+  width:min(var(--choice-width,900px),calc(var(--duel-vw,100vw) - 40px));
+  display:flex; flex-direction:column; height:auto !important; max-height:calc(var(--duel-vh,100dvh) - 40px) !important; overflow:hidden;
+}
+body .modal-bg.duel-panel.modal-v3.modal-v2.cc-managed:is(:not(.board-decision),.board-list-open).duel-expanded .cc-dialog { --choice-art-width:194px; --choice-art-height:272px; width:min(960px,calc(var(--duel-vw,100vw) - 40px)); }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-body {
+  display:flex; flex-direction:column; gap:12px; min-height:0; min-width:0; overflow:auto; flex:1 1 auto;
+  padding:2px; scrollbar-gutter:stable; overscroll-behavior:contain;
+}
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-content { flex:0 0 auto; min-height:0; overflow:visible; align-items:flex-start; gap:12px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-grid {
+  container-type:normal; height:auto; max-height:none; min-height:0; align-items:stretch; overflow-x:auto; overflow-y:visible;
+  padding:6px; gap:16px; scrollbar-width:thin; scrollbar-color:#7092aa #dceaf4;
+}
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-card {
+  flex:0 0 calc(var(--choice-art-width) + 12px); width:calc(var(--choice-art-width) + 12px); height:auto; min-height:0;
+  padding:3px; border:1px solid transparent; border-radius:10px; background:transparent; box-shadow:none; overflow:visible; gap:5px;
+}
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-pick { flex:1 0 auto; display:flex; padding:0; background:transparent; box-shadow:none; border:0; color:var(--compact-ink); border-radius:8px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-art { width:var(--choice-art-width); height:var(--choice-art-height); min-height:var(--choice-art-height); flex:0 0 var(--choice-art-height); align-self:center; border-radius:8px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-art img { object-fit:contain; filter:drop-shadow(0 3px 3px #0a254442); }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-name {
+  display:block; height:auto; min-height:42px; max-height:none; margin:7px 0 0; padding:7px 6px 3px;
+  font:700 italic 16px/1.3 Arial,sans-serif; text-align:center; white-space:normal; overflow:visible; overflow-wrap:anywhere;
+  border:1px solid #a5becf; border-radius:9px 9px 0 0; background:#f5fbff; -webkit-line-clamp:unset;
+}
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) :is(.cc-meta,.cc-condition) {
+  display:block; width:100%; height:auto; max-height:none; padding:2px 5px; color:var(--compact-muted); background:#f5fbff;
+  font-size:14px; line-height:1.3; white-space:normal; overflow:visible; -webkit-line-clamp:unset;
+}
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-meta:last-child { padding-bottom:5px; border-radius:0 0 8px 8px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-read { position:static; width:100%; min-width:0; margin-top:auto; min-height:44px; padding:5px 12px; font-size:16px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-read::before { display:none; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-card.selected { border-color:transparent; background:transparent; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-card.selected .cc-art { outline:3px solid #0cc9df; outline-offset:3px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-number { top:0; left:auto; right:0; width:32px; height:32px; border-radius:7px; border:2px solid #18b9ce; background:#a3f5fa; color:#092e49; font-size:22px; line-height:27px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-unavailable .cc-art { opacity:.6; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-unavailable-reason { display:block; color:#783b28; background:#fff1e5; border-radius:6px; font-size:14px; line-height:1.35; padding:5px; overflow:visible; max-height:none; -webkit-line-clamp:unset; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-scroll { width:44px; min-width:44px; flex:0 0 44px; border:1px solid #9bb9cc; color:#103c60; background:#e7f4fb; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-summary { height:auto; max-height:none; overflow:visible; margin:0; padding:6px 10px; color:var(--compact-ink); background:#e0eff8; border:1px solid #adc5d4; border-left:3px solid #13b8d2; border-radius:8px; font-size:16px; line-height:1.4; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) [hidden] { display:none !important; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-response-context { max-height:none; overflow:visible; color:var(--compact-ink); background:#eef8fe; border:1px solid #a4bdcf; border-left:3px solid #16b9d0; padding:10px 12px; border-radius:10px; font-size:16px; line-height:1.45; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-response-text { font-size:16px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-source-details summary { color:#123c5f; min-height:44px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-response-source { padding:0; min-width:54px; flex:none; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-response-source img { width:54px; height:76px; object-fit:contain; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-toolbar { max-height:none; flex-wrap:wrap; overflow:visible; color:var(--compact-ink); }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) :is(.cc-toolbar,.cc-navigation) :is(input,select,button) { min-height:44px; background:#f4fbff; color:#123a58; border:1px solid #8baabe; border-radius:6px; font-size:16px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-navigation { display:flex; flex-wrap:wrap; flex:none; gap:10px 20px; color:#163b57; font-size:16px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-navigation label { display:flex; align-items:center; gap:8px; color:#163b57; font:600 16px/1.4 Arial,sans-serif; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-payment-details { color:var(--compact-ink); font-size:16px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-payment-details summary { min-height:44px; display:flex; align-items:center; }
+/* Single-card and effect readers share their supplied detail data. */
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog.duel-dialog.cc-spotlight { width:min(740px,calc(var(--duel-vw,100vw) - 40px)); max-height:min(660px,calc(var(--duel-vh,100dvh) - 40px)) !important; --choice-art-width:200px; --choice-art-height:280px; }
+body .modal-bg.duel-panel.modal-v3.modal-v2.cc-managed.duel-expanded:is(:not(.board-decision),.board-list-open) .cc-dialog.cc-spotlight { width:min(900px,calc(var(--duel-vw,100vw) - 40px)); --choice-art-width:220px; --choice-art-height:308px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-spotlight .cc-grid { flex:0 0 calc(var(--choice-art-width) + 24px); }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-spotlight :is(.cc-name,.cc-meta,.cc-condition) { display:none; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail { padding:12px; min-width:0; overflow:visible; background:transparent; color:var(--compact-ink); border-radius:10px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail h4 { font:800 italic 24px/1.2 Arial,sans-serif; color:#0b2b48; margin:0 0 8px; overflow-wrap:anywhere; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail-stats { color:var(--compact-muted); font-size:16px; line-height:1.4; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail .cc-instruction { margin:8px 0 12px; padding:12px; border:1px solid #a5bece; border-radius:12px; background:#f4fbff; box-shadow:inset 0 0 0 2px #fff; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail-rules { font-size:17px; line-height:1.45; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-grid { flex:0 0 240px; flex-direction:column; max-height:none; overflow:visible; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-card { width:100%; flex:0 0 auto; padding:7px; border:1px solid #a6becf; background:#f4fbff; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-pick { display:grid; grid-template-columns:54px minmax(0,1fr); gap:6px 10px; text-align:left; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-art { width:54px; height:76px; min-height:76px; grid-row:1 / 4; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-name { padding:0 20px 0 0; margin:0; border:0; border-radius:0; font-size:16px; text-align:left; min-height:0; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-detail { display:flex; gap:14px; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail-art { width:150px; height:210px; object-fit:contain; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-browse .cc-grid { flex-wrap:wrap; justify-content:center; max-height:none; overflow:visible; }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog.cc-empty { width:min(560px,calc(var(--duel-vw,100vw) - 40px)); }
+body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-empty .cc-content { min-height:60px; }
+/* Content-sized confirmations, with art only where the existing task has it. */
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog:has(.skill-confirmation) { width:min(540px,calc(var(--duel-vw,100vw) - 40px)); height:auto; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog:has(.skill-confirmation .cc-response-context) { width:min(740px,calc(var(--duel-vw,100vw) - 40px)); }
+body .modal-bg.duel-panel.modal-v3.duel-confirmation .duel-dialog { width:min(540px,calc(var(--duel-vw,100vw) - 40px)); height:auto; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .skill-confirmation { gap:12px; padding:6px 0; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .skill-confirmation-effect { color:#0b2b48; font-size:17px; line-height:1.45; margin:0; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .skill-confirmation .cc-response-context { color:#0b2b48; background:#f4fbff; border:1px solid #a4bdce; border-left:3px solid #19bad2; max-height:none; overflow:visible; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .skill-confirmation .cc-response-text { font-size:16px; line-height:1.45; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .skill-confirmation-payment { color:#365b76; font-size:16px; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .skill-confirmation-payment strong { background:#e5f4fa; color:#153d5c; border-color:#8faec2; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog:has(.action-cast-preview) { width:min(740px,calc(var(--duel-vw,100vw) - 40px)); height:auto; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .action-cast-preview { align-items:flex-start; gap:18px; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .action-cast-preview>img { width:180px; height:252px; max-width:32%; object-fit:contain; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .action-cast-name { font:800 italic 22px/1.2 Arial,sans-serif; color:#0b2b48; }
+body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .action-cast-rules { font-size:17px; line-height:1.45; color:#0b2b48; }
+/* Landscape keeps readable text and a persistent 44px action row. */
+@media (max-width:999px), (max-height:560px) {
+  .modal-v3 { --compact-pad:14px; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) { padding:12px; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .duel-dialog { max-height:calc(var(--duel-vh,100dvh) - 24px); width:min(780px,calc(var(--duel-vw,100vw) - 24px)); gap:8px; padding-top:7px; padding-bottom:8px; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head) { min-height:46px; padding:2px 6px 2px 10px; flex-wrap:nowrap; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head) h3 { flex:1 1 120px; font-size:20px; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-instruction,.sub,.duel-body,.cc-detail-rules,.skill-confirmation-effect,.action-cast-rules) { font-size:16px; line-height:1.4; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .cc-selected-count { font-size:13px; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-actions,.duel-dialog>.row) button { min-width:100px; min-height:44px; font-size:16px; padding:6px 12px; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-footer,.duel-dialog>.row) { padding-top:6px; }
+  body .modal-bg.duel-panel.modal-v3.modal-v2.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog.duel-dialog { --choice-art-width:116px; --choice-art-height:162px; width:min(780px,calc(var(--duel-vw,100vw) - 24px)); display:flex; height:auto !important; max-height:calc(var(--duel-vh,100dvh) - 24px) !important; }
+  body .modal-bg.duel-panel.modal-v3.modal-v2.cc-managed:is(:not(.board-decision),.board-list-open).duel-expanded .cc-dialog { --choice-art-width:134px; --choice-art-height:188px; width:calc(var(--duel-vw,100vw) - 24px); }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-body { gap:8px; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-content { overflow:visible; align-items:flex-start; flex:0 0 auto; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-grid { height:auto; max-height:none; gap:10px; overflow-x:auto; overflow-y:visible; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-name { font-size:16px; min-height:42px; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog.duel-dialog.cc-spotlight { width:min(740px,calc(var(--duel-vw,100vw) - 24px)); max-height:calc(var(--duel-vh,100dvh) - 24px) !important; --choice-art-width:130px; --choice-art-height:182px; }
+  body .modal-bg.duel-panel.modal-v3.modal-v2.cc-managed.duel-expanded:is(:not(.board-decision),.board-list-open) .cc-dialog.cc-spotlight { width:calc(var(--duel-vw,100vw) - 24px); --choice-art-width:150px; --choice-art-height:210px; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-spotlight .cc-grid { flex-basis:calc(var(--choice-art-width) + 24px); }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail { padding:8px; overflow:visible; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail h4 { font-size:20px; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail-rules { font-size:16px; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-grid { flex-basis:210px; max-height:none; overflow:visible; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-detail { flex-direction:column; gap:8px; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-detail-art { width:110px; height:154px; align-self:center; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-toolbar { flex-wrap:wrap; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-browse .cc-grid { overflow:visible; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .action-cast-preview>img { width:130px; height:182px; }
+}
+@media (max-width:600px) and (orientation:portrait) {
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) :is(.cc-head,.modal-head) { flex-wrap:wrap; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-content { flex-wrap:wrap; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-spotlight .cc-grid { flex-basis:100%; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-grid { flex-basis:100%; }
+  body .modal-bg.duel-panel.modal-v3.cc-managed:is(:not(.board-decision),.board-list-open) .cc-effects:not(.cc-spotlight) .cc-detail { flex-direction:row; }
+  body .modal-bg.duel-panel.modal-v3:is(:not(.board-decision),.board-list-open) .cc-actions { display:flex; flex-wrap:wrap; width:100%; }
+}

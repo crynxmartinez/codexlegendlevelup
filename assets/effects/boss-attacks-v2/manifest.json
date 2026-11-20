@@ -1,0 +1,606 @@
+{
+  "version": 2,
+  "source": "art-source/effects/boss-attacks-v2/exports",
+  "entries": [
+    {
+      "id": "agta/set-1/wind-heart-rescuer-taguwasi",
+      "slug": "taguwasi",
+      "url": "/effects/boss-attacks-v2/taguwasi.webp",
+      "sha256": "710db9d87081ae061b42493c2baf0ad078aac38c3855f3ab879b100ffee55b62",
+      "bytes": 608200,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "agta/set-1/fifth-sky-tyrant-kalimangalnuk",
+      "slug": "kalimangalnuk",
+      "url": "/effects/boss-attacks-v2/kalimangalnuk.webp",
+      "sha256": "0e082e3936827c1029fe6bd190a4f2c3360a7511e9ab486abca4eb1ae34c8051",
+      "bytes": 255240,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "agta/set-1/life-breath-mother-nanolay",
+      "slug": "nanolay",
+      "url": "/effects/boss-attacks-v2/nanolay.webp",
+      "sha256": "7f91d70bb50e674f282563da95530d892ae1499215635927fe45a1d312faaf69",
+      "bytes": 746932,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "babaylan/set-1/mountain-sovereign-maria-cacao",
+      "slug": "maria-cacao",
+      "url": "/effects/boss-attacks-v2/maria-cacao.webp",
+      "sha256": "05ad01da2f3fab21c719037fd60c8866e1ae2a7fa4508d3da705075f02249065",
+      "bytes": 684272,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "babaylan/set-1/harvest-warden-mangaw",
+      "slug": "mangaw",
+      "url": "/effects/boss-attacks-v2/mangaw.webp",
+      "sha256": "e9154dd7df60a0dd5bf87c3f207885c9aa98db1d2436782375fa0b270c250742",
+      "bytes": 726790,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "babaylan/set-1/thunder-sovereign-kaptan",
+      "slug": "kaptan",
+      "url": "/effects/boss-attacks-v2/kaptan.webp",
+      "sha256": "e3b9a41a600a1396376df8b135ee481e60b65da1073c90e37ba7ff1a9d1473d6",
+      "bytes": 635734,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "babaylan/set-1/ocean-sovereign-maguayan",
+      "slug": "maguayan",
+      "url": "/effects/boss-attacks-v2/maguayan.webp",
+      "sha256": "e64d45bdfa994de4a1e9274a383628aadbedb42c0cab376c57c81eb39ae27bf5",
+      "bytes": 408142,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "babaylan/set-1/abyssal-revolt-sinogo",
+      "slug": "sinogo",
+      "url": "/effects/boss-attacks-v2/sinogo.webp",
+      "sha256": "f7bdb2df462505395e257cab57dec019c7dcd1576bcf1141df5d506b8163b107",
+      "bytes": 751602,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "babaylan/set-1/last-moon-devourer-bakunawa",
+      "slug": "bakunawa",
+      "url": "/effects/boss-attacks-v2/bakunawa.webp",
+      "sha256": "8f81243078a40c7eb61b93165d7e86382ef4fa5d9638972afffd31d38a6d76a1",
+      "bytes": 491976,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "babaylan/set-1/unbroken-invocation-amara",
+      "slug": "amara",
+      "url": "/effects/boss-attacks-v2/amara.webp",
+      "sha256": "2dab5df5ac61fc01661016f7f5e33a20e493d43a09df073a860baf60313c63b5",
+      "bytes": 375750,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong",
+      "slug": "apo-a-bekong",
+      "url": "/effects/boss-attacks-v2/apo-a-bekong.webp",
+      "sha256": "8bcb16663a37fce7adfa688ef6fa39764f214e4b8330862a965eff943ea584c5",
+      "bytes": 728566,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut",
+      "slug": "potri-rainalaut",
+      "url": "/effects/boss-attacks-v2/potri-rainalaut.webp",
+      "sha256": "ffe4aa5d830cf986d08eff04b7cce8190718ceb7a97d2aa4f9fa6952080a3298",
+      "bytes": 634906,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/boat-watching-tonong-tomitay",
+      "slug": "tomitay",
+      "url": "/effects/boss-attacks-v2/tomitay.webp",
+      "sha256": "75d6a5155f9a7bff60aaa137ca355cf0e1b90897656bcdde333ffeb3691aa4a4",
+      "bytes": 335686,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/sun-darkening-scourge-pah",
+      "slug": "pah",
+      "url": "/effects/boss-attacks-v2/pah.webp",
+      "sha256": "714e97fda35171900a16cc941dfa3d9d03a0074709909ea4ec8f3e3f7fec13c2",
+      "bytes": 524682,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/rattan-haunt-scourge-kurita",
+      "slug": "kurita",
+      "url": "/effects/boss-attacks-v2/kurita.webp",
+      "sha256": "f92bde63e529f03e2a3e7347cb4bb086b36730d86b509b4933338b27f8d4d306",
+      "bytes": 726030,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/matutun-branch-devourer-tarabusaw",
+      "slug": "tarabusaw",
+      "url": "/effects/boss-attacks-v2/tarabusaw.webp",
+      "sha256": "d7bee7626ce8bda2f44c5ed2dff6abca22a703bf00ce0d9e7b716c42440acc83",
+      "bytes": 391724,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/land-restoring-raja-indarapatra",
+      "slug": "indarapatra",
+      "url": "/effects/boss-attacks-v2/indarapatra.webp",
+      "sha256": "4e8ba2c9af65ada52e4098197c3eeabcb53a9ab8703643993fc2ad6fc93bf1c3",
+      "bytes": 380752,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/gurayen-wrath-mate-maka-ogis",
+      "slug": "maka-ogis",
+      "url": "/effects/boss-attacks-v2/maka-ogis.webp",
+      "sha256": "dbc2dbf9070b1262b0c028d946885474388d2b7e5aa03beed4279e8e7f3c8fd0",
+      "bytes": 627938,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/three-scourge-champion-sulayman",
+      "slug": "sulayman",
+      "url": "/effects/boss-attacks-v2/sulayman.webp",
+      "sha256": "ce2bd233cf41f035d4aa13c7ddb6fd682ba290c9dd32efccd000b61aab5cfdda",
+      "bytes": 424842,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    },
+    {
+      "id": "maguindanao/set-1/seven-sight-final-scourge-gurayn",
+      "slug": "gurayn",
+      "url": "/effects/boss-attacks-v2/gurayn.webp",
+      "sha256": "ed41ebc4a6432c56f842e4bd7dfa5b28fedfbad1f9f43253cf9c233d4d9a99b3",
+      "bytes": 483734,
+      "columns": 4,
+      "frameCount": 16,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "authoredDirection": "right",
+      "phases": {
+        "formation": {
+          "firstFrame": 0,
+          "frames": 3
+        },
+        "travel": {
+          "firstFrame": 3,
+          "frames": 7
+        },
+        "impact": {
+          "firstFrame": 10,
+          "frames": 4
+        },
+        "dispersal": {
+          "firstFrame": 14,
+          "frames": 2
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1664 @@
+{
+  "codexByGuild": {
+    "Gubat Banwa": {
+      "attack": "agta/set-1/dawnward-country-arawen",
+      "barrier": "agta/set-1/barbed-sky-passage-salikan"
+    },
+    "Visayas Arch": {
+      "attack": "babaylan/set-1/sovereign-heights-mount-lantoy",
+      "barrier": "babaylan/set-1/silent-threshold-kabulaw"
+    },
+    "Mindanao Arch": {
+      "attack": "maguindanao/set-1/city-beyond-the-sunset-mantapuli",
+      "barrier": "maguindanao/set-1/forest-of-broken-branches-mount-matutun"
+    }
+  },
+  "counts": {
+    "current": 72,
+    "hidden": 1,
+    "historical": 83
+  },
+  "cards": [
+    {
+      "id": "agta/arrow-of-the-sierra-amihan",
+      "name": "Arrow of the Sierra, Amihan",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/deerstep-runner-kidlat",
+      "name": "Deerstep Runner, Kidlat",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/ember-pot-bearer-berto",
+      "name": "Ember-Pot Bearer, Berto",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/ember-resin-grandmother-sinta",
+      "name": "Ember Resin Grandmonther, Sinta",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/firefly-pathkeeper-aya",
+      "name": "Firefly Pathkeeper, Aya",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/honey-keep-cliffer-kislap",
+      "name": "Honey Keep Cliffer, Kislap",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/leaf-whistle-scout-sari",
+      "name": "Leaf Whistle Scout, Sari",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/moon-net-fisher-mayumi",
+      "name": "Moon-Net Fisher, Mayumi",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/mudcrab-catcher-pilo",
+      "name": "Mudcrab Catcher, Pilo",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/rattan-bridge-weaver-nena",
+      "name": "Rattan Bridge Weaver, Nena",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/storm-bark-elder-ulan",
+      "name": "Storm Bark Elder, Ulan",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/the-boar-spear-makisig",
+      "name": "The Boar Spear, Makisig",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/voice-beneath-the-rain-laya",
+      "name": "Voice Beneath the Rain, Laya",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/bell-dancer-of-the-tides-sidlak",
+      "name": "Bell Dancer of the Tides, Sidlak",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/drummer-of-the-first-calling-baya",
+      "name": "Drummer of the First Calling, Baya",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/heart-of-the-twelve-spirits-amaya",
+      "name": "Heart of the Twelve Spirit, Amaya",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/keeper-of-the-mangrove-remedies-maliya",
+      "name": "Keeper of the Mangrove Remedies, Maliya",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/keeper-of-the-spirit-bowl-ilaya",
+      "name": "Keeper of the Spirit Bowl, Ilaya",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/lantern-of-the-mangrove-gate-salaya",
+      "name": "Lantern of the Mangrove Gate, Salaya",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/reader-of-moonlit-currents-dalina",
+      "name": "Reader of Moonlight Current, Dalina",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/reader-of-shallow-waters-nalia",
+      "name": "Reader of Shallow Waters, Nalia",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/shell-bell-initiate-yana",
+      "name": "Shell Bell Initiate, Yana",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/spear-between-two-worlds-kadasig",
+      "name": "Spear Between two Worlds, Kadasig",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/spear-of-the-emerald-tide-maraya",
+      "name": "Spear of the Emerald Tide, Maraya",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/vessel-beneath-the-moon-lunay",
+      "name": "Vessel Beneath the Moon, Lunay",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/weaver-of-the-spirit-threads-dayaw",
+      "name": "Weaver of the Spirit Threads, Dayaw",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/blood-moon-bai-a-labi",
+      "name": "Blood Moon Bai-A-Labi",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/buluan-inaul-wardkeeper-dayang-nuraya",
+      "name": "Buluan Inaul Wardkeeper, Dayang Nuraya",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/buluan-shell-caller-mayla",
+      "name": "Buluan Shell-Caller, Mayla",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/illana-lantaka-warder-panglima-jamal",
+      "name": "Illana Lantaka Warder, Panglima Jamal",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/illana-tide-harpooner-hakim",
+      "name": "Illana Tide-Harpooner, Hakim",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/kuta-wato-banner-keeper-sitti-rahma",
+      "name": "Kuta Wato Banner-Keeper, Sitti Rahma",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/kuta-wato-gate-bulwark-bai-samira",
+      "name": "Kuta Wato Gate-Bulwark, Bai Samira",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/kuta-wato-warcaller-datu-salik",
+      "name": "Kuta Wato Warcaller, Datu Salik",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/liguasan-mudblade-nasser",
+      "name": "Liguasan Mudblade, Nasser",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/liguasan-reed-eye-harun",
+      "name": "Liguasan Reed-Eye, Harun",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/pulangi-ember-spear-kamil",
+      "name": "Pulangi Ember-Spear, Kamil",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/pulangi-wake-cleaver-panglima-farid",
+      "name": "Pulangi Wake-Cleaver, Panglima Farid",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/veiled-eclipse-maharaja",
+      "name": "Veiled Eclipse Maharaja",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/kuta-wato-abyssblade-panglima-zafir",
+      "name": "Kuta Wato Abyssblade, Panglima Zafir",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/black-standard-oathkeeper-sitti-maira",
+      "name": "Black-Standard Oathkeeper, Sitti Maira",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/lowland-born-heir-rinamuntaw",
+      "name": "Lowland-Born Heir, Rinamuntaw",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/receding-sea-heiress-rinayung",
+      "name": "Receding-Sea Heiress, Rinayung",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/many-limbed-tidal-horror-kurita",
+      "name": "Many-Limbed Tidal Horror, Kurita",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/mountain-breaking-devourer-tarabusaw",
+      "name": "Mountain-Breaking Devourer, Tarabusaw",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/cave-light-heiress-bai-amina",
+      "name": "Cave-Light Heiress, Bai Amina",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/last-refuge-chief-datu-karim",
+      "name": "Last Refuge Chief, Datu Karim",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/hollow-tree-emberkeeper-harun",
+      "name": "Hollow-Tree Emberkeeper, Harun",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/lost-ring-bearer-buganga",
+      "name": "Lost-Ring Bearer, Buganga",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/legend-script-guardian-datu-kali-adam",
+      "name": "Legend-Script Guardian, Datu Kali Adam",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/mantapuli-memory-keeper-alad",
+      "name": "Mantapuli Memory Keeper, Alad",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/many-bodied-hunter-omaka-an-shard",
+      "name": "Many-Bodied Hunter, Omaka-an Shard",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/bita-eclipse-hatchling-pahira",
+      "name": "Bita Eclipse Hatchling, Pahira",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/dread-night-caller-balbal",
+      "name": "Dread-Night Caller, Balbal",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/heaven-sheltered-survivor-lanao-sprite",
+      "name": "Heaven-Sheltered Survivor, Lanao Sprite",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/three-scourge-slayer-sulayman",
+      "name": "Three-Scourge Slayer, Sulayman",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/sun-darkening-scourge-pah",
+      "name": "Sun-Darkening Scourge, Pah",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/land-restoring-raja-indarapatra",
+      "name": "Land-Restoring Raja, Indarapatra",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/seven-sight-final-scourge-gurayan",
+      "name": "Seven-Sight Final Scourge, Gurayan",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/gurayen-wrath-mate-maka-ogis",
+      "name": "Gurayen Wrath-Mate, Maka-Ogis",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "maguindanao/ridge-bed-devourer-omaka-an",
+      "name": "Ridge-Bed Devourer, Omaka-an",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/heaven-rending-wind-taguwasi",
+      "name": "Heaven-Rending Wind, Taguwasi",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/fifth-sky-arrowlord-kalimangalnuk",
+      "name": "Fifth-Sky Arrowlord, Kalimangalnuk",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/life-restoring-mother-ina-nanolay",
+      "name": "Life-Restoring Mother, Ina Nanolay",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/mystic-river-caller-alig",
+      "name": "Mystic River Caller, Alig",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/fallen-sky-warrior-talimanog",
+      "name": "Fallen Sky Warrior, Talimanog",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/defiant-sky-warrior-ammani",
+      "name": "Defiant Sky Warrior, Ammani",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/enduring-sky-warrior-annibo",
+      "name": "Enduring Sky Warrior, Annibo",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/golden-gate-warden-nagdombilan",
+      "name": "Golden Gate Warden, Nagdombilan",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/moon-stealing-wing-ammalabukkaw",
+      "name": "Moon-Stealing Wing, Ammalabukkaw",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/captive-moon-innawagan",
+      "name": "Captive Moon, Innawagan",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/sunrise-seeking-wing-dalewasan",
+      "name": "Sunrise-Seeking Wing, Dalewasan",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/shapeshifting-savior-nagmalitong-yawa",
+      "name": "Shapeshifting Savior, Nagmalitong Yawa",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/celestial-matriarch-alunsina",
+      "name": "Celestial Matriarch, Alunsina",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/lifespan-carver-sidapa",
+      "name": "Lifespan Carver, Sidapa",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/seven-year-challenger-labaw-donggon",
+      "name": "Seven-Year Challenger, Labaw Donggon",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/tarangban-voyager-humadapnon",
+      "name": "Tarangban Voyager, Humadapnon",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/ridge-splitting-warrior-dumalapdap",
+      "name": "Ridge-Splitting Warrior, Dumalapdap",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/heart-veiled-lord-saragnayon",
+      "name": "Heart-Veiled Lord, Saragnayon",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/ancestral-faithkeeper-tamblot",
+      "name": "Ancestral Faithkeeper, Tamblot",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/diwata-shrinekeeper-pagali",
+      "name": "Diwata Shrinekeeper, Pagali",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/final-blow-heir-asu-mangga",
+      "name": "Final-Blow Heir, Asu Mangga",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "babaylan/heart-beast-hunter-buyung-baranungun",
+      "name": "Heart-Beast Hunter, Buyung Baranungun",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "historical"
+    },
+    {
+      "id": "agta/set-1/wind-heart-rescuer-taguwasi",
+      "name": "Wind-Heart Rescuer, Taguwasi",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] At the start of your Main Phase, look at the top 3 cards of your deck and put them back on top in any order.[/green]",
+      "removedStateSkills": [
+        "[green][Bayanihan][Persona] 1/Turn: When this Unit attacks, Sipol 1.[/green]"
+      ],
+      "retainedSkills": [
+        "[green][Persona] At the start of your Main Phase, look at the top 3 cards of your deck and put them back on top in any order.[/green]"
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/fifth-sky-tyrant-kalimangalnuk",
+      "name": "Fifth-Sky Tyrant, Kalimangalnuk",
+      "level": 3,
+      "role": "persona",
+      "text": "[blue][Persona] 1/Turn: Sipol 1, then this Unit gets Power equal to the Power of the Unit called, until end of turn.[/blue]",
+      "removedStateSkills": [
+        "[green][Bayanihan][Persona] During your turn, all of your Units get Power +2000.[/green]"
+      ],
+      "retainedSkills": [
+        "[blue][Persona] 1/Turn: Sipol 1, then this Unit gets Power equal to the Power of the Unit called, until end of turn.[/blue]"
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/life-breath-mother-nanolay",
+      "name": "Life-Breath Mother, Nanolay",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/Turn: When this Unit attacks, draw 1, then this Unit gets Power +3000 until end of turn.[/green]",
+      "removedStateSkills": [
+        "[green][Bayanihan][Ally] 1/Turn: If this Unit was specially called during a Battle Phase, after your Persona attacks, [Cost: Discard 2 cards] Personify into this Unit, charged.[/green]"
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/Turn: When this Unit attacks, draw 1, then this Unit gets Power +3000 until end of turn.[/green]"
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/fallen-sky-challenger-talimanog",
+      "name": "Fallen Sky-Challenger, Talimanog",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/months-of-battle-warrior-ammani",
+      "name": "Months-Of-Battle Warrior, Ammani",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/relentless-third-brother-annibo",
+      "name": "Relentless Third Brother, Annibo",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/river-calling-sister-alig",
+      "name": "River-Calling Sister, Alig",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/maiden-taking-raptor-ammalabukkaw",
+      "name": "Maiden-Taking Raptor, Ammalabukkaw",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/golden-threshold-warden-nagdombilan",
+      "name": "Golden-Threshold Warden, Nagdombilan",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/wedding-war-chief-namandiyanin",
+      "name": "Wedding-War Chief, Namandiyanin",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/moon-bright-captive-innawagan",
+      "name": "Moon-Bright Captive, Innawagan",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/barbed-sky-messenger-dalewasan",
+      "name": "Barbed-Sky Messenger, Dalewasan",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/keeper-at-sunrise-sinag",
+      "name": "Keeper At Sunrise, Sinag",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/returning-sky-captain-darawan",
+      "name": "Returning Sky Captain, Darawan",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/wedding-pact-elder-amuray",
+      "name": "Wedding-Pact Elder, Amuray",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/nightfall-raider-kallan",
+      "name": "Nightfall Raider, Kallan",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/night-feast-defender-tamin",
+      "name": "Night-Feast Defender, Tamin",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/fifth-sky-sentinel-ulagan",
+      "name": "Fifth-Sky Sentinel, Ulagan",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/dawnward-country-arawen",
+      "name": "Dawnward Country, Arawen",
+      "level": 0,
+      "role": "codex-attack",
+      "text": "[Codex] Auto-switch before you draw, you may switch to this Codex for free.\nWhile this Codex is active, your Persona gets Power +5,000 while it is attacking. The bonus ends with that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "agta/set-1/barbed-sky-passage-salikan",
+      "name": "Barbed Sky Passage, Salikan",
+      "level": 0,
+      "role": "codex-barrier",
+      "text": "[Codex] Auto-switch before you Personify, you may switch to this Codex for free.\nWhile this Codex is active, your Persona gets Power +1,000 for each of your broken Barriers, on either player's turn.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/mountain-sovereign-maria-cacao",
+      "name": "Mountain Sovereign, Maria Cacao",
+      "level": 3,
+      "role": "persona",
+      "text": "[blue][Persona] 1/Turn: [Cost: Sanib the top 2 cards of your deck] special call a Level 2 or lower Divine Unit from your Heart. It gets Power +5000 until end of turn. Sanib it at the end of the turn.",
+      "removedStateSkills": [
+        "[green][Andukha 6][Persona] 1/Turn: When a Unit is Sanib during your turn, create 1 Kaluluwa in your Heart."
+      ],
+      "retainedSkills": [
+        "[blue][Persona] 1/Turn: [Cost: Sanib the top 2 cards of your deck] special call a Level 2 or lower Divine Unit from your Heart. It gets Power +5000 until end of turn. Sanib it at the end of the turn."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/harvest-warden-mangaw",
+      "name": "Harvest Warden, Mangaw",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona]: At the start of your Main Phase, Sanib the top card of your deck. Then you may create 2 Kaluluwa in your Heart.",
+      "removedStateSkills": [
+        "[green][Andukha 9][Persona]: During your turn, this Unit gets Power +1000 for each card you Sanib this turn."
+      ],
+      "retainedSkills": [
+        "[green][Persona]: At the start of your Main Phase, Sanib the top card of your deck. Then you may create 2 Kaluluwa in your Heart."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/thunder-sovereign-kaptan",
+      "name": "Thunder Sovereign, Kaptan",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/Turn: When this Unit attacks, [Cost: Sanib one card from your hand] draw 1 card. This Unit gets Power +3000 until end of turn.",
+      "removedStateSkills": [
+        "[blue][Andukha 9][Persona] 1/Turn: Look at the top 5 cards of your deck. Sanib up to one Divine Unit from among them and put the rest on the bottom in any order. This Unit gets Power +5000 until end of turn."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/Turn: When this Unit attacks, [Cost: Sanib one card from your hand] draw 1 card. This Unit gets Power +3000 until end of turn."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/ocean-sovereign-maguayan",
+      "name": "Ocean Sovereign, Maguayan",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/Turn: When a Unit is special called from your Heart, draw 1 card, then Sanib 1 card from your hand.",
+      "removedStateSkills": [
+        "[green][Andukha 9][Persona] 1/Turn: When this Unit attacks, [Cost: Sanib 1 of your Allies] add that Ally's current Power to this Unit's Power for that battle."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/Turn: When a Unit is special called from your Heart, draw 1 card, then Sanib 1 card from your hand."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/abyssal-revolt-sinogo",
+      "name": "Abyssal Revolt, Sinogo",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/Turn: When this Unit attacks, [Cost: Kalas 5] special call a Beast or Bird Unit from your deck. Sanib that Unit at the end of your turn.",
+      "removedStateSkills": [
+        "[green][Andukha 12][Persona]: Your Beast and Bird Units' numeric Kalas costs are reduced by 2, to a minimum of 0."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/Turn: When this Unit attacks, [Cost: Kalas 5] special call a Beast or Bird Unit from your deck. Sanib that Unit at the end of your turn."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/last-moon-devourer-bakunawa",
+      "name": "Last Moon Devourer, Bakunawa",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/Turn: When this Unit attacks your opponent's Persona, [Cost: Kalas 6] this Unit gets Power +10000 for that battle. Your opponent cannot use Level 2 or higher cards to defend this battle. If six or more Kaluluwa tokens were Kalas for this cost, draw 1 card.",
+      "removedStateSkills": [
+        "[green][Andukha 9][Persona]: At the end of a battle in which this Unit attacked, if its attack did not hit, Sanib up to three cards from your Grave."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/Turn: When this Unit attacks your opponent's Persona, [Cost: Kalas 6] this Unit gets Power +10000 for that battle. Your opponent cannot use Level 2 or higher cards to defend this battle. If six or more Kaluluwa tokens were Kalas for this cost, draw 1 card."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/unbroken-invocation-amara",
+      "name": "Unbroken Invocation, Amara",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/Turn: When this Unit is Sanib from the Persona Zone, special call one Unit from your Heart.",
+      "removedStateSkills": [
+        "[blue][Andukha 9][Heart] 1/Turn: [Cost: Kalas this card] search your deck for a Level 2 or lower Babaylan Unit other than Unbroken Invocation, Amara. Sanib it, then special call a Babaylan Unit from your Heart. Shuffle your deck. The called Unit gets Power +5000 until end of turn."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/Turn: When this Unit is Sanib from the Persona Zone, special call one Unit from your Heart."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/heaven-s-pursuit-dalagan",
+      "name": "Heaven's Pursuit, Dalagan",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/unyielding-pursuer-guidala",
+      "name": "Unyielding Pursuer, Guidala",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/unseen-defender-tata-cero",
+      "name": "Unseen Defender, Tata Cero",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/leafborne-champion-kapitan-dyano",
+      "name": "Leafborne Champion, Kapitan Dyano",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/spring-sentinel-ulango",
+      "name": "Spring Sentinel, Ulango",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/shadow-prowler-sagwil",
+      "name": "Shadow Prowler, Sagwil",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/nightfall-hunter-wakira",
+      "name": "Nightfall Hunter, Wakira",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/reef-enchanter-lawira",
+      "name": "Reef Enchanter, Lawira",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/answering-voice-aday",
+      "name": "Answering Voice, Aday",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/first-invocation-luning",
+      "name": "First Invocation, Luning",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/spirit-mediator-iday",
+      "name": "Spirit Mediator, Iday",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/hidden-affliction-doro",
+      "name": "Hidden Affliction, Doro",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/floodwatch-runner-sali",
+      "name": "Floodwatch Runner, Sali",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/promise-bearer-nardo",
+      "name": "Promise Bearer, Nardo",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/small-deliverer-silak",
+      "name": "Small Deliverer, Silak",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/sovereign-heights-mount-lantoy",
+      "name": "Sovereign Heights, Mount Lantoy",
+      "level": 0,
+      "role": "codex-attack",
+      "text": "Auto-switch — before you draw, if your opponent has more Barriers than you, you may switch to this Codex for free.\nWhile this Codex is active, your Persona gets Power +5,000 while it is attacking. The bonus ends with that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "babaylan/set-1/silent-threshold-kabulaw",
+      "name": "Silent Threshold, Kabulaw",
+      "level": 0,
+      "role": "codex-barrier",
+      "text": "Auto-switch — before you Personify, you may switch to this Codex for free.\nWhile this Codex is active, your Persona gets Power +1,000 for each of your broken Barriers, on either player's turn.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong",
+      "name": "Nonok-Veiled Guardian, Apo a Bekong",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/turn: Whenever another of your Allies is Offered, choose one of your units. It gets Power +3000 until end of turn.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] Whenever one of your shields breaks, this unit permanently gets Power +1000."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/turn: Whenever another of your Allies is Offered, choose one of your units. It gets Power +3000 until end of turn."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut",
+      "name": "Beneath-Water Ancestress, Potri Rainalaut",
+      "level": 3,
+      "role": "persona",
+      "text": "[blue][Persona] 1/turn: [Cost: Offer 1 of your Allies] special call a Level 1 Maguindanaon unit from your Grave. It enters charged.",
+      "removedStateSkills": [
+        "[blue][Garahana][Persona] 1/turn: draw 1 card. This unit gets Power +2000 for each unit Offered this turn until end of turn."
+      ],
+      "retainedSkills": [
+        "[blue][Persona] 1/turn: [Cost: Offer 1 of your Allies] special call a Level 1 Maguindanaon unit from your Grave. It enters charged."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/boat-watching-tonong-tomitay",
+      "name": "Boat-Watching Tonong, Tomitay",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Allies] look at the top 3 cards of your deck and arrange them on top in any order.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] 1/turn: When your attack check reveals a Force, draw 1 card and charge one of your Allies."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Allies] look at the top 3 cards of your deck and arrange them on top in any order."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/ridge-bed-multiplier-omaka-an",
+      "name": "Ridge-Bed Multiplier, Omaka-an",
+      "level": 3,
+      "role": "persona",
+      "text": "",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "hidden"
+    },
+    {
+      "id": "maguindanao/set-1/sun-darkening-scourge-pah",
+      "name": "Sun-Darkening Scourge, Pah",
+      "level": 3,
+      "role": "persona",
+      "text": "[blue][Persona] 1/turn: [Cost: Offer 2 of your Allies] this unit gets Power +5000 until end of turn. If you have 2 or fewer Barriers, it gets +10000 instead.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] charge this unit and it gets Power +5000 until end of turn."
+      ],
+      "retainedSkills": [
+        "[blue][Persona] 1/turn: [Cost: Offer 2 of your Allies] this unit gets Power +5000 until end of turn. If you have 2 or fewer Barriers, it gets +10000 instead."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/rattan-haunt-scourge-kurita",
+      "name": "Rattan-Haunt Scourge, Kurita",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Allies] damage one of your opponent's Allies, and this unit gets Power +5000 for that battle.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 1 of your other Allies] damage one of your opponent's Allies."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Allies] damage one of your opponent's Allies, and this unit gets Power +5000 for that battle."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/matutun-branch-devourer-tarabusaw",
+      "name": "Matutun Branch-Devourer, Tarabusaw",
+      "level": 3,
+      "role": "persona",
+      "text": "[blue][Persona] 1/turn: Before this unit's first attack this turn, [Cost: Offer 2 of your other Allies] its first attack this turn gets one extra attack check.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 2] charge this unit. Do not perform an attack check for its next attack this turn."
+      ],
+      "retainedSkills": [
+        "[blue][Persona] 1/turn: Before this unit's first attack this turn, [Cost: Offer 2 of your other Allies] its first attack this turn gets one extra attack check."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/land-restoring-raja-indarapatra",
+      "name": "Land-Restoring Raja, Indarapatra",
+      "level": 3,
+      "role": "persona",
+      "text": "[blue][Persona] 1/turn: search your deck for a Level 2 or lower Maguindanaon unit and special call it. It enters charged.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] search your deck for two Level 2 or lower Maguindanaon units and special call them. Each gets Power +5000 until end of turn."
+      ],
+      "retainedSkills": [
+        "[blue][Persona] 1/turn: search your deck for a Level 2 or lower Maguindanaon unit and special call it. It enters charged."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/gurayen-wrath-mate-maka-ogis",
+      "name": "Gurayen Wrath-Mate, Maka-Ogis",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your other Allies] add that Ally's current Power to this unit's Power for that battle.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] During your turn, if you Offered 2 or more this turn, this unit gets Power +5000."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your other Allies] add that Ally's current Power to this unit's Power for that battle."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/three-scourge-champion-sulayman",
+      "name": "Three-Scourge Champion, Sulayman",
+      "level": 3,
+      "role": "persona",
+      "text": "[blue][Persona] 1/turn: [Cost: Offer 1 of your Allies] search your deck for a Maguindanaon unit and special call it. It enters charged. This unit and the called unit each get Power +3000 until end of turn.\nWhen this attack hits, draw 1 card.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] 1/turn: When this unit attacks, [Cost: Offer 3] damage up to two of your opponent's Allies. This unit gets Power +10000 for that battle and gains \"When this attack hits, draw 1 card.\""
+      ],
+      "retainedSkills": [
+        "[blue][Persona] 1/turn: [Cost: Offer 1 of your Allies] search your deck for a Maguindanaon unit and special call it. It enters charged. This unit and the called unit each get Power +3000 until end of turn.",
+        "When this attack hits, draw 1 card."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/house-shell-shadow-pahira",
+      "name": "House-Shell Shadow, Pahira",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/rattan-marsh-stalker-kuritan",
+      "name": "Rattan-Marsh Stalker, Kuritan",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/matutun-branch-hurler-tarabuk",
+      "name": "Matutun Branch Hurler, Tarabuk",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/dread-night-caller-balbal",
+      "name": "Dread-Night Caller, Balbal",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/balete-laughing-spirit-ba-i-a-salendagao",
+      "name": "Balete-Laughing Spirit, Ba-i a Salendagao",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/heaven-sheltered-survivor-lanao-sprite",
+      "name": "Heaven-Sheltered Survivor, Lanao Sprite",
+      "level": 2,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +5,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/current-borne-ancestor-crocodile-form-apu",
+      "name": "Current-Borne Ancestor, Crocodile-Form Apu",
+      "level": 2,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +5,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/smoke-split-hunter-salimbadut",
+      "name": "Smoke-Split Hunter, Salimbadut",
+      "level": 2,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +5,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/first-son-of-the-returned-land-rinamuntaw",
+      "name": "First Son of the Returned Land, Rinamuntaw",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/first-daughter-of-the-returned-land-rinayung",
+      "name": "First Daughter of the Returned Land, Rinayung",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/hollow-tree-guide-the-old-woman",
+      "name": "Hollow-Tree Guide, the Old Woman",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/last-witness-of-the-old-words-alad",
+      "name": "Last Witness of the Old Words, Alad",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/elder-of-the-old-telling-maharaja-layla",
+      "name": "Elder of the Old Telling, Maharaja Layla",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/keeper-of-the-account-datu-kali-adam",
+      "name": "Keeper of the Account, Datu Kali Adam",
+      "level": 1,
+      "role": "attack",
+      "text": "[Ally] When this Unit attacks, it gets Power +3,000 for that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/spring-veiled-heiress-dayang-amina",
+      "name": "Spring-Veiled Heiress, Dayang Amina",
+      "level": 1,
+      "role": "support",
+      "text": "[Ally] When this Unit supports, it gets Power +3,000 for that attack. This increases its support contribution once.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/seven-sight-final-scourge-gurayn",
+      "name": "Seven-Sight Final Scourge, Gurayn",
+      "level": 3,
+      "role": "persona",
+      "text": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 2 of your other Allies] look at the top 7 cards of your deck. Special call up to two Beasts or Birds from among them. Put the remaining cards on the bottom in any order.",
+      "removedStateSkills": [
+        "[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] choose a Seven-Sight Final Scourge, Gurayn from your hand and Personify into it, charged."
+      ],
+      "retainedSkills": [
+        "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 2 of your other Allies] look at the top 7 cards of your deck. Special call up to two Beasts or Birds from among them. Put the remaining cards on the bottom in any order."
+      ],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/keeper-of-the-last-refuge-datu-karim",
+      "name": "Keeper of the Last Refuge, Datu Karim",
+      "level": 1,
+      "role": "arrival",
+      "text": "[Ally] When this Unit is normally called or specially called, it gets Power +3,000 until this turn ends.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/city-beyond-the-sunset-mantapuli",
+      "name": "City Beyond the Sunset, Mantapuli",
+      "level": 0,
+      "role": "codex-attack",
+      "text": "Auto-switch — before you draw, you may switch to this Codex for free.\nWhile this Codex is active, your Persona gets Power +5,000 while it is attacking. The bonus ends with that attack.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    },
+    {
+      "id": "maguindanao/set-1/forest-of-broken-branches-mount-matutun",
+      "name": "Forest of Broken Branches, Mount Matutun",
+      "level": 0,
+      "role": "codex-barrier",
+      "text": "Auto-switch — at the start of your Main Phase, you may switch to this Codex for free.\nWhile this Codex is active, your Persona gets Power +1,000 for each of your broken Barriers, on either player's turn.",
+      "removedStateSkills": [],
+      "retainedSkills": [],
+      "availability": "current"
+    }
+  ]
+}

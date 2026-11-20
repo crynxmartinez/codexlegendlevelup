@@ -1,0 +1,49 @@
+/* Runtime overlays only. Keep the approved illustrations and frames intact. */
+.card .card-hud .pw.card-stat {
+  color:#f2d473; border:0; box-shadow:none; font-size:clamp(18px,2.05vh,26px);
+  flex-direction:column; align-items:center; gap:1px; line-height:1.05;
+  padding:2px 4px; background:#07100bf2;
+}
+.card .card-hud .pw.card-stat:is(.tick-up,.tick-down) { color:#f2d473!important; }
+.defense-zone .dcard { position:relative; }
+.defense-zone .dcard .card-stat {
+  flex-direction:column; gap:0; padding:1px 2px; bottom:1px; left:1px;
+  font-size:18px; line-height:1;
+}
+.defense-zone .dcard .card-stat-label { font-size:8px; }
+/* An unavailable card's art recedes, but its numbers remain readable. */
+body.anime-battlefield #app .stat-hand .hand-card.dim { opacity:1; filter:none; }
+.stat-hand .hand-card.dim::after {
+  content:''; position:absolute; inset:0; border-radius:inherit;
+  background:#05101b69; pointer-events:none; z-index:1;
+}
+.stat-hand .hand-card .hc-level { z-index:4; }
+/* Reserve both lower corners. Crowded hands scroll instead of hiding values. */
+body.anime-battlefield #app .hand-bar.stat-hand {
+  --stat-hand-h:clamp(100px,15dvh,162px);
+  left:calc(1% + clamp(275px,25vw,390px) + 8px); right:calc(24.935% + 8px); bottom:0; height:calc(var(--stat-hand-h) + 36px);
+  align-items:flex-end; justify-content:safe center; gap:5px;
+  padding:28px 8px 7px; box-sizing:border-box;
+  overflow-x:auto; overflow-y:hidden; scrollbar-width:thin;
+  scrollbar-color:#668da2 #071827; overscroll-behavior-x:contain;
+}
+body.anime-battlefield #app .stat-hand .hand-card {
+  width:calc(var(--stat-hand-h)*5/7); height:var(--stat-hand-h);
+  margin-left:0; scroll-margin-inline:8px;
+}
+body.anime-battlefield #app .stat-hand .hand-card:hover,
+body.anime-battlefield #app .stat-hand .hand-card.sel { transform:translateY(-18px); }
+.deck-refined .deck-copy .card-stat { font-size:14px; padding:1px 2px; }
+.deck-refined .deck-copy .card-stat-label { font-size:8px; }
+@media(max-height:500px) {
+  .card .card-hud .pw.card-stat { font-size:14px; padding:1px 2px; }
+  .defense-zone .dcard .card-stat { font-size:13px; }
+  .deck-refined .deck-copy .card-stat { font-size:13px; }
+  body.anime-battlefield #app .hand-bar.stat-hand {
+    --stat-hand-h:100px; left:calc(1% + max(180px,23vw) + 6px); height:130px; gap:4px;
+    padding-top:23px; padding-bottom:5px;
+  }
+}
+@media(max-width:1000px),(max-height:600px) {
+  body.anime-battlefield #app .hand-bar.stat-hand { left:calc(1% + max(180px,23vw) + 6px); right:calc(24.125% + 6px); }
+}

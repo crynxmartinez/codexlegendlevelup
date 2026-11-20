@@ -1,0 +1,43 @@
+/* Dedicated lesson presentation; normal matches never mount these guides. */
+.tutorial-version-label { display:inline-block; margin:4px 0; padding:3px 8px; color:#075270; background:#d6f5ff; border:1px solid #86bccc; border-radius:4px; font:700 11px/1.4 Roboto,sans-serif; }
+.tutorial-rules-note { padding:10px 12px; border-left:3px solid #1592b6; background:#e5f4fa; color:#123b56; font:13px/1.45 Roboto,sans-serif; }
+body.anime-battlefield .tutorial-coach {
+  width:min(380px,calc(100vw - 16px)); box-sizing:border-box;
+  padding:16px 18px; border:1px solid #b4d8e8; border-left:4px solid #63e8ff;
+  border-radius:4px 16px 4px 4px;
+  background:linear-gradient(135deg,#14324af7,#071321fa 70%);
+  box-shadow:0 0 0 2px #112535,0 0 22px #00cbff26,0 12px 36px #0009;
+  font-size:15px; line-height:1.45; overscroll-behavior:contain;
+}
+body.anime-battlefield .tutorial-coach h2 { font:bold italic 22px/1.15 Roboto,sans-serif; margin:7px 0 10px; color:#fff; }
+body.anime-battlefield .tutorial-kicker { color:#80eaff; font-size:10px; }
+body.anime-battlefield .tutorial-location { color:#b5d3e4; font:bold 10px/1.4 Roboto,sans-serif; letter-spacing:.06em; margin:7px 0 10px; }
+body.anime-battlefield .tutorial-location:empty { display:none; }
+body.anime-battlefield .tutorial-coach > p { color:#edf6fc; font-size:15px; }
+body.anime-battlefield .tutorial-coach-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+body.anime-battlefield .tutorial-wait { flex:1 0 100%; font-size:12px; }
+body.anime-battlefield :is(.tutorial-coach,.first-battle-controls,.journey-controls) button:not(.kw-help) {
+  min-height:40px; padding:8px 14px; border:1px solid #86b8ce; border-radius:3px;
+  background:linear-gradient(#233e53,#102435); color:#eefaff; font-size:12px;
+}
+body.anime-battlefield .tutorial-coach button.primary { background:linear-gradient(120deg,#0877ad,#113c67); border-color:#8eefff; box-shadow:inset 0 0 0 1px #47bedd55; }
+body.anime-battlefield :is(.first-battle-controls,.journey-controls) { left:12px; right:auto; top:8px; transform:none; flex-direction:row; max-width:calc(100vw - 24px); }
+body.anime-battlefield .tutorial-coach-minimized { top:56px; left:12px; right:auto; border-radius:3px 12px 3px 3px; background:#0d2739f5; }
+body.anime-battlefield .tutorial-coach-minimized span { color:#8fe8ff; }
+/* No position/transform changes on highlighted cards, piles or zones. */
+body.anime-battlefield .tutorial-target { outline:3px solid #7af0ff !important; outline-offset:5px; animation:tutorialGuidePulse 1.4s ease-in-out infinite alternate; }
+body.anime-battlefield .tutorial-target::after { display:none; }
+@keyframes tutorialGuidePulse { from { outline-color:#60d4ef; } to { outline-color:#e2fbff; } }
+@media (max-height:550px), (max-width:900px) {
+  body.anime-battlefield .tutorial-state-label > span:last-child { display:none; }
+  body.anime-battlefield .tutorial-coach { width:300px; padding:10px 12px; font-size:13px; }
+  body.anime-battlefield .tutorial-coach h2 { font-size:18px; margin:4px 0 6px; }
+  body.anime-battlefield .tutorial-coach > p { font-size:13px; }
+  body.anime-battlefield .tutorial-location { margin:5px 0; font-size:9px; }
+  body.anime-battlefield .tutorial-coach-actions { margin-top:8px; gap:6px; }
+  body.anime-battlefield :is(.first-battle-controls,.journey-controls) { left:8px; top:4px; gap:4px; }
+  body.anime-battlefield :is(.first-battle-controls,.journey-controls) button { min-height:32px; padding:5px 8px; font-size:10px; }
+  body.anime-battlefield .tutorial-coach-minimized { top:40px; left:8px; max-width:280px; }
+}
+@media (prefers-reduced-motion:reduce) { body.anime-battlefield .tutorial-target { animation:none; } }
+html[data-animation-intensity="minimal"] body.anime-battlefield .tutorial-target { animation:none; }

@@ -1,0 +1,36 @@
+# Patch 1.17 — effect clarity and free Codex
+
+Implemented locally; client and shared server must be published together. No deployment is recorded by this document.
+
+## Player changes
+
+- Hand departures caused by effects and paid costs now queue shared movement snapshots. Discard batches, deck returns, Exile and special calls travel to their actual destination; dedicated normal-call, Personify, Heart and Rally presentations are not doubled. Two older Maguindanao discard scripts now use the same movement path. PvP sends private movement counts/routes with card backs and strips concealed card IDs/art from the opponent payload. The source disappears as travel starts; the landing gets a brief label. No new confirmation was added. Desktop and 844×390 component previews checked discard and deck-return routes, with 76 focused engine/UI/privacy tests passing. This is not a live PvP or physical-device playthrough.
+- Codex switches are free manually and automatically, including with no Plays left. Timing, board conditions and skill limits still apply. The bot avoids cycling through the same free switches.
+- Stacked Power shows its total. The badge opens a breakdown by physical source copy, original position, Offer cause and expiry. Full inspection carries the same provenance. Legacy modifiers without metadata retain their known source without inventing a position.
+- Waiting Offer triggers carry the offered card's identity and original position. Different occurrences remain individually selectable. Source positions remain visible, and the heading distinguishes effects from physical cards.
+- Offer selection highlights the chosen field cards. The summary says how many actual Units go to Grave, separately from weighted Offer value. Payment details lists exact copies and possible related effects. It does not run speculative effects, spend costs, promise an activation, or promise that a response will not negate it.
+- Card rules, the guide, tutorial and Dev Log describe free switching.
+- Target-result captions distinguish a target leaving the field, changing zones or losing eligibility from negation. Other clauses still resolve. Draw results remain visible alongside the explanation; history keeps the result. Long captions remain visible for at least 2.8 seconds without waiting or a Continue button.
+- Learn deck has a collapsed Building advice section for physical copy counts, Level 1–2 Units, Action Play usage, the existing 12-Force rule, and regional rules-text mechanics. These are composition hints, not simulated combos or new deck restrictions. The current draft is read each time the guide opens.
+- Opponent response windows light the top screen edge red, with a short status label. The light ends when priority returns or resolution starts, and clears on disconnect, hidden tabs and match end. Resolution shows the current effect out of the chain total, in reverse order. Reduced-motion settings remove the fade.
+- Completed effects produce a short, non-blocking recap based on public events: actual Allies Offered, net Power changes, negated activations and lost targets. Tapping opens that action's history. Reconnects do not replay old recaps. Structured Power events do not add presentation delays.
+- End Turn can show how many legal attackers remain. This is a hint, not a confirmation or restriction. Multiple attack targets do not double-count a Unit.
+- Buff information states its expiry; removed Power and granted skills briefly fade beside the same field copy. Leaving the field does not show a misleading expiry on a replacement card.
+- Normal match results show remaining Barriers, the final public attack when applicable, optional Key moments, Match history, Rematch and Edit deck. Local rematches retain the opposing deck; editing a built-in deck creates a draft and only Save persists it. PvP retains mutual rematch consent; Edit deck leaves the finished room for the deck library.
+
+## Codex audit
+
+October 5 animation follow-up: chain cards support right-click, tap and keyboard inspection. Battle-destroyed Allies now shatter into 12 pieces of their own artwork before the local board redraws. The exact queued destruction is suppressed afterward to avoid replaying it. PvP cues identify the destroyed field incarnation and use its last visible geometry; Offers, blocked attacks and Persona hits retain their separate presentation. Reduced motion fades the cracked pane. Resize, orientation change, hidden tabs and cancellation remove temporary shards. Desktop and 844×390 landscape component previews were inspected; 27 focused animation/session tests, client build/unused checks, shared-server build and two private-room tests passed. This is not a live PvP or physical-device playthrough.
+
+All 30 selectable Codex were inspected through their runtime scripts. Four have a becoming-active effect: Amuran, Faithless Prison, Argao River and Cape Timbalangan. Each already has a once-per-turn usage limit. Controller tests switch away and back three times and confirm that each resolves only once without consuming Plays. No new skill restriction was needed.
+
+Other Codex effects still require their own printed trigger/conditions. Free switching does not automatically activate them. This audit addresses repeatable becoming-active effects; it is not a claim of exhaustive competitive balance.
+
+## Verification
+
+- Exact Tarabusaw / two Salendagao / two offered Allies scenario produces four +5000 boosts, two from each source and two for each offered unit. Original positions survive movement to Grave.
+- Targeted coverage includes source grouping, legacy modifiers, hidden-card exclusion, pending decision indices, read-only Offer previews, free switching, Codex skill limits, PvP seat mapping and session/decision handling.
+- Real card-choice component checked in an isolated local fixture at desktop and landscape-phone sizes (1366×768, 844×390 and 568×320). Expanded payment details and waiting effects keep their confirmation buttons inside the viewport. Fixture checks do not constitute a full physical-phone playthrough.
+- Shared match-server bundle is regenerated from the same engine before publication. Existing private-room security and start/leave checks are retained.
+- October 5 follow-up: build, unused-symbol check and 27 focused tests passed, including controller cases for leaving/returning targets, changed eligibility, independent draw clauses and negation. Shared server build and both private-room tests passed. Real deck-guide navigation and expanded advice inspected at 1366×768, 844×390 and 568×320; no horizontal overflow and Close stays visible in landscape scrolling. This remains local, not a deployment or physical-device test.
+- October 5 duel-feedback follow-up: production build and unused-symbol check passed. Focused UI, chain, event privacy/determinism and presentation suites passed, including the exact two-Salendagao/two-Offer regression. Shared server build and both private-room tests passed after engine synchronization. The real activity/recap/expiry components were exercised in an isolated browser fixture at 844×390 and 568×320. Normal setup reached the main phase, but repeated preview-tab closures prevented a complete normal-match/result-screen visual check. No physical-device or live PvP playthrough is claimed. No deployment was performed.

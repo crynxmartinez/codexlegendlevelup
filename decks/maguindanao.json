@@ -1,0 +1,49 @@
+{
+  "name": "Maguindanao — Garahana",
+  "deck": "Maguindanao",
+  "guild": "Mindanao Arch",
+  "state": "Garahana",
+  "persona": "maguindanao/veiled-eclipse-maharaja",
+  "notes": [
+    "Maguindanao deck — Offer playstyle (tribute units as skill costs).",
+    "State: Garahana — released when 5+ Maguindanaon units are in your Grave.",
+    "Last Oath: skills that activate when a unit is Offered.",
+    "",
+    "4 Personas at 2 copies each = 8. Sentry at 2. Rest distributed to reach 50.",
+    "Forces 4×3=12 (mandatory). Key cards bumped to 3: Mayla, Nuraya."
+  ],
+  "main": [
+    { "id": "maguindanao/buluan-mirror-seer-dayang-amira", "copies": 3 },
+    { "id": "maguindanao/illana-stormwing-ramitan", "copies": 3 },
+    { "id": "maguindanao/liguasan-mire-bender-duma", "copies": 3 },
+    { "id": "maguindanao/pulangi-bloodcurrent-sangkad", "copies": 3 },
+
+    { "id": "maguindanao/buluan-shell-caller-mayla", "copies": 3 },
+    { "id": "maguindanao/illana-tide-harpooner-hakim", "copies": 3 },
+    { "id": "maguindanao/kuta-wato-banner-keeper-sitti-rahma", "copies": 2 },
+    { "id": "maguindanao/liguasan-mudblade-nasser", "copies": 3 },
+    { "id": "maguindanao/pulangi-ember-spear-kamil", "copies": 3 },
+
+    { "id": "maguindanao/buluan-inaul-wardkeeper-dayang-nuraya", "copies": 3 },
+    { "id": "maguindanao/illana-lantaka-warder-panglima-jamal", "copies": 2 },
+    { "id": "maguindanao/kuta-wato-gate-bulwark-bai-samira", "copies": 3 },
+    { "id": "maguindanao/liguasan-reed-eye-harun", "copies": 3 },
+    { "id": "maguindanao/pulangi-wake-cleaver-panglima-farid", "copies": 3 },
+
+    { "id": "maguindanao/blood-moon-bai-a-labi", "copies": 2 },
+    { "id": "maguindanao/kuta-wato-warcaller-datu-salik", "copies": 2 },
+    { "id": "maguindanao/veiled-eclipse-maharaja", "copies": 2 },
+
+    { "id": "maguindanao/crimson-agung-resonance", "copies": 1 },
+    { "id": "maguindanao/pulangi-river-unbound", "copies": 1 },
+
+    { "id": "maguindanao/kuta-wato-oath-shield-panglima-sabir", "copies": 2 }
+  ],
+  "codex": [
+    "maguindanao/illana-bay",
+    "maguindanao/kuta-wato",
+    "maguindanao/lake-buluan",
+    "maguindanao/liguasan-marsh",
+    "maguindanao/pulangi-river"
+  ]
+}

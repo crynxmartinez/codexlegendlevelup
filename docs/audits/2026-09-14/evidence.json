@@ -1,0 +1,410 @@
+{
+  "commit": "546f3ae85fd4e4850a89863807aaf92d4845ccd4",
+  "date": "2026-09-14",
+  "tests": {
+    "total": 701,
+    "passed": 697,
+    "failed": 1,
+    "skipped": 3,
+    "failures": [
+      {
+        "fullName": "chains stay shallow enough that the badge is enough",
+        "failureMessages": [
+          "AssertionError: chains reached 5 links; the CHAIN badge may no longer be enough: expected 5 to be less than or equal to 3\n    at C:\\Code\\codexlegend\\src\\core\\chain-depth.test.ts:82:6\n    at processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at file:///C:/Code/codexlegend/node_modules/@vitest/runner/dist/index.js:533:5\n    at runTest (file:///C:/Code/codexlegend/node_modules/@vitest/runner/dist/index.js:1056:11)\n    at runSuite (file:///C:/Code/codexlegend/node_modules/@vitest/runner/dist/index.js:1205:15)\n    at runFiles (file:///C:/Code/codexlegend/node_modules/@vitest/runner/dist/index.js:1262:5)\n    at startTests (file:///C:/Code/codexlegend/node_modules/@vitest/runner/dist/index.js:1271:3)\n    at file:///C:/Code/codexlegend/node_modules/vitest/dist/chunks/runBaseTests.3qpJUEJM.js:126:11\n    at withEnv (file:///C:/Code/codexlegend/node_modules/vitest/dist/chunks/runBaseTests.3qpJUEJM.js:90:5)\n    at run (file:///C:/Code/codexlegend/node_modules/vitest/dist/chunks/runBaseTests.3qpJUEJM.js:112:3)"
+        ]
+      }
+    ]
+  },
+  "build": "passed",
+  "dependencyAudit": {
+    "production": 0,
+    "development": {
+      "critical": 1,
+      "high": 1,
+      "moderate": 3
+    }
+  },
+  "probes": {
+    "duplicateCopies": {
+      "total": 5,
+      "builderProblems": [],
+      "setupAccepted": true
+    },
+    "failedStorage": {
+      "saveThrew": false,
+      "reloadedDecks": 0
+    },
+    "corruptSibling": {
+      "reloadedDecks": 0
+    },
+    "unaffordableAction": {
+      "name": "The Elders Answer",
+      "legal": false,
+      "cost": 1,
+      "zoneAfter": "grave",
+      "playsAfter": 1
+    }
+  },
+  "matches": [
+    {
+      "pair": [
+        "agta",
+        "babaylan"
+      ],
+      "seed": 0,
+      "first": 0,
+      "winner": 1,
+      "turns": 12,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "agta"
+      ],
+      "seed": 0,
+      "first": 0,
+      "winner": 0,
+      "turns": 11,
+      "maxChain": 5,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "babaylan"
+      ],
+      "seed": 1,
+      "first": 0,
+      "winner": 0,
+      "turns": 11,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "agta"
+      ],
+      "seed": 1,
+      "first": 0,
+      "winner": 1,
+      "turns": 10,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "babaylan"
+      ],
+      "seed": 2,
+      "first": 0,
+      "winner": 0,
+      "turns": 9,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "agta"
+      ],
+      "seed": 2,
+      "first": 0,
+      "winner": 0,
+      "turns": 15,
+      "maxChain": 4,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "babaylan"
+      ],
+      "seed": 3,
+      "first": 0,
+      "winner": 1,
+      "turns": 16,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "agta"
+      ],
+      "seed": 3,
+      "first": 0,
+      "winner": 0,
+      "turns": 13,
+      "maxChain": 5,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "babaylan"
+      ],
+      "seed": 4,
+      "first": 0,
+      "winner": 0,
+      "turns": 9,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "agta"
+      ],
+      "seed": 4,
+      "first": 0,
+      "winner": 0,
+      "turns": 13,
+      "maxChain": 5,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "maguindanao"
+      ],
+      "seed": 0,
+      "first": 0,
+      "winner": 1,
+      "turns": 8,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "agta"
+      ],
+      "seed": 0,
+      "first": 0,
+      "winner": 1,
+      "turns": 8,
+      "maxChain": 4,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "maguindanao"
+      ],
+      "seed": 1,
+      "first": 0,
+      "winner": 0,
+      "turns": 7,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "agta"
+      ],
+      "seed": 1,
+      "first": 0,
+      "winner": 1,
+      "turns": 14,
+      "maxChain": 5,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "maguindanao"
+      ],
+      "seed": 2,
+      "first": 0,
+      "winner": 0,
+      "turns": 15,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "agta"
+      ],
+      "seed": 2,
+      "first": 0,
+      "winner": 1,
+      "turns": 14,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "maguindanao"
+      ],
+      "seed": 3,
+      "first": 0,
+      "winner": 0,
+      "turns": 9,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "agta"
+      ],
+      "seed": 3,
+      "first": 0,
+      "winner": 1,
+      "turns": 12,
+      "maxChain": 4,
+      "error": null
+    },
+    {
+      "pair": [
+        "agta",
+        "maguindanao"
+      ],
+      "seed": 4,
+      "first": 0,
+      "winner": 0,
+      "turns": 11,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "agta"
+      ],
+      "seed": 4,
+      "first": 0,
+      "winner": 0,
+      "turns": 11,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "maguindanao"
+      ],
+      "seed": 0,
+      "first": 0,
+      "winner": 0,
+      "turns": 11,
+      "maxChain": 4,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "babaylan"
+      ],
+      "seed": 0,
+      "first": 0,
+      "winner": 1,
+      "turns": 12,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "maguindanao"
+      ],
+      "seed": 1,
+      "first": 0,
+      "winner": 1,
+      "turns": 8,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "babaylan"
+      ],
+      "seed": 1,
+      "first": 0,
+      "winner": 0,
+      "turns": 7,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "maguindanao"
+      ],
+      "seed": 2,
+      "first": 0,
+      "winner": 1,
+      "turns": 12,
+      "maxChain": 4,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "babaylan"
+      ],
+      "seed": 2,
+      "first": 0,
+      "winner": 0,
+      "turns": 11,
+      "maxChain": 2,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "maguindanao"
+      ],
+      "seed": 3,
+      "first": 0,
+      "winner": 0,
+      "turns": 9,
+      "maxChain": 4,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "babaylan"
+      ],
+      "seed": 3,
+      "first": 0,
+      "winner": 0,
+      "turns": 9,
+      "maxChain": 3,
+      "error": null
+    },
+    {
+      "pair": [
+        "babaylan",
+        "maguindanao"
+      ],
+      "seed": 4,
+      "first": 0,
+      "winner": 0,
+      "turns": 11,
+      "maxChain": 4,
+      "error": null
+    },
+    {
+      "pair": [
+        "maguindanao",
+        "babaylan"
+      ],
+      "seed": 4,
+      "first": 0,
+      "winner": 0,
+      "turns": 9,
+      "maxChain": 3,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "name": "Agta Set 1",
+  "persona": "agta/set-1/wind-heart-rescuer-taguwasi",
+  "main": [
+    {
+      "id": "agta/set-1/wind-heart-rescuer-taguwasi",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/fifth-sky-tyrant-kalimangalnuk",
+      "copies": 2
+    },
+    {
+      "id": "agta/set-1/life-breath-mother-nanolay",
+      "copies": 2
+    },
+    {
+      "id": "agta/set-1/fallen-sky-challenger-talimanog",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/months-of-battle-warrior-ammani",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/relentless-third-brother-annibo",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/river-calling-sister-alig",
+      "copies": 2
+    },
+    {
+      "id": "agta/set-1/golden-threshold-warden-nagdombilan",
+      "copies": 2
+    },
+    {
+      "id": "agta/set-1/moon-bright-captive-innawagan",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/barbed-sky-messenger-dalewasan",
+      "copies": 2
+    },
+    {
+      "id": "agta/set-1/keeper-at-sunrise-sinag",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/returning-sky-captain-darawan",
+      "copies": 2
+    },
+    {
+      "id": "agta/set-1/wedding-pact-elder-amuray",
+      "copies": 1
+    },
+    {
+      "id": "agta/set-1/fifth-sky-sentinel-ulagan",
+      "copies": 2
+    },
+    {
+      "id": "agta/set-1/the-three-brothers-ascend",
+      "copies": 2
+    },
+    {
+      "id": "agta/set-1/taguwasi-answers-the-plea",
+      "copies": 1
+    },
+    {
+      "id": "agta/set-1/path-turning-warden-tumatanan",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/beast-spirit-healer-subkal",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/healer-s-spirit-friend-bunog",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/restless-wandering-dead-belet",
+      "copies": 3
+    },
+    {
+      "id": "agta/sierra-watchkeeper-banoy",
+      "copies": 2
+    }
+  ],
+  "codex": [
+    "agta/set-1/dawnward-country-arawen",
+    "agta/set-1/barbed-sky-passage-salikan",
+    "agta/set-1/brothers-refuge-taliman",
+    "agta/set-1/golden-threshold-nagdan",
+    "agta/set-1/heaven-s-rift-siwangan"
+  ]
+}

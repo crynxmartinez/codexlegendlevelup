@@ -1,0 +1,98 @@
+const fs = require('fs');
+const cards = JSON.parse(fs.readFileSync('src/data/cards.json', 'utf8'));
+
+const properText = {
+  // AGTA - all have [red] Bayanihan state
+  'agta/hidden-path': `[Auto-Switch] If opponent controls more Units than you and you did not switch last turn, you may switch to this Codex.
+[red]Bayanihan - When all of your Ally Zones are occupied by Luzon Arch Units, release Bayanihan until end of turn.[/red]
+[blue]At the start of your Draw Phase, instead of drawing, reveal the top two cards of your deck. Choose one — if it is a Unit, special call it to an open Ally Zone (otherwise add it to your hand). Place the other on the bottom. If Bayanihan is released, reveal three instead.[/blue]
+Gather - Reveal the top card of your deck. If it is a Unit, special call it to an Ally Zone. Otherwise, place it on the bottom.`,
+
+  'agta/shared-ember': `[Auto-Switch] If opponent Persona Level is higher than yours and you did not switch last turn, you may switch to this Codex.
+[red]Bayanihan - When all of your Ally Zones are occupied by Luzon Arch Units, release Bayanihan until end of turn.[/red]
+[green]When you Personify from your hand, reveal the top two cards of your deck. If it is a Unit, special call it to an open Ally Zone. Otherwise, place it on the bottom of your deck.[/green]`,
+
+  'agta/thousand-knots': `[Auto-Switch] If you control more Units than opponent and you did not switch last turn, you may switch to this Codex.
+[red]Bayanihan - When all of your Ally Zones are occupied by Luzon Arch Units, release Bayanihan until end of turn.[/red]
+[green]When you Gather during your Main, if the revealed card was not a Unit, [Cost: send that card to the bottom of the deck and 1 Energy] reveal one more.[/green]
+Gather - Reveal the top card of your deck. If it is a Unit, special call it to an Ally Zone. Otherwise, place it on the bottom.`,
+
+  'agta/listening-canopy': `[Auto-Switch] If opponent Persona Power is equal to or greater than yours and you did not switch last turn, you may switch to this Codex.
+[red]Bayanihan - When all of your Ally Zones are occupied by Luzon Arch Units, release Bayanihan until end of turn.[/red]
+[green][1/turn]: When your Persona attacks, [Cost: 1 Energy] Gather 1. A Unit called by this effect gets Power +2000 until end of turn. If Bayanihan is released, all your Units get Power +2000 until end of turn.[/green]`,
+
+  'agta/returning-river': `[Auto-Switch] If you have 2 or fewer Barriers and you did not switch last turn, you may switch to this Codex.
+[red]Bayanihan - When all of your Ally Zones are occupied by Luzon Arch Units, release Bayanihan until end of turn.[/red]
+[green]When your Barrier is broken and it is not a Force card, reveal the top two cards of your deck. Choose up to one Unit and special call it to an open Ally Zone as exhausted. Place the rest on the bottom.[/green]`,
+
+  // MAGUINDANAO - all have [red] Eclipse state
+  'maguindanao/pulangi-river': `[Auto-Switch] If opponent hand is larger than yours and you did not switch last turn, you may switch to this Codex.
+[red]Eclipse - While there are 5 or more unit cards in your Grave, Release this State.[/red]
+[green]Replace your draw — [Cost: Offer 1 of your units] Draw 2.[/green]`,
+
+  'maguindanao/kuta-wato': `[Auto-Switch] If opponent Persona Level is higher than yours and you did not switch last turn, you may switch to this Codex.
+[red]Eclipse - While there are 5 or more unit cards in your Grave, Release this State.[/red]
+[green]When you personify, you may personify with a Level 3 or higher unit from your Grave. Then discard 1 card.[/green]`,
+
+  'maguindanao/liguasan-marsh': `[Auto-Switch] If opponent controls more Units than you and you did not switch last turn, you may switch to this Codex.
+[red]Eclipse - While there are 5 or more unit cards in your Grave, Release this State.[/red]
+[green]The first time you Offer a unit during your Main, special call that unit back to the field.[/green]`,
+
+  'maguindanao/illana-bay': `[Auto-Switch] If opponent has 2 or fewer Barriers and you did not switch last turn, you may switch to this Codex.
+[red]Eclipse - While there are 5 or more unit cards in your Grave, Release this State.[/red]
+[green]When your Persona attacks, it gets Power +5000 for that battle. If you Offered 3 or more units this turn, it gets Power +10000 instead.[/green]`,
+
+  'maguindanao/lake-buluan': `[Auto-Switch] If you have 2 or fewer Barriers and you did not switch last turn, you may switch to this Codex.
+[red]Eclipse - While there are 5 or more unit cards in your Grave, Release this State.[/red]
+[green]When your Barrier is broken and it is not a Force card, [Cost: discard 1 card] search your deck for a Level 1 unit and special call it.[/green]`,
+
+  // BABAYLAN - all have [red] Resonance state
+  'babaylan/heart-spring-beneath-the-ancient-balete': `[Auto-Switch] If opponent hand is larger than yours and you did not switch last turn, you may switch to this Codex.
+[red]Resonance - If you have 6+ cards in Heart, release this State. Your units on the field gain bonus based on the number of cards in Heart during your turn:
+• 6+ — All your units get Power +1000.
+• 9+ — All your units get Power +2000.
+• 12+ — All your units get Power +3000.[/red]
+[green]At your Draw Step, instead of drawing, [Essence] 2 cards from the top of your deck.[/green]`,
+
+  'babaylan/the-ancestral-caverns-of-samar': `[Auto-Switch] If opponent Persona Level is higher than yours and you did not switch last turn, you may switch to this Codex.
+[red]Resonance - If you have 6+ cards in Heart, release this State. Your units on the field gain bonus based on the number of cards in Heart during your turn:
+• 6+ — All your units get Power +1000.
+• 9+ — All your units get Power +2000.
+• 12+ — All your units get Power +3000.[/red]
+[green]When you Personify to a Level 3 or higher unit, you may personify from Heart. Then choose one card from hand and [Essence] it.[/green]`,
+
+  'babaylan/the-healing-grove-of-bandilaan': `[Auto-Switch] If opponent controls more Units than you and you did not switch last turn, you may switch to this Codex.
+[red]Resonance - If you have 6+ cards in Heart, release this State. Your units on the field gain bonus based on the number of cards in Heart during your turn:
+• 6+ — All your units get Power +1000.
+• 9+ — All your units get Power +2000.
+• 12+ — All your units get Power +3000.[/red]
+[green]Each time you special call a unit from deck or Heart, create a [Kaluluwa] token and [Essence] it.[/green]`,
+
+  'babaylan/the-sacred-crown-of-kanlaon': `[Auto-Switch] If you control more Units than opponent and you did not switch last turn, you may switch to this Codex.
+[red]Resonance - If you have 6+ cards in Heart, release this State. Your units on the field gain bonus based on the number of cards in Heart during your turn:
+• 6+ — All your units get Power +1000.
+• 9+ — All your units get Power +2000.
+• 12+ — All your units get Power +3000.[/red]
+[green]When your Persona attacks, it gains bonuses per cards in Heart:
+• 6+ — Persona gets Power +5000.
+• 12+ — Opponent cannot call Level 2 or higher to defense.
+• 20+ — Opponent cannot call Level 1 or higher to defense.[/green]`,
+
+  'babaylan/the-storm-altar-of-madja-as': `[Auto-Switch] If you have 2 or fewer Barriers and you did not switch last turn, you may switch to this Codex.
+[red]Resonance - If you have 6+ cards in Heart, release this State. Your units on the field gain bonus based on the number of cards in Heart during your turn:
+• 6+ — All your units get Power +1000.
+• 9+ — All your units get Power +2000.
+• 12+ — All your units get Power +3000.[/red]
+[green]When your Barrier is broken and it is not a Force card, create 1 [Kaluluwa] token and [Essence] it. If you have 10 or more [Kaluluwa] tokens, draw 1 card.[/green]`
+};
+
+let count = 0;
+cards.forEach((c) => {
+  if (properText[c.id]) {
+    c.text = properText[c.id];
+    count++;
+  }
+});
+
+fs.writeFileSync('src/data/cards.json', JSON.stringify(cards, null, 2));
+console.log(`Fixed ${count} codex cards with proper colored squares`);

@@ -1,0 +1,56 @@
+/* A screen-facing layer travels with the card without turning its labels. */
+.card-hud {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 100%; height: 100%;
+  transform: translate(-50%, -50%) rotate(var(--hud-turn, 0deg));
+  transition: transform 180ms cubic-bezier(.22,.7,.25,1);
+  pointer-events: none;
+  z-index: 10;
+}
+.card-hud.sideways { width: 140%; height: calc(100% * 5 / 7); }
+.card .card-hud .mod-chips {
+  top: 2px; left: 2px; right: 2px;
+  transform: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2px;
+  pointer-events: none;
+}
+.card-hud .mod-chip {
+  min-height: 18px; min-width: 0;
+  width: auto; height: auto;
+  padding: 1px 4px;
+  font-size: clamp(10px, 8cqw, 12px);
+  line-height: 14px;
+  letter-spacing: 0;
+  text-transform: none;
+  border: 1px solid;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px #0009;
+  pointer-events: auto;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.card-hud .mod-chip:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+.card-hud .mod-chip.granted-skill { color: #f1e1ff; background: #482363; border-color: #cba0f5; }
+.card .card-hud .abdot { top: auto; bottom: 2px; left: 2px; right: auto; width: 16px; height: 16px; }
+.card .card-hud .pw {
+  bottom: 2px; right: 2px;
+  padding: 2px 5px;
+  font-size: clamp(16px, 18cqw, 26px);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, .9);
+}
+/* Keep short landscape cards clear of the ability counter beside Power. */
+@media (max-height:500px), (max-width:700px) {
+  .card .card-hud .pw { font-size:clamp(10px, 15cqw, 18px); padding:1px 3px; }
+}
+.card-hud .combat-label { top: -16px; left: 0; }
+html[data-duel-pace="fast"] .card-hud { transition-duration: 100ms; }
+html[data-animation-intensity="minimal"] .card-hud { transition: none; }
+@media (prefers-reduced-motion: reduce) { .card-hud { transition: none; } }

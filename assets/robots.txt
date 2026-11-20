@@ -1,0 +1,14 @@
+# Codex Legends - the duel client at https://game.codexlegendtcg.site/
+#
+# This host had no robots.txt at all, which is not itself a block - a missing
+# file means "crawl everything" - but it also meant no sitemap was ever
+# advertised here, and this host is a separate property in Search Console from
+# www.codexlegendtcg.site.
+#
+# Card and board art is deliberately crawlable. It is ours, it is the most
+# distinctive thing about the project, and image search is worth having.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://game.codexlegendtcg.site/sitemap.xml

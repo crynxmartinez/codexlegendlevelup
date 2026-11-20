@@ -1,0 +1,92 @@
+/* Remaining deck destinations: the same navy/silver/cyan menu family. */
+body dialog.deck-learning.anime-deck-learning {
+  width:min(1040px,94vw);max-height:92dvh;box-sizing:border-box;
+  padding:0 26px 24px;color:#163956;
+  background:#eef7fc url('/ui/menu-v1/kit/svg/pale-surface.svg') center/cover;
+  border:2px solid #b1cbdc;border-radius:16px;
+  box-shadow:0 0 0 2px #183b59,0 18px 60px #00122c80;
+  scrollbar-color:#638da8 #e4eff7;font-size:15px;line-height:1.5;
+}
+body .anime-deck-learning header {
+  position:sticky;top:0;z-index:2;margin:0 -26px 22px;padding:16px 24px;
+  background:linear-gradient(120deg,#103869,#071b34);color:white;
+  border-bottom:3px solid #12d1ed;
+}
+body .anime-deck-learning h2 {font:850 italic 28px/1.15 Codex,Arial,sans-serif;color:white}
+body .anime-deck-learning h3 {font:800 italic 20px/1.3 Codex,Arial,sans-serif;color:#103959;margin:16px 0 12px}
+body .anime-deck-learning button:not(.st-switch):not(.cc-card):not(.cc-nav),
+body .anime-deck-learning a {
+  color:#fff;background:linear-gradient(135deg,#21496c,#0b233d);
+  border:1px solid #b4cddd;box-shadow:inset 0 0 0 2px #31546e;
+  border-radius:8px;min-height:44px;padding:10px 16px;font-weight:700;
+  letter-spacing:0;text-transform:none;transition:background .15s,box-shadow .15s;
+}
+body .anime-deck-learning button:hover:not(:disabled),body .anime-deck-learning a:hover {
+  color:white;background:#07599d;box-shadow:inset 0 0 0 2px #25cce9;
+}
+body .anime-deck-learning .learning-sequence {
+  color:#16476a;background:#dceefa;border-left:3px solid #00accd;
+  padding:12px 16px;border-radius:0 10px 10px 0;line-height:1.6;
+}
+body .anime-deck-learning details {background:#fff9;border:1px solid #b8cfde;border-radius:10px;padding:8px 14px;margin:10px 0}
+body .anime-deck-learning summary {color:#163e62;cursor:pointer;min-height:36px;font-weight:700}
+body .anime-deck-learning .subtle,body .anime-deck-learning .learning-advice-count {color:#456782}
+body .anime-deck-learning .learning-key-cards {display:flex;gap:12px;flex-wrap:wrap}
+body .anime-deck-learning .learning-key-cards h3 {flex-basis:100%;margin-bottom:0}
+body .anime-deck-learning .learning-key-cards button.learning-card:not(.st-switch):not(.cc-card):not(.cc-nav) {
+  display:flex;align-items:center;gap:12px;flex:1 1 210px;text-align:left;
+  color:#173b5a;background:#fff9;margin:0;padding:10px;box-shadow:0 2px 5px #193a5817;
+}
+body .anime-deck-learning .learning-card img {width:58px;aspect-ratio:5/7;object-fit:contain;border-radius:4px}
+body .anime-deck-learning .learning-card span {font-size:14px;line-height:1.4}
+body .anime-deck-learning .learning-key-cards button.learning-card:hover:not(:disabled) {color:#123c60;background:#d5f4fc}
+body .anime-deck-learning .learning-hand button:not(.st-switch):not(.cc-card):not(.cc-nav) {flex:0 0 clamp(90px,10vw,130px);padding:0;background:transparent;border:0;box-shadow:none;border-radius:8px}
+body .anime-deck-learning .learning-hand img {width:100%;aspect-ratio:5/7;object-fit:contain;box-shadow:0 3px 6px #13345230}
+body .anime-deck-learning .learning-empty {padding:16px;background:#e0edf7;border-radius:8px;width:100%}
+
+.deck-refined .card-tools {flex-wrap:wrap}
+.deck-refined .card-tools button.inspect-card {
+  background:linear-gradient(130deg,#234c6e,#0c2945);color:#f5fcff;
+  border:1px solid #9cbdcf;box-shadow:inset 0 0 0 1px #476d86;
+  border-radius:7px;min-height:36px;padding:5px 9px;font-size:12px;
+}
+.deck-refined .card-tools button.inspect-card:hover {background:#075aa4;color:white;border-color:#05cee9}
+.deck-refined .deck-copy .card-tools {display:grid;grid-template-columns:1fr auto}
+.deck-refined .deck-copy .copy-label {grid-column:1/-1}
+.deck-refined .deck-copy button.inspect-card {font-size:11px;padding:4px;min-width:0}
+
+.deck-refined.deck-catalogue {padding:0;gap:0;justify-content:flex-start}
+.deck-catalogue .catalogue-title {padding:12px 26px;color:#17476b;font:800 italic 21px Codex,Arial,sans-serif;flex:none}
+.deck-catalogue .deck-detail-layout {width:100%;max-width:none;min-height:0;flex:1;grid-template-columns:minmax(260px,30%) 1fr;padding:0 26px 18px;gap:20px}
+.deck-catalogue .deck-detail-list,.deck-catalogue .deck-detail-panel {background:#f9fcffe8;border:1px solid #abc3d6;border-radius:14px;box-shadow:0 4px 12px #12334d18;scrollbar-color:#648fae #dfebf4}
+.deck-catalogue .deck-group-label {color:#244b6b;font-size:12px;border-color:#b9cedf;padding:10px 4px}
+.deck-catalogue .deck-card-row {border:2px solid transparent;border-radius:9px;padding:8px;min-height:76px}
+.deck-catalogue .deck-card-row:hover {background:#e1f1fb}
+.deck-catalogue .deck-card-row.sel {background:#d9f5ff;border-color:#00a6d1;box-shadow:inset 4px 0 #00a6d1}
+.deck-catalogue .deck-card-row img {width:46px;height:auto;aspect-ratio:5/7;object-fit:contain}
+.deck-catalogue .deck-card-row-name {white-space:normal;font-size:14px;color:#163958;line-height:1.4;font-weight:700}
+.deck-catalogue .deck-card-row-stats {font-size:12px;color:#526e87}
+.deck-catalogue .deck-card-row-copies {font-size:16px;color:#175780}
+.deck-catalogue .deck-detail-panel {display:grid;grid-template-columns:minmax(150px,38%) minmax(0,1fr);align-content:start;align-items:start;padding:24px;gap:24px}
+.deck-catalogue .deck-detail-art {width:100%;max-width:340px;justify-self:center;height:auto;box-shadow:0 5px 16px #123b6130}
+.deck-catalogue .deck-detail-body {max-width:none;min-width:0}
+.deck-catalogue .deck-detail-name {font:850 italic 25px/1.2 Codex,Arial,sans-serif;color:#113c62;margin-bottom:12px}
+.deck-catalogue .deck-detail-type {color:#325d7d;line-height:1.5;margin-top:8px}
+.deck-catalogue .deck-detail-stats {flex-wrap:wrap;gap:8px}
+.deck-catalogue .deck-detail-stats span {color:#1c4668;background:#e0eef7;border-radius:8px;padding:9px;font-size:14px}
+.deck-catalogue .deck-detail-stats b {color:#153e61}
+.deck-catalogue .deck-detail-text {font-size:15px;line-height:1.7;color:#213e58}
+.deck-catalogue .deck-detail-text .kw {color:#075a82}
+.deck-catalogue .deck-detail-flavor {color:#55728a;font-size:13px}
+@media(max-width:1100px){.deck-catalogue .deck-detail-panel{display:flex}.deck-catalogue .deck-detail-art{max-width:240px}.deck-catalogue .deck-detail-body{max-width:540px}}
+@media(max-height:500px) and (orientation:landscape){
+  body dialog.deck-learning.anime-deck-learning{max-height:calc(100dvh - 12px);padding:0 16px 16px;font-size:14px}
+  body .anime-deck-learning header{margin:0 -16px 12px;padding:9px 16px;top:0}
+  body .anime-deck-learning h2{font-size:22px}
+  .deck-catalogue .catalogue-title{font-size:16px;padding:5px 14px}
+  .deck-catalogue .deck-detail-layout{grid-template-columns:29% 1fr;padding:0 12px 8px;gap:12px}
+  .deck-catalogue .deck-detail-panel{display:grid;grid-template-columns:32% 1fr;padding:12px;gap:14px}
+  .deck-catalogue .deck-card-row{padding:5px;gap:6px}.deck-catalogue .deck-card-row img{width:34px}
+  .deck-catalogue .deck-card-row-name{font-size:12px}.deck-catalogue .deck-detail-name{font-size:20px}
+  .deck-catalogue .deck-detail-text{font-size:14px}
+}

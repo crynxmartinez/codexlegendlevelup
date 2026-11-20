@@ -1,0 +1,810 @@
+{
+  "babaylan/set-1/mountain-sovereign-maria-cacao": {
+    "name": "Mountain Sovereign, Maria Cacao",
+    "type": "Unit",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Divine Heart-call Persona",
+    "skill": "[blue][Persona] 1/Turn: [Cost: Sanib the top 2 cards of your deck] special call a Level 2 or lower Divine Unit from your Heart. It gets Power +5000 until end of turn. Sanib it at the end of the turn.\n[green][Andukha 6][Persona] 1/Turn: When a Unit is Sanib during your turn, create 1 Kaluluwa in your Heart.",
+    "gameplay": "Updated rules: [Persona] 1/Turn: [Cost: Sanib the top 2 cards of your deck] special call a Level 2 or lower Divine Unit from your Heart. It gets Power +5000 until end of turn. Sanib it at the end of the turn.\n[Andukha 6][Persona] 1/Turn: When a Unit is Sanib during your turn, create 1 Kaluluwa in your Heart.",
+    "partners": "Dalagan, Guidala, Danao Highlands",
+    "pattern": "Pale Moon call-and-return; Genesis Kalas payoff",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "High"
+  },
+  "babaylan/set-1/harvest-warden-mangaw": {
+    "name": "Harvest Warden, Mangaw",
+    "type": "Unit",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Heart-count scaling Persona",
+    "skill": "[green][Persona]: At the start of your Main Phase, Sanib the top card of your deck. Then you may create 2 Kaluluwa in your Heart.\n[green][Andukha 9][Persona]: During your turn, this Unit gets Power +1000 for each card you Sanib this turn.",
+    "gameplay": "Updated rules: [Persona]: At the start of your Main Phase, Sanib the top card of your deck. Then you may create 2 Kaluluwa in your Heart.\n[Andukha 9][Persona]: During your turn, this Unit gets Power +1000 for each card you Sanib this turn.",
+    "partners": "Six Moons Lost, Guidala, Lawira",
+    "pattern": "Dark Irregulars soul-count scaling; Genesis large Soul-Blast turns",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/thunder-sovereign-kaptan": {
+    "name": "Thunder Sovereign, Kaptan",
+    "type": "Unit",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Divine chain-attack Persona",
+    "skill": "[green][Persona] 1/Turn: When this Unit attacks, [Cost: Sanib one card from your hand] draw 1 card. This Unit gets Power +3000 until end of turn.\n[blue][Andukha 9][Persona] 1/Turn: Look at the top 5 cards of your deck. Sanib up to one Divine Unit from among them and put the rest on the bottom in any order. This Unit gets Power +5000 until end of turn.",
+    "gameplay": "Updated rules: [Persona] 1/Turn: When this Unit attacks, Sanib one card from your hand, then draw 1 card. This Unit gets Power +3000 until end of turn.\n[Andukha 9][Persona] 1/Turn: Look at the top 5 cards of your deck. Sanib up to one Divine Unit from among them and put the rest on the bottom in any order. This Unit gets Power +5000 until end of turn.",
+    "partners": "Dalagan, Dyano, Guidala",
+    "pattern": "Genesis top-deck selection plus Pale Moon battle calling",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "High"
+  },
+  "babaylan/set-1/ocean-sovereign-maguayan": {
+    "name": "Ocean Sovereign, Maguayan",
+    "type": "Unit",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Heart exchange control Persona",
+    "skill": "[green][Persona] 1/Turn: When a Unit is special called from your Heart, draw 1 card, then Sanib 1 card from your hand.\n[green][Andukha 9][Persona] 1/Turn: When this Unit attacks, [Cost: Sanib 1 of your Allies] add that Ally's current Power to this Unit's Power for that battle.",
+    "gameplay": "Updated rules: [Persona] 1/Turn: When a Unit is special called from your Heart, draw 1 card, then Sanib 1 card from your hand.\n[Andukha 9][Persona] 1/Turn: When this Unit attacks, [Cost: Sanib 1 of your Allies] add that Ally's current Power to this Unit's Power for that battle.",
+    "partners": "Ulango, Salumi, Argao River",
+    "pattern": "Pale Moon carousel; Dark Irregulars threshold control",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/abyssal-revolt-sinogo": {
+    "name": "Abyssal Revolt, Sinogo",
+    "type": "Unit",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch",
+      "Beast"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Beast carousel Persona",
+    "skill": "[green][Persona] 1/Turn: When this Unit attacks, [Cost: Kalas 5] special call a Beast or Bird Unit from your deck. Sanib that Unit at the end of your turn.\n[green][Andukha 12][Persona]: Your Beast and Bird Units' numeric Kalas costs are reduced by 2, to a minimum of 0.",
+    "gameplay": "Updated rules: [Persona] 1/Turn: When this Unit attacks, [Cost: Kalas 5] special call a Beast or Bird Unit from your deck. Sanib that Unit at the end of your turn.\n[Andukha 12][Persona]: Your Beast and Bird Units' numeric Kalas costs are reduced by 2, to a minimum of 0.",
+    "partners": "Ulango, Sagwil, Wakira",
+    "pattern": "Purple Trapezist exchange; Luquier field reconstruction",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "High"
+  },
+  "babaylan/set-1/last-moon-devourer-bakunawa": {
+    "name": "Last Moon Devourer, Bakunawa",
+    "type": "Unit",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch",
+      "Beast"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Kalas finisher Persona",
+    "skill": "[green][Persona] 1/Turn: When this Unit attacks your opponent's Persona, [Cost: Kalas 6] this Unit gets Power +10000 for that battle. Your opponent cannot use Level 2 or higher cards to defend this battle. If six or more Kaluluwa tokens were Kalas for this cost, draw 1 card.\n[green][Andukha 9][Persona]: At the end of a battle in which this Unit attacked, if its attack did not hit, Sanib up to three cards from your Grave.",
+    "gameplay": "Updated rules: [Persona] 1/Turn: When this Unit attacks your opponent's Persona, [Cost: Kalas 6] this Unit gets Power +10000 for that battle. Your opponent cannot use Level 2 or higher cards to defend this battle. If six or more Kaluluwa tokens were Kalas for this cost, draw 1 card.\n[Andukha 9][Persona]: At the end of a battle in which this Unit attacked, if its attack did not hit, Sanib up to three cards from your Grave.",
+    "partners": "Luning, Return Our Moon, Moonwake Shore",
+    "pattern": "Dark Irregulars soul-threshold finisher",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/unbroken-invocation-amara": {
+    "name": "Unbroken Invocation, Amara",
+    "type": "Unit",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch",
+      "Babaylan"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Babaylan engine Persona",
+    "skill": "[green][Persona] 1/Turn: When this Unit is Sanib from the Persona Zone, special call one Unit from your Heart.\n[blue][Andukha 9][Heart] 1/Turn: [Cost: Kalas this card] search your deck for a Level 2 or lower Babaylan Unit other than Unbroken Invocation, Amara. Sanib it, then special call a Babaylan Unit from your Heart. Shuffle your deck. The called Unit gets Power +5000 until end of turn.",
+    "gameplay": "Updated rules: [Persona] 1/Turn: When this Unit is Sanib from the Persona Zone, special call one Unit from your Heart.\n[Andukha 9][Heart] 1/Turn: [Cost: Kalas this card] search your deck for a Level 2 or lower Babaylan Unit other than Unbroken Invocation, Amara. Sanib it, then special call a Babaylan Unit from your Heart. Shuffle your deck. The called Unit gets Power +5000 until end of turn.",
+    "partners": "Aday, Luning, Kabulaw",
+    "pattern": "Genesis selective soul setup; Pale Moon toolbox call",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "High"
+  },
+  "babaylan/set-1/heaven-s-pursuit-dalagan": {
+    "name": "Heaven's Pursuit, Dalagan",
+    "type": "Unit",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Divine Heart-call filter",
+    "skill": "[green][Ally]: When this Unit is placed, Sanib the top card of your deck, then create 1 Kaluluwa in your Heart.",
+    "gameplay": "Updated rules: [Ally]: When this Unit is placed, Sanib the top card of your deck, then create 1 Kaluluwa in your Heart.",
+    "partners": "Maria Cacao, Kaptan, Argao River",
+    "pattern": "Pale Moon on-call value; Dark Irregulars soul-in trigger",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/unyielding-pursuer-guidala": {
+    "name": "Unyielding Pursuer, Guidala",
+    "type": "Unit",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Kalas-triggered Divine attacker",
+    "skill": "[green][Ally]: When this Unit is placed, Sanib the top card of your deck. Then, once per turn per copy, you may special call a Unit from your hand. If you do, Sanib this Unit and the called Unit at the end of your turn.",
+    "gameplay": "Updated rules: [Ally]: When this Unit is placed, Sanib the top card of your deck. Then you may special call a Unit from your hand. If you do, Sanib this Unit and the called Unit at the end of your turn.",
+    "partners": "Maria Cacao, Mangaw, Six Moons Lost",
+    "pattern": "Genesis Chamomile-style Soul-Blast payoff",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/unseen-defender-tata-cero": {
+    "name": "Unseen Defender, Tata Cero",
+    "type": "Unit",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch",
+      "Human"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Defensive Heart builder",
+    "skill": "[green][Ally] 1/Turn per copy: When this Unit attacks, it gets Power +1000 for each Kaluluwa in your Heart for that battle.",
+    "gameplay": "Updated rules: [Ally]: When this Unit attacks, it gets Power +1000 for each Kaluluwa in your Heart for that battle.",
+    "partners": "Maguayan, Kaptan, Hidden Court",
+    "pattern": "Resource conversion after guarding",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/leafborne-champion-kapitan-dyano": {
+    "name": "Leafborne Champion, Kapitan Dyano",
+    "type": "Unit",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch",
+      "Human"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Divine top-card engine",
+    "skill": "[green][Ally]: When this Unit is placed, it gets Power +3000 until end of turn.",
+    "gameplay": "Updated rules: [Ally]: When this Unit is placed, it gets Power +3000 until end of turn.",
+    "partners": "Kaptan, Mount Lantoy, Tabayag",
+    "pattern": "Dark Irregulars soul charge with trait reward",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/spring-sentinel-ulango": {
+    "name": "Spring Sentinel, Ulango",
+    "type": "Unit",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch",
+      "Beast"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Beast Heart-call extender",
+    "skill": "[green][Heart]: When this Unit is Kalas, draw 1 card.",
+    "gameplay": "Updated rules: [Heart]: When this Unit is Kalas, draw 1 card.",
+    "partners": "Sinogo, Wakira, Bantayan Waters",
+    "pattern": "Scharhrot multiattack enabled by stored resources",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/shadow-prowler-sagwil": {
+    "name": "Shadow Prowler, Sagwil",
+    "type": "Unit",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch",
+      "Beast"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Beast exchange enabler",
+    "skill": "[green][Heart]: When this Unit is Kalas, choose one opposing Ally Unit and damage it.",
+    "gameplay": "Updated rules: [Heart]: When this Unit is Kalas, choose one opposing Ally Unit and damage it.",
+    "partners": "Sinogo, Nardo, Silak",
+    "pattern": "Pale Moon end-of-battle field rotation",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/nightfall-hunter-wakira": {
+    "name": "Nightfall Hunter, Wakira",
+    "type": "Unit",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch",
+      "Bird"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Repeat attacker",
+    "skill": "[green][Heart]: When this Unit is Kalas, choose up to two of your Units. Each gets Power +3000 until end of turn.",
+    "gameplay": "Updated rules: [Heart]: When this Unit is Kalas, choose up to two of your Units. Each gets Power +3000 until end of turn.",
+    "partners": "Sinogo, Ulango, Flight of the Faithless",
+    "pattern": "Pale Moon called-unit multiattack",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/reef-enchanter-lawira": {
+    "name": "Reef Enchanter, Lawira",
+    "type": "Unit",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch",
+      "Spirit"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Spirit Kalas converter",
+    "skill": "[green][Ally]: At the end of your turn, Sanib this Unit.",
+    "gameplay": "Updated rules: [Ally]: At the end of your turn, Sanib this Unit.",
+    "partners": "Mangaw, A Promise Broken, Kabulaw",
+    "pattern": "Genesis Soul-Blast trigger; Dark Irregulars resource replacement",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/answering-voice-aday": {
+    "name": "Answering Voice, Aday",
+    "type": "Unit",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch",
+      "Babaylan"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Babaylan Heart tutor",
+    "skill": "[green][Ally]: This Unit gets Power +1000 for each card you Sanib this turn.",
+    "gameplay": "Updated rules: [Ally]: This Unit gets Power +1000 for each card you Sanib this turn.",
+    "partners": "Amara, Luning, Iday",
+    "pattern": "Genesis selective soul loading",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/first-invocation-luning": {
+    "name": "First Invocation, Luning",
+    "type": "Unit",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch",
+      "Babaylan"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Sanib-event scaler",
+    "skill": "[green][Ally] 1/Turn across all cards with this name: When Kaluluwa are created, you may create 1 additional Kaluluwa in your Heart. The additional token does not trigger this skill again.",
+    "gameplay": "Updated rules: [Ally]: When Kaluluwa are created, you may create 1 additional Kaluluwa in your Heart. The additional token does not trigger this skill again.",
+    "partners": "Amara, Bakunawa, Dingayop Spring",
+    "pattern": "Doreen-style power on soul entry",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/spirit-mediator-iday": {
+    "name": "Spirit Mediator, Iday",
+    "type": "Unit",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch",
+      "Human"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Kalas recovery",
+    "skill": "[green][Hand/Ally] 1/Turn per copy: When you Sanib a card, [Cost: Sanib this card] choose one of your Units. It gets Power +5000 until end of turn.",
+    "gameplay": "Updated rules: [Hand/Ally]: When you Sanib a card, [Cost: Sanib this card] choose one of your Units. It gets Power +5000 until end of turn.",
+    "partners": "Aday, Guidala, A Promise Broken",
+    "pattern": "Genesis value when Soul-Blasted",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/hidden-affliction-doro": {
+    "name": "Hidden Affliction, Doro",
+    "type": "Unit",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch",
+      "Human"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Reactive Heart caller",
+    "skill": "[blue][Ally] 1/Turn: this Unit gets Power +5000 until end of turn. At the end of your turn, choose one of your other Allies or one card from your hand. Sanib this Unit and the chosen card.",
+    "gameplay": "Updated rules: [Ally] 1/Turn: this Unit gets Power +5000 until end of turn. At the end of your turn, choose one of your other Allies or one card from your hand. Sanib this Unit and the chosen card.",
+    "partners": "Thunder Beneath the Waves, Tanon Strait, Maguayan",
+    "pattern": "Pale Moon conditional call from soul",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/floodwatch-runner-sali": {
+    "name": "Floodwatch Runner, Sali",
+    "type": "Unit",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch",
+      "Human"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Barrier-response caller",
+    "skill": "[green][Ally] 1/Turn per copy: When you Kalas, you may give this Unit Power +5000 until end of turn.",
+    "gameplay": "Updated rules: [Ally]: When you Kalas, you may give this Unit Power +5000 until end of turn.",
+    "partners": "Tata Cero, Hidden Court, Bituon",
+    "pattern": "Stored defensive resource becoming board",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/promise-bearer-nardo": {
+    "name": "Promise Bearer, Nardo",
+    "type": "Unit",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch",
+      "Human"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Token-producing support",
+    "skill": "[green][Ally]: The first time you Sanib a card each turn, you may draw 1 card.",
+    "gameplay": "Updated rules: [Ally]: The first time you Sanib a card each turn, you may draw 1 card.",
+    "partners": "Amara, Luning, Bakunawa",
+    "pattern": "Pale Moon return-to-soul setup",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/small-deliverer-silak": {
+    "name": "Small Deliverer, Silak",
+    "type": "Unit",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch",
+      "Fish"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Heart-call resource refund",
+    "skill": "[green][Heart]: When this Unit is Kalas, draw 1 card, then Sanib 1 card from your hand.",
+    "gameplay": "Updated rules: [Heart]: When this Unit is Kalas, draw 1 card, then Sanib 1 card from your hand.",
+    "partners": "Sagwil, Maria Cacao, Argao River",
+    "pattern": "Pale Moon on-call resource refund",
+    "balance": "Verify the printed costs, threshold, trigger zone, and delayed Sanib timing.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/field-blessing-banira": {
+    "name": "Field Blessing, Banira",
+    "type": "Force",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Force; Heart setup",
+    "skill": "[yellow][Force][Hand] On either player's turn: When an opponent's Ally on the field activates its ability, [Cost: Reveal and discard this card] choose one of your Allies and one of your opponent's Allies. Rally them to the bottom of their owners' decks.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]",
+    "gameplay": "The baseline Force for reaching Andukha while maintaining attack pressure.",
+    "partners": "Luning, Mangaw, Tabayag",
+    "pattern": "Dark Irregulars soul charge plus Codex Legends Force structure",
+    "balance": "Mandatory top-card Sanib carries deck-out risk.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/quiet-crossing-salumi": {
+    "name": "Quiet Crossing, Salumi",
+    "type": "Force",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Force; Kalas and draw",
+    "skill": "[yellow][Force][Hand] On either player's turn: When your opponent activates a card's ability, [Cost: Reveal and discard this card] negate that activation.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]",
+    "gameplay": "Turns stored Heart into a fresh card and activates Kalas triggers during checks.",
+    "partners": "Guidala, Iday, Lawira",
+    "pattern": "Genesis Soul-Blast conversion",
+    "balance": "Cannot draw without successfully Kalas.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/kindly-neighbor-silaya": {
+    "name": "Kindly Neighbor, Silaya",
+    "type": "Force",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Force; hand-to-Heart filter",
+    "skill": "[yellow][Force][Hand] On either player's turn: When your opponent activates an effect that would special call one or more Units, [Cost: Reveal and discard this card] draw 2 cards.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]",
+    "gameplay": "Improves hand quality while storing the best future Heart call or Kalas trigger.",
+    "partners": "Dalagan, Aday, Amara",
+    "pattern": "Pale Moon selective soul setup",
+    "balance": "Card-neutral and requires a card in hand after drawing.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/hidden-passage-kawili": {
+    "name": "Hidden Passage, Kawili",
+    "type": "Force",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch",
+      "Divine"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Force; Heart call",
+    "skill": "[yellow][Force][Hand] On either player's turn: When an opponent's Unit attacks, [Cost: Reveal and discard this card] choose one of your Units. It gets Power +5000 until the end of that attack. Draw 1 card.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]",
+    "gameplay": "A check creates a setup body while the Power mode advances the current battle.",
+    "partners": "Silak, Luning, Doro",
+    "pattern": "Pale Moon call from soul",
+    "balance": "The called unit is exhausted to prevent a free check-driven extra attack.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/the-elders-answer": {
+    "name": "The Elders Answer",
+    "type": "Action",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; selective Heart setup",
+    "skill": "[blue]Play with - Look at the top 3 cards of your deck. Sanib one Unit from among them and place the rest on the bottom in any order.[/blue]",
+    "gameplay": "Finds a useful Heart card without blind milling and improves the next draws.",
+    "partners": "Kaptan, Aday, Mount Lantoy",
+    "pattern": "Genesis top-deck control and soul setup",
+    "balance": "One card enters Heart and the Action does not replace itself.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/a-promise-broken": {
+    "name": "A Promise Broken",
+    "type": "Action",
+    "level": 1,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; Kalas hand filter",
+    "skill": "[blue]Play with - [Cost: Kalas 2] Draw 2 cards, then discard 1 card.[/blue]",
+    "gameplay": "Turns Heart into hand selection while triggering cards that care about Kalas.",
+    "partners": "Guidala, Iday, Lawira",
+    "pattern": "Genesis Soul-Blast for advantage",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/the-mountain-withdraws": {
+    "name": "The Mountain Withdraws",
+    "type": "Action",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; Heart exchange",
+    "skill": "[blue]Play with - [Cost: Sanib one of your Allies] special call a different Unit of equal or lower Level from your Heart. It gets Power +5000 until end of turn.[/blue]",
+    "gameplay": "Converts a field unit into the right Heart unit and opens a placed-from-Heart combo.",
+    "partners": "Dalagan, Ulango, Silak",
+    "pattern": "Purple Trapezist exchange",
+    "balance": "The called card must be different and cannot exceed the paid unit's Level.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/flight-of-the-faithless": {
+    "name": "Flight of the Faithless",
+    "type": "Action",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; temporary attacker",
+    "skill": "[blue]Play with - [Cost: Kalas 1] special call a Beast or Bird Unit from your Heart. It gets Power +5000 until end of turn. At the end of turn, Sanib it.[/blue]",
+    "gameplay": "Borrows a stored attacker for the turn and restores it for another carousel later.",
+    "partners": "Wakira, Ulango, Sinogo",
+    "pattern": "Pale Moon temporary soul call",
+    "balance": "The Unit returns to Heart at end of turn.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/thunder-beneath-the-waves": {
+    "name": "Thunder Beneath the Waves",
+    "type": "Action",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; control payoff",
+    "skill": "[blue]Play with - [Cost: Kalas 3] Exhaust up to two opposing Allies. If you have Andukha 12, one of them gets Power -5000 until end of turn.[/blue]",
+    "gameplay": "Spends Heart to clear attack lanes and enable Doro.",
+    "partners": "Doro, Maguayan, Tanon Strait",
+    "pattern": "Dark Irregulars threshold control",
+    "balance": "Exhausts rather than destroys; only one target receives the debuff.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/when-lantoy-wept": {
+    "name": "When Lantoy Wept",
+    "type": "Action",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; Grave-to-Heart recovery",
+    "skill": "[blue]Play with - Choose up to two Unit cards in your Grave and Sanib them, then Kalas 1.[/blue]",
+    "gameplay": "Rebuilds the Heart with known cards and immediately enables one Kalas trigger.",
+    "partners": "Guidala, Iday, Mount Lantoy",
+    "pattern": "Genesis recursion into Soul-Blast",
+    "balance": "Net Heart gain is one and it requires a Kalas after recovery.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/the-river-rises": {
+    "name": "The River Rises",
+    "type": "Action",
+    "level": 2,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; team power setup",
+    "skill": "[blue]Play with - Sanib the top 2 cards of your deck. If you have Andukha 9, all your Units get Power +3000 until end of turn.[/blue]",
+    "gameplay": "Advances Andukha and turns the established Heart into a wide pressure turn.",
+    "partners": "Mangaw, Luning, Tabayag",
+    "pattern": "Dark Irregulars soul growth into front-row scaling",
+    "balance": "Small team bonus and mandatory two-card deck cost.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/six-moons-lost": {
+    "name": "Six Moons Lost",
+    "type": "Action",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; large Kalas control",
+    "skill": "[blue]Play with - [Cost: Kalas 6] Return up to two exhausted opposing Allies to their owner's hand. If six or more Kaluluwa tokens were Kalas, draw 1 card.[/blue]",
+    "gameplay": "A high-end Heart payoff that trades six stored cards for a major tempo swing.",
+    "partners": "Mangaw, Bakunawa, Doro",
+    "pattern": "Dark Irregulars large-soul finisher; Genesis mass Soul-Blast",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/return-our-moon": {
+    "name": "Return Our Moon",
+    "type": "Action",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; Heart retrieval",
+    "skill": "[blue]Return one Unit from your Heart to your hand. If it is Divine, you may Sanib the top card of your deck. If it is a Beast or Bird, draw 1 card, then discard 1 card.[/blue]",
+    "gameplay": "Retrieves a needed call or Persona from Heart and rewards either major package without raw advantage.",
+    "partners": "Kaptan, Sinogo, Bakunawa",
+    "pattern": "Dark Irregulars selective soul retrieval",
+    "balance": "One card leaves Heart, lowering Andukha.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/the-covenant-renewed": {
+    "name": "The Covenant Renewed",
+    "type": "Action",
+    "level": 3,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Action; late-game Heart rebuild",
+    "skill": "[blue]Play with - Sanib up to two Unit cards from your Grave. If you have Andukha 12 after this effect, your Persona gets Power +10000 until end of turn.[/blue]",
+    "gameplay": "Restores spent combo pieces to Heart and rewards reaching the top threshold again.",
+    "partners": "Amara, Maria Cacao, Moonwake Shore",
+    "pattern": "Genesis resource recycling; Dark Irregular threshold payoff",
+    "balance": "No card draw and needs grave setup.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/sovereign-heights-mount-lantoy": {
+    "name": "Sovereign Heights, Mount Lantoy",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; deck control",
+    "skill": "Auto-switch — before you draw, if your opponent has more Barriers than you, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — When your State is released, all of your Units get Power +1000 until end of turn.",
+    "gameplay": "Makes blind Sanib safer and improves future checks without adding cards.",
+    "partners": "Dyano, Banira, The River Rises",
+    "pattern": "Genesis top-deck manipulation",
+    "balance": "Only sees one card and provides no direct advantage.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/silent-threshold-kabulaw": {
+    "name": "Silent Threshold, Kabulaw",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; Kalas quality",
+    "skill": "Auto-switch — before you Personify, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — Instead of Personifying from your hand, look at the top 5 cards of your deck and Personify one Level 3 Unit among them. Put the rest on the bottom of your deck.",
+    "gameplay": "Rewards careful Kalas choices with hand filtering.",
+    "partners": "Lawira, Iday, A Promise Broken",
+    "pattern": "Genesis Soul-Blast trigger value",
+    "balance": "Card-neutral and once per turn.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/unseen-passage-argao-river": {
+    "name": "Unseen Passage, Argao River",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; Heart-call amplifier",
+    "skill": "Auto-switch — before you draw, if your opponent has more cards in hand than you, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — When this Codex becomes active, Kalas any number of cards. Draw 1 card for every 5 cards vented this way.",
+    "gameplay": "Funds and strengthens one carousel call each turn.",
+    "partners": "Dalagan, Silak, Wakira",
+    "pattern": "Pale Moon on-call payoff",
+    "balance": "Once per turn and battle phase only.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/fields-under-watch-tabayag": {
+    "name": "Fields Under Watch, Tabayag",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; early Andukha setup",
+    "skill": "Auto-switch — at the start of your Main Phase, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — At the start of your Main Phase, Sanib the top card of your deck. If it was a Unit, create a Kaluluwa token in your Heart.",
+    "gameplay": "Helps slower hands reach Andukha 6 but turns off once the state is established.",
+    "partners": "Mangaw, Luning, Banira",
+    "pattern": "Dark Irregulars early soul acceleration",
+    "balance": "Stops at six and carries deck pressure.",
+    "effort": "Low"
+  },
+  "babaylan/set-1/living-sanctuary-dingayop-spring": {
+    "name": "Living Sanctuary, Dingayop Spring",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; token refill",
+    "skill": "Auto-switch — when your Persona is under attack, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — When you check a Barrier and it is not a Force, create 2 Kaluluwa tokens in your Heart, then discard 1 card.",
+    "gameplay": "Replaces some Heart count lost to calling and feeds token payoffs.",
+    "partners": "Maria Cacao, Sinogo, Luning",
+    "pattern": "Luquier field building with soul replacement",
+    "balance": "One token per turn.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/hidden-court-dingayop-cavern": {
+    "name": "Hidden Court, Dingayop Cavern",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; defensive Heart",
+    "skill": "Auto-switch — before you draw, if your opponent has more Units than you, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — While this is active, whenever you Sanib a Unit from your field or your deck during your Main Phase, create a Kaluluwa token in your Heart as well.",
+    "gameplay": "Uses Heart defensively and makes token-heavy lists harder to break.",
+    "partners": "Tata Cero, Sali, Bituon",
+    "pattern": "Soul as defensive resource",
+    "balance": "Only +5000 and once per turn; consumes two Heart.",
+    "effort": "High"
+  },
+  "babaylan/set-1/champion-s-trial-danao-highlands": {
+    "name": "Champion's Trial, Danao Highlands",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; Divine package",
+    "skill": "Auto-switch — when your Persona attacks, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — When your Persona attacks, it gets Power +1000 for each Kaluluwa token in your Heart. At the end of your turn, Kalas 3.",
+    "gameplay": "Makes a Divine Heart call hit hard and optionally stores it again.",
+    "partners": "Maria Cacao, Kaptan, Dalagan",
+    "pattern": "Pale Moon called-unit scaling and return",
+    "balance": "One Unit per turn; returning it costs board presence.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/turning-pursuit-bantayan-waters": {
+    "name": "Turning Pursuit, Bantayan Waters",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; Beast/Bird package",
+    "skill": "Auto-switch — when your Barrier breaks during your opponent's turn, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — 1/Turn: The next time your Persona is attacked, it gets Power +1000 for each Kaluluwa token in your Heart until end of battle.",
+    "gameplay": "Clears an exhausted attacker into Heart and improves the next carousel hand.",
+    "partners": "Sinogo, Ulango, Wakira",
+    "pattern": "Pale Moon return-to-soul cleanup",
+    "balance": "Card-neutral and removes the attacker from the field.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/faithless-prison-tanon-strait": {
+    "name": "Faithless Prison, Tañon Strait",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; exhaustion control",
+    "skill": "Auto-switch — before you draw, if you have 2 or fewer Barriers, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — When this Codex becomes active, Kalas 2. Choose one of the cards vented this way and special call it to an open Ally Zone; exile the other.",
+    "gameplay": "Turns exhaustion into better attacks against that unit and feeds Doro.",
+    "partners": "Thunder Beneath the Waves, Doro, Maguayan",
+    "pattern": "Dark Irregulars board control with threshold bonus",
+    "balance": "No removal and one target per turn.",
+    "effort": "Medium"
+  },
+  "babaylan/set-1/great-calling-moonwake-shore": {
+    "name": "Great Calling, Moonwake Shore",
+    "type": "Codex",
+    "level": 0,
+    "subtypes": [
+      "Visayas Arch"
+    ],
+    "set": "set-1",
+    "status": "implemented",
+    "role": "Codex; large-Kalas recovery",
+    "skill": "Auto-switch — before you draw, you may switch to this Codex for free.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — Instead of drawing, create 2 Kaluluwa tokens in your Heart. If Andukha is released, draw 1 card.",
+    "gameplay": "Large Kalas costs rebuild a small part of the field and reward committing to a payoff turn.",
+    "partners": "Bakunawa, Six Moons Lost, Iday",
+    "pattern": "Genesis mass Soul-Blast payoff",
+    "balance": "Level 1 only; it attacks immediately only after Kalas 6.",
+    "effort": "High"
+  }
+}

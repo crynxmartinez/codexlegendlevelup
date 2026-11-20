@@ -1,0 +1,118 @@
+/* Approved modal-system-v2: geometry belongs here, not to card/board skins.
+   No rule or selection state is derived from CSS. */
+body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) { align-items:center; }
+body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog {
+  --choice-art-width:180px; --choice-art-height:252px;
+  width:min(1120px,calc(var(--duel-vw,100vw) - 32px));
+  height:auto !important; max-height:calc(var(--duel-vh,100dvh) - 32px) !important;
+  min-height:0; overflow:auto; scroll-padding-block:76px 100px;
+}
+body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-content {
+  flex:1 0 auto; min-height:0; overflow:visible; align-items:start;
+}
+body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-grid {
+  container-type:normal; min-height:0; overflow:auto; align-items:start;
+  gap:14px; padding:8px; scrollbar-width:thin; scrollbar-color:#78b9d7 #0b2038;
+}
+body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-card {
+  width:calc(var(--choice-art-width) + 14px); flex:0 0 calc(var(--choice-art-width) + 14px);
+  height:auto; min-height:0;
+}
+body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-art {
+  flex:0 0 var(--choice-art-height); width:var(--choice-art-width); height:var(--choice-art-height);
+  min-height:var(--choice-art-height); align-self:center;
+}
+body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-pick { flex:none; }
+body .duel-panel.cc-managed .cc-footer { position:sticky; bottom:-1px; z-index:4; flex:none; max-height:none; overflow:visible; }
+body .duel-panel.cc-managed .cc-instruction { display:block; }
+body .duel-panel.cc-managed .cc-instruction:empty { display:none; }
+body .duel-panel.cc-managed .cc-summary { height:auto; max-height:5.6em; overflow:auto; }
+body .duel-panel.cc-managed .cc-summary[hidden] {display:none;}
+body .duel-panel.cc-managed .cc-payment-details { max-height:110px; overflow:auto; }
+body .duel-panel.cc-managed:not(.board-decision):not(.duel-expanded) .cc-dialog {
+  --choice-art-width:160px; --choice-art-height:224px; max-height:min(520px,calc(var(--duel-vh,100dvh) - 32px)) !important;
+}
+body .duel-panel.cc-managed .cc-dialog.cc-spotlight { width:min(920px,calc(var(--duel-vw,100vw) - 32px)); --choice-art-width:220px; --choice-art-height:308px; }
+body .duel-panel.cc-managed .cc-spotlight .cc-grid { flex:0 0 250px; }
+body .duel-panel.cc-managed .cc-spotlight .cc-scroll { display:none; }
+body .duel-panel.cc-managed .cc-detail { min-width:0; flex:1; padding:14px 18px; background:#18354b; border-radius:10px; align-self:stretch; }
+body .duel-panel.cc-managed .cc-detail h4 { margin:0 0 10px; font-size:22px; color:#effaff; }
+body .duel-panel.cc-managed .cc-detail-rules { font-size:16px; line-height:1.55; }
+body .duel-panel.cc-managed .cc-detail-stats { font-size:14px; color:#b8d4e6; margin:0 0 12px; }
+body .duel-panel.cc-managed .cc-detail[hidden] { display:none; }
+/* Effect candidates are distinct options even when they share a source card. */
+body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-grid { flex:0 0 228px; flex-direction:column; max-height:380px; overflow:auto; }
+body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-card { width:100%; flex:0 0 auto; }
+body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-pick { display:grid; grid-template-columns:48px 1fr; gap:5px 12px; text-align:left; }
+body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-art { width:48px; height:67px; min-height:67px; grid-row:1/4; }
+body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-name { margin:0; padding-right:25px; text-align:left; font-size:14px; }
+body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-meta { font-size:12px; }
+body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-scroll { display:none; }
+body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-detail { display:flex; gap:20px; }
+.cc-detail-art { width:180px; height:252px; object-fit:contain; flex:none; }
+.cc-detail-copy { min-width:0; }
+body .duel-panel.cc-managed .cc-browse .cc-grid { flex-wrap:wrap; justify-content:flex-start; max-height:480px; }
+body .duel-panel.cc-managed .cc-browse { --choice-art-width:160px; --choice-art-height:224px; }
+/* Board placement still uses measured free rectangles, never a fixed overlay. */
+body .duel-panel.cc-managed.board-list-open .cc-placement > .cc-incoming { display:flex !important; --incoming-width:64px; --incoming-height:90px; }
+body .duel-panel.cc-managed.cc-board-docked:not(.board-list-open):not(.duel-minimized) .cc-dialog {
+  position:absolute; left:var(--board-choice-left); top:var(--board-choice-top);
+  width:var(--board-choice-width); height:auto !important; min-height:0;
+  max-height:var(--board-choice-height) !important; overflow:auto;
+}
+body .duel-panel.cc-managed.cc-board-docked .cc-placement { --incoming-height:140px; --incoming-width:100px; }
+body .duel-panel.cc-managed.cc-board-docked.cc-board-narrow .cc-placement { display:grid !important; grid-template-columns:minmax(0,1fr) minmax(0,1fr); grid-template-rows:auto auto auto; --incoming-height:78px; --incoming-width:56px; }
+body .duel-panel.cc-managed.cc-board-docked.cc-board-narrow .cc-incoming { flex-direction:row; align-self:stretch; }
+body .duel-panel.cc-managed.cc-board-docked.cc-board-narrow .cc-placement>.cc-head { grid-area:1/1/2/3; }
+body .duel-panel.cc-managed.cc-board-docked.cc-board-narrow .cc-placement>.cc-incoming { grid-area:2/1/3/2; min-width:0; }
+body .duel-panel.cc-managed.cc-board-docked.cc-board-narrow .cc-placement>.cc-response-context { grid-area:2/2/3/3; min-height:44px; max-height:90px; margin:0; overflow:auto; }
+body .duel-panel.cc-managed.cc-board-docked.cc-board-narrow .cc-placement>.cc-footer { grid-area:3/1/4/3; position:static; }
+body .duel-panel.cc-managed.cc-board-docked .cc-dialog { overflow-x:hidden !important; }
+body .duel-panel.cc-managed.duel-minimized .cc-dialog { display:none !important; }
+@media (max-width:900px), (max-height:550px) {
+  body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog,
+  body .duel-panel.cc-managed:not(.board-decision):not(.duel-expanded) .cc-dialog {
+    --choice-art-width:112px; --choice-art-height:157px;
+    width:calc(var(--duel-vw,100vw) - 24px); max-height:calc(var(--duel-vh,100dvh) - 24px) !important;
+  }
+  body .duel-panel.cc-managed .cc-dialog.cc-spotlight { --choice-art-width:120px; --choice-art-height:168px; }
+  body .duel-panel.cc-managed .cc-spotlight .cc-grid { flex-basis:142px; }
+  body .duel-panel.cc-managed .cc-detail { padding:10px; }
+  body .duel-panel.cc-managed .cc-detail h4 { font-size:18px; }
+  body .duel-panel.cc-managed .cc-detail-rules { font-size:14px; line-height:1.4; }
+  body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-grid { flex-basis:185px; max-height:235px; }
+  body .duel-panel.cc-managed .cc-effects:not(.cc-spotlight) .cc-detail { gap:12px; }
+  .cc-detail-art { width:112px; height:157px; }
+  body .duel-panel.cc-managed .cc-browse .cc-grid { max-height:260px; }
+  body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog:is(.cc-effects,.cc-spotlight) {height:calc(var(--duel-vh,100dvh) - 24px) !important;overflow:hidden;}
+  body .duel-panel.cc-managed .cc-dialog:is(.cc-effects,.cc-spotlight) .cc-content {flex:1 1 0;min-height:0;overflow:auto;align-items:stretch;}
+  body .duel-panel.cc-managed .cc-dialog:is(.cc-effects,.cc-spotlight) .cc-grid {max-height:none;height:100%;overflow:auto;}
+  body .duel-panel.cc-managed .cc-dialog:is(.cc-effects,.cc-spotlight) .cc-detail {overflow:auto;}
+  body .duel-panel.cc-managed .cc-dialog:is(.cc-effects,.cc-spotlight) .cc-footer {position:static;}
+}
+/* Landscape reading keeps source text beside the rail, not above its artwork. */
+@media(max-width:900px),(max-height:550px) {
+ body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty) {
+   display:grid;grid-template-columns:190px minmax(0,1fr);grid-template-rows:auto auto minmax(0,1fr) auto auto;
+   height:calc(var(--duel-vh,100dvh) - 24px) !important;overflow:hidden;gap:6px 12px;
+ }
+ body .duel-panel.cc-managed .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty)>.cc-head {grid-area:1/1/2/3;}
+ body .duel-panel.cc-managed .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty)>.cc-instruction {grid-area:2/1/3/2;font-size:12px;max-height:54px;overflow:auto;}
+ body .duel-panel.cc-managed .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty)>.cc-response-context {grid-area:3/1/4/2;max-height:100%;height:100%;overflow:auto;align-self:stretch;display:block;box-sizing:border-box;}
+ body .duel-panel.cc-managed .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty)>.cc-response-context .cc-response-source {float:left;margin:0 8px 6px 0;}
+ body .duel-panel.cc-managed .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty)>.cc-toolbar {grid-area:4/1/5/2;max-height:48px;overflow:auto;}
+ body .duel-panel.cc-managed .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty)>.cc-content {grid-area:2/2/5/3;min-height:0;height:100%;overflow:hidden;}
+ body .duel-panel.cc-managed .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty) .cc-grid {height:100%;box-sizing:border-box;align-items:start;padding:3px;}
+ body .duel-panel.cc-managed .cc-dialog:not(.cc-effects):not(.cc-spotlight):not(.cc-placement):not(.cc-empty)>.cc-footer {grid-area:5/1/6/3;position:static;}
+ body .modal-v2 .cc-summary {font-size:14px;padding:4px 8px;margin-bottom:4px;max-height:2.8em;}
+ body .duel-panel.cc-managed .cc-navigation {grid-area:4/1/5/2;overflow:auto;}
+ body .modal-v2 .cc-head h3 {font-size:18px;}
+ body .modal-v2 .cc-head {padding-block:5px;}
+}
+/* Empty piles retain navigation, without reserving a full card rail. */
+body .duel-panel.cc-managed:is(:not(.board-decision),.board-list-open) .cc-dialog.cc-empty {
+ width:min(620px,calc(var(--duel-vw,100vw) - 24px));height:auto !important;display:flex;flex-direction:column;
+}
+body .duel-panel.cc-managed .cc-empty>.cc-content {min-height:60px;height:auto;flex:0 1 auto;}
+body .duel-panel.cc-managed .cc-empty>.cc-instruction {max-height:none;font-size:14px;}
+body .duel-panel.cc-managed .cc-empty .cc-grid {height:auto;}

@@ -1,0 +1,20 @@
+/* The attack-support preview is short, bounded combat arithmetic, not a long
+   rules document. Keep its full lines above the existing confirmation row. */
+body .modal-bg.duel-panel.cc-managed.cc-combat-summary .cc-footer {
+  display:flex;flex-direction:column;align-items:stretch;gap:8px;
+  max-height:none;overflow:visible;
+}
+body .modal-bg.duel-panel.cc-managed.cc-combat-summary .cc-footer .cc-summary {
+  flex:0 0 auto;width:100%;min-width:0;box-sizing:border-box;
+  height:auto!important;max-height:none!important;overflow:visible!important;
+  line-height:1.4;white-space:normal;overflow-wrap:anywhere;margin:0;
+}
+body .modal-bg.duel-panel.cc-managed.cc-combat-summary .cc-footer .cc-actions {
+  flex:0 0 auto;width:min(100%,760px);margin-inline:auto;
+}
+@media(max-width:1000px),(max-height:600px) {
+  body .modal-bg.duel-panel.cc-managed.cc-combat-summary .cc-footer {gap:5px;}
+  body .modal-bg.duel-panel.cc-managed.cc-combat-summary .cc-footer .cc-summary {
+    font-size:13px;line-height:1.35;padding:6px 9px;
+  }
+}

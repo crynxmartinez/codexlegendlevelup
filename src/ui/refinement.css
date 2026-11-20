@@ -1,0 +1,89 @@
+/* Shared presentation tokens. No card artwork, rules or network behavior. */
+:root {
+  --ui-surface: #0c1420;
+  --ui-surface-raised: #141f2c;
+  --ui-line: #47505a;
+  --ui-line-accent: #827044;
+  --ui-muted: #b0bdcb;
+  --ui-focus: #8bdded;
+  --ui-radius-control: 10px;
+  --ui-radius-panel: 12px;
+  --ui-radius-dialog: 16px;
+  --ui-shadow: 0 4px 14px #0005;
+  --ui-shadow-raised: 0 16px 44px #0009;
+  --ui-motion-fast: 120ms;
+  --ui-motion-panel: 200ms;
+  --ui-ease-out: cubic-bezier(.22,.7,.25,1);
+}
+
+/* Appearance is shared; placement and decision semantics stay with each shell. */
+body :is(.modal, .duel-panel .duel-dialog, .inspect .body, .credits-dialog, .deck-learning) {
+  color: var(--silver);
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-line-accent);
+  border-radius: var(--ui-radius-dialog);
+  box-shadow: var(--ui-shadow-raised);
+  scrollbar-color: #66717e var(--ui-surface);
+  scrollbar-width: thin;
+}
+body .modal-bg:not(.duel-panel) { background: #030609b8; backdrop-filter: none; }
+body :is(.credits-dialog, .deck-learning)::backdrop { background: #030609b8; }
+body :is(.modal-head h3, .cc-head h3) {
+  font-size: 19px; font-weight: 600; line-height: 1.3;
+  letter-spacing: 0; text-transform: none;
+}
+body .modal > .sub { color: var(--ui-muted); font-size: 14px; line-height: 1.5; font-style: normal; }
+body :is(.modal, .cc-dialog, .inspect .body, .credits-dialog, .deck-learning) :is(input, select, textarea):not([type=range]):not([type=checkbox]):not([type=radio]) {
+  box-sizing: border-box; min-height: 44px; max-width: 100%; min-width: 0;
+  padding: 10px 12px; color: var(--silver); background: #09111a;
+  border: 1px solid var(--ui-line); border-radius: var(--ui-radius-control);
+  font: inherit; font-size: 16px; line-height: 1.4;
+  transition: border-color var(--ui-motion-fast), background-color var(--ui-motion-fast);
+}
+body :is(.modal, .cc-dialog, .inspect .body, .credits-dialog, .deck-learning) :is(input, select, textarea)[aria-invalid=true] { border-color: var(--bad); }
+body :is(.modal, .cc-dialog, .inspect .body, .credits-dialog, .deck-learning) :is(input, textarea)::placeholder { color: #93a2b4; opacity: 1; }
+body :is(.modal, .cc-dialog, .inspect .body, .credits-dialog, .deck-learning) button:not(.st-switch):not(.cc-card):not(.cc-nav) {
+  border-radius: var(--ui-radius-control); min-height: 44px;
+  transition: background-color var(--ui-motion-fast), border-color var(--ui-motion-fast), color var(--ui-motion-fast);
+}
+body :is(.modal, .cc-dialog, .inspect .body, .credits-dialog, .deck-learning) :is(button,input,select,textarea,summary,a):focus-visible {
+  outline: 2px solid var(--ui-focus); outline-offset: 3px;
+}
+body :is(.modal, .cc-dialog, .inspect .body, .credits-dialog, .deck-learning) button:disabled { cursor: not-allowed; }
+body .inspect .body { padding: 20px 24px; }
+body .inspect .chipstat { border-radius: var(--ui-radius-control); background: var(--ui-surface-raised); border-color: var(--ui-line); }
+
+/* Settings descriptions are prose, never capitalized button labels. */
+body .modal:has(> .settings-body) { width: min(720px, calc(100vw - 24px)); }
+body .settings-body { max-width: none; width: 100%; gap: 24px; padding-right: 8px; scrollbar-color: #66717e var(--ui-surface); scrollbar-width: thin; }
+body .set-section { gap: 10px; }
+body .set-title { font-size: 12px; letter-spacing: .08em; }
+body .set-choice { border-radius: var(--ui-radius-control); padding: 12px; text-transform: none; letter-spacing: 0; background: var(--ui-surface-raised); border-color: var(--ui-line); }
+body .set-choice.on { border-color: var(--gold); background: #302b20; }
+body .set-choice .sc-name { font-size: 14px; line-height: 1.4; }
+body :is(.set-choice .sc-hint, .set-hint, .st-hint) { font-size: 13px; color: var(--ui-muted); line-height: 1.5; text-transform: none; letter-spacing: 0; }
+body .st-name { font-size: 14px; line-height: 1.4; }
+body .set-toggle { align-items: center; gap: 16px; padding: 10px 0; }
+/* Full-size switch hit area, compact pill painted inside it. */
+body .settings-body .st-switch { position: relative; min-width: 48px; width: 48px; min-height: 44px; height: 44px; border: 0; background: transparent; box-shadow: none; }
+body .settings-body .st-switch::before { content: ''; position: absolute; inset: 10px 0; border-radius: 999px; background: #334253; border: 1px solid #738093; }
+body .settings-body .st-switch.on::before { background: #766138; border-color: var(--gold); }
+body .settings-body .st-switch::after { top: 14px; left: 4px; width: 16px; height: 16px; transform: none; background: #e5edf5; }
+body .settings-body .st-switch.on::after { left: 28px; }
+
+/* Utility entry only: battle panels already use the cancellable motion system. */
+body .modal-bg:not(.duel-panel):not(.minimised) > .modal,
+body :is(.credits-dialog, .deck-learning)[open] { animation: ui-panel-enter var(--ui-motion-panel) var(--ui-ease-out) both; }
+@keyframes ui-panel-enter { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+@media (max-height: 540px) and (orientation: landscape) {
+  body .modal:has(> .settings-body) { max-height: calc(100dvh - 16px); padding: 12px 16px; }
+  body .settings-body { gap: 16px; }
+  body .set-choice { padding: 8px 10px; }
+  body :is(.modal-head h3, .cc-head h3) { font-size: 16px; }
+  body .inspect .body { padding: 12px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body .modal-bg:not(.duel-panel):not(.minimised) > .modal,
+  body :is(.credits-dialog, .deck-learning)[open] { animation: ui-panel-fade 120ms linear both; }
+  @keyframes ui-panel-fade { from { opacity: 0; } to { opacity: 1; } }
+}

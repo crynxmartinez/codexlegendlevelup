@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Board decision verification</title><link rel="stylesheet" href="/src/ui/style.css"></head>
+<body><div id="app"></div><script type="module">
+// Development-only fixtures using the production chooser, motion and styles.
+if (!import.meta.env.DEV) throw new Error('Development verification only');
+const {openCardChoice}=await import('/src/ui/card-choice.ts');
+const {attackWindup}=await import('/src/ui/duel-motion.ts');
+const {ALL_CARDS}=await import('/src/data/loader.ts');
+const {boardUrl}=await import('/src/ui/assets.ts');
+const records=Object.values(ALL_CARDS).filter(c=>c.type==='Unit').slice(0,12);
+const app=document.querySelector('#app');
+const make=(tag,cls,text='')=>{const n=document.createElement(tag);n.className=cls;n.textContent=text;return n;};
+const wrap=make('div','board-wrap'), mats=make('div','mats');wrap.append(mats);app.append(wrap);
+const cards=[];
+for(const foe of [true,false]){
+ const mat=make('section',`mat${foe?' foe':''}`), units=make('div','z-units');mat.append(units);mats.append(mat);
+ for(let i=0;i<5;i++){
+  const slot=make('div',`slot${i===2?' persona':''}`);slot.dataset.slot=i===2?'persona':String(i>2?i-1:i);units.append(slot);
+  if(i===4)continue;
+  const rec=records[i+(foe?4:0)],uid=`${foe?'foe':'own'}-${i}`,node=make('div','card');node.dataset.uid=uid;node.style.backgroundImage=`url("${boardUrl(rec.art)}")`;node.setAttribute('aria-label',rec.name);slot.append(node);
+  cards.push({uid,name:rec.name,image:boardUrl(rec.art),type:rec.type,detail:'',stats:'',zone:i===2?'persona':'ally'});
+ }
+ for(const zone of ['deck','codex','grave','exile','extra','check']){const n=make('div',`pilebox z-${zone}`,zone);mat.append(n);}
+ const barriers=make('div','zbox z-barrier','● ● ● ● ●');mat.append(barriers);
+ if(foe)mats.append(make('div','defense-zone','Defense'));
+}
+for(const foe of [true,false]){
+ const side=make('aside',`side ${foe?'foe':'mine'}`),head=make('header');
+ for(const [label,value] of [['Plays','3'],['Hand','5'],['Persona','3']]){const stat=make('div','stat');stat.append(make('span','',label),make('b','',value));head.append(stat);}
+ side.append(head);if(!foe){const actions=make('div','actions');actions.append(make('button','turn-btn','End turn'));side.append(actions);}app.append(side);
+}
+const hand=make('div','hand-bar');app.append(hand);
+const fit=()=>{
+ const compact=matchMedia('(max-width:1000px), (max-height:600px)').matches;
+ for(const mat of mats.querySelectorAll('.mat')){
+  const sides=mat.querySelectorAll('.mat-side');
+  if(!compact){for(const side of sides){mat.append(...side.children);side.remove();}continue;}
+  if(sides.length)continue;
+  for(const [side,zones] of [['left',['extra','codex','exile']],['right',['check','deck','grave']]]){
+   const holder=make('div',`mat-side ${side}`);for(const zone of zones)holder.append(mat.querySelector(`.z-${zone}`));mat.append(holder);
+  }
+ }
+};window.addEventListener('resize',fit);fit();
+for(let i=0;i<5;i++){const rec=records[i],uid=`hand-${i}`,node=make('div','hand-card');node.dataset.uid=uid;node.style.backgroundImage=`url("${boardUrl(rec.art)}")`;node.setAttribute('aria-label',rec.name);hand.append(node);cards.push({uid,name:rec.name,image:boardUrl(rec.art),type:rec.type,detail:'',stats:'',zone:'hand'});}
+const controls=make('nav','smoke-controls');controls.style.cssText='position:fixed;top:0;right:0;z-index:1500;display:flex;gap:3px';document.body.append(controls);
+const result=make('output','');result.id='result';result.style.cssText='position:fixed;top:8px;left:8px;z-index:1400;font-size:11px';document.body.append(result);
+const btn=(label,run)=>{const b=make('button','',label);b.onclick=run;controls.append(b);};
+btn('Choose hand',async()=>{const picked=await openCardChoice({title:'Discard 2 cards',instruction:'Choose two cards.',cards:cards.filter(c=>c.zone==='hand'),max:2,exact:true,confirm:'Discard',decline:'Cancel'});result.textContent=`Selected: ${picked.join(', ')}`;});
+btn('Choose ally',async()=>{const picked=await openCardChoice({title:'Choose an Ally',instruction:'Choose your target.',cards:cards.filter(c=>c.zone==='ally'),max:1,exact:true});result.textContent=`Selected: ${picked.join(', ')}`;});
+btn('Place unit',async()=>{
+ const nodes=Array.from(document.querySelectorAll('.mat:not(.foe) .slot:not(.persona)'));
+ const boardElements=new Map(nodes.map(n=>[`slot-${n.dataset.slot}`,n]));
+ const options=nodes.map(n=>({uid:`slot-${n.dataset.slot}`,name:`Ally ${Number(n.dataset.slot)+1}`,image:'/ui/card-back.webp',type:'Ally Zone',detail:'',stats:'',position:n.querySelector('.card')?'Replaces existing unit':'Empty'}));
+ const picked=await openCardChoice({title:'Choose an Ally Zone',instruction:'Choose a highlighted Ally Zone.',cards:options,boardElements,max:1,exact:true,confirm:'Place here'});result.textContent=`Placed: ${picked.join(', ')}`;
+});
+btn('Attack',async()=>{const node=document.querySelector('[data-uid="own-1"]');node.classList.add('attacking');node.style.transform='rotate(90deg) scale(.86)';await attackWindup(node,0,-120);result.textContent=`Attack holder layer: ${getComputedStyle(node.parentElement).zIndex}`;});
+btn('Reset attack',()=>{const node=document.querySelector('[data-uid="own-1"]');node.classList.remove('attacking');node.style.transform='';});
+</script></body></html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- Google tag (gtag.js) — two destinations, one loader.
+         This is NOT two Google tags on one page, which is the thing Google's
+         install screen warns against: that means two gtag.js <script> loads
+         fighting each other. One loader with several `config` lines is the
+         supported way to report to more than one property.
+
+           G-Z1ZHSR40HH  the game's own property
+           G-J7VGJMV6LX  shared with the marketing site, so a visitor who
+                         presses Play there and lands here stays one person.
+                         GA4 only stitches them once both domains are listed
+                         under Admin > Data Streams > Configure tag settings >
+                         Configure your domains. Drop this line and the funnel
+                         from the site into the game goes with it.
+
+         Either way this fires one page_view for the whole client. The game is
+         a single page that swaps screens, so the title screen, deck builder
+         and duel all look like the same view until `screen()` reports them by
+         name — see docs/analytics.md. -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1ZHSR40HH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z1ZHSR40HH');
+      gtag('config', 'G-J7VGJMV6LX');
+    </script>
+
+    <title>Play Codex Legends - Filipino trading card game</title>
+    <meta
+      name="description"
+      content="Play free in your browser. A trading card game built on the pre-colonial history and folklore of Luzon, the Visayas and Mindanao. No download, no account."
+    />
+    <link rel="canonical" href="https://game.codexlegendtcg.site/" />
+    <meta name="theme-color" content="#05060a" />
+    <meta property="og:url" content="https://game.codexlegendtcg.site/" />
+    <meta property="og:title" content="Play Codex Legends" />
+    <meta
+      property="og:description"
+      content="A Filipino trading card game, free in your browser. No download, no account."
+    />
+    <meta property="og:image" content="https://www.codexlegendtcg.site/ui/share-card.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Codex Legends TCG" />
+    <meta property="og:locale" content="en_PH" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/ui/logo.png" />
+    <link rel="apple-touch-icon" href="/ui/logo.png" />
+    <!-- Roboto is served from this repo (see assets/fonts and the @font-face
+         block at the top of style.css), so there is no third-party request
+         and nothing to preconnect to. -->
+    <link rel="stylesheet" href="/src/ui/style.css" />
+    <link rel="stylesheet" href="/src/ui/refinement.css" />
+
+    <!-- The one thing a crawler can be told about a page it cannot play. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "@id": "https://game.codexlegendtcg.site/#game",
+      "name": "Codex Legends",
+      "url": "https://game.codexlegendtcg.site/",
+      "description": "A trading card game built on the pre-colonial history and folklore of Luzon, the Visayas and Mindanao. Free to play test in the browser.",
+      "image": "https://www.codexlegendtcg.site/ui/share-card.jpg",
+      "inLanguage": "en-PH",
+      "genre": ["Trading card game", "Strategy"],
+      "gamePlatform": "Web browser",
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any, in a web browser",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Codex Legends TCG",
+        "url": "https://www.codexlegendtcg.site/"
+      },
+      "sameAs": "https://www.codexlegendtcg.site/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "PHP",
+        "availability": "https://schema.org/InStock",
+        "url": "https://game.codexlegendtcg.site/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!--
+      The duel client builds itself into #app, so without this a crawler sees
+      one <div> and the word "Codex Legends" - which is a page with nothing on
+      it, and gets treated as one.
+
+      Everything below is true of the page it describes and is replaced the
+      moment scripts run, which is the honest use of <noscript>: it is the
+      same page described for a reader that cannot run it, not different
+      content served to a crawler. It also gives this host its only crawlable
+      links back to the site.
+    -->
+    <noscript>
+      <h1>Codex Legends - a Filipino trading card game</h1>
+      <p>
+        Codex Legends is a free trading card game built on the pre-colonial
+        history and folklore of the Philippines. Three decks are drawn from
+        three archipelagos: Agta from Luzon, Babaylan from the Visayas and
+        Maguindanao from Mindanao.
+      </p>
+      <p>
+        Each player defends five Barriers. Break all five and land one more hit
+        to win. Codex cards sit beside the field and can be switched mid-duel,
+        changing how a deck plays rather than adding power to the board.
+      </p>
+      <p>
+        <strong>This page needs JavaScript to run the duel.</strong> Enable it
+        to play, or read more about the game and the folklore behind it:
+      </p>
+      <ul>
+        <li><a href="https://www.codexlegendtcg.site/">Codex Legends home</a></li>
+        <li><a href="https://www.codexlegendtcg.site/insights/">Insights - the stories behind the cards</a></li>
+      </ul>
+    </noscript>
+    <script type="module" src="/src/ui/boot.ts"></script>
+  </body>
+</html>

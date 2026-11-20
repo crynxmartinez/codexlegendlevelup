@@ -1,0 +1,117 @@
+{
+  "source": "Approved anime-v1 source layers; original sources preserved",
+  "files": [
+    {
+      "file": "arena.webp",
+      "bytes": 202822
+    },
+    {
+      "file": "banner-cyan.svg",
+      "bytes": 1162
+    },
+    {
+      "file": "banner-red.svg",
+      "bytes": 1162
+    },
+    {
+      "file": "banner-silver.svg",
+      "bytes": 1162
+    },
+    {
+      "file": "barrier-pip.svg",
+      "bytes": 733
+    },
+    {
+      "file": "button-cyan.svg",
+      "bytes": 1127
+    },
+    {
+      "file": "button-red.svg",
+      "bytes": 1127
+    },
+    {
+      "file": "button-silver.svg",
+      "bytes": 1127
+    },
+    {
+      "file": "heart.svg",
+      "bytes": 763
+    },
+    {
+      "file": "lock-closed.svg",
+      "bytes": 933
+    },
+    {
+      "file": "lock-open.svg",
+      "bytes": 930
+    },
+    {
+      "file": "panel-frame.svg",
+      "bytes": 1038
+    },
+    {
+      "file": "pile-frame.svg",
+      "bytes": 917
+    },
+    {
+      "file": "portrait-frame.svg",
+      "bytes": 920
+    },
+    {
+      "file": "portrait-kaptan.webp",
+      "bytes": 129386
+    },
+    {
+      "file": "portrait-sulayman.webp",
+      "bytes": 106124
+    },
+    {
+      "file": "portrait-taguwasi.webp",
+      "bytes": 94694
+    },
+    {
+      "file": "seal-ally-cyan.svg",
+      "bytes": 2878
+    },
+    {
+      "file": "seal-ally-red.svg",
+      "bytes": 2878
+    },
+    {
+      "file": "seal-ally-silver.svg",
+      "bytes": 2878
+    },
+    {
+      "file": "seal-persona-cyan.svg",
+      "bytes": 3044
+    },
+    {
+      "file": "seal-persona-red.svg",
+      "bytes": 3044
+    },
+    {
+      "file": "seal-persona-silver.svg",
+      "bytes": 3044
+    },
+    {
+      "file": "selected-check.svg",
+      "bytes": 821
+    },
+    {
+      "file": "shield.svg",
+      "bytes": 879
+    },
+    {
+      "file": "target-cyan.svg",
+      "bytes": 750
+    },
+    {
+      "file": "target-red.svg",
+      "bytes": 750
+    },
+    {
+      "file": "target-silver.svg",
+      "bytes": 750
+    }
+  ]
+}

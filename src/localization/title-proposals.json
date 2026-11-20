@@ -1,0 +1,82 @@
+{
+  "agta/set-1/wind-heart-rescuer-taguwasi": {
+    "options": ["Saklolo ng Hangin", "Tugon sa Panawagan", "Bagwis ng Pag-asa"],
+    "reason": "Saklolo ng Hangin gives the wind-and-rescue identity a short, memorable title. It avoids naming a specific wind such as Habagat without supporting lore."
+  },
+  "agta/set-1/fifth-sky-tyrant-kalimangalnuk": {
+    "options": ["Lupit ng Kalangitan", "Trono sa Ikalimang Langit", "Pangil ng Langit"],
+    "reason": "Lupit ng Kalangitan leads with the character's threatening presence. The second option keeps the fifth-heaven setting explicit; the third is a metaphor, not a new creature trait."
+  },
+  "agta/set-1/life-breath-mother-nanolay": {
+    "options": ["Hininga ng Buhay", "Kalingang Walang Hanggan", "Yakap ng Pag-iral"],
+    "reason": "Hininga ng Buhay is a compact identity rather than a literal description of a mother. The alternatives emphasize care and life without assigning new powers."
+  },
+  "babaylan/set-1/mountain-sovereign-maria-cacao": {
+    "options": ["Diwa ng Kabundukan", "Korona ng mga Tuktok", "Dangal ng Kabundukan"],
+    "reason": "Diwa ng Kabundukan evokes the mountain presence already established by the card. The alternatives suggest sovereignty without adding a new family relationship or historical claim."
+  },
+  "babaylan/set-1/harvest-warden-mangaw": {
+    "options": ["Biyaya ng Ani", "Kalinga ng Bukirin", "Pangako ng Masaganang Lupa"],
+    "reason": "Biyaya ng Ani gives the harvest guardian a warm, distinctive identity. The alternatives shift the emphasis to protection or abundance."
+  },
+  "babaylan/set-1/thunder-sovereign-kaptan": {
+    "options": ["Dagundong ng Langit", "Poot ng mga Ulap", "Sigaw ng Unos"],
+    "reason": "Dagundong ng Langit communicates authority through thunder itself, without using another long Pinuno or Tagapag title."
+  },
+  "babaylan/set-1/ocean-sovereign-maguayan": {
+    "options": ["Tinig ng Laot", "Diwa ng Karagatan", "Trono ng mga Alon"],
+    "reason": "Tinig ng Laot gives the ocean ruler a quieter but commanding identity. The other options emphasize the sea's presence or dominion."
+  },
+  "babaylan/set-1/abyssal-revolt-sinogo": {
+    "options": ["Himagsik ng Kalaliman", "Alon ng Paghihimagsik", "Poot Mula sa Ilalim"],
+    "reason": "Himagsik ng Kalaliman reads as an identity rather than a translated sentence. It preserves the card's rebellion-and-depths theme without inventing its cause."
+  },
+  "babaylan/set-1/last-moon-devourer-bakunawa": {
+    "options": ["Gutom sa Buwan", "Lilim ng Eklipse", "Pangil sa Liwanag"],
+    "reason": "Gutom sa Buwan makes the moon-devouring motif immediate. It does not claim that every tradition shares the card's last-moon storyline."
+  },
+  "babaylan/set-1/unbroken-invocation-amara": {
+    "options": ["Panatang Di-Matitinag", "Tinig na Di-Mapatid", "Alingawngaw ng Panawagan"],
+    "reason": "Panatang Di-Matitinag gives the unbroken invocation an emotional identity. The alternatives keep the emphasis on the voice and persistence of the calling."
+  },
+  "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong": {
+    "options": ["Kalinga ng Nonok", "Bantay sa Lilim", "Panata sa mga Ugat"],
+    "reason": "Kalinga ng Nonok preserves the distinctive Nonok association and guardian role. The alternatives are imagery, not claims about a new ritual."
+  },
+  "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut": {
+    "options": ["Alaala sa Kailaliman", "Tinig ng mga Ninuno", "Kalinga sa Ilalim ng Tubig"],
+    "reason": "Alaala sa Kailaliman ties ancestry to the underwater setting in a short title. It avoids inventing an additional royal rank or origin story."
+  },
+  "maguindanao/set-1/boat-watching-tonong-tomitay": {
+    "options": ["Kalinga sa Paglalayag", "Kasangga sa Agos", "Tonong ng mga Bangka"],
+    "reason": "Kalinga sa Paglalayag emphasizes what the boat guardian means to travelers, rather than literally describing someone watching boats. The third option retains Tonong explicitly."
+  },
+  "maguindanao/set-1/sun-darkening-scourge-pah": {
+    "options": ["Lilim ng Araw", "Pakpak ng Dilim", "Takipsilim sa Kalangitan"],
+    "reason": "Lilim ng Araw is brief and ominous, grounded in the repository's story of Pah's wings darkening the sky. The alternatives emphasize the wings or the sky."
+  },
+  "maguindanao/set-1/rattan-haunt-scourge-kurita": {
+    "options": ["Sindak sa Yantok", "Ligalig ng Kabalalan", "Bangungot sa Kasukalan"],
+    "reason": "Sindak sa Yantok anchors the threat in the card's rattan setting. Kabalalan is the associated setting in the existing set, while the last option emphasizes atmosphere."
+  },
+  "maguindanao/set-1/matutun-branch-devourer-tarabusaw": {
+    "options": ["Poot ng Matutun", "Sindak ng Kagubatan", "Lupit ng mga Sanga"],
+    "reason": "Poot ng Matutun draws on the repository's account of the monster fighting with torn branches on Matutun. It avoids amplifying the old title into an unsupported branch-eating claim."
+  },
+  "maguindanao/set-1/land-restoring-raja-indarapatra": {
+    "options": ["Panata ng Pagbangon", "Raja ng Pag-asa", "Tanglaw ng Nagbalik na Lupain"],
+    "reason": "Panata ng Pagbangon centers the restoration of people and land in the repository's story. The second choice retains Raja as an explicit cultural title."
+  },
+  "maguindanao/set-1/gurayen-wrath-mate-maka-ogis": {
+    "options": ["Katuwang ng Poot", "Alab ng Gurayen", "Galit na Magkatuwang"],
+    "reason": "Katuwang ng Poot emphasizes the wrath-mate identity without asserting a specific marriage or family relationship not established in the available notes."
+  },
+  "maguindanao/set-1/three-scourge-champion-sulayman": {
+    "options": ["Tapang na May Kapalit", "Tabak Laban sa Sindak", "Dangal ng Tatlong Tagumpay"],
+    "reason": "Tapang na May Kapalit reflects the repository's story: Sulayman defeats the creatures, but Pah's falling wing crushes him. The alternatives emphasize courage or the three victories."
+  },
+  "maguindanao/set-1/seven-sight-final-scourge-gurayn": {
+    "options": ["Pitong Tanaw ng Sindak", "Huling Anino", "Tanaw ng Kapahamakan"],
+    "reason": "Pitong Tanaw ng Sindak evokes the seven-sight threat without claiming new anatomy. Huling Anino is the shortest option and retains the final-scourge mood."
+  }
+}

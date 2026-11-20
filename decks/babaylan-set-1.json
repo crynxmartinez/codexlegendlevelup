@@ -1,0 +1,93 @@
+{
+  "name": "Babaylan Set 1",
+  "persona": "babaylan/set-1/unbroken-invocation-amara",
+  "main": [
+    {
+      "id": "babaylan/set-1/unbroken-invocation-amara",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/mountain-sovereign-maria-cacao",
+      "copies": 2
+    },
+    {
+      "id": "babaylan/set-1/thunder-sovereign-kaptan",
+      "copies": 2
+    },
+    {
+      "id": "babaylan/set-1/last-moon-devourer-bakunawa",
+      "copies": 1
+    },
+    {
+      "id": "babaylan/set-1/heaven-s-pursuit-dalagan",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/unyielding-pursuer-guidala",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/leafborne-champion-kapitan-dyano",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/answering-voice-aday",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/first-invocation-luning",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/spirit-mediator-iday",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/promise-bearer-nardo",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/small-deliverer-silak",
+      "copies": 2
+    },
+    {
+      "id": "babaylan/set-1/the-elders-answer",
+      "copies": 2
+    },
+    {
+      "id": "babaylan/set-1/when-lantoy-wept",
+      "copies": 2
+    },
+    {
+      "id": "babaylan/set-1/return-our-moon",
+      "copies": 1
+    },
+    {
+      "id": "babaylan/warden-of-the-twelfth-tide-bituon",
+      "copies": 2
+    },
+    {
+      "id": "babaylan/set-1/field-blessing-banira",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/quiet-crossing-salumi",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/kindly-neighbor-silaya",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/hidden-passage-kawili",
+      "copies": 3
+    }
+  ],
+  "codex": [
+    "babaylan/set-1/sovereign-heights-mount-lantoy",
+    "babaylan/set-1/silent-threshold-kabulaw",
+    "babaylan/set-1/unseen-passage-argao-river",
+    "babaylan/set-1/fields-under-watch-tabayag",
+    "babaylan/set-1/champion-s-trial-danao-highlands"
+  ]
+}

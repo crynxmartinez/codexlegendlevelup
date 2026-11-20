@@ -1,0 +1,461 @@
+{
+  "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong": {
+    "role": "Defensive Persona; Offer payoff",
+    "skill": "[green][Persona] 1/turn: Whenever another of your Allies is Offered, choose one of your units. It gets Power +3000 until end of turn.\n[green][Garahana][Persona] Whenever one of your shields breaks, this unit permanently gets Power +1000.",
+    "gameplay": "Offers strengthen a chosen Unit. Each shield broken while Garahana is released grants this Persona a lasting +1000, even if Garahana later fades.",
+    "partners": "Amina, Rinamuntaw, Karim, Cave Beneath the Earth",
+    "pattern": "Tachikaze retire-trigger value; Shadow Paladin sacrifice as defense",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut": {
+    "role": "Grave-recursion Persona",
+    "skill": "[blue][Persona] 1/turn: [Cost: Offer 1 of your Allies] special call a Level 1 Maguindanaon unit from your Grave. It enters charged.\n[blue][Garahana][Persona] 1/turn: draw 1 card. This unit gets Power +2000 for each unit Offered this turn until end of turn.",
+    "gameplay": "Use the skill above. Normal calls and Actions use one play; skills and special calls do not.",
+    "partners": "All Level 1 Maguindanaon units; Restored Magindanao",
+    "pattern": "Luard low-grade toolbox; Tachikaze recycling after retirement",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/boat-watching-tonong-tomitay": {
+    "role": "Force-check setup Persona",
+    "skill": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Allies] look at the top 3 cards of your deck and arrange them on top in any order.\n[green][Garahana][Persona] 1/turn: When your attack check reveals a Force, draw 1 card and charge one of your Allies.",
+    "gameplay": "Arrange all three cards on top to prepare the attack check and later draws. A Force attack check draws a card and readies an Ally.",
+    "partners": "All four Tunung Forces; Cape Timbalangan",
+    "pattern": "Tachikaze trigger/equip-gauge planning; D-era compact payoff chains",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "High"
+  },
+  "maguindanao/set-1/ridge-bed-multiplier-omaka-an": {
+    "role": "Beast recursion Persona",
+    "skill": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Beast or Bird Allies] this unit gets Power equal to the offered unit's current Power for that battle.\n[green][Garahana][Persona] 1/turn: After this unit attacks, special call the unit offered for its first skill from your Grave. It enters charged.",
+    "gameplay": "Converts a developed attacker into Persona Power, then restores it after the Persona battle so it can attack again. The offered unit's Last Oath still resolves.",
+    "partners": "Kuritan, Pahira, Tarabuk, Mount Matutun",
+    "pattern": "Gaia Emperor copies retired Power; Tachikaze retire-then-call attacks",
+    "balance": "Track the exact card offered by the first skill. The recovery must be 1/turn and Garahana-locked.",
+    "effort": "High"
+  },
+  "maguindanao/set-1/sun-darkening-scourge-pah": {
+    "role": "All-in multiattack Persona",
+    "skill": "[blue][Persona] 1/turn: [Cost: Offer 2 of your Allies] this unit gets Power +5000 until end of turn. If you have 2 or fewer Barriers, it gets +10000 instead.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] charge this unit and it gets Power +5000 until end of turn.",
+    "gameplay": "Spend Offer value for Power, with a larger bonus at two or fewer Barriers, then pay Offer 3 after attacking to attack again.",
+    "partners": "Kali Adam, temporary-call Actions, Mount Bita",
+    "pattern": "Phantom Blaster mass sacrifice; Raging Form restanding Persona",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/rattan-haunt-scourge-kurita": {
+    "role": "Removal and Ally multiattack Persona",
+    "skill": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Allies] damage one of your opponent's Allies, and this unit gets Power +5000 for that battle.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 1 of your other Allies] damage one of your opponent's Allies.",
+    "gameplay": "Offer an Ally to damage an opposing Ally before battle, then Offer again for another damage effect after the attack, whether it hits or misses.",
+    "partners": "Salimbadut, Day Became Night, Mount Kabalalan",
+    "pattern": "Shadow Paladin sacrifice-for-removal; Tachikaze continuous attacks",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/matutun-branch-devourer-tarabusaw": {
+    "role": "High-cost restanding Persona",
+    "skill": "[blue][Persona] 1/turn: Before this unit's first attack this turn, [Cost: Offer 2 of your other Allies] its first attack this turn gets one extra attack check.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 2] charge this unit. Do not perform an attack check for its next attack this turn.",
+    "gameplay": "Pay before the first attack to check twice, then Offer again to ready this Persona. Its next attack skips all attack checks.",
+    "partners": "Tarabuk, Until Tarabusaw Tired, Mount Matutun",
+    "pattern": "Engorge; Raging Form-style second Vanguard attack with a constrained payoff",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "High"
+  },
+  "maguindanao/set-1/land-restoring-raja-indarapatra": {
+    "role": "Restoration and toolbox Persona",
+    "skill": "[blue][Persona] 1/turn: search your deck for a Level 2 or lower Maguindanaon unit and special call it. It enters charged.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] search your deck for two Level 2 or lower Maguindanaon units and special call them. Each gets Power +5000 until end of turn.",
+    "gameplay": "Use the skill above. Normal calls and Actions use one play; skills and special calls do not.",
+    "partners": "Rinamuntaw, Rinayung, Amina, Restored Magindanao",
+    "pattern": "Shadow Paladin fodder tutoring; Tachikaze units returning after retirement",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/gurayen-wrath-mate-maka-ogis": {
+    "role": "Adaptive sacrifice Persona",
+    "skill": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your other Allies] add that Ally's current Power to this unit's Power for that battle.\n[green][Garahana][Persona] During your turn, if you Offered 2 or more this turn, this unit gets Power +5000.",
+    "gameplay": "Add the offered Ally's current Power for the battle. Garahana supplies a continuous +5000 during your turn once your Offer total reaches two.",
+    "partners": "Mixed Beast/Bird/Maguindanaon lists; Four Scourges Came",
+    "pattern": "Tachikaze Power inheritance; Shadow Paladin role-specific fodder",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/three-scourge-champion-sulayman": {
+    "role": "Board-control Persona",
+    "skill": "[blue][Persona] 1/turn: [Cost: Offer 1 of your Allies] search your deck for a Maguindanaon unit and special call it. It enters charged. This unit and the called unit each get Power +3000 until end of turn.\n[green][Garahana][Persona] 1/turn: When this unit attacks, [Cost: Offer 3] damage up to two of your opponent's Allies. This unit gets Power +10000 for that battle and gains \"When this attack hits, draw 1 card.\"",
+    "gameplay": "Trade an Ally for any Maguindanaon Unit and strengthen both attackers. Offer 3 on attack to damage up to two enemies and earn a draw if that attack hits.",
+    "partners": "Kali Adam, Rinamuntaw, Rinayung, Seven Heads Before One King",
+    "pattern": "Original and D-series Phantom Blaster; D support that creates sacrifice material",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/house-shell-shadow-pahira": {
+    "role": "Force finder; Last Oath fodder",
+    "skill": "[green][Last Oath]: When this unit is Offered, look at the top 5 cards of your deck. You may reveal one Beast or Bird card from among them and put it into your hand. Put the rest on the bottom in any order.",
+    "gameplay": "[Last Oath]: When this unit is Offered, look at the top 5 cards of your deck. You may reveal one Beast or Bird card from among them and put it into your hand. Put the rest on the bottom in any order.",
+    "partners": "Tomitay, Gurayn, all Tunung Forces",
+    "pattern": "Early Tachikaze units that replace themselves when retired",
+    "balance": "Verify the trigger window, zone requirement, and duration in engine tests.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/rattan-marsh-stalker-kuritan": {
+    "role": "Temporary attacker",
+    "skill": "[green][Ally]: When this unit is placed, if you Offered an Ally this turn, this unit gets Power +5000 until end of turn.\n[green][Ally]: At the end of your turn, Offer this unit.",
+    "gameplay": "Provides a strong short-lived attack and then offers itself automatically, which advances Garahana and enables effects that watch for an Offer.",
+    "partners": "Kurita, The Four Scourges Came, Mount Kabalalan",
+    "pattern": "Revenger temporary calls; Tachikaze self-retirement timing",
+    "balance": "Because the end-of-turn Offer is mandatory, the +5000 can remain free.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/matutun-branch-hurler-tarabuk": {
+    "role": "Ally multiattack engine",
+    "skill": "[green][Ally] 1/turn: After this unit attacks, [Cost: Offer 1 of your other Allies] charge this unit. It gets Power +3000 until end of turn.",
+    "gameplay": "Turns a spare body into another Ally attack. Last Oath makes the cost productive, while the +3000 helps the second attack clear a higher Power line.",
+    "partners": "Rinamuntaw, Amina, Mount Matutun",
+    "pattern": "Tachikaze continuous attacks after retiring an Ally",
+    "balance": "Cannot Offer itself. Keep the bonus at +3000 because it attacks twice.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/dread-night-caller-balbal": {
+    "role": "Grave setup attacker",
+    "skill": "[green][Ally] 1/Turn per copy: When this unit is placed, send the top 3 cards of your deck to your Grave. This unit gets Power +3000 until end of turn for each unit card sent this way.",
+    "gameplay": "Accelerates Garahana without consuming the current board. The attack bonus scales with how many units were milled, so the result is useful even before the State releases.",
+    "partners": "Alad, Karim, The Lowlands Rose Again",
+    "pattern": "Luard's grave threshold; Codex Legends existing Nasser pattern",
+    "balance": "The maximum bonus is +9000. Watch deck-out pressure in long games.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/balete-laughing-spirit-ba-i-a-salendagao": {
+    "role": "Offer-chain Power support",
+    "skill": "[green][Garahana][Ally]: Whenever another of your Allies is Offered, choose one of your units. It gets Power +5000 until end of turn.",
+    "gameplay": "[Garahana][Ally]: Whenever another of your Allies is Offered, choose one of your units. It gets Power +5000 until end of turn.",
+    "partners": "Pah, Sulayman, Tarabuk",
+    "pattern": "Early Tachikaze units gaining Power when allies enter the drop",
+    "balance": "Verify the trigger window, zone requirement, and duration in engine tests.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/heaven-sheltered-survivor-lanao-sprite": {
+    "role": "Force recycler; Last Oath fodder",
+    "skill": "[green][Last Oath] 1/Turn per copy: When this unit is Offered, your Persona gets Power +2000 until the end of your opponent's turn.",
+    "gameplay": "[Last Oath]: When this unit is Offered, your Persona gets Power +2000 until the end of your opponent's turn.",
+    "partners": "Tomitay, Water Tunung, Cape Timbalangan",
+    "pattern": "Tachikaze resource recovery after retirement; D-era compact two-part support",
+    "balance": "Verify the trigger window, zone requirement, and duration in engine tests.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/current-borne-ancestor-crocodile-form-apu": {
+    "role": "Offer recovery engine",
+    "skill": "[green][Garahana][Grave]: The first time one of your Allies is Offered each turn, special call this unit. At the end of your turn, if this unit was called by this effect, Offer it.",
+    "gameplay": "[Garahana][Grave]: The first time one of your Allies is Offered each turn, special call this unit. At the end of your turn, if this unit was called by this effect, Offer it.",
+    "partners": "Any Last Oath unit; Potri Rainalaut",
+    "pattern": "Tachikaze units returning to hand after retirement",
+    "balance": "Verify the trigger window, zone requirement, and duration in engine tests.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/smoke-split-hunter-salimbadut": {
+    "role": "Removal attacker",
+    "skill": "[green][Ally] 1/turn: After this unit attacks, if you Offered an Ally this turn, damage one of your opponent's exhausted Allies.\n[green][Ally]: At the end of your turn, Offer this unit.",
+    "gameplay": "Converts prior Offer setup into free removal after it attacks, then becomes Offer material itself at end of turn.",
+    "partners": "Kurita, Day Became Night, Cape Timbalangan",
+    "pattern": "Tachikaze attack-then-retire chains; Shadow Paladin field control",
+    "balance": "Restrict removal to exhausted Allies and keep the self-Offer mandatory.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/first-son-of-the-returned-land-rinamuntaw": {
+    "role": "Hand-filtering Last Oath",
+    "skill": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may draw 1 card, then discard 1 card.",
+    "gameplay": "[Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then you may draw 1 card, then discard 1 card.",
+    "partners": "Indarapatra, Sulayman, Bekong",
+    "pattern": "Retire-trigger replacement value; existing Maguindanao Last Oath wording",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/first-daughter-of-the-returned-land-rinayung": {
+    "role": "Board-replacement Last Oath",
+    "skill": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn across all cards with this name, you may search your deck for a Level 1 Maguindanaon unit and special call it, charged.",
+    "gameplay": "[Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then you may search your deck for a Level 1 Maguindanaon unit and special call it, charged.",
+    "partners": "Amina, Karim, Sulayman",
+    "pattern": "Shadow Paladin creates replacement fodder; Tachikaze on-retire calls",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/hollow-tree-guide-the-old-woman": {
+    "role": "Maguindanaon searcher",
+    "skill": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may look at the top 5 cards of your deck. You may reveal one Maguindanaon unit from among them and put it into your hand. Put the rest on the bottom in any order.",
+    "gameplay": "[Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then you may look at the top 5 cards of your deck. You may reveal one Maguindanaon unit from among them and put it into your hand. Put the rest on the bottom in any order.",
+    "partners": "Kali Adam, Alad, Indarapatra",
+    "pattern": "Shadow Paladin low-grade consistency pieces",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/last-witness-of-the-old-words-alad": {
+    "role": "Fast Garahana enabler",
+    "skill": "[green][Grave]: This card is treated as 2 cards in your Grave.",
+    "gameplay": "[Grave]: This card is treated as 2 cards in your Grave.",
+    "partners": "Balbal, The Lowlands Rose Again, any Offer Persona",
+    "pattern": "D Phantom Blaster support that counts as multiple sacrifices; existing Bai Samira grave-count pattern",
+    "balance": "Verify the trigger window, zone requirement, and duration in engine tests.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/elder-of-the-old-telling-maharaja-layla": {
+    "role": "Codex-switch hand filter",
+    "skill": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may send the top card of your deck to the Grave.",
+    "gameplay": "[Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then you may send the top card of your deck to the Grave.",
+    "partners": "All Codex cards; Potri Rainalaut; Alad",
+    "pattern": "Luard grave preparation; D-era engines that tie support to a central game piece",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/voice-beneath-the-current-water-tunung": {
+    "role": "Force; Grave recovery",
+    "skill": "[yellow][Force][Hand] On either player's turn: When an opponent's Ally on the field activates its ability, [Cost: Reveal and discard this card] choose one of your Allies and one of your opponent's Allies. Rally them to the bottom of their owners' decks.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]",
+    "gameplay": "Pairs the normal Force Power boost with a recovered Last Oath or Offer-value unit.",
+    "partners": "Potri Rainalaut, Rinamuntaw, Amina",
+    "pattern": "Tachikaze post-retirement recovery; Codex Legends Force structure",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/prayer-above-the-storm-sky-tunung": {
+    "role": "Force; hand quality",
+    "skill": "[yellow][Force][Hand] On either player's turn: When your opponent activates a card's ability, [Cost: Reveal and discard this card] negate that activation.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]",
+    "gameplay": "Provides the safest all-purpose Force. On a check it improves the attack and filters a Maguindanaon unit into the Grave.",
+    "partners": "Tomitay, Alad, Maharaja Layla",
+    "pattern": "Vanguard trigger pressure plus Shadow Paladin grave setup",
+    "balance": "Use draw-then-discard rather than a clean draw to keep the second mode neutral.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/keeper-of-the-account-datu-kali-adam": {
+    "role": "Double-Offer cost unit",
+    "skill": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may choose one of your other units. It gets Power +3000 until end of turn.",
+    "gameplay": "[Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then you may choose one of your other units. It gets Power +3000 until end of turn.",
+    "partners": "Pah, Sulayman, Tarabusaw",
+    "pattern": "D Phantom Blaster support that counts as two sacrifices; existing Kamil Offer-value pattern",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/warden-within-the-ridge-mountain-tunung": {
+    "role": "Force; extra attack",
+    "skill": "[yellow][Force][Hand] On either player's turn: When your opponent activates an effect that would special call one or more Units, [Cost: Reveal and discard this card] draw 2 cards.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]",
+    "gameplay": "Turns a check into a stronger follow-up Ally attack. From hand, the player chooses between raw Power and another attack.",
+    "partners": "Tomitay, Tarabuk, Gurayn",
+    "pattern": "Tachikaze continuous attacks; Codex Legends Force structure",
+    "balance": "Cannot charge the Persona. Track whether repeated Force checks create too many attacks.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/listener-among-the-roots-tree-tunung": {
+    "role": "Force; Garahana setup",
+    "skill": "[yellow][Force][Hand] On either player's turn: When an opponent's Unit attacks, [Cost: Reveal and discard this card] choose one of your Units. It gets Power +5000 until the end of that attack. Draw 1 card.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]",
+    "gameplay": "Trades long-game deck size for faster Garahana. A check produces immediate Power while feeding future Grave payoffs.",
+    "partners": "Balbal, Alad, The Lowlands Rose Again",
+    "pattern": "Luard grave threshold; Tachikaze stored-resource development",
+    "balance": "Two cards is enough. Monitor deck-out in mill-heavy builds.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/the-four-scourges-came": {
+    "role": "Grave swarm Action",
+    "skill": "Action — special call up to one Level 2 or lower Beast and up to one Level 2 or lower Bird from your Grave. They enter charged. At the end of your turn, Offer the units called by this effect that remain in an Ally Zone.",
+    "gameplay": "Creates two temporary attackers or Offer bodies, then turns survivors into Garahana progress and Last Oath triggers.",
+    "partners": "Kuritan, Pahira, Salimbadut, Scourge Personas",
+    "pattern": "Revenger temporary calls; Tachikaze retire-to-enable follow-up effects",
+    "balance": "Subtype and level limits matter. The end-of-turn Offer must track only cards called by this Action.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/a-vow-carried-by-the-wind": {
+    "role": "Exact fodder Action",
+    "skill": "Action — search your deck for a Level 1 Maguindanaon unit and special call it. It enters charged. At the end of your turn, Offer that unit if it remains in an Ally Zone.",
+    "gameplay": "Finds the exact Last Oath or double-Offer unit required for the turn. If it survives, it becomes an Offer at end of turn instead of staying as free board advantage.",
+    "partners": "Kali Adam, Rinamuntaw, Rinayung",
+    "pattern": "D Phantom Blaster support creates expendable bodies; Revenger temporary calls",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/kabalalan-shook-from-below": {
+    "role": "Control Action",
+    "skill": "Action — [Cost: Offer 1 of your Allies] exhaust up to two of your opponent's Allies. If Garahana is released, you may damage one of those Allies that was already exhausted before this Action resolved.",
+    "gameplay": "Sets up attacks and exhausted-target removal. Garahana upgrades it only when the opponent already committed a unit, which limits blowouts.",
+    "partners": "Pah, Tarabusaw, Sulayman",
+    "pattern": "Shadow Paladin sacrifice-for-removal; controlled D-era board pressure",
+    "balance": "The damaged target must have been exhausted before resolution; otherwise this becomes two removals for one card.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/until-tarabusaw-tired": {
+    "role": "Granted multiattack Action",
+    "skill": "Action — choose one Beast Ally. The first time it finishes an attack this turn, you may Offer one of your other Allies. If you do, charge the chosen Beast and it gets Power +3000 until end of turn.",
+    "gameplay": "Lets any Beast borrow Tarabuk's attack pattern for one turn. The player must still supply a separate Offer body.",
+    "partners": "Tarabusaw, Omaka-an, Maka-Ogis",
+    "pattern": "Tachikaze retirement as the price for another attack",
+    "balance": "Ally only; no Persona restand. The granted trigger is once for the turn.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/the-price-of-the-third-victory": {
+    "role": "Three-Offer payoff Action",
+    "skill": "Action — play only if you Offered 3 or more this turn. Draw 2 cards, then discard 1 card. If Garahana is released, your Persona gets Power +3000 until end of turn.",
+    "gameplay": "Use the skill above. Normal calls and Actions use one play; skills and special calls do not.",
+    "partners": "Pah, Sulayman, Kali Adam",
+    "pattern": "Mass-sacrifice finishers need controlled replenishment",
+    "balance": "Check the threshold after Offer value is counted. It cannot be played before the third Offer is paid.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/day-became-night": {
+    "role": "Exhaust and removal Action",
+    "skill": "Action — exhaust up to two of your opponent's Allies. If you Offered 3 or more this turn, damage one exhausted opponent Ally instead of exhausting the second unit.",
+    "gameplay": "Opens targets for Scourge attacks. A heavy Offer turn upgrades one of the exhausts into removal.",
+    "partners": "Kurita, Salimbadut, Mount Bita",
+    "pattern": "Shadow Paladin turns sacrifice into board control",
+    "balance": "Resolve either two exhausts or one exhaust plus one damage. Do not damage two units.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/when-the-life-sign-withered": {
+    "role": "Efficient exchange Action",
+    "skill": "Action — [Cost: Offer 1 of your Allies] your opponent chooses one of their Allies and damages it. If your opponent has no Allies, draw 1 card instead.",
+    "gameplay": "Trades your chosen Last Oath unit for the opponent's least valuable Ally. If there is no target, it converts the Offer into hand replacement.",
+    "partners": "Any Last Oath unit; Sulayman",
+    "pattern": "Original Shadow Paladin reciprocal retirement",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/the-brother-awakened": {
+    "role": "Sibling swarm Action",
+    "skill": "Action — search your deck and Grave for up to one Rinamuntaw and up to one Rinayung, then special call them to separate Ally Zones. They enter charged. At the end of your turn, Offer each one that remains in an Ally Zone.",
+    "gameplay": "Builds two named Level 1 bodies for an attack or a large Offer cost, then guarantees their Last Oaths if they survive.",
+    "partners": "Rinamuntaw, Rinayung, Indarapatra",
+    "pattern": "Shadow Paladin named-piece assembly; Revenger temporary calls",
+    "balance": "One copy of each name only. Require two open or replaceable Ally Zones.",
+    "effort": "High"
+  },
+  "maguindanao/set-1/seven-heads-before-one-king": {
+    "role": "Late-game Power Action",
+    "skill": "Action — choose your Persona. Until end of turn, when it attacks, it gets Power +1000 for each unit card in your Grave, up to +10000. If seven or more of those cards are Maguindanaon units, damage one exhausted opponent Ally after that attack.",
+    "gameplay": "Turns the filled Grave into a final attack bonus without consuming more Allies. A deeply developed Garahana line also receives one controlled removal.",
+    "partners": "Sulayman, Balbal, Tree Tunung",
+    "pattern": "Ritual-style grave threshold; late Shadow Paladin scaling",
+    "balance": "Cap the Power at +10000 and removal at once per turn through the granted effect.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/the-lowlands-rose-again": {
+    "role": "Grave recycle Action",
+    "skill": "Action — choose up to two Level 1 Maguindanaon units in your Grave. Put one into your hand and put the other on the bottom of your deck. If you chose only one, put it into your hand.",
+    "gameplay": "Recovers one tool and returns another to the deck for future searches. Because it removes cards from the Grave, playing it can turn off Garahana and creates a real timing decision.",
+    "partners": "Potri Rainalaut, Old Woman, Restored Magindanao",
+    "pattern": "Luard recycles low grades from drop; resource loop with a threshold cost",
+    "balance": "Make the Garahana re-check immediate after cards leave the Grave.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/spring-veiled-heiress-dayang-amina": {
+    "role": "resource Last Oath",
+    "skill": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may choose one of your opponent's Ally units and damage it.",
+    "gameplay": "[Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then you may choose one of your opponent's Ally units and damage it.",
+    "partners": "Potri Rainalaut, Kabalalan Shook From Below, Pah",
+    "pattern": "Tachikaze retirement refund; Last Oath as resource conversion",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/seven-sight-final-scourge-gurayn": {
+    "role": "Beast/Bird toolbox Persona",
+    "skill": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 2 of your other Allies] look at the top 7 cards of your deck. Special call up to two Beasts or Birds from among them. Put the remaining cards on the bottom in any order.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] choose a Seven-Sight Final Scourge, Gurayn from your hand and Personify into it, charged.",
+    "gameplay": "Look seven deep for up to two Beast or Bird attackers. After battle, Offer 3 to Personify a fresh Gurayn from hand; the outgoing Persona moves to Heart.",
+    "partners": "Pahira, Four Scourges Came, Mountain Tunung",
+    "pattern": "Tachikaze attack-chain replacement; D-era support finds exact archetype pieces",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/keeper-of-the-last-refuge-datu-karim": {
+    "role": "Last Oath recovery",
+    "skill": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn across all cards with this name, you may search your deck for another Keeper of the Last Refuge, Datu Karim and special call it, charged.",
+    "gameplay": "[Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then you may search your deck for another Keeper of the Last Refuge, Datu Karim and special call it, charged.",
+    "partners": "Rinamuntaw, Rinayung, Amina, Potri Rainalaut",
+    "pattern": "Tachikaze hand recovery after retirement; Luard low-grade recursion",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/city-beyond-the-sunset-mantapuli": {
+    "role": "Codex; hand-quality engine",
+    "skill": "Auto-switch — before you draw, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\nCodex skill — Instead of drawing, Offer 1 Ally or send the top card of your deck to your Grave. Then, if Garahana is released, draw 1 card.",
+    "gameplay": "Makes the first small sacrifice each turn improve the hand and place another useful card in the Grave.",
+    "partners": "Rinamuntaw, Alad, Maharaja Layla",
+    "pattern": "Retirement replacement value; Luard grave shaping",
+    "balance": "One trigger per turn. It filters rather than drawing a clean extra card.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/forest-of-broken-branches-mount-matutun": {
+    "role": "Codex; Beast/Bird attack loop",
+    "skill": "Auto-switch — at the start of your Main Phase, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — At the start of your Main Phase, send the top card of your deck to your Grave. If it was a Unit, one of your Units gets Power +5000 until end of turn.",
+    "gameplay": "Transforms one battle-phase sacrifice into a fresh attacker. It is the closest Set 1 expression of Tachikaze's retire-and-return turns.",
+    "partners": "Omaka-an, Tarabuk, Four Scourges Came",
+    "pattern": "Tachikaze Engorge and retirement-trigger revival",
+    "balance": "Preserve the printed non-currency costs, timing, targets and once-per-turn limits.",
+    "effort": "High"
+  },
+  "maguindanao/set-1/throne-of-the-sun-shadow-mount-bita": {
+    "role": "Codex; Persona pressure",
+    "skill": "Auto-switch — when your Persona attacks, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When your Persona attacks, it gets Power +3000 for each card Offered this turn, until end of turn.",
+    "gameplay": "Rewards the deck's main cost with a simple, visible Persona payoff. It is the best default Codex for Pah and Sulayman finishers.",
+    "partners": "Pah, Sulayman, Price of the Third Victory",
+    "pattern": "Phantom Blaster converts sacrifice count into boss Power",
+    "balance": "One attack receives the appropriate bonus each time; restanding Personas also receive it, so test Pah carefully.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/the-rattan-haunt-mount-kabalalan": {
+    "role": "Codex; Main-phase recovery",
+    "skill": "Auto-switch — before you draw, if you have 2 or fewer Barriers, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When you Offer a Unit during your turn, search your deck for a Unit other than the one you Offered and special call it.",
+    "gameplay": "Lets an activated Offer cost keep its body for a later turn while denying an immediate attack. Last Oath still resolves before the return.",
+    "partners": "Kuritan, Crocodile-Form Apu, Indarapatra",
+    "pattern": "Tachikaze units survive retirement; existing Liguasan Marsh pattern",
+    "balance": "Return exhausted and only once per turn to prevent free attack loops.",
+    "effort": "Medium"
+  },
+  "maguindanao/set-1/peak-of-seven-sights-mount-gurayn": {
+    "role": "Codex; Scourge consistency",
+    "skill": "Auto-switch — before you Personify, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\nCodex skill — Instead of Personifying from your hand, look at the top 5 cards of your deck and Personify one Level 3 Unit among them. Put the rest on the bottom of your deck.",
+    "gameplay": "Turns an expendable Ally into a Persona or large attacker while feeding Offer and Last Oath synergies.",
+    "partners": "Gurayn, Pah, Kurita, Tarabusaw",
+    "pattern": "Shadow Paladin boss searchers; sacrifice as a consistency cost",
+    "balance": "Level 3 and subtype restrictions keep the search narrow. The skill consumes the turn's Codex action use.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/mirror-of-the-giant-war-lake-lanao": {
+    "role": "Codex; defensive board rebuild",
+    "skill": "Auto-switch — before you draw, if your opponent has more Barriers than you, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When your State is released, all of your Units get Power +1000 until end of turn.",
+    "gameplay": "Rebuilds an expendable body after taking damage and can put a discarded Maguindanaon card into the Grave at the same time.",
+    "partners": "Bekong, Kali Adam, Amina",
+    "pattern": "Shadow Paladin continually creates sacrifice material; existing Lake Buluan pattern",
+    "balance": "No trigger on a Force Barrier check. The discard is mandatory before the deck search.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/reach-of-the-ridge-giants-illana-bay": {
+    "role": "Codex; first Offer cost bonus",
+    "skill": "Auto-switch — before you draw, if your opponent has more Units than you, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — Before paying an Offer cost, if you have not Offered a Unit this turn, you may activate this skill in its own response chain. After it resolves, the first Unit you Offer this turn counts as 2 Offers, regardless of subtype.",
+    "gameplay": "Activate before paying an Offer cost. After the separate chain resolves, one Unit can pay Offer 2; two ordinary Units can pay Offer 3.",
+    "partners": "Pah, Tarabusaw, Sulayman",
+    "pattern": "Pre-payment chain followed by a once-per-turn Offer bonus",
+    "balance": "Only the first physical Unit Offered counts as 2. Does not create a second Last Oath or change Grave cards or subtypes.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/cave-beneath-the-earth-the-last-refuge": {
+    "role": "Codex; defensive replacement",
+    "skill": "Auto-switch — when your Barrier breaks during your opponent's turn, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When your Barrier breaks, your Persona gets Power +1000 for each of your broken Barriers, until end of turn.",
+    "gameplay": "Redirects a removal effect into a chosen Last Oath unit. The threatened Ally survives, but the player still loses a body.",
+    "partners": "Bekong, Rinamuntaw, Karim",
+    "pattern": "Shadow Paladin sacrifice as protection; Tachikaze death-trigger selection",
+    "balance": "It does not prevent battle damage and cannot Offer the threatened unit itself.",
+    "effort": "High"
+  },
+  "maguindanao/set-1/the-sea-withdrawn-lowlands-restored-magindanao": {
+    "role": "Codex; sustainable recursion",
+    "skill": "Auto-switch — when your Persona is under attack, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When you check a Barrier and it is not a Force, special call 1 Unit from your deck, then discard 1 card.",
+    "gameplay": "Recycles a spent unit into the deck and converts a Level 1 in hand into immediate board presence. Removing a Grave card can temporarily clear Garahana.",
+    "partners": "Old Woman, Indarapatra, Lowlands Rose Again",
+    "pattern": "Luard recycles low grades; repeated fodder without infinite Grave growth",
+    "balance": "The Grave payment must occur first. Re-evaluate Garahana immediately after it leaves the Grave.",
+    "effort": "Low"
+  },
+  "maguindanao/set-1/shore-of-the-broken-hills-cape-timbalangan": {
+    "role": "Codex; Force value",
+    "skill": "Auto-switch — before you draw, if your opponent has more cards in hand than you, you may switch to this Codex for free.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When this Codex becomes active, draw 2 cards, then discard 1 card.",
+    "gameplay": "Adds a small recovery reward to Force-check turns and gives Tomitay a Codex that does not create another attack by itself.",
+    "partners": "Tomitay, all Tunung Forces, Lanao Sprite",
+    "pattern": "Tachikaze trigger-driven resource gain; D-era support centered on the leader's check",
+    "balance": "Once per turn regardless of how many Forces resolve. Return Level 1 only.",
+    "effort": "Medium"
+  }
+}

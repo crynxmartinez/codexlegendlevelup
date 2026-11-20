@@ -1,0 +1,43 @@
+/* Public Check reveal: an upright card beside its owner's pile column. */
+body .duel-notice.check-reveal-notice:has(.duel-notice-cards img:only-child) {
+  --reveal-light:#76edff;
+  width:clamp(180px,14vw,250px); display:flex; flex-direction:column; align-items:center;
+  gap:8px; padding:10px; border:0; background:transparent; box-shadow:none;
+  isolation:isolate; overflow:visible;
+}
+body .check-reveal-notice::before {
+  content:''; position:absolute; inset:5% -18%; z-index:-1; pointer-events:none;
+  background:repeating-conic-gradient(from 8deg,transparent 0deg 12deg,#73ecff75 13deg 14deg,transparent 16deg 30deg);
+  mask-image:radial-gradient(ellipse,#000 15%,transparent 68%);
+  animation:check-reveal-burst 600ms ease-out both;
+}
+body .duel-notice.check-reveal-notice > strong {
+  display:block; width:100%; padding:5px 12px; box-sizing:border-box; text-align:center;
+  color:#f2fcff; font-size:clamp(18px,1.6vw,25px); font-weight:900; font-style:italic;
+  background:linear-gradient(135deg,#19364b,#06121e); border:2px solid #bceeff;
+  clip-path:polygon(9% 0,100% 0,91% 100%,0 100%); text-shadow:0 0 12px #4bddff;
+}
+body .duel-notice.check-reveal-notice .duel-notice-cards { overflow:visible; width:100%; }
+body .duel-notice.check-reveal-notice .duel-notice-cards img:only-child {
+  width:100%; height:auto; aspect-ratio:5 / 7; max-width:100%; max-height:38dvh;
+  border-radius:9px; filter:drop-shadow(0 0 9px var(--reveal-light));
+  animation:check-reveal-arrive 220ms ease-out both;
+}
+body .duel-notice.check-reveal-notice > p {
+  margin:0; padding:7px 9px; width:100%; box-sizing:border-box;
+  font-size:13px; line-height:1.35; text-align:center; color:#e6f8ff;
+  background:#071421ed; border:1px solid #73cde8; border-radius:6px;
+}
+body .check-reveal-notice.force { --reveal-light:#fff2a0; }
+@keyframes check-reveal-burst { from { opacity:0; transform:scale(.65); } 35% { opacity:1; } to { opacity:.55; transform:scale(1); } }
+@keyframes check-reveal-arrive { from { opacity:0; transform:translateY(12px) scale(.92); } to { opacity:1; transform:none; } }
+@media (max-height:600px), (max-width:900px) {
+  body .duel-notice.check-reveal-notice:has(.duel-notice-cards img:only-child) { width:150px; gap:4px; padding:4px; }
+  body .duel-notice.check-reveal-notice .duel-notice-cards img:only-child { max-height:42dvh; }
+  body .duel-notice.check-reveal-notice > p { font-size:11px; padding:4px; }
+  body .duel-notice.check-reveal-notice > strong { font-size:16px; padding:3px 8px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  body .check-reveal-notice::before, body .duel-notice.check-reveal-notice .duel-notice-cards img:only-child { animation:none; }
+  body .check-reveal-notice::before { opacity:.25; }
+}

@@ -1,0 +1,566 @@
+{
+  "agta/sierra-watchkeeper-banoy": {
+    "art": "assets/cards/web/rounded-v3/agta--sierra-watchkeeper-banoy.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--sierra-watchkeeper-banoy.webp"
+  },
+  "babaylan/warden-of-the-twelfth-tide-bituon": {
+    "art": "assets/cards/web/rounded-v3/babaylan--warden-of-the-twelfth-tide-bituon.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--warden-of-the-twelfth-tide-bituon.webp"
+  },
+  "maguindanao/kuta-wato-oath-shield-panglima-sabir": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--kuta-wato-oath-shield-panglima-sabir.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--kuta-wato-oath-shield-panglima-sabir.webp"
+  },
+  "agta/set-1/wind-heart-rescuer-taguwasi": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--wind-heart-rescuer-taguwasi.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--wind-heart-rescuer-taguwasi.webp"
+  },
+  "agta/set-1/fifth-sky-tyrant-kalimangalnuk": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--fifth-sky-tyrant-kalimangalnuk.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--fifth-sky-tyrant-kalimangalnuk.webp"
+  },
+  "agta/set-1/life-breath-mother-nanolay": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--life-breath-mother-nanolay.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--life-breath-mother-nanolay.webp"
+  },
+  "agta/set-1/fallen-sky-challenger-talimanog": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--fallen-sky-challenger-talimanog.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--fallen-sky-challenger-talimanog.webp"
+  },
+  "agta/set-1/months-of-battle-warrior-ammani": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--months-of-battle-warrior-ammani.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--months-of-battle-warrior-ammani.webp"
+  },
+  "agta/set-1/relentless-third-brother-annibo": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--relentless-third-brother-annibo.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--relentless-third-brother-annibo.webp"
+  },
+  "agta/set-1/river-calling-sister-alig": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--river-calling-sister-alig.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--river-calling-sister-alig.webp"
+  },
+  "agta/set-1/maiden-taking-raptor-ammalabukkaw": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--maiden-taking-raptor-ammalabukkaw.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--maiden-taking-raptor-ammalabukkaw.webp"
+  },
+  "agta/set-1/golden-threshold-warden-nagdombilan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--golden-threshold-warden-nagdombilan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--golden-threshold-warden-nagdombilan.webp"
+  },
+  "agta/set-1/wedding-war-chief-namandiyanin": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--wedding-war-chief-namandiyanin.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--wedding-war-chief-namandiyanin.webp"
+  },
+  "agta/set-1/moon-bright-captive-innawagan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--moon-bright-captive-innawagan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--moon-bright-captive-innawagan.webp"
+  },
+  "agta/set-1/barbed-sky-messenger-dalewasan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--barbed-sky-messenger-dalewasan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--barbed-sky-messenger-dalewasan.webp"
+  },
+  "agta/set-1/keeper-at-sunrise-sinag": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--keeper-at-sunrise-sinag.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--keeper-at-sunrise-sinag.webp"
+  },
+  "agta/set-1/returning-sky-captain-darawan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--returning-sky-captain-darawan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--returning-sky-captain-darawan.webp"
+  },
+  "agta/set-1/wedding-pact-elder-amuray": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--wedding-pact-elder-amuray.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--wedding-pact-elder-amuray.webp"
+  },
+  "agta/set-1/nightfall-raider-kallan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--nightfall-raider-kallan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--nightfall-raider-kallan.webp"
+  },
+  "agta/set-1/night-feast-defender-tamin": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--night-feast-defender-tamin.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--night-feast-defender-tamin.webp"
+  },
+  "agta/set-1/fifth-sky-sentinel-ulagan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--fifth-sky-sentinel-ulagan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--fifth-sky-sentinel-ulagan.webp"
+  },
+  "agta/set-1/path-turning-warden-tumatanan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--path-turning-warden-tumatanan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--path-turning-warden-tumatanan.webp"
+  },
+  "agta/set-1/beast-spirit-healer-subkal": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--beast-spirit-healer-subkal.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--beast-spirit-healer-subkal.webp"
+  },
+  "agta/set-1/healer-s-spirit-friend-bunog": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--healer-s-spirit-friend-bunog.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--healer-s-spirit-friend-bunog.webp"
+  },
+  "agta/set-1/restless-wandering-dead-belet": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--restless-wandering-dead-belet.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--restless-wandering-dead-belet.webp"
+  },
+  "agta/set-1/innawagan-s-abduction": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--innawagan-s-abduction.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--innawagan-s-abduction.webp"
+  },
+  "agta/set-1/the-three-brothers-ascend": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--the-three-brothers-ascend.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--the-three-brothers-ascend.webp"
+  },
+  "agta/set-1/dalewasan-crosses-the-barbed-sky": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--dalewasan-crosses-the-barbed-sky.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--dalewasan-crosses-the-barbed-sky.webp"
+  },
+  "agta/set-1/sinag-reveals-the-rescuer": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--sinag-reveals-the-rescuer.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--sinag-reveals-the-rescuer.webp"
+  },
+  "agta/set-1/taguwasi-answers-the-plea": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--taguwasi-answers-the-plea.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--taguwasi-answers-the-plea.webp"
+  },
+  "agta/set-1/talimanog-falls-as-the-gate-breaks": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--talimanog-falls-as-the-gate-breaks.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--talimanog-falls-as-the-gate-breaks.webp"
+  },
+  "agta/set-1/taguwasi-tears-open-heaven": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--taguwasi-tears-open-heaven.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--taguwasi-tears-open-heaven.webp"
+  },
+  "agta/set-1/kalimangalnuk-s-final-defeat": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--kalimangalnuk-s-final-defeat.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--kalimangalnuk-s-final-defeat.webp"
+  },
+  "agta/set-1/alig-restores-her-brothers": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--alig-restores-her-brothers.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--alig-restores-her-brothers.webp"
+  },
+  "agta/set-1/the-wedding-becomes-a-battlefield": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--the-wedding-becomes-a-battlefield.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--the-wedding-becomes-a-battlefield.webp"
+  },
+  "agta/set-1/dawnward-country-arawen": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--dawnward-country-arawen.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--dawnward-country-arawen.webp"
+  },
+  "agta/set-1/barbed-sky-passage-salikan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--barbed-sky-passage-salikan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--barbed-sky-passage-salikan.webp"
+  },
+  "agta/set-1/fifth-heaven-ularan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--fifth-heaven-ularan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--fifth-heaven-ularan.webp"
+  },
+  "agta/set-1/brothers-refuge-taliman": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--brothers-refuge-taliman.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--brothers-refuge-taliman.webp"
+  },
+  "agta/set-1/healing-house-aligan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--healing-house-aligan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--healing-house-aligan.webp"
+  },
+  "agta/set-1/wedding-clearing-amuran": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--wedding-clearing-amuran.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--wedding-clearing-amuran.webp"
+  },
+  "agta/set-1/golden-threshold-nagdan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--golden-threshold-nagdan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--golden-threshold-nagdan.webp"
+  },
+  "agta/set-1/heaven-s-rift-siwangan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--heaven-s-rift-siwangan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--heaven-s-rift-siwangan.webp"
+  },
+  "agta/set-1/mystic-sky-river-dalunan": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--mystic-sky-river-dalunan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--mystic-sky-river-dalunan.webp"
+  },
+  "agta/set-1/storm-court-kaliman": {
+    "art": "assets/cards/web/rounded-v3/agta--set-1--storm-court-kaliman.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/agta--set-1--storm-court-kaliman.webp"
+  },
+  "babaylan/set-1/mountain-sovereign-maria-cacao": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--mountain-sovereign-maria-cacao.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--mountain-sovereign-maria-cacao.webp"
+  },
+  "babaylan/set-1/harvest-warden-mangaw": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--harvest-warden-mangaw.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--harvest-warden-mangaw.webp"
+  },
+  "babaylan/set-1/thunder-sovereign-kaptan": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--thunder-sovereign-kaptan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--thunder-sovereign-kaptan.webp"
+  },
+  "babaylan/set-1/ocean-sovereign-maguayan": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--ocean-sovereign-maguayan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--ocean-sovereign-maguayan.webp"
+  },
+  "babaylan/set-1/abyssal-revolt-sinogo": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--abyssal-revolt-sinogo.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--abyssal-revolt-sinogo.webp"
+  },
+  "babaylan/set-1/last-moon-devourer-bakunawa": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--last-moon-devourer-bakunawa.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--last-moon-devourer-bakunawa.webp"
+  },
+  "babaylan/set-1/unbroken-invocation-amara": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--unbroken-invocation-amara.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--unbroken-invocation-amara.webp"
+  },
+  "babaylan/set-1/heaven-s-pursuit-dalagan": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--heaven-s-pursuit-dalagan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--heaven-s-pursuit-dalagan.webp"
+  },
+  "babaylan/set-1/unyielding-pursuer-guidala": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--unyielding-pursuer-guidala.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--unyielding-pursuer-guidala.webp"
+  },
+  "babaylan/set-1/unseen-defender-tata-cero": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--unseen-defender-tata-cero.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--unseen-defender-tata-cero.webp"
+  },
+  "babaylan/set-1/leafborne-champion-kapitan-dyano": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--leafborne-champion-kapitan-dyano.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--leafborne-champion-kapitan-dyano.webp"
+  },
+  "babaylan/set-1/spring-sentinel-ulango": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--spring-sentinel-ulango.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--spring-sentinel-ulango.webp"
+  },
+  "babaylan/set-1/shadow-prowler-sagwil": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--shadow-prowler-sagwil.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--shadow-prowler-sagwil.webp"
+  },
+  "babaylan/set-1/nightfall-hunter-wakira": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--nightfall-hunter-wakira.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--nightfall-hunter-wakira.webp"
+  },
+  "babaylan/set-1/reef-enchanter-lawira": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--reef-enchanter-lawira.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--reef-enchanter-lawira.webp"
+  },
+  "babaylan/set-1/answering-voice-aday": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--answering-voice-aday.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--answering-voice-aday.webp"
+  },
+  "babaylan/set-1/first-invocation-luning": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--first-invocation-luning.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--first-invocation-luning.webp"
+  },
+  "babaylan/set-1/spirit-mediator-iday": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--spirit-mediator-iday.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--spirit-mediator-iday.webp"
+  },
+  "babaylan/set-1/hidden-affliction-doro": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--hidden-affliction-doro.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--hidden-affliction-doro.webp"
+  },
+  "babaylan/set-1/floodwatch-runner-sali": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--floodwatch-runner-sali.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--floodwatch-runner-sali.webp"
+  },
+  "babaylan/set-1/promise-bearer-nardo": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--promise-bearer-nardo.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--promise-bearer-nardo.webp"
+  },
+  "babaylan/set-1/small-deliverer-silak": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--small-deliverer-silak.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--small-deliverer-silak.webp"
+  },
+  "babaylan/set-1/field-blessing-banira": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--field-blessing-banira.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--field-blessing-banira.webp"
+  },
+  "babaylan/set-1/quiet-crossing-salumi": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--quiet-crossing-salumi.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--quiet-crossing-salumi.webp"
+  },
+  "babaylan/set-1/kindly-neighbor-silaya": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--kindly-neighbor-silaya.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--kindly-neighbor-silaya.webp"
+  },
+  "babaylan/set-1/hidden-passage-kawili": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--hidden-passage-kawili.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--hidden-passage-kawili.webp"
+  },
+  "babaylan/set-1/the-elders-answer": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--the-elders-answer.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--the-elders-answer.webp"
+  },
+  "babaylan/set-1/a-promise-broken": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--a-promise-broken.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--a-promise-broken.webp"
+  },
+  "babaylan/set-1/the-mountain-withdraws": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--the-mountain-withdraws.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--the-mountain-withdraws.webp"
+  },
+  "babaylan/set-1/flight-of-the-faithless": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--flight-of-the-faithless.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--flight-of-the-faithless.webp"
+  },
+  "babaylan/set-1/thunder-beneath-the-waves": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--thunder-beneath-the-waves.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--thunder-beneath-the-waves.webp"
+  },
+  "babaylan/set-1/when-lantoy-wept": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--when-lantoy-wept.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--when-lantoy-wept.webp"
+  },
+  "babaylan/set-1/the-river-rises": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--the-river-rises.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--the-river-rises.webp"
+  },
+  "babaylan/set-1/six-moons-lost": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--six-moons-lost.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--six-moons-lost.webp"
+  },
+  "babaylan/set-1/return-our-moon": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--return-our-moon.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--return-our-moon.webp"
+  },
+  "babaylan/set-1/the-covenant-renewed": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--the-covenant-renewed.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--the-covenant-renewed.webp"
+  },
+  "babaylan/set-1/sovereign-heights-mount-lantoy": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--sovereign-heights-mount-lantoy.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--sovereign-heights-mount-lantoy.webp"
+  },
+  "babaylan/set-1/silent-threshold-kabulaw": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--silent-threshold-kabulaw.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--silent-threshold-kabulaw.webp"
+  },
+  "babaylan/set-1/unseen-passage-argao-river": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--unseen-passage-argao-river.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--unseen-passage-argao-river.webp"
+  },
+  "babaylan/set-1/fields-under-watch-tabayag": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--fields-under-watch-tabayag.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--fields-under-watch-tabayag.webp"
+  },
+  "babaylan/set-1/living-sanctuary-dingayop-spring": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--living-sanctuary-dingayop-spring.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--living-sanctuary-dingayop-spring.webp"
+  },
+  "babaylan/set-1/hidden-court-dingayop-cavern": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--hidden-court-dingayop-cavern.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--hidden-court-dingayop-cavern.webp"
+  },
+  "babaylan/set-1/champion-s-trial-danao-highlands": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--champion-s-trial-danao-highlands.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--champion-s-trial-danao-highlands.webp"
+  },
+  "babaylan/set-1/turning-pursuit-bantayan-waters": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--turning-pursuit-bantayan-waters.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--turning-pursuit-bantayan-waters.webp"
+  },
+  "babaylan/set-1/faithless-prison-tanon-strait": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--faithless-prison-tanon-strait.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--faithless-prison-tanon-strait.webp"
+  },
+  "babaylan/set-1/great-calling-moonwake-shore": {
+    "art": "assets/cards/web/rounded-v3/babaylan--set-1--great-calling-moonwake-shore.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/babaylan--set-1--great-calling-moonwake-shore.webp"
+  },
+  "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--nonok-veiled-guardian-apo-a-bekong.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--nonok-veiled-guardian-apo-a-bekong.webp"
+  },
+  "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--beneath-water-ancestress-potri-rainalaut.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--beneath-water-ancestress-potri-rainalaut.webp"
+  },
+  "maguindanao/set-1/boat-watching-tonong-tomitay": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--boat-watching-tonong-tomitay.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--boat-watching-tonong-tomitay.webp"
+  },
+  "maguindanao/set-1/sun-darkening-scourge-pah": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--sun-darkening-scourge-pah.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--sun-darkening-scourge-pah.webp"
+  },
+  "maguindanao/set-1/rattan-haunt-scourge-kurita": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--rattan-haunt-scourge-kurita.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--rattan-haunt-scourge-kurita.webp"
+  },
+  "maguindanao/set-1/matutun-branch-devourer-tarabusaw": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--matutun-branch-devourer-tarabusaw.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--matutun-branch-devourer-tarabusaw.webp"
+  },
+  "maguindanao/set-1/land-restoring-raja-indarapatra": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--land-restoring-raja-indarapatra.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--land-restoring-raja-indarapatra.webp"
+  },
+  "maguindanao/set-1/gurayen-wrath-mate-maka-ogis": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--gurayen-wrath-mate-maka-ogis.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--gurayen-wrath-mate-maka-ogis.webp"
+  },
+  "maguindanao/set-1/three-scourge-champion-sulayman": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--three-scourge-champion-sulayman.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--three-scourge-champion-sulayman.webp"
+  },
+  "maguindanao/set-1/house-shell-shadow-pahira": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--house-shell-shadow-pahira.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--house-shell-shadow-pahira.webp"
+  },
+  "maguindanao/set-1/rattan-marsh-stalker-kuritan": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--rattan-marsh-stalker-kuritan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--rattan-marsh-stalker-kuritan.webp"
+  },
+  "maguindanao/set-1/matutun-branch-hurler-tarabuk": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--matutun-branch-hurler-tarabuk.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--matutun-branch-hurler-tarabuk.webp"
+  },
+  "maguindanao/set-1/dread-night-caller-balbal": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--dread-night-caller-balbal.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--dread-night-caller-balbal.webp"
+  },
+  "maguindanao/set-1/balete-laughing-spirit-ba-i-a-salendagao": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--balete-laughing-spirit-ba-i-a-salendagao.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--balete-laughing-spirit-ba-i-a-salendagao.webp"
+  },
+  "maguindanao/set-1/heaven-sheltered-survivor-lanao-sprite": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--heaven-sheltered-survivor-lanao-sprite.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--heaven-sheltered-survivor-lanao-sprite.webp"
+  },
+  "maguindanao/set-1/current-borne-ancestor-crocodile-form-apu": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--current-borne-ancestor-crocodile-form-apu.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--current-borne-ancestor-crocodile-form-apu.webp"
+  },
+  "maguindanao/set-1/smoke-split-hunter-salimbadut": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--smoke-split-hunter-salimbadut.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--smoke-split-hunter-salimbadut.webp"
+  },
+  "maguindanao/set-1/first-son-of-the-returned-land-rinamuntaw": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--first-son-of-the-returned-land-rinamuntaw.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--first-son-of-the-returned-land-rinamuntaw.webp"
+  },
+  "maguindanao/set-1/first-daughter-of-the-returned-land-rinayung": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--first-daughter-of-the-returned-land-rinayung.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--first-daughter-of-the-returned-land-rinayung.webp"
+  },
+  "maguindanao/set-1/hollow-tree-guide-the-old-woman": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--hollow-tree-guide-the-old-woman.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--hollow-tree-guide-the-old-woman.webp"
+  },
+  "maguindanao/set-1/last-witness-of-the-old-words-alad": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--last-witness-of-the-old-words-alad.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--last-witness-of-the-old-words-alad.webp"
+  },
+  "maguindanao/set-1/elder-of-the-old-telling-maharaja-layla": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--elder-of-the-old-telling-maharaja-layla.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--elder-of-the-old-telling-maharaja-layla.webp"
+  },
+  "maguindanao/set-1/voice-beneath-the-current-water-tunung": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--voice-beneath-the-current-water-tunung.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--voice-beneath-the-current-water-tunung.webp"
+  },
+  "maguindanao/set-1/prayer-above-the-storm-sky-tunung": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--prayer-above-the-storm-sky-tunung.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--prayer-above-the-storm-sky-tunung.webp"
+  },
+  "maguindanao/set-1/keeper-of-the-account-datu-kali-adam": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--keeper-of-the-account-datu-kali-adam.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--keeper-of-the-account-datu-kali-adam.webp"
+  },
+  "maguindanao/set-1/warden-within-the-ridge-mountain-tunung": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--warden-within-the-ridge-mountain-tunung.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--warden-within-the-ridge-mountain-tunung.webp"
+  },
+  "maguindanao/set-1/listener-among-the-roots-tree-tunung": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--listener-among-the-roots-tree-tunung.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--listener-among-the-roots-tree-tunung.webp"
+  },
+  "maguindanao/set-1/the-four-scourges-came": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--the-four-scourges-came.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--the-four-scourges-came.webp"
+  },
+  "maguindanao/set-1/a-vow-carried-by-the-wind": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--a-vow-carried-by-the-wind.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--a-vow-carried-by-the-wind.webp"
+  },
+  "maguindanao/set-1/kabalalan-shook-from-below": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--kabalalan-shook-from-below.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--kabalalan-shook-from-below.webp"
+  },
+  "maguindanao/set-1/until-tarabusaw-tired": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--until-tarabusaw-tired.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--until-tarabusaw-tired.webp"
+  },
+  "maguindanao/set-1/the-price-of-the-third-victory": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--the-price-of-the-third-victory.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--the-price-of-the-third-victory.webp"
+  },
+  "maguindanao/set-1/day-became-night": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--day-became-night.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--day-became-night.webp"
+  },
+  "maguindanao/set-1/when-the-life-sign-withered": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--when-the-life-sign-withered.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--when-the-life-sign-withered.webp"
+  },
+  "maguindanao/set-1/the-brother-awakened": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--the-brother-awakened.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--the-brother-awakened.webp"
+  },
+  "maguindanao/set-1/seven-heads-before-one-king": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--seven-heads-before-one-king.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--seven-heads-before-one-king.webp"
+  },
+  "maguindanao/set-1/the-lowlands-rose-again": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--the-lowlands-rose-again.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--the-lowlands-rose-again.webp"
+  },
+  "maguindanao/set-1/spring-veiled-heiress-dayang-amina": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--spring-veiled-heiress-dayang-amina.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--spring-veiled-heiress-dayang-amina.webp"
+  },
+  "maguindanao/set-1/seven-sight-final-scourge-gurayn": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--seven-sight-final-scourge-gurayn.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--seven-sight-final-scourge-gurayn.webp"
+  },
+  "maguindanao/set-1/keeper-of-the-last-refuge-datu-karim": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--keeper-of-the-last-refuge-datu-karim.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--keeper-of-the-last-refuge-datu-karim.webp"
+  },
+  "maguindanao/set-1/city-beyond-the-sunset-mantapuli": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--city-beyond-the-sunset-mantapuli.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--city-beyond-the-sunset-mantapuli.webp"
+  },
+  "maguindanao/set-1/forest-of-broken-branches-mount-matutun": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--forest-of-broken-branches-mount-matutun.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--forest-of-broken-branches-mount-matutun.webp"
+  },
+  "maguindanao/set-1/throne-of-the-sun-shadow-mount-bita": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--throne-of-the-sun-shadow-mount-bita.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--throne-of-the-sun-shadow-mount-bita.webp"
+  },
+  "maguindanao/set-1/the-rattan-haunt-mount-kabalalan": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--the-rattan-haunt-mount-kabalalan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--the-rattan-haunt-mount-kabalalan.webp"
+  },
+  "maguindanao/set-1/peak-of-seven-sights-mount-gurayn": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--peak-of-seven-sights-mount-gurayn.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--peak-of-seven-sights-mount-gurayn.webp"
+  },
+  "maguindanao/set-1/mirror-of-the-giant-war-lake-lanao": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--mirror-of-the-giant-war-lake-lanao.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--mirror-of-the-giant-war-lake-lanao.webp"
+  },
+  "maguindanao/set-1/reach-of-the-ridge-giants-illana-bay": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--reach-of-the-ridge-giants-illana-bay.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--reach-of-the-ridge-giants-illana-bay.webp"
+  },
+  "maguindanao/set-1/cave-beneath-the-earth-the-last-refuge": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--cave-beneath-the-earth-the-last-refuge.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--cave-beneath-the-earth-the-last-refuge.webp"
+  },
+  "maguindanao/set-1/the-sea-withdrawn-lowlands-restored-magindanao": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--the-sea-withdrawn-lowlands-restored-magindanao.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--the-sea-withdrawn-lowlands-restored-magindanao.webp"
+  },
+  "maguindanao/set-1/shore-of-the-broken-hills-cape-timbalangan": {
+    "art": "assets/cards/web/rounded-v3/maguindanao--set-1--shore-of-the-broken-hills-cape-timbalangan.webp",
+    "thumb": "assets/cards/thumb/rounded-v3/maguindanao--set-1--shore-of-the-broken-hills-cape-timbalangan.webp"
+  }
+}

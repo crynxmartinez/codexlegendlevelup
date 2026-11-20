@@ -1,0 +1,78 @@
+{
+  "name": "Visayas — Tutorial deck",
+  "persona": "babaylan/set-1/thunder-sovereign-kaptan",
+  "main": [
+    {
+      "id": "babaylan/set-1/answering-voice-aday",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/first-invocation-luning",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/spirit-mediator-iday",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/small-deliverer-silak",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/floodwatch-runner-sali",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/heaven-s-pursuit-dalagan",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/unyielding-pursuer-guidala",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/unseen-defender-tata-cero",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/leafborne-champion-kapitan-dyano",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/thunder-sovereign-kaptan",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/unbroken-invocation-amara",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/field-blessing-banira",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/quiet-crossing-salumi",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/kindly-neighbor-silaya",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/hidden-passage-kawili",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/set-1/the-elders-answer",
+      "copies": 3
+    },
+    {
+      "id": "babaylan/warden-of-the-twelfth-tide-bituon",
+      "copies": 2
+    }
+  ],
+  "codex": [
+    "babaylan/set-1/sovereign-heights-mount-lantoy",
+    "babaylan/set-1/silent-threshold-kabulaw"
+  ]
+}

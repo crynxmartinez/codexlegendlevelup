@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+"""
+Convert board/UI art (game mat, card back) to WebP.
+
+Separate from convert_cards.py so it never rescans the 229 card faces.
+
+Usage:  python tools/convert_ui.py [--quality 88] [--force]
+"""
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "assets" / "ui"
+
+# source -> (output stem, long-edge cap)
+SOURCES = {
+    "game mat.png": ("game-mat", 1920),
+    "card back.png": ("card-back", 1400),
+}
+
+
+def human(n: float) -> str:
+    for unit in ("B", "KB", "MB"):
+        if abs(n) < 1024:
+            return f"{n:.1f}{unit}"
+        n /= 1024
+    return f"{n:.1f}GB"
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Convert board/UI art to WebP.")
+    ap.add_argument("--quality", type=int, default=88)
+    ap.add_argument("--force", action="store_true")
+    args = ap.parse_args()
+
+    OUT.mkdir(parents=True, exist_ok=True)
+    total_in = total_out = 0
+    missing = []
+
+    for name, (stem, max_edge) in SOURCES.items():
+        src = ROOT / "assets" / name
+        if not src.exists():
+            missing.append(name)
+            continue
+        dest = OUT / f"{stem}.webp"
+        if not args.force and dest.exists() and dest.stat().st_mtime >= src.stat().st_mtime:
+            print(f"  {stem:<12} up to date, skipped")
+            continue
+
+        img = Image.open(src)
+        img.load()
+        img = img.convert("RGBA" if img.mode in ("RGBA", "LA", "P") else "RGB")
+        w, h = img.size
+        if max(w, h) > max_edge:
+            s = max_edge / max(w, h)
+            img = img.resize((round(w * s), round(h * s)), Image.LANCZOS)
+        img.save(dest, "WEBP", quality=args.quality, method=6)
+
+        i, o = src.stat().st_size, dest.stat().st_size
+        total_in += i
+        total_out += o
+        ratio = f"{w}x{h}"
+        print(f"  {stem:<12} {ratio:>10}  {human(i):>8} -> {human(o):>8}  "
+              f"({(1 - o / i) * 100:+.0f}%)  aspect {img.size[0] / img.size[1]:.3f}")
+
+    if missing:
+        print(f"\nMissing sources: {', '.join(missing)}")
+    if total_in:
+        print(f"\nTotal: {human(total_in)} -> {human(total_out)} "
+              f"(saved {human(total_in - total_out)})")
+    print(f"Output: {OUT}")
+    return 1 if missing else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

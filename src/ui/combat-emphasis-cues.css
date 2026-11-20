@@ -1,0 +1,18 @@
+.phase-banner.combat-phase-cue{opacity:1;transform:translate(-50%,-50%);transition:none;pointer-events:none}
+.combat-phase-cue .phase-text{display:inline-block}
+.combat-power-cue{position:fixed;z-index:610;pointer-events:none;width:clamp(148px,14.5vw,224px);padding:2px;background:linear-gradient(145deg,#f5feff,#a1b8c8 38%,#526f83 60%,#dcebf4);clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);filter:drop-shadow(0 2px 3px #0007);font-family:Arial,sans-serif}
+.combat-power-face{display:flex;align-items:center;gap:7px;min-height:65px;padding:7px 11px;background:linear-gradient(110deg,#133955,#071a2d);clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%)}
+.combat-power-sword{flex:0 0 24px;color:#f9d675}.combat-power-sword svg{display:block;width:24px;height:35px;fill:currentColor;stroke:#fff2c5;stroke-width:1}.combat-power-sword .sword-groove{fill:none;stroke:#806020;stroke-width:1.4}
+.combat-power-cue.loss .combat-power-sword{color:#ff8e9c;transform:rotate(180deg)}.combat-power-cue.loss .combat-power-sword svg{stroke:#ffd0d8}.combat-power-cue.loss .sword-groove{stroke:#9c3f52}
+.combat-power-words{min-width:0}.combat-power-delta{display:block;font-style:italic;font-weight:900;font-size:clamp(18px,1.65vw,26px);line-height:1;color:#ffe1a0;white-space:nowrap}.combat-power-cue.loss .combat-power-delta{color:#ffadb8}
+.combat-power-values{display:block;margin-top:3px;font-size:12px;color:#f4fcff;white-space:nowrap}.combat-power-source{display:block;margin-top:3px;font-size:12px;line-height:1.2;color:#cfdee8;overflow-wrap:anywhere}
+.combat-power-target{display:none;font-size:12px;line-height:1.2;color:#fff;overflow-wrap:anywhere}
+.combat-power-detached .combat-power-target{display:block;margin-bottom:4px;font-weight:700}
+.combat-power-cue.combat-power-rail{width:116px;box-sizing:border-box}
+.combat-power-rail .combat-power-face{display:grid;grid-template-columns:16px minmax(0,1fr);gap:3px 2px;padding:6px 5px;min-height:0}
+.combat-power-rail .combat-power-sword svg{width:16px;height:26px}
+.combat-power-rail .combat-power-words{display:contents}.combat-power-rail .combat-power-sword{grid-row:2;grid-column:1}
+.combat-power-rail .combat-power-delta{grid-row:2;grid-column:2}.combat-power-rail .combat-power-values,.combat-power-rail .combat-power-source,.combat-power-rail .combat-power-target{grid-column:1/-1}
+.combat-power-rail .combat-power-target{grid-row:1;margin:0}.combat-power-rail .combat-power-values{grid-row:3}.combat-power-rail .combat-power-source{grid-row:4}
+@media(max-height:520px){.combat-power-face{min-height:52px;padding:5px 9px;gap:5px}.combat-power-sword{flex-basis:19px}.combat-power-sword svg{width:19px;height:29px}.combat-power-delta{font-size:18px}.combat-power-values,.combat-power-source{font-size:11px}}
+@media(max-height:520px){.combat-power-target{font-size:11px}}

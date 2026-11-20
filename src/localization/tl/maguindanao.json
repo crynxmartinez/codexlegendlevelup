@@ -1,0 +1,206 @@
+{
+  "maguindanao/kuta-wato-oath-shield-panglima-sabir": {
+    "name": "Kalasag ng Panata ng Kuta Wato, Panglima Sabir",
+    "text": "[Sentry]: Kapag tatanggap ng damage ang iyong Persona, [Cost: Ipakita ang barahang ito] pawalang-bisa ang damage na iyon, pagkatapos ay i-exile ang barahang ito nang nakataob."
+  },
+  "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong": {
+    "name": "Tagapangalagang Nakukubli sa Nonok, Apo a Bekong",
+    "text": "[green][Persona] 1/turn: Sa tuwing na-Offer ang isa sa iba mong mga Ally, pumili ng isa sa iyong mga Unit. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.\n[green][Garahana][Persona] Sa tuwing nababasag ang isa sa iyong mga kalasag, permanenteng bigyan ang Unit na ito ng Power +1000."
+  },
+  "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut": {
+    "name": "Ninunang Babae sa Ilalim ng Tubig, Potri Rainalaut",
+    "text": "[blue][Persona] 1/turn: [Cost: I-Offer ang 1 sa iyong mga Ally] Mag-special call ng isang Level 1 Maguindanaon Unit mula sa iyong Grave. Papasok ito nang charged.\n[blue][Garahana][Persona] 1/turn: Bumunot ng 1 baraha. Bigyan ang Unit na ito ng Power +2000 para sa bawat Unit na na-Offer sa turnong ito, hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/boat-watching-tonong-tomitay": {
+    "name": "Tonong na Tagapagbantay ng mga Bangka, Tomitay",
+    "text": "[green][Persona] 1/turn: Kapag umatake ang Unit na ito, [Cost: I-Offer ang 1 sa iyong mga Ally] tingnan ang 3 baraha sa ibabaw ng iyong deck at ayusin ang mga ito sa ibabaw sa anumang pagkakasunod-sunod.\n[green][Garahana][Persona] 1/turn: Kapag Force ang ipinakita ng iyong attack check, bumunot ng 1 baraha at i-charge ang isa sa iyong mga Ally."
+  },
+  "maguindanao/set-1/sun-darkening-scourge-pah": {
+    "name": "Salot na Nagpapadilim sa Araw, Pah",
+    "text": "[blue][Persona] 1/turn: [Cost: I-Offer ang 2 sa iyong mga Ally] Bigyan ang Unit na ito ng Power +5000 hanggang sa pagtatapos ng turno. Kung mayroon kang 2 o mas kaunting Barrier, bigyan ito ng +10000 sa halip.\n[green][Garahana][Persona] 1/turn: Pagkatapos umatake ng Unit na ito, [Cost: Offer 3] i-charge ang Unit na ito at bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/rattan-haunt-scourge-kurita": {
+    "name": "Salot na Namamahay sa Yantok, Kurita",
+    "text": "[green][Persona] 1/turn: Kapag umatake ang Unit na ito, [Cost: I-Offer ang 1 sa iyong mga Ally] bigyan ng damage ang isa sa mga Ally ng kalaban, at bigyan ang Unit na ito ng Power +5000 para sa laban na iyon.\n[green][Garahana][Persona] 1/turn: Pagkatapos umatake ng Unit na ito, [Cost: I-Offer ang 1 sa iba mong mga Ally] bigyan ng damage ang isa sa mga Ally ng kalaban."
+  },
+  "maguindanao/set-1/matutun-branch-devourer-tarabusaw": {
+    "name": "Manlalamon ng mga Sanga sa Matutun, Tarabusaw",
+    "text": "[blue][Persona] 1/turn: Bago ang unang pag-atake ng Unit na ito sa turnong ito, [Cost: I-Offer ang 2 sa iba mong mga Ally] magkakaroon ng isang karagdagang attack check ang unang pag-atake nito sa turnong ito.\n[green][Garahana][Persona] 1/turn: Pagkatapos umatake ng Unit na ito, [Cost: Offer 2] i-charge ang Unit na ito. Huwag magsagawa ng attack check sa susunod nitong pag-atake sa turnong ito."
+  },
+  "maguindanao/set-1/land-restoring-raja-indarapatra": {
+    "name": "Raja na Nagpapanumbalik ng Lupain, Indarapatra",
+    "text": "[blue][Persona] 1/turn: Maghanap sa iyong deck ng isang Maguindanaon Unit na Level 2 o mas mababa at i-special call ito. Papasok ito nang charged.\n[green][Garahana][Persona] 1/turn: Pagkatapos umatake ng Unit na ito, [Cost: Offer 3] maghanap sa iyong deck ng dalawang Maguindanaon Unit na Level 2 o mas mababa at i-special call ang mga ito. Bigyan ang bawat isa ng Power +5000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/gurayen-wrath-mate-maka-ogis": {
+    "name": "Katuwang sa Poot ng Gurayen, Maka-Ogis",
+    "text": "[green][Persona] 1/turn: Kapag umatake ang Unit na ito, [Cost: I-Offer ang 1 sa iba mong mga Ally] idagdag ang kasalukuyang Power ng Ally na iyon sa Power ng Unit na ito para sa laban na iyon.\n[green][Garahana][Persona] Sa iyong turno, kung nakapag-Offer ka ng 2 o higit pa sa turnong ito, bigyan ang Unit na ito ng Power +5000."
+  },
+  "maguindanao/set-1/three-scourge-champion-sulayman": {
+    "name": "Kampeon Laban sa Tatlong Salot, Sulayman",
+    "text": "[blue][Persona] 1/turn: [Cost: I-Offer ang 1 sa iyong mga Ally] Maghanap sa iyong deck ng isang Maguindanaon Unit at i-special call ito. Papasok ito nang charged. Bigyan ang Unit na ito at ang na-call na Unit ng tig-Power +3000 hanggang sa pagtatapos ng turno.\n[green][Garahana][Persona] 1/turn: Kapag umatake ang Unit na ito, [Cost: Offer 3] bigyan ng damage ang hanggang dalawa sa mga Ally ng kalaban. Bigyan ang Unit na ito ng Power +10000 para sa laban na iyon at ng skill na \"Kapag tumama ang pag-atakeng ito, bumunot ng 1 baraha.\""
+  },
+  "maguindanao/set-1/house-shell-shadow-pahira": {
+    "name": "Anino ng Balat-Bahay, Pahira",
+    "text": "[green][Last Oath]: Kapag na-Offer ang Unit na ito, tingnan ang 5 baraha sa ibabaw ng iyong deck. Maaari mong ipakita ang isang barahang Beast o Bird mula sa mga ito at ilagay ito sa iyong kamay. Ilagay ang natitira sa ilalim sa anumang pagkakasunod-sunod."
+  },
+  "maguindanao/set-1/rattan-marsh-stalker-kuritan": {
+    "name": "Maniniktik sa Latian ng Yantok, Kuritan",
+    "text": "[green][Ally]: Kapag inilagay ang Unit na ito, kung nag-Offer ka ng isang Ally sa turnong ito, bigyan ang Unit na ito ng Power +5000 hanggang sa pagtatapos ng turno.\n[green][Ally]: Sa pagtatapos ng iyong turno, i-Offer ang Unit na ito."
+  },
+  "maguindanao/set-1/matutun-branch-hurler-tarabuk": {
+    "name": "Tagahagis ng Sanga sa Matutun, Tarabuk",
+    "text": "[green][Ally] 1/turn: Pagkatapos umatake ng Unit na ito, [Cost: I-Offer ang 1 sa iba mong mga Ally] i-charge ang Unit na ito. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/dread-night-caller-balbal": {
+    "name": "Tagatawag ng Nakapanghihilakbot na Gabi, Balbal",
+    "text": "[green][Ally] 1/Turn bawat kopya: Kapag inilagay ang Unit na ito, ipadala ang 3 baraha sa ibabaw ng iyong deck sa iyong Grave. Bigyan ang Unit na ito ng Power +3000 hanggang sa pagtatapos ng turno para sa bawat barahang Unit na naipadala sa ganitong paraan."
+  },
+  "maguindanao/set-1/balete-laughing-spirit-ba-i-a-salendagao": {
+    "name": "Espiritung Tumatawa sa Balete, Ba-i a Salendagao",
+    "text": "[green][Garahana][Ally]: Sa tuwing na-Offer ang isa sa iba mong mga Ally, pumili ng isa sa iyong mga Unit. Bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/heaven-sheltered-survivor-lanao-sprite": {
+    "name": "Nakaligtas sa Kanlungan ng Langit, Lanao Sprite",
+    "text": "[green][Last Oath] 1/Turn bawat kopya: Kapag na-Offer ang Unit na ito, bigyan ang iyong Persona ng Power +2000 hanggang sa pagtatapos ng turno ng kalaban."
+  },
+  "maguindanao/set-1/current-borne-ancestor-crocodile-form-apu": {
+    "name": "Ninunong Dala ng Agos, Apu na Anyo ng Buwaya",
+    "text": "[green][Garahana][Grave]: Sa unang pagkakataong ma-Offer ang isa sa iyong mga Ally sa bawat turno, i-special call ang Unit na ito. Sa pagtatapos ng iyong turno, kung na-call ang Unit na ito dahil sa effect na ito, i-Offer ito."
+  },
+  "maguindanao/set-1/smoke-split-hunter-salimbadut": {
+    "name": "Mangangasong Humahawi sa Usok, Salimbadut",
+    "text": "[green][Ally] 1/turn: Pagkatapos umatake ng Unit na ito, kung nag-Offer ka ng isang Ally sa turnong ito, bigyan ng damage ang isa sa mga exhausted na Ally ng kalaban.\n[green][Ally]: Sa pagtatapos ng iyong turno, i-Offer ang Unit na ito."
+  },
+  "maguindanao/set-1/first-son-of-the-returned-land-rinamuntaw": {
+    "name": "Unang Anak na Lalaki ng Nagbalik na Lupain, Rinamuntaw",
+    "text": "[green][Last Oath]: Kapag na-Offer ang Unit na ito, pumili ng isa sa iyong mga Ally. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno. Pagkatapos, isang beses bawat turno para sa bawat kopya, maaari kang bumunot ng 1 baraha, pagkatapos ay bumitaw ng 1 baraha."
+  },
+  "maguindanao/set-1/first-daughter-of-the-returned-land-rinayung": {
+    "name": "Unang Anak na Babae ng Nagbalik na Lupain, Rinayung",
+    "text": "[green][Last Oath]: Kapag na-Offer ang Unit na ito, pumili ng isa sa iyong mga Ally. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno. Pagkatapos, isang beses bawat turno na pinagsasaluhan ng lahat ng barahang may ganitong pangalan, maaari kang maghanap sa iyong deck ng isang Level 1 Maguindanaon Unit at i-special call ito nang charged."
+  },
+  "maguindanao/set-1/hollow-tree-guide-the-old-woman": {
+    "name": "Gabay sa Guwang na Puno, ang Matandang Babae",
+    "text": "[green][Last Oath]: Kapag na-Offer ang Unit na ito, pumili ng isa sa iyong mga Ally. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno. Pagkatapos, isang beses bawat turno para sa bawat kopya, maaari mong tingnan ang 5 baraha sa ibabaw ng iyong deck. Maaari mong ipakita ang isang Maguindanaon Unit mula sa mga ito at ilagay ito sa iyong kamay. Ilagay ang natitira sa ilalim sa anumang pagkakasunod-sunod."
+  },
+  "maguindanao/set-1/last-witness-of-the-old-words-alad": {
+    "name": "Huling Saksi ng mga Sinaunang Salita, Alad",
+    "text": "[green][Grave]: Binibilang ang barahang ito bilang 2 baraha sa iyong Grave."
+  },
+  "maguindanao/set-1/elder-of-the-old-telling-maharaja-layla": {
+    "name": "Nakatatanda ng Sinaunang Salaysay, Maharaja Layla",
+    "text": "[green][Last Oath]: Kapag na-Offer ang Unit na ito, pumili ng isa sa iyong mga Ally. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno. Pagkatapos, isang beses bawat turno para sa bawat kopya, maaari mong ipadala ang baraha sa ibabaw ng iyong deck sa Grave."
+  },
+  "maguindanao/set-1/voice-beneath-the-current-water-tunung": {
+    "name": "Tinig sa Ilalim ng Agos, Tunung ng Tubig",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ng ability ang isang Ally ng kalaban na nasa field, [Cost: Ipakita at bitawan ang barahang ito] pumili ng isa sa iyong mga Ally at isa sa mga Ally ng kalaban. I-Rally ang mga ito sa ilalim ng deck ng kani-kanilang may-ari.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "maguindanao/set-1/prayer-above-the-storm-sky-tunung": {
+    "name": "Panalangin sa Ibabaw ng Bagyo, Tunung ng Langit",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ang kalaban ng ability ng isang baraha, [Cost: Ipakita at bitawan ang barahang ito] pawalang-bisa ang pag aktiba na iyon.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "maguindanao/set-1/keeper-of-the-account-datu-kali-adam": {
+    "name": "Tagapag-ingat ng Salaysay, Datu Kali Adam",
+    "text": "[green][Last Oath]: Kapag na-Offer ang Unit na ito, pumili ng isa sa iyong mga Ally. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno. Pagkatapos, isang beses bawat turno para sa bawat kopya, maaari kang pumili ng isa sa iba mong mga Unit. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/warden-within-the-ridge-mountain-tunung": {
+    "name": "Tagapagbantay sa Loob ng Gulod, Tunung ng Bundok",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ang kalaban ng effect na mag-special call ng isa o higit pang Unit, [Cost: Ipakita at bitawan ang barahang ito] bumunot ng 2 baraha.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "maguindanao/set-1/listener-among-the-roots-tree-tunung": {
+    "name": "Tagapakinig sa mga Ugat, Tunung ng Puno",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag umatake ang isang Unit ng kalaban, [Cost: Ipakita at bitawan ang barahang ito] pumili ng isa sa iyong mga Unit. Bigyan ito ng Power +5000 hanggang sa pagtatapos ng pag-atakeng iyon. Bumunot ng 1 baraha.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "maguindanao/set-1/the-four-scourges-came": {
+    "name": "Dumating ang Apat na Salot",
+    "text": "Action — Mag-special call mula sa iyong Grave ng hanggang isang Beast na Level 2 o mas mababa at hanggang isang Bird na Level 2 o mas mababa. Papasok ang mga ito nang charged. Sa pagtatapos ng iyong turno, i-Offer ang mga Unit na na-call dahil sa effect na ito na nananatili sa isang Ally Zone."
+  },
+  "maguindanao/set-1/a-vow-carried-by-the-wind": {
+    "name": "Panatang Dala ng Hangin",
+    "text": "Action — Maghanap sa iyong deck ng isang Level 1 Maguindanaon Unit at i-special call ito. Papasok ito nang charged. Sa pagtatapos ng iyong turno, i-Offer ang Unit na iyon kung nananatili ito sa isang Ally Zone."
+  },
+  "maguindanao/set-1/kabalalan-shook-from-below": {
+    "name": "Nayanig ang Kabalalan Mula sa Ilalim",
+    "text": "Action — [Cost: I-Offer ang 1 sa iyong mga Ally] I-exhaust ang hanggang dalawa sa mga Ally ng kalaban. Kung napakawalan ang Garahana, maaari mong bigyan ng damage ang isa sa mga Ally na iyon na exhausted na bago nalutas ang Action na ito."
+  },
+  "maguindanao/set-1/until-tarabusaw-tired": {
+    "name": "Hanggang sa Napagod si Tarabusaw",
+    "text": "Action — Pumili ng isang Beast Ally. Sa unang pagkakataong matapos nitong umatake sa turnong ito, maaari mong i-Offer ang isa sa iba mong mga Ally. Kung ginawa mo ito, i-charge ang napiling Beast at bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/the-price-of-the-third-victory": {
+    "name": "Ang Kapalit ng Ikatlong Tagumpay",
+    "text": "Action — Maaari lamang itong laruin kung nakapag-Offer ka ng 3 o higit pa sa turnong ito. Bumunot ng 2 baraha, pagkatapos ay bumitaw ng 1 baraha. Kung napakawalan ang Garahana, bigyan ang iyong Persona ng Power +3000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/day-became-night": {
+    "name": "Naging Gabi ang Araw",
+    "text": "Action — I-exhaust ang hanggang dalawa sa mga Ally ng kalaban. Kung nakapag-Offer ka ng 3 o higit pa sa turnong ito, bigyan ng damage ang isang exhausted na Ally ng kalaban sa halip na i-exhaust ang ikalawang Unit."
+  },
+  "maguindanao/set-1/when-the-life-sign-withered": {
+    "name": "Nang Nalanta ang Tanda ng Buhay",
+    "text": "Action — [Cost: I-Offer ang 1 sa iyong mga Ally] Pipili ang kalaban ng isa sa kanyang mga Ally at bibigyan ito ng damage. Kung walang Ally ang kalaban, bumunot na lamang ng 1 baraha."
+  },
+  "maguindanao/set-1/the-brother-awakened": {
+    "name": "Nagising ang Kapatid",
+    "text": "Action — Maghanap sa iyong deck at Grave ng hanggang isang Rinamuntaw at hanggang isang Rinayung, pagkatapos ay i-special call ang mga ito sa magkahiwalay na Ally Zone. Papasok ang mga ito nang charged. Sa pagtatapos ng iyong turno, i-Offer ang bawat isa na nananatili sa isang Ally Zone."
+  },
+  "maguindanao/set-1/seven-heads-before-one-king": {
+    "name": "Pitong Ulo sa Harap ng Isang Hari",
+    "text": "Action — Piliin ang iyong Persona. Hanggang sa pagtatapos ng turno, kapag umatake ito, bigyan ito ng Power +1000 para sa bawat barahang Unit sa iyong Grave, hanggang +10000. Kung pito o higit pa sa mga barahang iyon ay Maguindanaon Unit, bigyan ng damage ang isang exhausted na Ally ng kalaban pagkatapos ng pag-atakeng iyon."
+  },
+  "maguindanao/set-1/the-lowlands-rose-again": {
+    "name": "Muling Umangat ang Kapatagan",
+    "text": "Action — Pumili ng hanggang dalawang Level 1 Maguindanaon Unit sa iyong Grave. Ilagay ang isa sa iyong kamay at ang isa pa sa ilalim ng iyong deck. Kung isa lamang ang pinili mo, ilagay ito sa iyong kamay."
+  },
+  "maguindanao/set-1/spring-veiled-heiress-dayang-amina": {
+    "name": "Tagapagmanang Nakukubli sa Bukal, Dayang Amina",
+    "text": "[green][Last Oath]: Kapag na-Offer ang Unit na ito, pumili ng isa sa iyong mga Ally. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno. Pagkatapos, isang beses bawat turno para sa bawat kopya, maaari kang pumili ng isa sa mga Ally Unit ng kalaban at bigyan ito ng damage."
+  },
+  "maguindanao/set-1/seven-sight-final-scourge-gurayn": {
+    "name": "Huling Salot na May Pitong Paningin, Gurayn",
+    "text": "[green][Persona] 1/turn: Kapag umatake ang Unit na ito, [Cost: I-Offer ang 2 sa iba mong mga Ally] tingnan ang 7 baraha sa ibabaw ng iyong deck. Mag-special call ng hanggang dalawang Beast o Bird mula sa mga ito. Ilagay ang natitirang baraha sa ilalim sa anumang pagkakasunod-sunod.\n[green][Garahana][Persona] 1/turn: Pagkatapos umatake ng Unit na ito, [Cost: Offer 3] pumili ng isang Huling Salot na May Pitong Paningin, Gurayn mula sa iyong kamay at mag-Personify bilang ito, nang charged."
+  },
+  "maguindanao/set-1/keeper-of-the-last-refuge-datu-karim": {
+    "name": "Tagapagbantay ng Huling Kanlungan, Datu Karim",
+    "text": "[green][Last Oath]: Kapag na-Offer ang Unit na ito, pumili ng isa sa iyong mga Ally. Bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno. Pagkatapos, isang beses bawat turno na pinagsasaluhan ng lahat ng barahang may ganitong pangalan, maaari kang maghanap sa iyong deck ng isa pang Tagapagbantay ng Huling Kanlungan, Datu Karim at i-special call ito nang charged."
+  },
+  "maguindanao/set-1/city-beyond-the-sunset-mantapuli": {
+    "name": "Lungsod sa Kabila ng Takipsilim, Mantapuli",
+    "text": "Auto-switch — Bago ka bumunot, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\nCodex skill — Sa halip na bumunot, i-Offer ang 1 Ally o ipadala ang baraha sa ibabaw ng iyong deck sa iyong Grave. Pagkatapos, kung napakawalan ang Garahana, bumunot ng 1 baraha."
+  },
+  "maguindanao/set-1/forest-of-broken-branches-mount-matutun": {
+    "name": "Gubat ng mga Bali-baling Sanga, Bundok Matutun",
+    "text": "Auto-switch — Sa simula ng iyong Main Phase, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\n1/Turn: Codex skill — Sa simula ng iyong Main Phase, ipadala ang baraha sa ibabaw ng iyong deck sa iyong Grave. Kung Unit iyon, bigyan ang isa sa iyong mga Unit ng Power +5000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/throne-of-the-sun-shadow-mount-bita": {
+    "name": "Trono ng Anino ng Araw, Bundok Bita",
+    "text": "Auto-switch — Kapag umatake ang iyong Persona, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\n1/Turn: Codex skill — Kapag umatake ang iyong Persona, bigyan ito ng Power +3000 para sa bawat barahang na-Offer sa turnong ito, hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/the-rattan-haunt-mount-kabalalan": {
+    "name": "Pinamumugaran sa Yantok, Bundok Kabalalan",
+    "text": "Auto-switch — Bago ka bumunot, kung mayroon kang 2 o mas kaunting Barrier, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\n1/Turn: Codex skill — Kapag nag-Offer ka ng Unit sa iyong turno, maghanap sa iyong deck ng ibang Unit maliban sa na-Offer mo at i-special call ito."
+  },
+  "maguindanao/set-1/peak-of-seven-sights-mount-gurayn": {
+    "name": "Tuktok ng Pitong Paningin, Bundok Gurayn",
+    "text": "Auto-switch — Bago ka mag-Personify, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\nCodex skill — Sa halip na mag-Personify mula sa iyong kamay, tingnan ang 5 baraha sa ibabaw ng iyong deck at mag-Personify bilang isang Level 3 Unit mula sa mga ito. Ilagay ang natitira sa ilalim ng iyong deck."
+  },
+  "maguindanao/set-1/mirror-of-the-giant-war-lake-lanao": {
+    "name": "Salamin ng Digmaan ng mga Higante, Lawa ng Lanao",
+    "text": "Auto-switch — Bago ka bumunot, kung mas marami ang Barrier ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\n1/Turn: Codex skill — Kapag napakawalan ang iyong State, bigyan ang lahat ng iyong Unit ng Power +1000 hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/reach-of-the-ridge-giants-illana-bay": {
+    "name": "Saklaw ng mga Higante ng Gulod, Look ng Illana",
+    "text": "Auto-switch — Bago ka bumunot, kung mas marami ang Unit ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\n1/Turn: Codex skill — Bago magbayad ng Offer cost, kung wala ka pang na-Offer na Unit sa turnong ito, maaari mong i-aktiba ang skill na ito sa sarili nitong response chain. Pagkatapos nitong malutas, ang unang Unit na i-Offer mo sa turnong ito ay bibilang bilang 2 Offer, anuman ang subtype nito."
+  },
+  "maguindanao/set-1/cave-beneath-the-earth-the-last-refuge": {
+    "name": "Yungib sa Ilalim ng Lupa, ang Huling Kanlungan",
+    "text": "Auto-switch — Kapag nabasag ang iyong Barrier sa turno ng kalaban, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\n1/Turn: Codex skill — Kapag nabasag ang iyong Barrier, bigyan ang iyong Persona ng Power +1000 para sa bawat basag mong Barrier, hanggang sa pagtatapos ng turno."
+  },
+  "maguindanao/set-1/the-sea-withdrawn-lowlands-restored-magindanao": {
+    "name": "Kapatagang Iniwan ng Dagat, Muling Naibalik na Magindanao",
+    "text": "Auto-switch — Kapag inaatake ang iyong Persona, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\n1/Turn: Codex skill — Kapag nag-check ka ng Barrier at hindi ito Force, mag-special call ng 1 Unit mula sa iyong deck, pagkatapos ay bumitaw ng 1 baraha."
+  },
+  "maguindanao/set-1/shore-of-the-broken-hills-cape-timbalangan": {
+    "name": "Baybayin ng mga Wasak na Burol, Tangway ng Timbalangan",
+    "text": "Auto-switch — Bago ka bumunot, kung mas marami ang baraha sa kamay ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Garahana: Pakawalan habang may 5 o higit pang barahang Maguindanaon Unit sa iyong Grave.\n1/Turn: Codex skill — Kapag naging aktibo ang Codex na ito, bumunot ng 2 baraha, pagkatapos ay bumitaw ng 1 baraha."
+  }
+}

@@ -1,0 +1,34 @@
+.side .state-progress { width:100%; min-height:32px; display:flex; justify-content:space-between; align-items:center; padding:4px 0; background:none; border:0; border-radius:0; color:inherit; font:inherit; text-transform:none; letter-spacing:normal; text-align:left; }
+.state-progress:focus-visible { outline:2px solid #8cecff; outline-offset:3px; }
+.state-progress b,.s-plays b { color:#8cecff; }
+.plays-refresh { font-size:11px; color:#b5c5d4; line-height:1.4; margin:3px 0 6px; }
+.cc-summary { white-space:pre-line; }
+.history-choices { display:grid; gap:8px; }
+.history-choice { text-align:left; white-space:normal; text-transform:none; letter-spacing:normal; line-height:1.4; min-height:44px; }
+.dh-card-inspect { min-width:44px; min-height:44px; padding:3px; background:none; border:1px solid #546372; }
+.dh-card-inspect .dh-mini { display:block; }
+@media(max-height:600px) and (orientation:landscape) {
+  .side .state-progress { width:auto; min-height:28px; padding:3px 6px; gap:5px; }
+  .side .plays-refresh { display:none; }
+  .side .s-plays b { font-size:12px; }
+  .title-screen .ka-front { width:min(660px,94vw); max-height:100dvh; padding:12px 18px; overflow-y:auto; justify-content:flex-start; }
+  .title-screen .ka-menu { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+  .title-screen .ka-menu > .ka-item { min-height:44px; padding:8px; font-size:12px; letter-spacing:normal; }
+  .title-screen .ka-menu > .primary { grid-column:1/-1; }
+  .title-screen .ka-links { grid-column:1/-1; flex-wrap:wrap; }
+  .title-screen .ka-links .ka-item { min-height:36px; font-size:11px; }
+}
+@media(pointer:coarse) { .side .state-progress { min-height:44px; } }
+.card-lore { margin:14px 0; padding:12px; border:1px solid #645b3d; border-radius:6px; line-height:1.5; }
+.card-lore summary { color:#e2c578; cursor:pointer; min-height:32px; display:list-item; }
+.card-lore p { font-size:14px; margin:10px 0; }
+.card-lore .lore-context { color:#aebfc9; font-size:12px; }
+.card-lore a { display:block; color:#91ddeb; font-size:12px; min-height:32px; }
+.inspect-close { float:right; min-height:44px; padding:6px 12px; margin:0 0 8px 10px; }
+.inspect .body { overscroll-behavior:contain; }
+@media (pointer:coarse) { .card-lore summary,.card-lore a { min-height:44px; } }
+.mod-popover { box-sizing:border-box; max-width:calc(100vw - 16px); max-height:calc(100dvh - 16px); overflow:auto; overscroll-behavior:contain; }
+@media (orientation:landscape) and (max-height:540px) {
+  .mod-popover { font-size:12px; }
+  .mod-popover .mod-pop-art { max-height:100px; width:auto; margin-inline:auto; }
+}

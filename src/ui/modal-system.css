@@ -1,0 +1,164 @@
+/* Approved modal system v2. Scoped chrome; existing controllers own behavior. */
+:root { --modal-surface:linear-gradient(145deg,#132f49,#081a2d 65%); --modal-silver:#c9dfeb; --modal-ink:#edf7ff; --modal-muted:#acc6d9; }
+body .modal-bg.modal-v2:not(.board-decision) { align-items:center; }
+body .modal-v2 .duel-dialog {
+  color:var(--modal-ink); background:var(--modal-surface); border:2px solid var(--modal-silver);
+  border-radius:16px 6px 16px 6px; box-shadow:0 0 0 4px #27435b,0 20px 75px #0009;
+  padding:0 22px; gap:14px; scrollbar-color:#78b9d7 #0b2038;
+}
+body .modal-v2 :is(.cc-head,.modal-head) {
+  margin:0 -22px; padding:16px 22px; border-radius:0; position:sticky; top:0; z-index:5;
+  background:#071b2f; border-bottom:1px solid #4a718e; isolation:isolate; flex:none;
+}
+body .modal-v2 :is(.cc-head,.modal-head)::before {
+  content:'';position:absolute;inset:0 20% 0 0;background:linear-gradient(120deg,#255f90,#123555);
+  clip-path:polygon(0 0,100% 0,94% 100%,0 100%);border-bottom:3px solid #b8dbe8;z-index:-1;
+}
+body .modal-v2 :is(.cc-head,.modal-head)::after { content:'';position:absolute;bottom:0;left:0;width:48%;height:3px;background:#60eeff;pointer-events:none; }
+body .modal-v2 :is(.cc-head,.modal-head) h3 { color:#edf7ff; font-size:26px; font-weight:900; font-style:italic; line-height:1.15; text-transform:uppercase; }
+body .modal-v2 .cc-selected-count { border-radius:20px; padding:6px 12px; background:#071a2d; color:#b4f5ff; font-size:14px; }
+body .modal-v2 :is(.cc-instruction,.sub,.duel-body) { font-size:16px; line-height:1.45; color:#d0e5f4; }
+body .modal-v2 :is(.cc-footer,.duel-dialog>.row) { margin:0 -22px; padding:14px 22px; border-top:1px solid #48657c; background:linear-gradient(115deg,#122f49 40%,#07192b 40%); }
+body .modal-v2 .cc-actions { width:100%; justify-content:flex-end; margin:0; }
+body .modal-v2 :is(.cc-actions,.duel-dialog>.row) button {
+  min-height:46px; min-width:140px; padding:10px 28px; border:2px solid #c7dce9; border-radius:8px 3px 8px 3px;
+  background:linear-gradient(150deg,#224b70,#0e2944); color:#edf7ff;
+  box-shadow:inset 0 0 0 2px #385a76; font:800 italic 17px/1.2 Roboto,Arial,sans-serif; text-transform:uppercase; letter-spacing:0;
+}
+body .modal-v2 :is(.cc-actions,.duel-dialog>.row) button.primary { background:linear-gradient(120deg,#0070cd,#084477);border-color:#79f5ff;box-shadow:inset 0 0 0 2px #0987ad; }
+body .modal-v2 :is(.cc-actions,.duel-dialog>.row) button.danger { background:#4c2236; border-color:#ff8499; }
+body .modal-v2 :is(.cc-actions,.duel-dialog>.row) button:disabled { opacity:.5; box-shadow:none; filter:none; color:#d4e3ef; background:#263c50; }
+body .modal-v2 :is(.cc-actions,.duel-dialog>.row) button:hover:not(:disabled) { filter:brightness(1.15); }
+body .modal-v2 :is(button,input,select,summary,a):focus-visible { outline:3px solid white; outline-offset:2px; }
+body .modal-v2 .duel-controls button,body .modal-v2 .cc-head>button { background:#132f47; color:#e7f8ff; border:1px solid #92b6cd; border-radius:8px; min-height:44px;min-width:44px;box-shadow:none; }
+body .modal-v2 .cc-card { border:2px solid transparent; border-radius:12px; background:transparent; overflow:visible; }
+body .modal-v2 .cc-card.selected { border-color:#65ebfa; background:#193e55; box-shadow:none; }
+body .modal-v2 .cc-pick { padding:5px; border-radius:9px; background:transparent; color:#edf7ff; }
+body .modal-v2 .cc-name { display:block; height:auto; min-height:34px; overflow:visible; font-weight:700; font-size:14px; line-height:1.25; margin-top:8px; }
+body .modal-v2 :is(.cc-meta,.cc-condition) { height:auto; white-space:normal; color:#b6cfe1; }
+body .modal-v2 .cc-number { top:8px;left:8px;min-width:28px;height:28px;line-height:24px;background:#edfaff;color:#082340;border:2px solid #17d1ec;border-radius:50%;z-index:2;font-size:16px; }
+body .modal-v2 .cc-art img { filter:drop-shadow(0 5px 4px #0006); }
+body .modal-v2 .cc-read { width:44px;height:44px;min-width:44px;min-height:44px; }
+body .modal-v2 .cc-summary { padding:8px 12px;border-left:3px solid #6fdbe8;background:#18354b;border-radius:8px;color:#d2e9f5; }
+body .modal-v2 .cc-response-context { display:flex;align-items:start;gap:14px;flex:none;background:#0a1b2c;border:1px solid #375873;border-radius:10px;padding:12px 16px;font-size:14px;max-height:180px;overflow:auto; }
+body .modal-v2 .cc-response-source { padding:0;background:transparent;border:0;box-shadow:none;flex:none; }
+body .modal-v2 .cc-response-source img { width:50px;height:70px;object-fit:contain; }
+body .modal-v2 .cc-response-text { min-width:0;font-size:inherit;line-height:1.45; }
+body .modal-v2 .cc-response-text p { margin:6px 0 0; }
+body .modal-v2 .cc-source-details summary { color:#d7ecfa; }
+body .modal-v2 .cc-toolbar { margin:0; }
+body .modal-v2 .cc-toolbar :is(input,select) { background:#e7f1f7;color:#12304a;border:1px solid #88b6cd;min-height:44px;border-radius:7px;font-size:14px; }
+body .modal-v2 .cc-toolbar button { background:#18354b;color:#e6f4ff;border:1px solid #789bb4;border-radius:7px; }
+body .modal-v2 .cc-incoming { background:#18354b;border:1px solid #406580;border-radius:10px;color:#edf7ff;box-shadow:none; }
+body .modal-v2.board-decision:not(.board-list-open) .cc-head { padding:8px 16px; }
+body .modal-v2.board-decision:not(.board-list-open) .cc-head h3 { font-size:21px; }
+body .modal-v2.board-decision:not(.board-list-open) .cc-footer { padding:9px 22px; }
+body .modal-v2.cc-managed.board-decision:not(.board-list-open):not(.duel-expanded) .cc-head h3 {font-size:21px;}
+body .modal-v2.cc-managed.board-decision:not(.board-list-open):not(.duel-expanded) :is(.cc-instruction,.cc-summary) {font-size:16px;line-height:1.4;}
+body .modal-v2.cc-managed.board-decision:not(.board-list-open):not(.duel-expanded) .cc-dialog {padding:0 22px;gap:8px;}
+body .modal-v2 .duel-dialog:has(.skill-confirmation) { width:min(780px,calc(100vw - 32px));max-height:calc(var(--duel-vh,100dvh) - 32px);height:auto; }
+body .modal-v2 .skill-confirmation .cc-response-context { max-height:none; font-size:16px; padding:14px; }
+body .modal-v2 .skill-confirmation .cc-response-source img { width:110px;height:154px; }
+body .modal-v2 .skill-confirmation-effect { font-size:16px;line-height:1.5;padding:0 4px; }
+body .modal-v2.duel-confirmation .duel-dialog { width:min(620px,calc(100vw - 32px));height:auto;padding:0 22px; }
+body .modal-v2 .action-cast-preview>img { width:160px;max-width:30%;height:224px;max-height:none; }
+body .modal-v2 .action-cast-rules { font-size:16px;line-height:1.5; }
+/* Existing native document shells retain their focus, close, and media cleanup. */
+body :is(dialog.credits-dialog[open],dialog.deck-learning[open],.devlog-bg .devlog,aside.feedback,.modal-bg.menu-utility>div.modal) {
+  color:var(--modal-ink);background:var(--modal-surface);border:2px solid var(--modal-silver);border-radius:16px 6px;
+  box-shadow:0 0 0 4px #27435b,0 20px 75px #0009;
+}
+body :is(.credits-dialog,.deck-learning,.devlog,.feedback,.menu-utility) :is(header,.dl-head,.fb-head,.modal-head) { background:linear-gradient(115deg,#255f90,#123555 75%,#071b2f 75%);color:#fff;border-bottom:3px solid #60eeff; }
+body :is(.credits-dialog,.deck-learning,.menu-utility) :is(p,.sub,.subtle,.ask-text,h3),body .feedback :is(legend,.fb-written,.fb-intro,.fb-status,.fb-storage-note,.fb-count),body .devlog :is(.dl-col,.dl-bullets,.dl-bullets li,.dl-dmeta,.dl-pdate,.dl-readhint,.dl-cname,.dl-none,.dl-plabel) {color:#cbe2f2;}
+body :is(.credits-dialog,.deck-learning) a { color:#8cecff; }
+body .devlog :is(.dl-patch,.dl-entry,.dl-mast,.dl-doc),body .deck-learning :is(.learning-advice-grid section,.learning-stats section,.learning-card) {background:#18354b;border-color:#54758f;color:#edf7ff;}
+body .devlog :is(.dl-ver,.dl-dtitle,.dl-summary,.dl-ename,.dl-kicker) {color:#edf7ff;}
+body .menu-utility .modal-head h3 {font-size:26px;}
+/* Duel inspector: preserve extras, live modifiers, explicit Play and return. */
+body .inspect-bg:not(.setup-inspection) .inspect { width:min(1120px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:24px;gap:26px;box-sizing:border-box;background:var(--modal-surface);border:2px solid #c9dfeb;border-radius:16px 6px;box-shadow:0 0 0 4px #27435b,0 20px 75px #0009;align-items:start;overflow:auto; }
+body .inspect-bg:not(.setup-inspection) .inspect>.art { width:290px;height:406px;max-width:32vw;max-height:none;object-fit:contain;flex:none; }
+body .inspect-bg:not(.setup-inspection) .inspect>.body { background:transparent;border:0;box-shadow:none;padding:0;max-height:calc(100dvh - 84px);overflow:auto;min-width:0;flex:1;color:#edf7ff; }
+body .inspect-bg:not(.setup-inspection) .inspect .nm {font:900 italic 26px/1.2 Roboto,Arial,sans-serif;color:#edf7ff;}
+body .inspect-bg:not(.setup-inspection) .inspect :is(.text,.rule-entry) {font-size:16px;line-height:1.55;}
+body .inspect-bg:not(.setup-inspection) .inspect .rule-entry {border-left-color:#63d6e9;}
+body .inspect-bg:not(.setup-inspection) .inspect :is(.rule-label,.inspect-hint) {color:#b8d4e6;}
+body .inspect-bg:not(.setup-inspection) .inspect .chipstat {background:#092139;border:1px solid #527c98;color:#d6edf7;}
+body .inspect-bg:not(.setup-inspection) .inspect :is(.inspect-extra,.card-lore) {background:#18354b;border-color:#52758c;color:#d4e5f1;}
+body .inspect-bg:not(.setup-inspection) .inspect-close {background:#153550;color:white;border:1px solid #a8cadd;border-radius:8px;min-height:44px;}
+/* Reading sections share the same controls; switching sections never changes settings. */
+.modal-sections {display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px;min-height:0;}
+.modal-section-nav {display:flex;flex-direction:column;gap:8px;min-width:0;overflow:auto;}
+.modal-section-nav button {text-align:left;white-space:normal;min-height:44px;background:#18354b;border:1px solid #54758f;border-radius:8px;color:#edf7ff;padding:10px 12px;}
+.modal-section-nav button[aria-current=true] {border-left:4px solid #60eeff;background:#214b69;}
+.modal-section-pages {min-height:0;overflow:auto;}
+body .modal-v2 .settings-body {display:block;font-size:16px;}
+body .modal-v2 .modal-sections {height:min(460px,calc(var(--duel-vh,100dvh) - 220px));}
+body .modal-v2 .settings-body .set-section[hidden] {display:none;}
+body .modal-v2 .settings-body .set-title {font-size:22px;color:#edf7ff;}
+body .modal-v2 .set-choice .sc-hint {color:#c1d8e8;}
+@media(max-width:900px),(max-height:550px) {
+ body .modal-v2 .duel-dialog {padding:0 12px;gap:8px;border-radius:10px 4px;}
+ body .modal-v2 :is(.cc-head,.modal-head) {margin:0 -12px;padding:8px 12px;gap:8px;}
+ body .modal-v2 :is(.cc-head,.modal-head) h3 {font-size:20px;flex-basis:160px;}
+ body .modal-v2 :is(.cc-instruction,.sub,.duel-body) {font-size:14px;line-height:1.4;}
+ body .modal-v2 :is(.cc-footer,.duel-dialog>.row) {margin:0 -12px;padding:8px 12px;}
+ body .modal-v2 :is(.cc-actions,.duel-dialog>.row) button {font-size:14px;min-height:44px;min-width:110px;padding:8px 14px;}
+ body .modal-v2 .cc-name {font-size:12px;line-height:1.3;min-height:30px;}
+ body .modal-v2 .cc-selected-count {font-size:12px;padding:4px 8px;}
+ body .modal-v2 .cc-response-context {padding:8px 10px;font-size:12px;max-height:95px;gap:10px;}
+ body .modal-v2 .cc-response-source img {width:32px;height:45px;}
+ body .modal-v2 .skill-confirmation .cc-response-context {font-size:14px;}
+ body .modal-v2 .skill-confirmation .cc-response-source img {width:70px;height:98px;}
+ body .modal-v2.board-decision:not(.board-list-open) .cc-head h3 {font-size:18px;}
+ body .modal-v2.cc-managed.board-decision:not(.board-list-open):not(.duel-expanded) .cc-head h3 {font-size:18px;}
+ body .modal-v2.cc-managed.board-decision:not(.board-list-open):not(.duel-expanded) :is(.cc-instruction,.cc-summary) {font-size:14px;}
+ body .modal-v2.cc-managed.board-decision:not(.board-list-open):not(.duel-expanded) .cc-dialog {padding:0 12px;gap:6px;}
+ body .modal-v2.board-decision:not(.board-list-open) .cc-footer {padding:6px 12px;}
+ body .modal-v2 .modal-sections {grid-template-columns:125px minmax(0,1fr);height:calc(var(--duel-vh,100dvh) - 180px);gap:12px;}
+ body .inspect-bg:not(.setup-inspection) .inspect {padding:14px;gap:18px;}
+ body .inspect-bg:not(.setup-inspection) .inspect>.art {width:140px;height:196px;max-width:30%;}
+ body .inspect-bg:not(.setup-inspection) .inspect>.body {max-height:calc(100dvh - 64px);}
+ body .inspect-bg:not(.setup-inspection) .inspect .nm {font-size:21px;}
+ body .inspect-bg:not(.setup-inspection) .inspect :is(.text,.rule-entry) {font-size:14px;line-height:1.4;}
+}
+/* Document pages use the same reading navigation as duel settings. */
+body :is(.deck-learning,.credits-dialog) .modal-sections {height:min(500px,calc(100dvh - 180px));}
+body :is(.deck-learning,.credits-dialog) .modal-section-pages>[hidden] {display:none;}
+body :is(.deck-learning,.credits-dialog) .modal-section-nav button {background:#18354b;color:#edf7ff;border:1px solid #789bb4;box-shadow:none;font-size:15px;}
+body :is(.deck-learning,.credits-dialog) .modal-section-nav button[aria-current=true] {background:#214b69;border-left:4px solid #60eeff;}
+body .anime-deck-learning :is(.subtle,.learning-advice-count) {color:#bbd2e2;}
+body .anime-deck-learning details {background:#18354b;border-color:#54758f;}
+body .anime-deck-learning summary {color:#edf7ff;}
+body .anime-deck-learning .learning-key-cards button.learning-card:not(.st-switch):not(.cc-card):not(.cc-nav) {background:#18354b;color:#edf7ff;border-color:#54758f;}
+body .anime-deck-learning .learning-hand {display:flex;flex-wrap:wrap;gap:12px;}
+body .anime-deck-learning .learning-hand button:not(.st-switch):not(.cc-card):not(.cc-nav) {flex-basis:160px;}
+body :is(.deck-learning,.credits-dialog) :focus-visible {outline:3px solid white;outline-offset:3px;}
+@media(max-width:900px),(max-height:550px){
+ body :is(.deck-learning,.credits-dialog) .modal-sections {height:calc(100dvh - 130px);grid-template-columns:125px minmax(0,1fr);gap:12px;}
+ body .anime-deck-learning .learning-hand button:not(.st-switch):not(.cc-card):not(.cc-nav) {flex-basis:112px;}
+}
+body dialog.deck-learning.anime-deck-learning .learning-key-cards button.learning-card:not(.st-switch):not(.cc-card):not(.cc-nav) {background:#18354b;color:#edf7ff;border-color:#54758f;}
+body dialog.deck-learning.anime-deck-learning :is(.learning-sequence,details) {background:#18354b;color:#dceefa;border-color:#54758f;}
+body dialog.deck-learning.anime-deck-learning summary {color:#edf7ff;}
+body dialog.deck-learning.anime-deck-learning :is(.subtle,.learning-advice-count) {color:#bbd2e2;}
+body dialog.deck-learning.anime-deck-learning .modal-section-nav button[aria-current=true] {background:#214b69;border-left:4px solid #60eeff;}
+body .modal-v2 .duel-dialog:has(.settings-body) {width:min(1040px,calc(100vw - 32px));height:auto;max-height:calc(100dvh - 32px);}
+body .modal-v2 .settings-body {max-height:none;overflow:hidden;flex:1 1 auto;min-height:0;}
+body .modal-v2 .modal-section-nav button {height:auto;flex:none;line-height:1.35;padding:10px 12px;min-height:48px;}
+body .modal-v2 .settings-body .set-section {font-size:16px;}
+body .modal-v2 .settings-body .st-switch.on::before {background:#075fa5;border-color:#5fe5fa;}
+@media(max-width:900px),(max-height:550px){
+ body .modal-v2 .settings-body .set-section {font-size:14px;}
+ body .modal-v2 .modal-section-nav button {font-size:13px;min-height:44px;}
+}
+body .modal-v2 .ask-text {font-size:16px;line-height:1.45;}
+@media(max-width:900px),(max-height:550px){body .modal-v2 .ask-text {font-size:14px;}}
+body dialog.deck-learning.anime-deck-learning {font-size:16px;line-height:1.45;}
+body dialog.credits-dialog .credits-content {overflow:hidden;}
+body dialog.credits-dialog .credits-content h3 {color:#edf7ff;}
+body dialog.credits-dialog .modal-section-nav button {height:auto;flex:none;white-space:normal;overflow-wrap:anywhere;min-width:0;font-size:14px;line-height:1.4;padding:10px 12px;text-transform:none;}
+body dialog.deck-learning.anime-deck-learning .learning-hand button:not(.st-switch):not(.cc-card):not(.cc-nav) {flex:0 0 160px;}
+@media(max-width:900px),(max-height:550px){
+ body dialog.deck-learning.anime-deck-learning {font-size:14px;}
+ body dialog.deck-learning.anime-deck-learning .learning-hand button:not(.st-switch):not(.cc-card):not(.cc-nav) {flex-basis:112px;}
+}

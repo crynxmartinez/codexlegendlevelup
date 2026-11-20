@@ -1,0 +1,48 @@
+{
+  "name": "Agta — Bayanihan",
+  "deck": "Agta",
+  "guild": "Luzon Arch",
+  "state": "Bayanihan",
+  "persona": "agta/the-boar-spear-makisig",
+  "notes": [
+    "Agta deck — Sipol playstyle (superior call from top of deck).",
+    "State: Bayanihan — released when all 4 Ally Zones are occupied by Luzon Arch Units.",
+    "Sipol: Reveal top card. If Unit, special call to open Ally Zone. Otherwise, bottom of deck.",
+    "3 Personas at 2 copies each = 6. L2 at 3 copies = 15. L1: 4×3+1×2 = 14.",
+    "Forces 4×3=12, Actions 2×1=2, Sentry 1×1=1. Total = 50."
+  ],
+  "main": [
+    { "id": "agta/the-boar-spear-makisig", "copies": 2 },
+    { "id": "agta/voice-beneath-the-rain-laya", "copies": 2 },
+    { "id": "agta/arrow-of-the-sierra-amihan", "copies": 2 },
+
+    { "id": "agta/honey-keep-cliffer-kislap", "copies": 3 },
+    { "id": "agta/deerstep-runner-kidlat", "copies": 3 },
+    { "id": "agta/moon-net-fisher-mayumi", "copies": 3 },
+    { "id": "agta/ember-resin-grandmother-sinta", "copies": 3 },
+    { "id": "agta/storm-bark-elder-ulan", "copies": 3 },
+
+    { "id": "agta/firefly-pathkeeper-aya", "copies": 2 },
+    { "id": "agta/mudcrab-catcher-pilo", "copies": 3 },
+    { "id": "agta/ember-pot-bearer-berto", "copies": 3 },
+    { "id": "agta/leaf-whistle-scout-sari", "copies": 3 },
+    { "id": "agta/rattan-bridge-weaver-nena", "copies": 3 },
+
+    { "id": "agta/mangrove-maw-lunod", "copies": 3 },
+    { "id": "agta/golden-hiveheart-pulot", "copies": 3 },
+    { "id": "agta/root-tusk-boar-dagsa", "copies": 3 },
+    { "id": "agta/storm-talon-eagle-salimbay", "copies": 3 },
+
+    { "id": "agta/rattan-snarefall", "copies": 1 },
+    { "id": "agta/sierras-vanishing-trail", "copies": 1 },
+
+    { "id": "agta/sierra-watchkeeper-banoy", "copies": 1 }
+  ],
+  "codex": [
+    "agta/hidden-path",
+    "agta/listening-canopy",
+    "agta/returning-river",
+    "agta/shared-ember",
+    "agta/thousand-knots"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": "nico",
+      "name": "Nico Vergara",
+      "region": "Luzon",
+      "duelist": "ui/menu-v1/characters/nico.webp",
+      "gameplay": "Cosmetic identity only"
+    },
+    {
+      "id": "lira",
+      "name": "Lira Manalo",
+      "region": "Visayas",
+      "duelist": "ui/menu-v1/characters/lira.webp",
+      "gameplay": "Cosmetic identity only"
+    },
+    {
+      "id": "amir",
+      "name": "Amir Salipada",
+      "region": "Mindanao",
+      "duelist": "ui/menu-v1/characters/amir.webp",
+      "gameplay": "Cosmetic identity only"
+    },
+    {
+      "id": "celina",
+      "name": "Celina Arce",
+      "region": "Luzon",
+      "duelist": "ui/menu-v1/characters/celina.webp",
+      "gameplay": "Cosmetic identity only"
+    },
+    {
+      "id": "dario",
+      "name": "Dario Velez",
+      "region": "Visayas",
+      "duelist": "ui/menu-v1/characters/dario.webp",
+      "gameplay": "Cosmetic identity only"
+    },
+    {
+      "id": "raina",
+      "name": "Raina Dalisay",
+      "region": "Mindanao",
+      "duelist": "ui/menu-v1/characters/raina.webp",
+      "gameplay": "Cosmetic identity only"
+    }
+  ]
+}

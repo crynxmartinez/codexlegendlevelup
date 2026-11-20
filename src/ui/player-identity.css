@@ -1,0 +1,105 @@
+/* Approved unified HUD: clipped silver bevels, diagonal portrait, live data. */
+body.anime-battlefield #app .side.mine,
+body.anime-battlefield #app .side.foe {width:clamp(290px,25vw,330px);height:auto;max-height:none;padding:0;}
+body.anime-battlefield #app .side.mine {bottom:.2%;}
+body.anime-battlefield #app .side.foe {top:.2%;}
+body.anime-battlefield #app .side header.identity-panel {
+ --identity-accent:#59eaff;
+ --identity-slant:23px;
+ position:relative;display:grid;grid-template-columns:34% minmax(0,1fr);grid-template-rows:auto auto;
+ align-items:stretch;gap:0;padding:5px 6px;height:auto;max-height:none;
+ border:0;border-radius:0;transform:none;box-shadow:none;overflow:hidden;
+ clip-path:polygon(13px 0,calc(100% - 13px) 0,100% 13px,100% calc(100% - 13px),calc(100% - 13px) 100%,13px 100%,0 calc(100% - 13px),0 13px);
+ background:linear-gradient(120deg,#12384e,#041522 58%,#0b2334);
+}
+body.anime-battlefield #app .side.foe header.identity-panel {--identity-accent:#ff8398;}
+body.anime-battlefield #app .side header.identity-panel::before {
+ content:"";position:absolute;inset:0;pointer-events:none;z-index:4;
+ border:16px solid transparent;border-image:url('/ui/anime-v1/player-silver-frame.svg') 24 / 16px / 0 stretch;
+}
+body.anime-battlefield #app .side header.identity-panel::after {
+ content:"";position:absolute;inset:8px;pointer-events:none;z-index:3;
+ background:linear-gradient(48deg,transparent 40%,var(--identity-accent) 42% 59%,transparent 61%) right top / 14px 14px no-repeat,
+ linear-gradient(-48deg,transparent 40%,var(--identity-accent) 42% 59%,transparent 61%) right bottom / 14px 14px no-repeat,
+ linear-gradient(115deg,transparent 30%,var(--identity-accent) 32% 64%,transparent 66%) left bottom / 13px 20px no-repeat;
+}
+body.anime-battlefield #app .side header.identity-panel > * {transform:none;min-width:0;}
+body.anime-battlefield #app .side .identity-picture {
+ grid-column:1;grid-row:1/3;position:relative;overflow:hidden;min-height:112px;
+ clip-path:polygon(0 0,100% 0,calc(100% - var(--identity-slant)) 100%,0 100%);background:linear-gradient(120deg,#145672,#061a2b);
+}
+body.anime-battlefield #app .identity-picture::after {content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(#fff,var(--identity-accent),#c5e6f0);clip-path:polygon(calc(100% - 2px) 0,100% 0,calc(100% - var(--identity-slant)) 100%,calc(100% - var(--identity-slant) - 2px) 100%);}
+body.anime-battlefield #app .side .identity-panel .anime-portrait {position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;box-shadow:none;background:none;object-fit:cover;object-position:50% 14%;}
+/* Scale from the portrait's height so a wide HUD still shows a headshot. */
+body.anime-battlefield #app .side .identity-panel .duelist-picture .anime-portrait {width:auto;height:380%;max-width:none;left:46%;top:2%;right:auto;bottom:auto;transform:translateX(-50%);}
+body.anime-battlefield #app .side .identity-panel .duelist-picture[data-person="celina"] .anime-portrait {height:350%;}
+body.anime-battlefield #app .side .identity-panel .duelist-picture[data-person="amir"] .anime-portrait {left:47%;}
+body.anime-battlefield .stat-tip-body {white-space:pre-line;}
+body.anime-battlefield #app .identity-info {grid-column:2;grid-row:1;align-self:stretch;padding:0 9px 0 0;font-size:0;line-height:1;display:flex;flex-direction:column;}
+body.anime-battlefield #app .identity-info h3 {display:block;width:auto;font-size:24px;line-height:1.1;font-weight:850;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0;padding:3px 5px 4px;border-bottom:1px solid #a9c2ce;color:#fff;text-transform:uppercase;}
+body.anime-battlefield #app .identity-details {display:flex;align-items:center;gap:9px;margin-left:calc(var(--identity-slant) * -.30);padding:5px 5px;}
+body.anime-battlefield #app .identity-info :is(.s-persona,.s-hand) {display:inline-flex;position:static;padding:0;margin:0;line-height:1.2;font-size:11px;gap:4px;color:#d5e7ee;white-space:nowrap;}
+body.anime-battlefield #app .identity-info .s-barriers {display:flex;position:static;align-items:center;justify-content:space-between;padding:5px 5px;border-top:1px solid #a9c2ce;margin:0 0 0 calc(var(--identity-slant) * -.56);font-size:12px;line-height:1.2;gap:6px;color:#fff;}
+body.anime-battlefield #app .identity-info .gems {display:inline-flex;gap:5px;}
+body.anime-battlefield #app .identity-info .gem {display:block;width:8px;height:8px;border-radius:0;transform:rotate(45deg);background:var(--identity-accent);border:1px solid #d7faff;box-shadow:0 0 7px var(--identity-accent);}
+body.anime-battlefield #app .identity-info .gem.spent {background:transparent;border-color:#bfd0db;box-shadow:none;opacity:1;}
+body.anime-battlefield #app .identity-info .gem-count {font-size:13px;color:white;}
+body.anime-battlefield #app .identity-progress {grid-column:2;grid-row:2;margin:0 9px 0 calc(var(--identity-slant) * -.78);border-top:1px solid #c1d6df;background:transparent;}
+body.anime-battlefield #app .identity-progress .state-progress {position:relative;inset:auto;transform:none;width:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:3px 6px;padding:4px;min-height:28px;height:auto;font-size:12px;margin:0;border:0;border-radius:0;box-shadow:none;}
+body.anime-battlefield #app .identity-progress .state-progress > span:first-child {white-space:nowrap;font-style:italic;font-weight:800;}
+body.anime-battlefield #app .identity-progress .chip {display:inline-block;font-size:9px;padding:2px 6px 2px 19px;border:1px solid #c0d2df;border-radius:12px;white-space:nowrap;}
+body.anime-battlefield #app .identity-progress .state-progress:hover {background:transparent;color:#fff;}
+body.anime-battlefield #app .identity-progress .state-progress:focus-visible {outline:2px solid var(--identity-accent);outline-offset:-2px;}
+/* Plays belongs to the matching HUD, clear of its portrait and the adjacent
+   Exile pile. The narrow landscape width stays inside the outside gutter. */
+body.anime-battlefield #app .side > .anime-zone-plays {
+ display:flex;flex-direction:row-reverse;justify-content:center;align-items:center;gap:4px;
+ position:absolute;width:clamp(84px,10.5vw,140px);max-width:100%;margin:0;padding:5px;
+ font:bold italic clamp(9px,.9vw,15px)/1.1 Roboto,sans-serif;
+ top:auto;bottom:calc(100% + 5px);left:0;right:auto;
+}
+body.anime-battlefield #app .side > .anime-zone-plays :is(span,b) {font:inherit;color:inherit;}
+/* The legacy compact HUD replaces a hidden label with ::after "Plays".
+   This badge keeps its full real label, so that replacement must stay absent. */
+body.anime-battlefield #app .side > .anime-zone-plays > span::after {content:none;display:none;}
+body.anime-battlefield #app .side.foe > .anime-zone-plays {top:calc(100% + 5px);bottom:auto;left:auto;right:0;}
+@media(max-width:1000px),(max-height:600px) {
+ body.anime-battlefield #app .side.mine,body.anime-battlefield #app .side.foe {width:clamp(200px,24.5vw,245px);min-width:0;}
+ body.anime-battlefield #app .side header.identity-panel {padding:3px 5px;--identity-slant:18px;}
+ body.anime-battlefield #app .side .identity-picture {min-height:64px;}
+ body.anime-battlefield #app .identity-info {padding:0 6px 0 0;}
+ body.anime-battlefield #app .identity-info h3 {font-size:17px;padding:2px 4px;}
+ body.anime-battlefield #app .identity-details {gap:7px;padding:2px 4px;}
+ body.anime-battlefield #app .identity-info :is(.s-persona,.s-hand) {font-size:9px;gap:3px;margin:0;}
+ body.anime-battlefield #app .identity-info .s-barriers {font-size:10px;gap:4px;padding:2px 4px;}
+ body.anime-battlefield #app .identity-info .gems {gap:4px;}
+ body.anime-battlefield #app .identity-info .gem {width:5px;height:5px;}
+ body.anime-battlefield #app .identity-info .gem-count {font-size:10px;}
+ body.anime-battlefield #app .identity-progress {margin-right:6px;}
+ body.anime-battlefield #app .identity-progress .state-progress {font-size:9px;min-height:21px;padding:2px;gap:2px;flex-wrap:nowrap;}
+ body.anime-battlefield #app .identity-progress .chip {font-size:7px;padding:2px 3px 2px 13px;background-size:9px;background-position:2px center;}
+}
+
+/* Reserve the corner portraits' space without covering pile controls or Plays. */
+@media (min-height:851px) {
+ body.anime-battlefield #app .mat.foe .z-exile {top:7%;}
+}
+@media (min-height:601px) and (max-height:850px) {
+ body.anime-battlefield #app .pilebox {height:20%;}
+ body.anime-battlefield #app :is(.z-extra,.z-check) {top:5%;}
+ body.anime-battlefield #app :is(.z-codex,.z-deck) {top:27%;}
+ body.anime-battlefield #app :is(.z-exile,.z-grave) {top:49%;}
+ body.anime-battlefield #app .mat.foe :is(.z-exile,.z-grave) {top:31%;}
+ body.anime-battlefield #app .mat.foe :is(.z-codex,.z-deck) {top:53%;}
+ body.anime-battlefield #app .mat.foe :is(.z-extra,.z-check) {top:75%;}
+}
+@media (max-height:600px) {
+ body.anime-battlefield #app .mat:not(.foe) :is(.z-extra,.z-codex,.z-exile),
+ body.anime-battlefield #app .mat.foe :is(.z-extra,.z-codex,.z-exile) {height:25%;min-height:32px;}
+ body.anime-battlefield #app .mat:not(.foe) .z-extra {top:-26%;}
+ body.anime-battlefield #app .mat:not(.foe) .z-codex {top:0%;}
+ body.anime-battlefield #app .mat:not(.foe) .z-exile {top:26%;}
+ body.anime-battlefield #app .mat.foe .z-exile {top:49%;}
+ body.anime-battlefield #app .mat.foe .z-codex {top:75%;}
+ body.anime-battlefield #app .mat.foe .z-extra {top:101%;}
+}

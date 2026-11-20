@@ -1,0 +1,85 @@
+/* Approved compact-modal-v3 board surfaces. Positioning still comes from the
+   existing collision-aware layout; native cards, hand and Barriers do not move. */
+body .modal-v2.modal-v3.board-decision:not(.board-list-open):not(.cc-approved-active) .cc-dialog {
+  color:#0b2c48;background:linear-gradient(125deg,#f7fcff,#dcecf7);border:6px solid transparent;
+  border-image:url('/ui/anime-v1/player-silver-frame.svg') 24 / 6px / 0 stretch;
+  border-radius:8px;box-shadow:0 8px 24px #0006;
+}
+body .modal-v2.modal-v3.board-decision:not(.board-list-open):not(.cc-approved-active) .cc-head {
+  color:#fff;background:linear-gradient(110deg,#174671,#071d34);border-bottom:2px solid #06cde4;
+}
+body .modal-v2.modal-v3.board-decision:not(.board-list-open):not(.cc-approved-active) :is(.cc-instruction,.cc-summary,.cc-response-text,.cc-source-details summary) {color:#0b2c48;font-size:16px;line-height:1.4}
+body .modal-v2.modal-v3.board-decision:not(.board-list-open):not(.cc-approved-active) :is(.cc-summary,.cc-response-context,.cc-incoming,.cc-footer) {color:#0b2c48;background:#edf7fe;border-color:#90afc5}
+body .modal-v2.modal-v3.board-decision:not(.board-list-open):not(.cc-approved-active) .cc-summary {max-height:none;overflow:visible}
+body .modal-v2.modal-v3.board-decision:not(.board-list-open):not(.cc-approved-active) .cc-actions button {
+  min-height:44px;color:#fff;border:3px solid #b4ccdc;background:linear-gradient(115deg,#204b72,#071c31);
+  box-shadow:inset 0 0 0 1px #637f94;border-radius:5px;clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%);
+  font:800 italic 16px/1.3 Arial,sans-serif;
+}
+body .modal-v2.modal-v3.board-decision:not(.board-list-open):not(.cc-approved-active) .cc-actions button.primary {background:linear-gradient(115deg,#087bb9,#064d87);border-color:#37deeb}
+body .modal-v2.modal-v3.board-decision:not(.board-list-open):not(.cc-approved-active) .cc-actions button:disabled {background:#d7e3ec;color:#607588;border-color:#b7cbd8;opacity:1}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-dialog {
+  background:transparent; border:0; clip-path:none; filter:none; isolation:auto;
+}
+body .modal-v3.cc-approved-active .cc-dialog::before,
+body .modal-v3.cc-approved-active .cc-dialog::after {display:none}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-approved-heading {
+  padding:0 6px; color:#092b49;left:22%;top:2px;width:50%;max-height:none;overflow:visible;
+  background:linear-gradient(125deg,#f7fcff,#dcecf7);
+  border:3px solid transparent;
+  border-image:url('/ui/anime-v1/player-silver-frame.svg') 24 / 3px / 0 stretch;
+  clip-path:polygon(13px 0,calc(100% - 13px) 0,100% 13px,100% calc(100% - 13px),calc(100% - 13px) 100%,13px 100%,0 calc(100% - 13px),0 13px);
+  scrollbar-color:#729ab4 #e8f4fc;
+}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-head {
+  padding:0 8px; min-height:44px; color:#fff;
+  background:linear-gradient(110deg,#174671,#071d34); border-bottom:2px solid #06cde4;
+}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-head h3 {font-size:22px;text-transform:uppercase}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-head button {font-size:13px}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-instruction {
+  color:#092b49;font-size:16px;line-height:1.25;margin:0 7px 2px;
+}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-approved-rail {
+  color:#092b49;background:linear-gradient(125deg,#f7fcff,#dcecf7);scrollbar-color:#729ab4 #e8f4fc;
+}
+body .modal-v3.cc-approved-active .cc-comparison-stage {
+  padding:9px 10px;background:linear-gradient(110deg,#174671,#071d34);color:#fff;
+  font:800 italic 18px/1.2 Arial,sans-serif;letter-spacing:0;
+}
+body .modal-v3.cc-approved-active .cc-comparison-score {padding:12px 10px;gap:7px;border-left:0}
+body .modal-v3.cc-approved-active .cc-comparison-score.defense {background:transparent;border-top:1px solid #90aabd}
+body .modal-v3.cc-approved-active .cc-comparison-score>span {font-size:14px;line-height:1.25;letter-spacing:0;color:#0a2d49}
+body .modal-v3.cc-approved-active .cc-comparison-score>strong {font-size:40px;color:#8e1e49}
+body .modal-v3.cc-approved-active .cc-comparison-score.defense>strong {color:#123c61}
+body .modal-v3.cc-approved-active .cc-comparison-score>small {font-size:14px;line-height:1.35;color:#203f57}
+body .modal-v3.cc-approved-active .cc-comparison-outcome {background:#fff5d9;color:#8b420a;border-color:#90aabd;font-size:16px;line-height:1.4;padding:10px}
+body .modal-v3.cc-approved-active .cc-comparison-outcome>small {font-size:14px;line-height:1.4;color:#203f57}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-approved-selected {
+  padding:8px;margin-bottom:7px;color:#0b304e;background:#e9f6ff;border:1px solid #b3cbdc;
+  font:700 italic 16px/1.3 Arial,sans-serif;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
+}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-actions button {
+  clip-path:none;color:#edf9ff;box-shadow:none;
+}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-actions button:disabled {color:#b4c7d4;opacity:.75}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-response-context {color:#102f4b;border-color:#90aabd}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active :is(.cc-response-text,.cc-response-text>p) {color:#102f4b;font-size:16px;line-height:1.4}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active :is(.cc-source-details summary,.cc-incoming-label,.cc-incoming,.cc-approved-destination) {color:#102f4b}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-incoming {font-size:16px}
+body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-approved-destination {font-size:16px;line-height:1.4;border-color:#90aabd}
+body .modal-v3.cc-approved-active :focus-visible {outline:3px dashed #007f9f!important;outline-offset:2px}
+body .modal-v3.cc-approved-active .cc-head :focus-visible,
+body .modal-v3.cc-approved-active .cc-actions :focus-visible {outline-color:#fff!important;outline-offset:-6px}
+@media(max-width:1000px),(max-height:600px) {
+  body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-head h3 {font-size:17px}
+  body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-instruction {font-size:16px}
+  body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-approved-heading {padding:3px 6px 5px}
+  body .modal-v3.cc-approved-active .cc-comparison-stage {font-size:13px;padding:4px}
+  body .modal-v3.cc-approved-active .cc-comparison-score {padding:5px;gap:3px}
+  body .modal-v3.cc-approved-active .cc-comparison-score>strong {font-size:25px}
+  body .modal-v3.cc-approved-active .cc-comparison-score>span {font-size:12px}
+  body .modal-v3.cc-approved-active .cc-comparison-outcome {font-size:13px;padding:5px}
+  body .modal-v3.cc-approved-active .cc-comparison-outcome>small {font-size:12px}
+  body .modal-bg.duel-panel.modal-v2.modal-v3.cc-managed.board-decision.cc-approved-active .cc-approved-selected {font-size:13px;padding:5px}
+}

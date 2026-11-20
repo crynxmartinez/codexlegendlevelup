@@ -1,0 +1,40 @@
+name: Game quality checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm ci --prefix game-server
+      - run: npm test
+      - run: npm run audit:assets
+      - run: npm run build
+      - run: node node_modules/typescript/bin/tsc --noEmit -p game-server/tsconfig.json
+      - run: npm run build --prefix game-server
+      - name: Local PvP integration
+        env:
+          PORT: '2572'
+          CODEX_HOST: 127.0.0.1
+          CODEX_ORIGINS: http://127.0.0.1:5174,http://127.0.0.1:5176
+          CODEX_TEST_SERVER: http://127.0.0.1:2572
+        run: |
+          node game-server/build/index.js > pvp-server.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..40}; do
+            if curl --fail --silent "$CODEX_TEST_SERVER/codex/health" > /dev/null; then break; fi
+            sleep 0.5
+          done
+          curl --fail --silent "$CODEX_TEST_SERVER/codex/health"
+          node tests/pvp/opening.mjs
+          node tests/pvp/recovery.mjs
+          node tests/pvp/rooms.mjs

@@ -1,0 +1,5 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "types": ["node"], "noImplicitOverride": false },
+  "include": ["src", "../src/vite-env.d.ts"]
+}

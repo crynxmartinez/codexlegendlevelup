@@ -1,0 +1,83 @@
+[
+  {
+    "region": "Luzon",
+    "total": 50,
+    "counts": {
+      "L1": 15,
+      "L2": 12,
+      "L3": 6,
+      "Force": 12,
+      "Action": 3,
+      "Sentry": 2
+    },
+    "roleCopies": {
+      "L1 support": 6,
+      "L1 arrival": 6,
+      "L1 attack": 3,
+      "L2 support": 6,
+      "L2 arrival": 3,
+      "L2 attack": 3
+    },
+    "codex": 2,
+    "normalValidationExceptions": [
+      {
+        "where": "codex",
+        "message": "2 Codex — a deck carries exactly 5."
+      }
+    ]
+  },
+  {
+    "region": "Visayas",
+    "total": 50,
+    "counts": {
+      "L1": 15,
+      "L2": 12,
+      "L3": 6,
+      "Force": 12,
+      "Action": 3,
+      "Sentry": 2
+    },
+    "roleCopies": {
+      "L1 support": 6,
+      "L1 arrival": 6,
+      "L1 attack": 3,
+      "L2 support": 6,
+      "L2 arrival": 3,
+      "L2 attack": 3
+    },
+    "codex": 2,
+    "normalValidationExceptions": [
+      {
+        "where": "codex",
+        "message": "2 Codex — a deck carries exactly 5."
+      }
+    ]
+  },
+  {
+    "region": "Mindanao",
+    "total": 50,
+    "counts": {
+      "L1": 15,
+      "L2": 12,
+      "L3": 6,
+      "Force": 12,
+      "Action": 3,
+      "Sentry": 2
+    },
+    "roleCopies": {
+      "L1 support": 6,
+      "L1 arrival": 6,
+      "L1 attack": 3,
+      "L2 support": 6,
+      "L2 arrival": 3,
+      "L2 attack": 3
+    },
+    "codex": 2,
+    "normalValidationExceptions": [
+      {
+        "where": "codex",
+        "message": "2 Codex — a deck carries exactly 5."
+      }
+    ]
+  }
+]

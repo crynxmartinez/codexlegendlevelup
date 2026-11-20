@@ -1,0 +1,104 @@
+/**
+ * Update card text in src/data/cards.json for:
+ * - Card text changes (Mayla, Hakim, Sitti Rahma, Kamil, Bai Samira, Rattan Snarefall, Mayumi)
+ * - Agta codex: [red] Bayanihan paragraph moved to first position
+ * - Maguindanao cards: add [blue]/[green] markers, [red] for Eclipse-locked
+ */
+const fs = require('fs');
+const path = require('path');
+
+const cardsPath = path.join('C:', 'Code', 'codexlegend', 'src', 'data', 'cards.json');
+const cards = JSON.parse(fs.readFileSync(cardsPath, 'utf8'));
+
+const BAYANIHAN = '[red]Bayanihan - When all of your Ally Zones are occupied by Luzon Arch Units, release Bayanihan until end of turn.';
+const GATHER = 'Gather - Reveal the top card of your deck. If it is a Unit, special call it to an Ally Zone. Otherwise, place it on the bottom.';
+
+// --- 1. Card text changes for modified cards ---
+const textUpdates = {
+  // Agta
+  'agta/rattan-snarefall': '[Cost: 3 Energy] Gather 2.\nGather - Reveal the top card of your deck. If it is a Unit, special call it to an Ally Zone. Otherwise, place it on the bottom.',
+  'agta/moon-net-fisher-mayumi': '[Ally]: When specially called, Gather 1.\nGather - Reveal the top card of your deck. If it is a Unit, special call it to an Ally Zone. Otherwise, place it on the bottom.',
+  // Maguindanao
+  'maguindanao/buluan-shell-caller-mayla': '[Last Oath]: When this unit is Offered, choose one of your other units. It gets Power +3000 until end of turn. Draw 1 card, then discard 1 card.',
+  'maguindanao/illana-tide-harpooner-hakim': '[Last Oath]: When this unit is Offered, choose one of your other units. It gets Power +3000 until end of turn. Damage one opponent Ally.',
+  'maguindanao/kuta-wato-banner-keeper-sitti-rahma': '[Ally]: When your Persona is attacked, [Cost: Offer this unit] Your Persona gets Power +10000 for that battle.\n[Last Oath]: When this unit is Offered, choose one of your other units. It gets Power +3000 until end of turn. Then [Cost: 1 Energy] Search your deck for a Level 1 unit and special call it.',
+  'maguindanao/pulangi-ember-spear-kamil': '[green]This card is treated as 2 Offer and is treated as 2 cards in Grave.',
+  'maguindanao/kuta-wato-gate-bulwark-bai-samira': '[green]This card is treated as 2 Offer and is treated as 2 cards in Grave.',
+};
+
+for (const [id, text] of Object.entries(textUpdates)) {
+  const card = cards.find(c => c.id === id);
+  if (!card) { console.error('NOT FOUND:', id); continue; }
+  card.text = text;
+  console.log('Updated text:', id);
+}
+
+// --- 2. Agta codex: add [red] Bayanihan as first paragraph ---
+const agtaCodexIds = [
+  'agta/hidden-path',
+  'agta/listening-canopy',
+  'agta/returning-river',
+  'agta/shared-ember',
+  'agta/thousand-knots',
+];
+
+for (const id of agtaCodexIds) {
+  const card = cards.find(c => c.id === id);
+  if (!card) { console.error('NOT FOUND:', id); continue; }
+  let text = card.text;
+  // Remove existing Bayanihan paragraph (with or without [red])
+  text = text.replace(/(\[red\])?Bayanihan - [^\n]+\n?/g, '');
+  // Split into paragraphs
+  let paras = text.split('\n').filter(p => p.trim());
+  // Insert [red] Bayanihan as first paragraph
+  paras.unshift(BAYANIHAN);
+  card.text = paras.join('\n');
+  console.log('Updated Agta codex:', id);
+}
+
+// --- 3. Maguindanao cards: add [blue]/[green] markers, [red] for Eclipse ---
+const magColorUpdates = {
+  // [blue] = activated/triggered abilities
+  'maguindanao/blood-moon-bai-a-labi': {
+    // Two [blue] abilities, one [red] Eclipse ability
+    text: '[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Search your deck for a Level 1 unit and special call it.\n[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Draw 1. This unit gets Power +5000, until end of turn.\n[red][Eclipse][Persona] 1/turn: When this unit attacks, [Cost: 1 Energy] This unit gets Power +1000 for each Maguindanaon unit in your Grave, until end of turn.',
+  },
+  // Already has [blue]
+  'maguindanao/illana-lantaka-warder-panglima-jamal': {
+    text: '[blue][Ally] 1/turn: If you Offered an Ally this turn, [Cost: 2 Energy] Damage one of your opponent\'s exhausted ally units.',
+  },
+  // [green] passive (already updated above)
+  'maguindanao/kuta-wato-gate-bulwark-bai-samira': {
+    text: '[green]This card is treated as 2 Offer and is treated as 2 cards in Grave.',
+  },
+  'maguindanao/liguasan-reed-eye-harun': {
+    text: '[blue][Ally] 1/turn: When this unit attacks, if you Offered an Ally this turn, damage one of your opponent\'s ally units.',
+  },
+  'maguindanao/pulangi-wake-cleaver-panglima-farid': {
+    text: '[blue][Ally] 1/turn: After this unit attacks, [Cost: Offer 1 of your other units] Charge this unit. It gets Power +3000, until end of turn.',
+  },
+  'maguindanao/liguasan-mudblade-nasser': {
+    text: '[blue][Last Oath]: When this unit is Offered, [Cost: 1 Energy] Search your deck for a Level 1 unit and special call it.',
+  },
+  // [green] passive (already updated above)
+  'maguindanao/pulangi-ember-spear-kamil': {
+    text: '[green]This card is treated as 2 Offer and is treated as 2 cards in Grave.',
+  },
+  'maguindanao/crimson-agung-resonance': {
+    text: '[blue]Play with - [Cost: 2 Energy]\nFor each Maguindanaon unit in your Grave, choose one of your units. That unit gets Power +1000, until end of turn.',
+  },
+  'maguindanao/pulangi-river-unbound': {
+    text: '[blue]Play with - [Cost: Offer 1 of your units]\nDamage one of your opponent ally unit.',
+  },
+};
+
+for (const [id, update] of Object.entries(magColorUpdates)) {
+  const card = cards.find(c => c.id === id);
+  if (!card) { console.error('NOT FOUND:', id); continue; }
+  card.text = update.text;
+  console.log('Updated Maguindanao colors:', id);
+}
+
+// --- Save ---
+fs.writeFileSync(cardsPath, JSON.stringify(cards, null, 2), 'utf8');
+console.log('\nDone! cards.json updated.');

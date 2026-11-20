@@ -1,0 +1,7 @@
+{
+  "name": "codex-desktop-toolchain",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Isolated desktop build tools; the browser dependency lock is preserved.",
+  "devDependencies": { "electron": "45.3.3", "electron-builder": "26.18.0" }
+}

@@ -1,0 +1,174 @@
+{
+  "agta/sierra-watchkeeper-banoy": {
+    "name": "Tagapagbantay ng Kabundukan, Banoy",
+    "text": "[yellow][Sentry] Kapag inatake ang iyong Persona, ipakita ang barahang ito at i-exile ito nang nakataob upang mapawalang-bisa ang pag-atakeng iyon. Pagkatapos, Sipol 1.[/yellow]"
+  },
+  "agta/set-1/wind-heart-rescuer-taguwasi": {
+    "name": "Tagapagligtas na May Puso ng Hangin, Taguwasi",
+    "text": "[green][Persona] Sa simula ng iyong Main Phase, tingnan ang 3 baraha sa ibabaw ng iyong deck at ibalik ang mga ito sa ibabaw sa anumang pagkakasunod-sunod.[/green]\n[green][Bayanihan][Persona] 1/Turn: Kapag umatake ang Unit na ito, Sipol 1.[/green]"
+  },
+  "agta/set-1/fifth-sky-tyrant-kalimangalnuk": {
+    "name": "Malupit na Pinuno ng Ikalimang Langit, Kalimangalnuk",
+    "text": "[blue][Persona] 1/Turn: Sipol 1, pagkatapos ay bigyan ang Unit na ito ng Power na katumbas ng Power ng Unit na na-call, hanggang sa pagtatapos ng turno.[/blue]\n[green][Bayanihan][Persona] Sa iyong turno, bigyan ang lahat ng iyong Unit ng Power +2000.[/green]"
+  },
+  "agta/set-1/life-breath-mother-nanolay": {
+    "name": "Ina ng Hininga ng Buhay, Nanolay",
+    "text": "[green][Persona] 1/Turn: Kapag umatake ang Unit na ito, bumunot ng 1 baraha, pagkatapos ay bigyan ang Unit na ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]\n[green][Bayanihan][Ally] 1/Turn: Kung na-special call ang Unit na ito sa isang Battle Phase, pagkatapos umatake ng iyong Persona, [Cost: Bumitaw ng 2 baraha] mag-Personify bilang Unit na ito, nang charged.[/green]"
+  },
+  "agta/set-1/fallen-sky-challenger-talimanog": {
+    "name": "Bumagsak na Manghahamon sa Langit, Talimanog",
+    "text": "[green][Ally] 1/Turn: Kapag na-special call, Sumipat 1. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/months-of-battle-warrior-ammani": {
+    "name": "Mandirigma ng Buwanang Pakikidigma, Ammani",
+    "text": "[green][Ally] 1/Turn: Kapag na-special call, ipakita ang baraha sa ibabaw ng iyong deck. Kung hindi ito Unit, ilagay ito sa ilalim at ilagay ang Unit na ito sa ibabaw ng iyong deck. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/relentless-third-brother-annibo": {
+    "name": "Walang-Sawang Ikatlong Kapatid, Annibo",
+    "text": "[green][Ally] 1/Turn: Kapag umatake ang iyong Persona, ilagay ang Unit na ito sa ibabaw ng iyong deck. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/river-calling-sister-alig": {
+    "name": "Kapatid na Tumatawag sa Ilog, Alig",
+    "text": "[green][Ally] 1/Turn: Kapag may barahang inilagay sa isang Ally Zone mula sa iyong deck o kamay, bigyan ang Unit na ito ng Power +2000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/maiden-taking-raptor-ammalabukkaw": {
+    "name": "Mandaragit na Dumudukot ng Dalaga, Ammalabukkaw",
+    "text": "[green][Ally] 1/Turn: Kapag na-special call, Sipol 1. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/golden-threshold-warden-nagdombilan": {
+    "name": "Tagapagbantay ng Gintong Bukana, Nagdombilan",
+    "text": "[green][Ally] 1/Turn: Kapag na-special call, ilagay ang 1 baraha mula sa iyong kamay sa ibabaw ng iyong deck, pagkatapos ay Sipol 1. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/wedding-war-chief-namandiyanin": {
+    "name": "Pinuno ng Digmaan sa Kasalan, Namandiyanin",
+    "text": "[green][Ally] 1/Turn: Kapag na-special call, Sumipat 3. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/moon-bright-captive-innawagan": {
+    "name": "Bihag na Kasingningning ng Buwan, Innawagan",
+    "text": "[green][Ally] 1/Turn: Kapag inilagay mula sa iyong kamay, ilagay ang Unit na ito sa ibabaw ng iyong deck. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/barbed-sky-messenger-dalewasan": {
+    "name": "Sugo ng Matinik na Langit, Dalewasan",
+    "text": "[green][Ally] 1/Turn: Kapag inilagay, pumili ng dalawa sa iyong mga Unit; bigyan ang bawat isa ng Power +2000 hanggang sa pagtatapos ng turno. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/keeper-at-sunrise-sinag": {
+    "name": "Tagapagbantay sa Pagsikat ng Araw, Sinag",
+    "text": "[green][Ally] 1/Turn: Kapag inilagay mula sa iyong kamay, bumitaw ng 1 baraha, pagkatapos ay bumunot ng 1 baraha. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/returning-sky-captain-darawan": {
+    "name": "Nagbabalik na Kapitan ng Langit, Darawan",
+    "text": "[green][Ally] 1/Turn: Kapag may Unit na inilagay mula sa iyong deck, bigyan ang Unit na ito ng Power +3000 hanggang sa pagtatapos ng turno. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/wedding-pact-elder-amuray": {
+    "name": "Nakatatanda ng Kasunduan sa Kasal, Amuray",
+    "text": "[blue][Hand] 1/Turn: Ilagay ang barahang ito sa ibabaw ng iyong deck.[/blue]"
+  },
+  "agta/set-1/nightfall-raider-kallan": {
+    "name": "Mananalakay sa Takipsilim, Kallan",
+    "text": "[blue][Hand] 1/Turn: Bitawan ang barahang ito, pagkatapos ay bumunot ng 1 baraha.[/blue]"
+  },
+  "agta/set-1/night-feast-defender-tamin": {
+    "name": "Tagapagtanggol ng Piging sa Gabi, Tamin",
+    "text": "[blue][Ally] 1/Turn: [Cost: Ilagay ang Unit na ito sa ilalim ng iyong deck] Pumili ng isa sa iyong mga Unit at ilagay ito sa ibabaw ng iyong deck. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/blue]"
+  },
+  "agta/set-1/fifth-sky-sentinel-ulagan": {
+    "name": "Bantay ng Ikalimang Langit, Ulagan",
+    "text": "[green][Ally] 1/Turn: Kapag sumuporta ang Unit na ito sa isang pag-atake, bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno. Kapag napakawalan ang Bayanihan at nasa field ang Unit na ito o kapag inilagay ito, magiging ganito ang skill nito: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/path-turning-warden-tumatanan": {
+    "name": "Tagapagbantay na Naglilihis ng Landas, Tumatanan",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ng ability ang isang Ally ng kalaban na nasa field, [Cost: Ipakita at bitawan ang barahang ito] pumili ng isa sa iyong mga Ally at isa sa mga Ally ng kalaban. I-Rally ang mga ito sa ilalim ng deck ng kani-kanilang may-ari.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/beast-spirit-healer-subkal": {
+    "name": "Manggagamot na Espiritu ng Hayop, Subkal",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ang kalaban ng ability ng isang baraha, [Cost: Ipakita at bitawan ang barahang ito] pawalang-bisa ang pag aktiba na iyon.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/healer-s-spirit-friend-bunog": {
+    "name": "Espiritung Kaibigan ng Manggagamot, Bunog",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ang kalaban ng effect na mag-special call ng isa o higit pang Unit, [Cost: Ipakita at bitawan ang barahang ito] bumunot ng 2 baraha.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/restless-wandering-dead-belet": {
+    "name": "Patay na Walang-Tigil sa Paglalagalag, Belet",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag umatake ang isang Unit ng kalaban, [Cost: Ipakita at bitawan ang barahang ito] pumili ng isa sa iyong mga Unit. Bigyan ito ng Power +5000 hanggang sa pagtatapos ng pag-atakeng iyon. Bumunot ng 1 baraha.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/innawagan-s-abduction": {
+    "name": "Ang Pagdukot kay Innawagan",
+    "text": "[blue][Action] Tingnan ang 3 baraha sa ibabaw ng iyong deck; mag-call ng hanggang 1 Unit mula sa mga ito sa isang bakanteng Ally Zone. Ilagay ang natitira sa ilalim ng deck sa anumang pagkakasunod-sunod.[/blue]"
+  },
+  "agta/set-1/the-three-brothers-ascend": {
+    "name": "Ang Pag-akyat ng Tatlong Magkakapatid",
+    "text": "[blue][Action] Tingnan ang 5 baraha sa ibabaw ng iyong deck; mag-call ng hanggang 2 Unit na Level 2 o mas mababa mula sa mga ito sa mga bakanteng Ally Zone. Ilagay ang natitira sa ilalim ng deck sa anumang pagkakasunod-sunod.[/blue]"
+  },
+  "agta/set-1/dalewasan-crosses-the-barbed-sky": {
+    "name": "Tinawid ni Dalewasan ang Matinik na Langit",
+    "text": "[blue][Action] Tingnan ang baraha sa ibabaw ng iyong deck; maaari mo itong ilagay sa ilalim. Pagkatapos, bumunot ng 1 baraha at bumitaw ng 1 baraha.[/blue]"
+  },
+  "agta/set-1/sinag-reveals-the-rescuer": {
+    "name": "Ibinunyag ni Sinag ang Tagapagligtas",
+    "text": "[blue][Action] Tingnan ang 5 baraha sa ibabaw ng iyong deck; ipakita ang isang Level 3 Unit mula sa mga ito at idagdag ito sa iyong kamay. Ilagay ang natitira sa ilalim ng deck sa anumang pagkakasunod-sunod.[/blue]"
+  },
+  "agta/set-1/taguwasi-answers-the-plea": {
+    "name": "Tinugon ni Taguwasi ang Panawagan",
+    "text": "[blue][Action] Sipol 1. Pagkatapos, kung napakawalan ang Bayanihan, bigyan ang isa sa iyong mga Unit ng Power +5000 sa turnong ito.[/blue]"
+  },
+  "agta/set-1/talimanog-falls-as-the-gate-breaks": {
+    "name": "Bumagsak si Talimanog sa Pagkawasak ng Tarangkahan",
+    "text": "[blue][Action] Ilagay ang isa sa iyong mga Ally sa ilalim ng iyong deck. Kung ginawa mo ito, wasakin ang isang Ally ng kalaban na Level 2 o mas mababa, pagkatapos ay Sipol 1.[/blue]"
+  },
+  "agta/set-1/taguwasi-tears-open-heaven": {
+    "name": "Biniyak ni Taguwasi ang Langit",
+    "text": "[blue][Action] Tingnan ang 5 baraha sa ibabaw ng iyong deck; mag-call ng hanggang 1 Unit mula sa mga ito sa isang bakanteng Ally Zone at bigyan ito ng Power +5000 sa turnong ito. Ilagay ang natitira sa ilalim ng deck. Kung napakawalan ang Bayanihan, bigyan ang iyong Persona ng Power +5000 sa turnong ito.[/blue]"
+  },
+  "agta/set-1/kalimangalnuk-s-final-defeat": {
+    "name": "Ang Huling Pagkatalo ni Kalimangalnuk",
+    "text": "[blue][Action] Kung may Bayanihan: wasakin ang isang Ally ng kalaban. Bigyan ang iyong Persona ng Power +5000 sa turnong ito.[/blue]"
+  },
+  "agta/set-1/alig-restores-her-brothers": {
+    "name": "Ibinalik ni Alig ang Kanyang mga Kapatid",
+    "text": "[blue][Action] Magbalik ng isang Level 2 o mas mababang Unit mula sa iyong Grave papunta sa iyong kamay.[/blue]"
+  },
+  "agta/set-1/the-wedding-becomes-a-battlefield": {
+    "name": "Naging Larangan ng Digmaan ang Kasalan",
+    "text": "[blue][Action] Bigyan ang iyong mga Unit ng Power +3000 sa turnong ito, o +5000 kung napakawalan ang Bayanihan.[/blue]"
+  },
+  "agta/set-1/dawnward-country-arawen": {
+    "name": "Lupaing Nakaharap sa Bukang-Liwayway, Arawen",
+    "text": "[Codex] Auto-switch — Bago ka bumunot, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]Sa halip na bumunot, tingnan ang 3 baraha sa ibabaw ng iyong deck at ibalik ang mga ito sa ibabaw sa anumang pagkakasunod-sunod. Pagkatapos, Sipol 1.[/green]"
+  },
+  "agta/set-1/barbed-sky-passage-salikan": {
+    "name": "Daan sa Matinik na Langit, Salikan",
+    "text": "[Codex] Auto-switch — Bago ka mag-Personify, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]Sa halip na mag-Personify mula sa iyong kamay, tingnan ang 5 baraha sa ibabaw ng iyong deck at mag-Personify bilang isang Level 3 Unit mula sa mga ito. Ilagay ang natitira sa ilalim ng deck sa anumang pagkakasunod-sunod.[/green]"
+  },
+  "agta/set-1/fifth-heaven-ularan": {
+    "name": "Ikalimang Langit, Ularan",
+    "text": "[Codex] Auto-switch — Kapag umatake ang iyong Persona, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]1/Turn: Kapag umatake ang iyong Persona, Sipol 1.[/green]"
+  },
+  "agta/set-1/brothers-refuge-taliman": {
+    "name": "Kanlungan ng Magkakapatid, Taliman",
+    "text": "[Codex] Auto-switch — Kapag nabasag ang iyong Barrier sa turno ng kalaban at hindi Force ang lumabas sa check, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]1/Turn: Kapag nag-check ka ng Barrier at hindi ito Force, bumitaw ng 1 baraha, pagkatapos ay Sipol 1.[/green]"
+  },
+  "agta/set-1/healing-house-aligan": {
+    "name": "Bahay ng Paghilom, Aligan",
+    "text": "[Codex] Auto-switch — Bago ka bumunot, kung mayroon kang 2 o mas kaunting Barrier, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]Habang aktibo ito, kung mag-Sipol ka sa iyong Main Phase, sa halip ay tingnan ang 2 baraha sa ibabaw ng iyong deck at pumili ng isa para sa Sipol. I-exile ang isa pa.[/green]"
+  },
+  "agta/set-1/wedding-clearing-amuran": {
+    "name": "Pook ng Kasalan, Amuran",
+    "text": "[Codex] Auto-switch — Bago ka bumunot, kung mas marami ang Unit ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]1/Turn: Kapag naging aktibo ang Codex na ito, [Cost: Bumitaw ng 1 baraha] Sipol 3.[/green]"
+  },
+  "agta/set-1/golden-threshold-nagdan": {
+    "name": "Gintong Bukana, Nagdan",
+    "text": "[Codex] Auto-switch — Sa simula ng iyong Main Phase, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]1/Turn: Sa simula ng iyong Main Phase, kung mas kaunti ang iyong Unit kaysa sa kalaban, Sipol 2.[/green]"
+  },
+  "agta/set-1/heaven-s-rift-siwangan": {
+    "name": "Siwang ng Langit, Siwangan",
+    "text": "[Codex] Auto-switch — Kapag inaatake ang iyong Persona, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]1/Turn: Kapag inaatake ang iyong Persona, kung nag-Sipol ka nang 3 o higit pang beses noong nakaraan mong turno, bigyan ang iyong Persona ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "agta/set-1/mystic-sky-river-dalunan": {
+    "name": "Mahiwagang Ilog sa Langit, Dalunan",
+    "text": "[Codex] Auto-switch — Bago ka bumunot, kung mas marami ang baraha sa kamay ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]Habang aktibo ito, kung mag-Sipol ka sa iyong Main Phase, ilagay ang baraha sa iyong kamay sa halip na i-call ito.[/green]"
+  },
+  "agta/set-1/storm-court-kaliman": {
+    "name": "Korte ng Bagyo, Kaliman",
+    "text": "[Codex] Auto-switch — Bago ka bumunot, kung mas marami ang Barrier ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\n[Bayanihan] Pakawalan habang may mga Luzon Arch Unit sa lahat ng apat na Ally Zone.\n[green]Habang napakawalan ang Bayanihan, bigyan ang iyong mga Unit ng Power +1000.[/green]"
+  }
+}

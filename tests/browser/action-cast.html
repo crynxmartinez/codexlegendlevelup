@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Action cast checks</title><link rel="stylesheet" href="/src/ui/style.css"><style>body{padding:16px}#results{white-space:pre-wrap}</style></head><body>
+<h2>Action cast checks</h2><button id="run">Run checks</button><button id="card">The Elders Answer</button><p id="state"></p><pre id="results">Ready</pre>
+<script type="module">
+import {confirmActionCast} from '/src/ui/action-cast.ts';
+import {createGame} from '/src/core/setup.ts';
+import {GameController} from '/src/core/game.ts';
+import {autoChooser} from '/src/core/effects.ts';
+import {moveCard,you,inst,maxPlays} from '/src/core/state.ts';
+import {FULL_INDEX,ALL_CARDS} from '/src/data/loader.ts';
+import {boardUrl} from '/src/ui/assets.ts';
+import deck from '/decks/babaylan-set-1.json';
+const rec=ALL_CARDS['babaylan/set-1/the-elders-answer'];
+let game,ctrl,uid,pending,inspections=0;
+const q=s=>document.querySelector(s),click=s=>q(s).click();
+function reset(){game=createGame(FULL_INDEX,[deck,deck],{seed:5,firstPlayer:0});game.turnPlayer=0;game.phase='main';for(const p of [0,1])you(game,p).activeCodex=null;you(game,0).energy=3;uid=Object.values(game.cards).find(c=>c.owner===0&&c.defId===rec.id).uid;moveCard(game,uid,'hand');ctrl=new GameController(game,FULL_INDEX,{choosers:[autoChooser,autoChooser]});show();}
+function show(){q('#state').textContent=`Energy ${you(game,0).energy} · Plays ${you(game,0).normalPlaysUsed}/${maxPlays(FULL_INDEX,game,0)} · Action in ${inst(game,uid).zone}`;}
+const legal=()=>ctrl.legalActions(0).some(a=>a.kind==='playAction'&&a.uid===uid);
+async function open(){if(!legal())return false;const approved=await confirmActionCast({name:rec.name,text:rec.text,image:boardUrl(rec.art),cost:1,energy:you(game,0).energy,inspect:art=>{art.oncontextmenu=e=>{e.preventDefault();inspections++;};}});if(approved&&legal())await ctrl.perform({kind:'playAction',uid},0);show();return approved;}
+q('#card').onclick=()=>{pending=open();};
+q('#run').onclick=async()=>{const checks=[];const check=(name,ok)=>{if(!ok)throw Error(name);checks.push('PASS '+name);};try{reset();click('#card');check('First click only previews',inst(game,uid).zone==='hand'&&you(game,0).energy===3&&you(game,0).normalPlaysUsed===0);check('Rules visible',q('.action-cast-rules').textContent.includes('top 3'));
+ q('.action-cast-preview img').dispatchEvent(new MouseEvent('contextmenu',{bubbles:true,cancelable:true}));check('Inspection does not cast',inspections>0&&inst(game,uid).zone==='hand');
+ click('.duel-controls button:last-child');check('Minimize does not cast',inst(game,uid).zone==='hand'&&you(game,0).energy===3);click('.duel-restore');
+ q('.row .primary').dispatchEvent(new MouseEvent('click',{bubbles:true,detail:2}));check('Double-click cannot cast',!!q('.duel-dialog')&&you(game,0).energy===3);
+ click('.row button:not(.primary)');check('Cancel does not spend',!(await pending)&&inst(game,uid).zone==='hand'&&you(game,0).normalPlaysUsed===0);
+ click('#card');click('.row .primary');check('Explicit Cast approved',await pending);check('Cast pays once and spends one play',you(game,0).energy===2&&you(game,0).normalPlaysUsed===1);check('Cast moves Action to Grave',inst(game,uid).zone==='grave');check('No orphan prompt',!q('.duel-panel'));
+ reset();for(const barrier of you(game,0).barriers.slice(0,3))moveCard(game,barrier,'grave');you(game,0).normalPlaysUsed=3;you(game,0).energy=4;show();click('#card');check('3 of 6 plays and 4 Energy opens Cast',!!q('.duel-dialog')&&legal());click('.row .primary');await pending;check('Fourth play succeeds with the correct cost',you(game,0).normalPlaysUsed===4&&you(game,0).energy===3&&inst(game,uid).zone==='grave');
+ moveCard(game,uid,'hand');you(game,0).normalPlaysUsed=6;click('#card');check('All six plays used blocks further casting',!(await pending)&&!q('.duel-dialog')&&you(game,0).energy===3);
+ reset();q('#results').textContent=checks.join('\n')+`\n${checks.length} checks passed.`;
+}catch(e){q('#results').textContent=checks.join('\n')+'\nFAIL '+e.message;throw e;}};
+reset();
+</script></body></html>

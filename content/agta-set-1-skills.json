@@ -1,0 +1,212 @@
+{
+  "agta/set-1/wind-heart-rescuer-taguwasi": {
+    "name": "Wind-Heart Rescuer, Taguwasi",
+    "role": "Deck-shaping rescuer",
+    "skill": "[green][Persona] At the start of your Main Phase, look at the top 3 cards of your deck and put them back on top in any order.[/green]\n[green][Bayanihan][Persona] 1/Turn: When this Unit attacks, [Cost: 2 Energy] Sipol 1.[/green]"
+  },
+  "agta/set-1/fifth-sky-tyrant-kalimangalnuk": {
+    "name": "Fifth-Sky Tyrant, Kalimangalnuk",
+    "role": "Full-field tyrant",
+    "skill": "[blue][Persona] 1/Turn: [Cost: 2 Energy] Sipol 1, then this Unit gets Power equal to the Power of the Unit called, until end of turn.[/blue]\n[green][Bayanihan][Persona] During your turn, all of your Units get Power +2000.[/green]"
+  },
+  "agta/set-1/life-breath-mother-nanolay": {
+    "name": "Life-Breath Mother, Nanolay",
+    "role": "Rebuild and ascend",
+    "skill": "[green][Persona] 1/Turn: When this Unit attacks, [Cost: 2 Energy] draw 1, then this Unit gets Power +3000 until end of turn.[/green]\n[green][Bayanihan][Ally] 1/Turn: If this Unit was specially called during a Battle Phase, after your Persona attacks, [Cost: Discard 2 cards and 2 Energy] Personify into this Unit, charged.[/green]"
+  },
+  "agta/set-1/fallen-sky-challenger-talimanog": {
+    "name": "Fallen Sky-Challenger, Talimanog",
+    "role": "Scout on arrival",
+    "skill": "[green][Ally] 1/Turn: When specially called, Sumipat 1. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/months-of-battle-warrior-ammani": {
+    "name": "Months-Of-Battle Warrior, Ammani",
+    "role": "Reshuffles a dead draw",
+    "skill": "[green][Ally] 1/Turn: When specially called, [Cost: 1 Energy] reveal the top card of your deck. If it is not a Unit, put it on the bottom and put this Unit on top of your deck. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/relentless-third-brother-annibo": {
+    "name": "Relentless Third Brother, Annibo",
+    "role": "Returns for the next wave",
+    "skill": "[green][Ally] 1/Turn: When your Persona attacks, put this Unit on top of your deck. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/river-calling-sister-alig": {
+    "name": "River-Calling Sister, Alig",
+    "role": "Grows with every arrival",
+    "skill": "[green][Ally] 1/Turn: When a card is placed into an Ally Zone from your deck or your hand, this Unit gets Power +2000 until end of turn.[/green]"
+  },
+  "agta/set-1/maiden-taking-raptor-ammalabukkaw": {
+    "name": "Maiden-Taking Raptor, Ammalabukkaw",
+    "role": "Raptor digs, or strikes",
+    "skill": "[green][Ally] 1/Turn: When specially called, Sipol 1. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/golden-threshold-warden-nagdombilan": {
+    "name": "Golden-Threshold Warden, Nagdombilan",
+    "role": "Trades a card for a body",
+    "skill": "[green][Ally] 1/Turn: When specially called, put 1 card from your hand on top of your deck, then Sipol 1. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/wedding-war-chief-namandiyanin": {
+    "name": "Wedding-War Chief, Namandiyanin",
+    "role": "Reads three, or strikes",
+    "skill": "[green][Ally] 1/Turn: When specially called, [Cost: 1 Energy] Sumipat 3. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/moon-bright-captive-innawagan": {
+    "name": "Moon-Bright Captive, Innawagan",
+    "role": "Rides the deck back",
+    "skill": "[green][Ally] 1/Turn: When placed from your hand, [Cost: 1 Energy] put this Unit on top of your deck. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/barbed-sky-messenger-dalewasan": {
+    "name": "Barbed-Sky Messenger, Dalewasan",
+    "role": "Spreads the strike",
+    "skill": "[green][Ally] 1/Turn: When placed, [Cost: 1 Energy] choose two of your Units; they each get Power +2000 until end of turn. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/keeper-at-sunrise-sinag": {
+    "name": "Keeper At Sunrise, Sinag",
+    "role": "Trades a card on arrival",
+    "skill": "[green][Ally] 1/Turn: When placed from your hand, discard 1 card, then draw 1 card. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/returning-sky-captain-darawan": {
+    "name": "Returning Sky Captain, Darawan",
+    "role": "Grows on every deck call",
+    "skill": "[green][Ally] 1/Turn: When a Unit is placed from your deck, this Unit gets Power +3000 until end of turn. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/wedding-pact-elder-amuray": {
+    "name": "Wedding-Pact Elder, Amuray",
+    "role": "Puts itself back",
+    "skill": "[blue][Hand] 1/Turn: [Cost: 1 Energy] Put this card on top of your deck.[/blue]"
+  },
+  "agta/set-1/nightfall-raider-kallan": {
+    "name": "Nightfall Raider, Kallan",
+    "role": "Trades itself for a card",
+    "skill": "[blue][Hand] 1/Turn: Discard this card, then draw 1 card.[/blue]"
+  },
+  "agta/set-1/night-feast-defender-tamin": {
+    "name": "Night-Feast Defender, Tamin",
+    "role": "Recalls a Unit to the top",
+    "skill": "[blue][Ally] 1/Turn: [Cost: 1 Energy, and put this Unit on the bottom of your deck] Choose one of your Units and put it on top of your deck. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/blue]"
+  },
+  "agta/set-1/fifth-sky-sentinel-ulagan": {
+    "name": "Fifth-Sky Sentinel, Ulagan",
+    "role": "Strengthens as it supports",
+    "skill": "[green][Ally] 1/Turn: When this Unit supports an attack, it gets Power +3000 until end of turn. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]"
+  },
+  "agta/set-1/path-turning-warden-tumatanan": {
+    "name": "Path-Turning Warden, Tumatanan",
+    "role": "Force: a check in the deck, a skill in the hand",
+    "skill": "[yellow][Force][Hand] On either player's turn: When an opponent's Ally on the field activates its ability, [Cost: Reveal and discard this card] choose one of your Allies and one of your opponent's Allies. Rally them to the bottom of their owners' decks.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]"
+  },
+  "agta/set-1/beast-spirit-healer-subkal": {
+    "name": "Beast-Spirit Healer, Subkal",
+    "role": "Force: a check in the deck, a skill in the hand",
+    "skill": "[yellow][Force][Hand] On either player's turn: When your opponent activates a card's ability, [Cost: Reveal and discard this card] negate that activation.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]"
+  },
+  "agta/set-1/healer-s-spirit-friend-bunog": {
+    "name": "Healer's Spirit-Friend, Bunog",
+    "role": "Force: a check in the deck, a skill in the hand",
+    "skill": "[yellow][Force][Hand] On either player's turn: When your opponent activates an effect that would special call one or more Units, [Cost: Reveal and discard this card] draw 2 cards.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]"
+  },
+  "agta/set-1/restless-wandering-dead-belet": {
+    "name": "Restless Wandering Dead, Belet",
+    "role": "Force: a check in the deck, a skill in the hand",
+    "skill": "[yellow][Force][Hand] On either player's turn: When an opponent's Unit attacks, [Cost: Reveal and discard this card] choose one of your Units. It gets Power +5000 until the end of that attack. Draw 1 card.[/yellow]\n[green]On an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn.[/green]"
+  },
+  "agta/set-1/innawagan-s-abduction": {
+    "name": "Innawagan's Abduction",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 1 Energy] Look at the top 3; call up to 1 Unit to an open Ally Zone. Bottom the rest in any order.[/blue]"
+  },
+  "agta/set-1/the-three-brothers-ascend": {
+    "name": "The Three Brothers Ascend",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 2 Energy] Look at the top 5; call up to 2 Level 2 or lower Units to open Ally Zones. Bottom the rest in any order.[/blue]"
+  },
+  "agta/set-1/dalewasan-crosses-the-barbed-sky": {
+    "name": "Dalewasan Crosses The Barbed Sky",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 0 Energy] Look at the top card; you may bottom it. Then draw 1 and discard 1.[/blue]"
+  },
+  "agta/set-1/sinag-reveals-the-rescuer": {
+    "name": "Sinag Reveals The Rescuer",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 1 Energy] Look at the top 5; reveal a Level 3 Unit among them and add it to hand. Bottom the rest in any order.[/blue]"
+  },
+  "agta/set-1/taguwasi-answers-the-plea": {
+    "name": "Taguwasi Answers The Plea",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 1 Energy] Sipol 1. Then, if Bayanihan is released, one of your Units gets Power +5000 this turn.[/blue]"
+  },
+  "agta/set-1/talimanog-falls-as-the-gate-breaks": {
+    "name": "Talimanog Falls As The Gate Breaks",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 2 Energy] Bottom one of your Allies. If you do, destroy an opposing Level 2 or lower Ally, then Sipol 1.[/blue]"
+  },
+  "agta/set-1/taguwasi-tears-open-heaven": {
+    "name": "Taguwasi Tears Open Heaven",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 2 Energy] Look at the top 5; call up to 1 Unit to an open Ally Zone with Power +5000 this turn. Bottom the rest. If Bayanihan is released, your Persona gets Power +5000 this turn.[/blue]"
+  },
+  "agta/set-1/kalimangalnuk-s-final-defeat": {
+    "name": "Kalimangalnuk's Final Defeat",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 2 Energy] With Bayanihan: destroy an opposing Ally. Your Persona gets Power +5000 this turn.[/blue]"
+  },
+  "agta/set-1/alig-restores-her-brothers": {
+    "name": "Alig Restores Her Brothers",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 1 Energy] Return a Level 2 or lower Unit from your Grave to your hand.[/blue]"
+  },
+  "agta/set-1/the-wedding-becomes-a-battlefield": {
+    "name": "The Wedding Becomes A Battlefield",
+    "role": "Main-phase tactical Action",
+    "skill": "[blue][Action] [Cost: 2 Energy] Your Units get Power +3000 this turn, or +5000 if Bayanihan is released.[/blue]"
+  },
+  "agta/set-1/dawnward-country-arawen": {
+    "name": "Dawnward Country, Arawen",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch before you draw, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]Instead of drawing, look at the top 3 cards of your deck and put them back on top in any order. Then Sipol 1.[/green]"
+  },
+  "agta/set-1/barbed-sky-passage-salikan": {
+    "name": "Barbed Sky Passage, Salikan",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch before you Personify, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]Instead of Personifying from your hand, look at the top 5 cards of your deck and Personify one Level 3 Unit among them. Put the rest on the bottom in any order.[/green]"
+  },
+  "agta/set-1/fifth-heaven-ularan": {
+    "name": "Fifth Heaven, Ularan",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch when your Persona attacks, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]When your Persona attacks, [Cost: 2 Energy] Sipol 1.[/green]"
+  },
+  "agta/set-1/brothers-refuge-taliman": {
+    "name": "Brothers' Refuge, Taliman",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch when your Barrier breaks during your opponent's turn, and the check is not a Force, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]When you check a Barrier and it is not a Force, discard 1 card, then Sipol 1.[/green]"
+  },
+  "agta/set-1/healing-house-aligan": {
+    "name": "Healing House, Aligan",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch before you draw, if you have 2 or fewer Barriers, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]While this is active, if you would Sipol during your Main Phase, look at the top 2 instead and choose one for the Sipol. Exile the other.[/green]"
+  },
+  "agta/set-1/wedding-clearing-amuran": {
+    "name": "Wedding Clearing, Amuran",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch before you draw, if your opponent has more Units than you, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]When this Codex becomes active, [Cost: 3 Energy] Sipol 3.[/green]"
+  },
+  "agta/set-1/golden-threshold-nagdan": {
+    "name": "Golden Threshold, Nagdan",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch at the start of your Main Phase, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]At the start of your Main Phase, if you have fewer Units than your opponent, [Cost: 3 Energy] Sipol 2.[/green]"
+  },
+  "agta/set-1/heaven-s-rift-siwangan": {
+    "name": "Heaven's Rift, Siwangan",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch when your Persona is under attack, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]When your Persona is under attack, if you Sipol’d 3 or more times during your last turn, your Persona gets Power +5000 until end of turn.[/green]"
+  },
+  "agta/set-1/mystic-sky-river-dalunan": {
+    "name": "Mystic Sky River, Dalunan",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch before you draw, if your opponent has more cards in hand than you, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]While this is active, if you would Sipol during your Main Phase, put the card into your hand instead of calling it.[/green]"
+  },
+  "agta/set-1/storm-court-kaliman": {
+    "name": "Storm Court, Kaliman",
+    "role": "Bayanihan engine",
+    "skill": "[Codex] Auto-switch before you draw, if your opponent has more Barriers than you, you may switch to this Codex for free.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]While Bayanihan is released, your Units get Power +1000.[/green]"
+  }
+}

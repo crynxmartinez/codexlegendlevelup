@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+"""Build cards.csv + cards.xlsx from the cards.jsonl store."""
+from __future__ import annotations
+
+import csv, json, re, sys, unicodedata
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+STORE = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "cards.jsonl"
+
+COLUMNS = [
+    "id", "idx", "deck", "name", "card_type", "level", "power", "defense",
+    "subtype", "type_line", "guild", "guild_printed", "state", "keywords",
+    "ability_count", "effect", "flavor", "artist", "file", "webp", "thumb",
+]
+
+# ---------------------------------------------------------------------------
+# ERRATA — designer-confirmed corrections to what the card art actually prints.
+# `guild` carries the corrected value; `guild_printed` preserves the art.
+# ---------------------------------------------------------------------------
+
+# Whole-deck guild corrections. A deck is a single guild; stray lines are typos.
+ERRATA_DECK_GUILD = {
+    "Angel": "Hub Nur",   # confirmed: the 11 "Ala Rasi Guild" lines are typos
+    # "Knight": ???,      # UNCONFIRMED: prints 14 Ala Rasi / 9 Hub Nur
+}
+
+# Ability marker colour -> rulebook ability category.
+MARKERS = {
+    "blue": "Activated", "green": "Conditional", "pink": "Continuous",
+    "yellow": "Battle", "red": "Codex Passive",
+}
+KEYWORD_PATTERNS = [
+    "Essence", "Vent", "Echo", "Rally", "Stack", "Screen", "Ignite",
+    "Install", "Engine Core", "Ascend Break", "Personify", "Gain",
+    "Heart", "Token", "Special call", "Damage", "Exhaust", "Charge",
+]
+
+
+def slug(s: str) -> str:
+    """Stable, URL-safe card id fragment."""
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
+    return re.sub(r"-{2,}", "-", s)
+
+
+def norm(s: str) -> str:
+    """Fold apostrophe/space variants so recorded names match on-disk filenames."""
+    for ch in "’‘ʼ´`":
+        s = s.replace(ch, "'")
+    # Strip diacritics so "Roisa" matches the on-disk "Róisa".
+    s = "".join(c for c in unicodedata.normalize("NFD", s)
+                if unicodedata.category(c) != "Mn")
+    return " ".join(s.split()).lower()
+
+
+def build_disk_index() -> dict:
+    """Map normalised stem -> actual relative webp path, per output tree."""
+    index = {}
+    for kind in ("web", "thumb"):
+        root = ROOT / "assets" / "cards" / kind
+        for f in root.rglob("*.webp"):
+            rel = f.relative_to(ROOT).as_posix()
+            index[(kind, norm(f.parent.name), norm(f.stem))] = rel
+    return index
+
+
+def keywords_in(text: str) -> str:
+    found = [k for k in KEYWORD_PATTERNS if re.search(re.escape(k), text, re.I)]
+    return "; ".join(found)
+
+
+def main() -> int:
+    rows = [json.loads(l) for l in STORE.read_text(encoding="utf-8").splitlines() if l.strip()]
+    rows.sort(key=lambda r: r["idx"])
+
+    disk = build_disk_index()
+    unresolved = []
+    out = []
+    seen_ids: dict[str, int] = {}   # same name printed twice (e.g. two Wisp arts)
+    for r in rows:
+        effect = r.get("effect", "") or ""
+        stem = Path(r["file"]).stem
+        deck_folder = {
+            "Angel": "Angel Deck", "Barbarian": "Barbarian Deck",
+            "Broken Bride": "Broken Bride Deck", "Concert": "Concert Deck",
+            "Dryad": "Dryad Deck", "Elf": "Elf Deck", "Knight": "Knigh Deck",
+            "Mecha": "Mecha Deck", "Oni": "Oni Deck", "Steam": "Steam Deck",
+        }[r["deck"]]
+        card_id = f'{slug(r["deck"])}/{slug(r["name"])}'
+        seen_ids[card_id] = seen_ids.get(card_id, 0) + 1
+        if seen_ids[card_id] > 1:
+            card_id = f"{card_id}-{seen_ids[card_id]}"
+
+        out.append({
+            "id": card_id,
+            "idx": r["idx"],
+            "deck": r["deck"],
+            "name": r["name"],
+            "card_type": r["card_type"],
+            "level": r["level"] if r["level"] is not None else "",
+            "power": r["power"] if r["power"] is not None else "",
+            "defense": r["defense"] if r["defense"] is not None else "",
+            "subtype": r.get("subtype", ""),
+            "type_line": r.get("type_line", ""),
+            "guild": ERRATA_DECK_GUILD.get(r["deck"], r.get("guild", "")),
+            "guild_printed": r.get("guild", ""),
+            "state": r.get("state", ""),
+            "keywords": keywords_in(effect),
+            "ability_count": len(re.findall(r"\[(blue|green|pink|yellow|red)\]", effect)),
+            "effect": effect,
+            "flavor": r.get("flavor", ""),
+            "artist": r.get("artist", ""),
+            "file": r["file"],
+            "webp": disk.get(("web", norm(deck_folder), norm(stem)), ""),
+            "thumb": disk.get(("thumb", norm(deck_folder), norm(stem)), ""),
+        })
+        if not out[-1]["webp"]:
+            unresolved.append(f'{r["deck"]}/{r["file"]}')
+
+    if unresolved:
+        print(f"WARNING: {len(unresolved)} card(s) had no matching webp:")
+        for u in unresolved:
+            print("   ", u)
+
+    csv_path = ROOT / "cards.csv"
+    with csv_path.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=COLUMNS)
+        w.writeheader()
+        w.writerows(out)
+    print(f"wrote {csv_path} ({len(out)} rows)")
+
+    try:
+        from openpyxl import Workbook
+        from openpyxl.styles import Alignment, Font, PatternFill
+        from openpyxl.utils import get_column_letter
+    except ImportError:
+        print("openpyxl not installed - skipped xlsx")
+        return 0
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Cards"
+    ws.append(COLUMNS)
+
+    head_fill = PatternFill("solid", fgColor="1F2937")
+    for c in ws[1]:
+        c.font = Font(bold=True, color="FFFFFF")
+        c.fill = head_fill
+        c.alignment = Alignment(vertical="center")
+
+    for row in out:
+        ws.append([row[c] for c in COLUMNS])
+
+    widths = {
+        "id": 40, "idx": 5, "deck": 13, "name": 32, "card_type": 14, "level": 6,
+        "power": 8, "defense": 9, "subtype": 12, "type_line": 22, "guild": 11,
+        "guild_printed": 13, "state": 11, "keywords": 30, "ability_count": 6, "effect": 90,
+        "flavor": 40, "artist": 14, "file": 34, "webp": 46, "thumb": 46,
+    }
+    for i, col in enumerate(COLUMNS, 1):
+        ws.column_dimensions[get_column_letter(i)].width = widths[col]
+
+    wrap_cols = {get_column_letter(COLUMNS.index(n) + 1) for n in ("effect", "flavor", "keywords")}
+    for r in ws.iter_rows(min_row=2):
+        for c in r:
+            c.alignment = Alignment(vertical="top", wrap_text=c.column_letter in wrap_cols)
+
+    ws.freeze_panes = "C2"
+    ws.auto_filter.ref = f"A1:{get_column_letter(len(COLUMNS))}{len(out) + 1}"
+
+    # Summary sheet: counts per deck and per card type.
+    s = wb.create_sheet("Summary")
+    s.append(["Deck", "Cards", "Guild", "State", "Units", "Actions", "Forces", "Codex", "Sentry", "Tokens"])
+    for c in s[1]:
+        c.font = Font(bold=True, color="FFFFFF")
+        c.fill = head_fill
+    for deck in sorted({r["deck"] for r in out}):
+        d = [r for r in out if r["deck"] == deck]
+        guilds = sorted({r["guild"] for r in d if r["guild"]})
+        states = sorted({r["state"] for r in d if r["state"]})
+        s.append([
+            deck, len(d), ", ".join(guilds), ", ".join(states),
+            sum(1 for r in d if "Unit" in r["card_type"]),
+            sum(1 for r in d if r["card_type"] == "Normal Action"),
+            sum(1 for r in d if r["card_type"] == "Force"),
+            sum(1 for r in d if r["card_type"] == "Codex"),
+            sum(1 for r in d if r["card_type"] == "Sentry Action"),
+            sum(1 for r in d if r["card_type"] == "Token"),
+        ])
+    for i, wdt in enumerate([14, 8, 20, 12, 8, 9, 9, 8, 8, 8], 1):
+        s.column_dimensions[get_column_letter(i)].width = wdt
+
+    xlsx_path = ROOT / "cards.xlsx"
+    wb.save(xlsx_path)
+    print(f"wrote {xlsx_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

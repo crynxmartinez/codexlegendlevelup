@@ -1,0 +1,85 @@
+{
+  "name": "Maguindanao Set 1",
+  "persona": "maguindanao/set-1/land-restoring-raja-indarapatra",
+  "main": [
+    {
+      "id": "maguindanao/set-1/land-restoring-raja-indarapatra",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/three-scourge-champion-sulayman",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/sun-darkening-scourge-pah",
+      "copies": 2
+    },
+    {
+      "id": "maguindanao/set-1/first-son-of-the-returned-land-rinamuntaw",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/first-daughter-of-the-returned-land-rinayung",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/hollow-tree-guide-the-old-woman",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/last-witness-of-the-old-words-alad",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/keeper-of-the-account-datu-kali-adam",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/spring-veiled-heiress-dayang-amina",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/keeper-of-the-last-refuge-datu-karim",
+      "copies": 2
+    },
+    {
+      "id": "maguindanao/set-1/matutun-branch-hurler-tarabuk",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/balete-laughing-spirit-ba-i-a-salendagao",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/voice-beneath-the-current-water-tunung",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/prayer-above-the-storm-sky-tunung",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/warden-within-the-ridge-mountain-tunung",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/listener-among-the-roots-tree-tunung",
+      "copies": 3
+    },
+    {
+      "id": "maguindanao/set-1/a-vow-carried-by-the-wind",
+      "copies": 2
+    },
+    {
+      "id": "maguindanao/set-1/the-lowlands-rose-again",
+      "copies": 2
+    }
+  ],
+  "codex": [
+    "maguindanao/set-1/city-beyond-the-sunset-mantapuli",
+    "maguindanao/set-1/throne-of-the-sun-shadow-mount-bita",
+    "maguindanao/set-1/the-rattan-haunt-mount-kabalalan",
+    "maguindanao/set-1/mirror-of-the-giant-war-lake-lanao",
+    "maguindanao/set-1/the-sea-withdrawn-lowlands-restored-magindanao"
+  ]
+}

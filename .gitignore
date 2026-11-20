@@ -1,0 +1,39 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+
+# The marketing site lives in its own repository. It is kept here only while
+# it is being moved across; the game builds and runs without it.
+site/
+src/site/
+
+# Design material, not deploy material. Card templates and the rules PDF are
+# 45 MB that the browser never requests — they made every clone and every
+# deploy carry a third of a repo that the game does not use. They stay on
+# disk; they just are not part of the site any more.
+design-source/
+/*.pdf
+
+# The card spreadsheet describes only the ten decks that were removed, and
+# the archived spreadsheet generator would rebuild them from it. Kept on disk, out of
+# the repository, so a fresh clone cannot resurrect them by accident.
+/cards.csv
+/cards.xlsx
+
+# Local browser validation captures and temporary scripts.
+.tmp/
+output/
+art-source/
+docs/design/card-frames/v1/masters/
+docs/design/card-frames/v1/originals/
+game-server/build/
+
+.vercel
+.env*
+!.env.production
+
+# Offline Windows build outputs (keep desktop source/configuration).
+dist-desktop/
+desktop-dist/
+release-desktop/

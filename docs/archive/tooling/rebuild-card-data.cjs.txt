@@ -1,0 +1,180 @@
+/**
+ * Re-add all Agta and Maguindanao cards to cards.json.
+ * Includes updated card text with color markers and Bayanihan paragraph.
+ */
+const fs = require('fs');
+const cards = JSON.parse(fs.readFileSync('src/data/cards.json', 'utf8'));
+
+// Remove any existing Agta/Maguindanao cards (in case of partial data)
+const filtered = cards.filter(c => c.deck !== 'Agta' && c.deck !== 'Maguindanao');
+
+const BAYANIHAN = '[red]Bayanihan - When all of your Ally Zones are occupied by Luzon Arch Units, release Bayanihan until end of turn.';
+const GATHER = 'Gather - Reveal the top card of your deck. If it is a Unit, special call it to an Ally Zone. Otherwise, place it on the bottom.';
+const ECLIPSE = '[red]Eclipse - While there are 5 or more Maguindanaon unit cards in your Grave, Release this State.';
+
+function agtaCard(id, name, type, level, power, defense, text, flavor) {
+  return {
+    id, name, type, guild: 'Gubat Banwa', deck: 'Agta', level, power, defense,
+    subtypes: type === 'Unit' ? ['Luzon Arch'] : [],
+    state: type === 'Unit' || type === 'Codex' ? 'Bayanihan' : null,
+    abilities: [], text: text || '', flavor: flavor || '',
+    artist: null,
+    art: `assets/cards/web/Agta/${name}.webp`,
+    thumb: `assets/cards/thumb/Agta/${name}.webp`,
+    guildPrinted: 'Gubat Banwa',
+  };
+}
+
+function magCard(id, name, type, level, power, defense, text, flavor) {
+  return {
+    id, name, type, guild: 'Mindanao Arch', deck: 'Maguindanao', level, power, defense,
+    subtypes: type === 'Unit' ? ['Maguindanao'] : [],
+    state: type === 'Unit' || type === 'Codex' ? 'Eclipse' : null,
+    abilities: [], text: text || '', flavor: flavor || '',
+    artist: null,
+    art: `assets/cards/web/maguindanao/${name}.webp`,
+    thumb: `assets/cards/thumb/maguindanao/${name}.webp`,
+    guildPrinted: 'Mindanao Arch',
+  };
+}
+
+const newCards = [
+  // ==================== AGTA ====================
+  // L3 Personas
+  agtaCard('agta/arrow-of-the-sierra-amihan', 'Arrow of the Sierra, Amihan', 'Unit', 3, 11000, 0,
+    '[blue][Persona] 1/turn: [Cost: 1 Energy] Gather 1.\n[green][Bayanihan][Persona]: When this unit attacks, reveal up to 2 Luzon Arch Units from your hand. Special call up to 2 of them to open Ally Zones. This unit and all units called this way get Power +5000 for that battle.'),
+  agtaCard('agta/the-boar-spear-makisig', 'The Boar Spear, Makisig', 'Unit', 3, 11000, 0,
+    '[green][Persona]: Each of your other Luzon Arch Ally Units gets Power +2000.\n[blue][Persona] 1/turn: [Cost: 1 Energy] Gather 1. A Unit called by this effect gets Power +2000 until end of turn.'),
+  agtaCard('agta/voice-beneath-the-rain-laya', 'Voice Beneath the Rain, Laya', 'Unit', 3, 10000, 0,
+    '[green][Ally]: When this Level 3 Unit is special called from your deck during Battle, after your Persona attacks, you may Personify this Unit as charged. If you do, move your previous Persona to an open Ally Zone as exhausted. This consumes the turn\'s Personify allowance.\n[green][Bayanihan][Persona]: When this unit is placed in the Persona Zone during Battle, Gather 1. If you successfully called a unit, this and that unit get Power +5000 until end of turn.'),
+
+  // L2 Units
+  agtaCard('agta/honey-keep-cliffer-kislap', 'Honey Keep Cliffer, Kislap', 'Unit', 2, 9000, 5000,
+    '[blue][Ally] 1/turn: When another Unit is special called from your deck, this unit gets Power +2000 until end of turn.'),
+  agtaCard('agta/deerstep-runner-kidlat', 'Deerstep Runner, Kidlat', 'Unit', 2, 7000, 5000,
+    '[blue][Ally]: When placed from hand, [Cost: 1 Energy] Gather 1.\n' + GATHER),
+  agtaCard('agta/moon-net-fisher-mayumi', 'Moon-Net Fisher, Mayumi', 'Unit', 2, 7000, 5000,
+    '[blue][Ally]: When specially called, Gather 1.\n' + GATHER),
+  agtaCard('agta/ember-resin-grandmother-sinta', 'Ember Resin Grandmonther, Sinta', 'Unit', 2, 7000, 5000,
+    '[blue][Ally]: When placed, [Cost: 1 Energy] Gather 1.\n' + GATHER),
+  agtaCard('agta/storm-bark-elder-ulan', 'Storm Bark Elder, Ulan', 'Unit', 2, 9000, 5000,
+    '[green][Bayanihan][Ally]: When this unit attacks or supports, this unit gets Power +2000 for each of your Ally Units, until end of turn.'),
+
+  // L1 Units
+  agtaCard('agta/firefly-pathkeeper-aya', 'Firefly Pathkeeper, Aya', 'Unit', 1, 5000, 10000,
+    '[blue][Ally]: When this unit is special called from your deck, look at the top card of your deck. You may place it on the bottom.'),
+  agtaCard('agta/mudcrab-catcher-pilo', 'Mudcrab Catcher, Pilo', 'Unit', 1, 5000, 10000,
+    '[blue][Ally]: When this unit is special called from your deck, choose another Luzon Arch Unit. It gets Power +1000 until end of turn.'),
+  agtaCard('agta/ember-pot-bearer-berto', 'Ember-Pot Bearer, Berto', 'Unit', 1, 5000, 10000,
+    '[blue][Ally]: When this unit is special called from your deck and supports a Luzon Arch attacker, choose one of your other Luzon Arch Ally Units. It gets Power +1000 for each of your Ally Units, until end of turn.'),
+  agtaCard('agta/leaf-whistle-scout-sari', 'Leaf Whistle Scout, Sari', 'Unit', 1, 5000, 10000,
+    '[blue][Ally]: When this unit is special called from your deck, choose another Luzon Arch Unit. It gets Power +1000 for each ally unit, until end of turn.\n[blue][Ally]: When this unit is special called from your deck, it gets Power +3000, until end of turn.'),
+  agtaCard('agta/rattan-bridge-weaver-nena', 'Rattan Bridge Weaver, Nena', 'Unit', 1, 5000, 10000,
+    '[blue][Ally]: When this unit is special called from your deck, Foresight 3 (look at the top 3 cards of your deck, reorder them on top or bottom).'),
+
+  // Force Cards
+  agtaCard('agta/mangrove-maw-lunod', 'Mangrove Maw, Lunod', 'Force', 0, 5000, 10000,
+    '[Force] Choose one —\n1. This unit gets Power +5000, until end of turn.\n2. Draw 1 card.'),
+  agtaCard('agta/golden-hiveheart-pulot', 'Golden HiveHeart, Pulot', 'Force', 0, 5000, 10000,
+    '[Force] Choose one —\n1. This unit gets Power +5000, until end of turn.\n2. All your Units get Power +2000, until end of turn.'),
+  agtaCard('agta/root-tusk-boar-dagsa', 'Root Tusk Boar, Dagsa', 'Force', 0, 5000, 10000,
+    "[Force] Choose one —\n1. This unit gets Power +5000, until end of turn.\n2. Exhaust up to 2 of your opponent's Ally Units."),
+  agtaCard('agta/storm-talon-eagle-salimbay', 'Storm Talon Eagle, Salimbay', 'Force', 0, 5000, 10000,
+    "[Force] Choose one —\n1. This unit gets Power +5000, until end of turn.\n2. Damage one of your opponent's exhausted ally units."),
+
+  // Actions
+  agtaCard('agta/rattan-snarefall', 'Rattan Snarefall', 'Action', 1, 0, 0,
+    '[Cost: 3 Energy] Gather 2.\n' + GATHER),
+  agtaCard('agta/sierras-vanishing-trail', "Sierra's Vanishing Trail", 'Action', 1, 0, 0,
+    '[Cost: 1 Energy] Gather 1. Draw 1 card.\n' + GATHER),
+
+  // Sentry
+  agtaCard('agta/sierra-watchkeeper-banoy', 'Sierra Watchkeeper, Banoy', 'Sentry', 1, 0, 0,
+    '[Sentry]: When this card is revealed as a Sentry, nullify all damage from that battle. Then Gather 1.\n' + GATHER),
+
+  // Codex
+  agtaCard('agta/hidden-path', 'Hidden Path', 'Codex', 0, 0, 0,
+    BAYANIHAN + '\n[blue]At the start of your Draw Phase, instead of drawing, reveal the top two cards of your deck. Choose one — if it is a Unit, special call it to an open Ally Zone (otherwise add it to your hand). Place the other on the bottom. If Bayanihan is released, reveal three instead.\n' + GATHER),
+  agtaCard('agta/listening-canopy', 'Listening Canopy', 'Codex', 0, 0, 0,
+    BAYANIHAN + '\n[green][1/turn]: When your Persona attacks, [Cost: 1 Energy] Gather 1. A Unit called by this effect gets Power +2000 until end of turn. If Bayanihan is released, all your Units get Power +2000 until end of turn.'),
+  agtaCard('agta/returning-river', 'Returning River', 'Codex', 0, 0, 0,
+    BAYANIHAN + '\n[green][1/turn]: When your Barrier is broken by a non-Force check card, reveal the top two cards of your deck. Choose up to one Unit and special call it to an open Ally Zone as exhausted. Place the rest on the bottom.'),
+  agtaCard('agta/shared-ember', 'Shared Ember', 'Codex', 0, 0, 0,
+    BAYANIHAN + '\n[green]When you Personify from your hand, reveal the top card of your deck. If it is a Unit, special call it to an open Ally Zone. Otherwise, place it on the bottom of your deck.'),
+  agtaCard('agta/thousand-knots', 'Thousand Knots', 'Codex', 0, 0, 0,
+    BAYANIHAN + '\n[blue][Main][1/turn]: You may Gather 1. If the revealed card was not a Unit, you may reveal the next card of your deck instead (reroll once). Place the non-Unit card on the bottom of your deck.\n' + GATHER),
+
+  // ==================== MAGUINDANAO ====================
+  // L3 Personas
+  magCard('maguindanao/veiled-eclipse-maharaja', 'Veiled Eclipse Maharaja', 'Unit', 3, 11000, 0,
+    "[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Exhaust one opposing Ally. If it is already exhausted, damage it instead.\n[green][red][Eclipse][Persona]: When this unit's attack misses, [Cost: Offer 3 of your units] Personify into a Level 3 Maguindanaon unit from your hand."),
+  magCard('maguindanao/blood-moon-bai-a-labi', 'Blood Moon Bai-A-Labi', 'Unit', 3, 11000, 0,
+    '[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Search your deck for a Level 1 unit and special call it.\n[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Draw 1. This unit gets Power +5000, until end of turn.\n[red][Eclipse][Persona] 1/turn: When this unit attacks, [Cost: 1 Energy] This unit gets Power +1000 for each Maguindanaon unit in your Grave, until end of turn.'),
+  magCard('maguindanao/kuta-wato-warcaller-datu-salik', 'Kuta Wato Warcaller, Datu Salik', 'Unit', 3, 11000, 0,
+    '[blue][Persona] 1/turn: [Cost: Offer 1 of your units] Special call 1 unit from your hand. That unit enters charged.\n[red][Eclipse][Persona] 1/turn: [Cost: Offer 2 of your units] Draw 2.'),
+
+  // L2 Units
+  magCard('maguindanao/buluan-inaul-wardkeeper-dayang-nuraya', 'Buluan Inaul Wardkeeper, Dayang Nuraya', 'Unit', 2, 9000, 5000,
+    '[green][Ally]: Whenever another of your Allies is Offered, choose one of your units. That unit gets Power +5000 for that battle.'),
+  magCard('maguindanao/illana-lantaka-warder-panglima-jamal', 'Illana Lantaka Warder, Panglima Jamal', 'Unit', 2, 9000, 5000,
+    "[blue][Ally] 1/turn: If you Offered an Ally this turn, [Cost: 2 Energy] Damage one of your opponent's exhausted ally units."),
+  magCard('maguindanao/kuta-wato-gate-bulwark-bai-samira', 'Kuta Wato Gate-Bulwark, Bai Samira', 'Unit', 2, 8000, 5000,
+    '[green]This card is treated as 2 Offer and is treated as 2 cards in Grave.'),
+  magCard('maguindanao/liguasan-reed-eye-harun', 'Liguasan Reed-Eye, Harun', 'Unit', 2, 9000, 5000,
+    "[blue][Ally] 1/turn: When this unit attacks, if you Offered an Ally this turn, damage one of your opponent's ally units."),
+  magCard('maguindanao/pulangi-wake-cleaver-panglima-farid', 'Pulangi Wake-Cleaver, Panglima Farid', 'Unit', 2, 9000, 5000,
+    '[blue][Ally] 1/turn: After this unit attacks, [Cost: Offer 1 of your other units] Charge this unit. It gets Power +3000, until end of turn.'),
+
+  // L1 Units
+  magCard('maguindanao/buluan-shell-caller-mayla', 'Buluan Shell-Caller, Mayla', 'Unit', 1, 5000, 10000,
+    '[blue][Last Oath]: When this unit is Offered, choose one of your other units. It gets Power +3000 until end of turn. Draw 1 card, then discard 1 card.'),
+  magCard('maguindanao/illana-tide-harpooner-hakim', 'Illana Tide-Harpooner, Hakim', 'Unit', 1, 5000, 10000,
+    '[blue][Last Oath]: When this unit is Offered, choose one of your other units. It gets Power +3000 until end of turn. Damage one opponent Ally.'),
+  magCard('maguindanao/kuta-wato-banner-keeper-sitti-rahma', 'Kuta Wato Banner-Keeper, Sitti Rahma', 'Unit', 1, 4000, 10000,
+    '[green][Ally]: When your Persona is attacked, [Cost: Offer this unit] Your Persona gets Power +10000 for that battle.\n[blue][Last Oath]: When this unit is Offered, choose one of your other units. It gets Power +3000 until end of turn. Then [Cost: 1 Energy] Search your deck for a Level 1 unit and special call it.'),
+  magCard('maguindanao/liguasan-mudblade-nasser', 'Liguasan Mudblade, Nasser', 'Unit', 1, 4000, 10000,
+    '[blue][Last Oath]: When this unit is Offered, [Cost: 1 Energy] Search your deck for a Level 1 unit and special call it.'),
+  magCard('maguindanao/pulangi-ember-spear-kamil', 'Pulangi Ember-Spear, Kamil', 'Unit', 1, 4000, 10000,
+    '[green]This card is treated as 2 Offer and is treated as 2 cards in Grave.'),
+
+  // Force Cards
+  magCard('maguindanao/buluan-mirror-seer-dayang-amira', 'Buluan Mirror-Seer, Dayang Amira', 'Force', 0, 5000, 10000,
+    "[Force] Choose one —\n1. This unit gets Power +5000, until end of turn.\n2. Exhaust up to 2 of your opponent's Ally Units."),
+  magCard('maguindanao/illana-stormwing-ramitan', 'Illana Stormwing, Ramitan', 'Force', 0, 5000, 10000,
+    '[Force] Choose one —\n1. This unit gets Power +5000, until end of turn.\n2. Draw 1 card.'),
+  magCard('maguindanao/liguasan-mire-bender-duma', 'Liguasan Mire-Bender, Duma', 'Force', 0, 5000, 10000,
+    "[Force] Choose one —\n1. This unit gets Power +5000, until end of turn.\n2. Damage one of your opponent's exhausted ally units."),
+  magCard('maguindanao/pulangi-bloodcurrent-sangkad', 'Pulangi Bloodcurrent, Sangkad', 'Force', 0, 5000, 10000,
+    '[Force] Choose one —\n1. This unit gets Power +5000, until end of turn.\n2. All your Units get Power +2000, until end of turn.'),
+
+  // Actions
+  magCard('maguindanao/crimson-agung-resonance', 'Crimson Agung Resonance', 'Action', 1, 0, 0,
+    '[blue]Play with - [Cost: 2 Energy]\nFor each Maguindanaon unit in your Grave, choose one of your units. That unit gets Power +1000, until end of turn.'),
+  magCard('maguindanao/pulangi-river-unbound', 'Pulangi River Unbound', 'Action', 1, 0, 0,
+    '[blue]Play with - [Cost: Offer 1 of your units]\nDamage one of your opponent ally unit.'),
+
+  // Sentry
+  magCard('maguindanao/kuta-wato-oath-shield-panglima-sabir', 'Kuta Wato Oath-shield, Panglima Sabir', 'Sentry', 1, 0, 0,
+    '[Sentry]: When this card is revealed as a Sentry, nullify all damage from that battle.'),
+
+  // Codex
+  magCard('maguindanao/illana-bay', 'Illana Bay', 'Codex', 0, 0, 0,
+    ECLIPSE + '\n[blue][1/turn]: When your Persona attacks, it gets Power +5000 for that battle. If you Offered 3 or more units this turn, it gets Power +10000 instead.'),
+  magCard('maguindanao/kuta-wato', 'Kuta Wato', 'Codex', 0, 0, 0,
+    ECLIPSE + '\n[green]When you Personify from your hand, the new Persona gets Power +5000, until end of turn.\n[red][Eclipse]: You may Personify into a Level 3 Maguindanaon unit from your Grave.'),
+  magCard('maguindanao/lake-buluan', 'Lake Buluan', 'Codex', 0, 0, 0,
+    ECLIPSE + '\n[green][1/turn]: When one of your Barriers is broken, discard 1 card from your hand. Send the check card to its owner\'s Grave.'),
+  magCard('maguindanao/liguasan-marsh', 'Liguasan Marsh', 'Codex', 0, 0, 0,
+    ECLIPSE + '\n[blue][Main][1/turn]: Search your deck for a Level 1 unit and special call it.'),
+  magCard('maguindanao/pulangi-river', 'Pulangi River', 'Codex', 0, 0, 0,
+    ECLIPSE + '\n[blue]Replace your draw — [Cost: Offer 1 of your units] Draw 2.'),
+];
+
+// Add all new cards
+filtered.push(...newCards);
+
+// Sort by id for consistency
+filtered.sort((a, b) => a.id.localeCompare(b.id));
+
+fs.writeFileSync('src/data/cards.json', JSON.stringify(filtered, null, 2) + '\n');
+console.log(`Added ${newCards.length} Agta/Maguindanao cards. Total: ${filtered.length}`);

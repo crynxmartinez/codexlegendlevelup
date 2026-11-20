@@ -1,0 +1,37 @@
+/* Approved symbols supplement labels; they do not replace controls or rules. */
+.stat-symbol {
+  display:inline-block; width:24px; height:24px; flex:0 0 auto;
+  background:center / contain no-repeat; vertical-align:middle; pointer-events:none;
+}
+.stat-symbol-power { background-image:url('/ui/stat-symbols-v1/power.svg'); }
+.stat-symbol-defense { background-image:url('/ui/stat-symbols-v1/defense.svg'); }
+.stat-symbol-barrier { background-image:url('/ui/stat-symbols-v1/barrier.svg'); }
+.stat-symbol-plays { background-image:url('/ui/stat-symbols-v1/plays.svg'); }
+/* Preserve the approved gold Power / green Defense corners and hand layout. */
+.card-stat {
+  position:absolute; bottom:3px; z-index:3; display:flex; flex-direction:column;
+  align-items:center; gap:1px; padding:2px 4px; border-radius:2px;
+  background:#07100bf2; color:#f2d473; font-size:18px; font-weight:900;
+  font-style:normal; font-variant-numeric:tabular-nums; line-height:1.05;
+  letter-spacing:-.35px; text-shadow:0 1px 1px #000; pointer-events:none;
+  box-sizing:border-box; user-select:none;
+}
+.card-stat-power { right:3px; }
+.card-stat-defense { left:3px; right:auto; color:#74e6a6; }
+.card-stat > .card-stat-label { display:inline-flex; align-items:center; gap:1px; font-size:10px; font-weight:800; line-height:1; letter-spacing:0; }
+.card-stat-label > .stat-symbol { width:16px; height:16px; }
+.card-stat > .card-stat-value { font:inherit; line-height:1; }
+.card-stat[data-stat-context=field],.card-stat[data-stat-context=defense] { flex-direction:row; align-items:baseline; gap:3px; }
+.cc-art > .card-stat { font-size:20px; }
+/* Only artwork dims when unavailable; the values still need to be readable. */
+.cc-unavailable .cc-art:has(> .card-stat) { opacity:1; }
+.cc-unavailable .cc-art:has(> .card-stat) > img { opacity:.5; }
+.cc-art:has(> .card-stat) > .cc-inspect-hint { bottom:42px; }
+@media(max-height:500px) {
+  .card-stat,.cc-art > .card-stat { font-size:13px; padding:1px 2px 2px; bottom:3px; letter-spacing:-.3px; }
+  .card-stat > .card-stat-label { font-size:8px; }
+  .card-stat-label > .stat-symbol { width:12px; height:12px; }
+  .card-stat-power { right:2px; }
+  .card-stat-defense { left:2px; }
+  .cc-art:has(> .card-stat) > .cc-inspect-hint { bottom:31px; }
+}

@@ -1,0 +1,190 @@
+{
+  "babaylan/warden-of-the-twelfth-tide-bituon": {
+    "name": "Tagapagbantay ng Ikalabindalawang Pagtaas ng Tubig, Bituon",
+    "text": "[yellow][Sentry] Kapag inatake ang iyong Persona, ipakita ang barahang ito at i-exile ito nang nakataob upang mapawalang-bisa ang pag-atakeng iyon. Lumikha ng 1 Kaluluwa sa iyong Heart, o 2 kung aktibo ang Andukha 9 sa oras ng pag aktiba mo sa barahang ito.[/yellow]"
+  },
+  "babaylan/set-1/mountain-sovereign-maria-cacao": {
+    "name": "Pinuno ng Bundok, Maria Cacao",
+    "text": "[blue][Persona] 1/Turn: [Cost: I-Sanib ang 2 baraha sa ibabaw ng iyong deck] Mag-special call ng isang Divine Unit na Level 2 o mas mababa mula sa iyong Heart. Bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno. I-Sanib ito sa pagtatapos ng turno.\n[green][Andukha 6][Persona] 1/Turn: Kapag may Unit na na-Sanib sa iyong turno, lumikha ng 1 Kaluluwa sa iyong Heart."
+  },
+  "babaylan/set-1/harvest-warden-mangaw": {
+    "name": "Tagapagbantay ng Ani, Mangaw",
+    "text": "[green][Persona]: Sa simula ng iyong Main Phase, i-Sanib ang baraha sa ibabaw ng iyong deck. Pagkatapos, maaari kang lumikha ng 2 Kaluluwa sa iyong Heart.\n[green][Andukha 9][Persona]: Sa iyong turno, bigyan ang Unit na ito ng Power +1000 para sa bawat barahang na-Sanib mo sa turnong ito."
+  },
+  "babaylan/set-1/thunder-sovereign-kaptan": {
+    "name": "Pinuno ng Kulog, Kaptan",
+    "text": "[green][Persona] 1/Turn: Kapag umatake ang Unit na ito, [Cost: I-Sanib ang isang baraha mula sa iyong kamay] bumunot ng 1 baraha. Bigyan ang Unit na ito ng Power +3000 hanggang sa pagtatapos ng turno.\n[blue][Andukha 9][Persona] 1/Turn: Tingnan ang 5 baraha sa ibabaw ng iyong deck. I-Sanib ang hanggang isang Divine Unit mula sa mga ito at ilagay ang natitira sa ilalim sa anumang pagkakasunod-sunod. Bigyan ang Unit na ito ng Power +5000 hanggang sa pagtatapos ng turno."
+  },
+  "babaylan/set-1/ocean-sovereign-maguayan": {
+    "name": "Pinuno ng Karagatan, Maguayan",
+    "text": "[green][Persona] 1/Turn: Kapag may Unit na na-special call mula sa iyong Heart, bumunot ng 1 baraha, pagkatapos ay i-Sanib ang 1 baraha mula sa iyong kamay.\n[green][Andukha 9][Persona] 1/Turn: Kapag umatake ang Unit na ito, [Cost: I-Sanib ang 1 sa iyong mga Ally] idagdag ang kasalukuyang Power ng Ally na iyon sa Power ng Unit na ito para sa laban na iyon."
+  },
+  "babaylan/set-1/abyssal-revolt-sinogo": {
+    "name": "Himagsikan sa Kalaliman, Sinogo",
+    "text": "[green][Persona] 1/Turn: Kapag umatake ang Unit na ito, [Cost: Kalas 5] mag-special call ng isang Beast o Bird Unit mula sa iyong deck. I-Sanib ang Unit na iyon sa pagtatapos ng iyong turno.\n[green][Andukha 12][Persona]: Bawasan ng 2 ang bilang ng kailangang bayaran sa Kalas costs ng iyong mga Beast at Bird Unit, ngunit hindi ito maaaring bumaba sa 0."
+  },
+  "babaylan/set-1/last-moon-devourer-bakunawa": {
+    "name": "Manlalamon ng Huling Buwan, Bakunawa",
+    "text": "[green][Persona] 1/Turn: Kapag inatake ng Unit na ito ang Persona ng kalaban, [Cost: Kalas 6] bigyan ang Unit na ito ng Power +10000 para sa laban na iyon. Hindi maaaring gumamit ang kalaban ng mga barahang Level 2 o mas mataas upang dumepensa sa laban na ito. Kung anim o higit pang Kaluluwa token ang na-Kalas para sa cost na ito, bumunot ng 1 baraha.\n[green][Andukha 9][Persona]: Sa pagtatapos ng isang laban kung saan umatake ang Unit na ito, kung hindi tumama ang pag-atake nito, i-Sanib ang hanggang tatlong baraha mula sa iyong Grave."
+  },
+  "babaylan/set-1/unbroken-invocation-amara": {
+    "name": "Walang-Patid na Panawagan, Amara",
+    "text": "[green][Persona] 1/Turn: Kapag na-Sanib ang Unit na ito mula sa Persona Zone, mag-special call ng isang Unit mula sa iyong Heart.\n[blue][Andukha 9][Heart] 1/Turn: [Cost: I-Kalas ang barahang ito] Maghanap sa iyong deck ng isang Babaylan Unit na Level 2 o mas mababa maliban sa Walang-Patid na Panawagan, Amara. I-Sanib ito, pagkatapos ay mag-special call ng isang Babaylan Unit mula sa iyong Heart. Balasahin ang iyong deck. Bigyan ang na-call na Unit ng Power +5000 hanggang sa pagtatapos ng turno."
+  },
+  "babaylan/set-1/heaven-s-pursuit-dalagan": {
+    "name": "Pagtugis ng Langit, Dalagan",
+    "text": "[green][Ally]: Kapag inilagay ang Unit na ito, i-Sanib ang baraha sa ibabaw ng iyong deck, pagkatapos ay lumikha ng 1 Kaluluwa sa iyong Heart."
+  },
+  "babaylan/set-1/unyielding-pursuer-guidala": {
+    "name": "Walang-Sawang Tagapagtugis, Guidala",
+    "text": "[green][Ally]: Kapag inilagay ang Unit na ito, i-Sanib ang baraha sa ibabaw ng iyong deck. Pagkatapos, isang beses bawat turno para sa bawat kopya, maaari kang mag-special call ng isang Unit mula sa iyong kamay. Kung ginawa mo ito, i-Sanib ang Unit na ito at ang na-call na Unit sa pagtatapos ng iyong turno."
+  },
+  "babaylan/set-1/unseen-defender-tata-cero": {
+    "name": "Di-Nakikitang Tagapagtanggol, Tata Cero",
+    "text": "[green][Ally] 1/Turn bawat kopya: Kapag umatake ang Unit na ito, bigyan ito ng Power +1000 para sa bawat Kaluluwa sa iyong Heart, para sa laban na iyon."
+  },
+  "babaylan/set-1/leafborne-champion-kapitan-dyano": {
+    "name": "Kampeong Lulan ng Dahon, Kapitan Dyano",
+    "text": "[green][Ally]: Kapag inilagay ang Unit na ito, bigyan ito ng Power +3000 hanggang sa pagtatapos ng turno."
+  },
+  "babaylan/set-1/spring-sentinel-ulango": {
+    "name": "Bantay ng Bukal, Ulango",
+    "text": "[green][Heart]: Kapag na-Kalas ang Unit na ito, bumunot ng 1 baraha."
+  },
+  "babaylan/set-1/shadow-prowler-sagwil": {
+    "name": "Gumagala sa Anino, Sagwil",
+    "text": "[green][Heart]: Kapag na-Kalas ang Unit na ito, pumili ng isang Ally Unit ng kalaban at bigyan ito ng damage."
+  },
+  "babaylan/set-1/nightfall-hunter-wakira": {
+    "name": "Mangangaso sa Takipsilim, Wakira",
+    "text": "[green][Heart]: Kapag na-Kalas ang Unit na ito, pumili ng hanggang dalawa sa iyong mga Unit. Bigyan ang bawat isa ng Power +3000 hanggang sa pagtatapos ng turno."
+  },
+  "babaylan/set-1/reef-enchanter-lawira": {
+    "name": "Mangkukulam ng Bahura, Lawira",
+    "text": "[green][Ally]: Sa pagtatapos ng iyong turno, i-Sanib ang Unit na ito."
+  },
+  "babaylan/set-1/answering-voice-aday": {
+    "name": "Tinig na Tumutugon, Aday",
+    "text": "[green][Ally]: Bigyan ang Unit na ito ng Power +1000 para sa bawat barahang na-Sanib mo sa turnong ito."
+  },
+  "babaylan/set-1/first-invocation-luning": {
+    "name": "Unang Panawagan, Luning",
+    "text": "[green][Ally] 1/Turn na pinagsasaluhan ng lahat ng barahang may ganitong pangalan: Kapag may mga Kaluluwa na nilikha, maaari kang lumikha ng 1 karagdagang Kaluluwa sa iyong Heart. Hindi muling magti-trigger ang skill na ito dahil sa karagdagang token."
+  },
+  "babaylan/set-1/spirit-mediator-iday": {
+    "name": "Tagapamagitan ng mga Espiritu, Iday",
+    "text": "[green][Hand/Ally] 1/Turn bawat kopya: Kapag nag-Sanib ka ng baraha, [Cost: I-Sanib ang barahang ito] pumili ng isa sa iyong mga Unit. Bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno."
+  },
+  "babaylan/set-1/hidden-affliction-doro": {
+    "name": "Nakatagong Pighati, Doro",
+    "text": "[blue][Ally] 1/Turn: Bigyan ang Unit na ito ng Power +5000 hanggang sa pagtatapos ng turno. Sa pagtatapos ng iyong turno, pumili ng isa sa iba mong mga Ally o isang baraha mula sa iyong kamay. I-Sanib ang Unit na ito at ang napiling baraha."
+  },
+  "babaylan/set-1/floodwatch-runner-sali": {
+    "name": "Takbong Bantay sa Baha, Sali",
+    "text": "[green][Ally] 1/Turn bawat kopya: Kapag nag-Kalas ka, maaari mong bigyan ang Unit na ito ng Power +5000 hanggang sa pagtatapos ng turno."
+  },
+  "babaylan/set-1/promise-bearer-nardo": {
+    "name": "Tagapagdala ng Pangako, Nardo",
+    "text": "[green][Ally]: Sa unang pagkakataong mag-Sanib ka ng baraha sa bawat turno, maaari kang bumunot ng 1 baraha."
+  },
+  "babaylan/set-1/small-deliverer-silak": {
+    "name": "Munting Tagapagligtas, Silak",
+    "text": "[green][Heart]: Kapag na-Kalas ang Unit na ito, bumunot ng 1 baraha, pagkatapos ay i-Sanib ang 1 baraha mula sa iyong kamay."
+  },
+  "babaylan/set-1/field-blessing-banira": {
+    "name": "Pagpapala sa Bukirin, Banira",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ng ability ang isang Ally ng kalaban na nasa field, [Cost: Ipakita at bitawan ang barahang ito] pumili ng isa sa iyong mga Ally at isa sa mga Ally ng kalaban. I-Rally ang mga ito sa ilalim ng deck ng kani-kanilang may-ari.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "babaylan/set-1/quiet-crossing-salumi": {
+    "name": "Tahimik na Pagtawid, Salumi",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ang kalaban ng ability ng isang baraha, [Cost: Ipakita at bitawan ang barahang ito] pawalang-bisa ang pag aktiba na iyon.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "babaylan/set-1/kindly-neighbor-silaya": {
+    "name": "Mabait na Kapitbahay, Silaya",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag nag-aktiba ang kalaban ng effect na mag-special call ng isa o higit pang Unit, [Cost: Ipakita at bitawan ang barahang ito] bumunot ng 2 baraha.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "babaylan/set-1/hidden-passage-kawili": {
+    "name": "Lihim na Daan, Kawili",
+    "text": "[yellow][Force][Hand] Sa turno ng alinmang manlalaro: Kapag umatake ang isang Unit ng kalaban, [Cost: Ipakita at bitawan ang barahang ito] pumili ng isa sa iyong mga Unit. Bigyan ito ng Power +5000 hanggang sa pagtatapos ng pag-atakeng iyon. Bumunot ng 1 baraha.[/yellow]\n[green]Sa attack check o Barrier check: pumili ng isa sa iyong mga Unit; bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/green]"
+  },
+  "babaylan/set-1/the-elders-answer": {
+    "name": "Ang Tugon ng mga Nakatatanda",
+    "text": "[blue]Kapag nilaro — Tingnan ang 3 baraha sa ibabaw ng iyong deck. I-Sanib ang isang Unit mula sa mga ito at ilagay ang natitira sa ilalim sa anumang pagkakasunod-sunod.[/blue]"
+  },
+  "babaylan/set-1/a-promise-broken": {
+    "name": "Pangakong Napako",
+    "text": "[blue]Kapag nilaro — [Cost: Kalas 2] Bumunot ng 2 baraha, pagkatapos ay bumitaw ng 1 baraha.[/blue]"
+  },
+  "babaylan/set-1/the-mountain-withdraws": {
+    "name": "Ang Pag-urong ng Bundok",
+    "text": "[blue]Kapag nilaro — [Cost: I-Sanib ang isa sa iyong mga Ally] Mag-special call mula sa iyong Heart ng ibang Unit na kapantay o mas mababa ang Level. Bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno.[/blue]"
+  },
+  "babaylan/set-1/flight-of-the-faithless": {
+    "name": "Pagtakas ng mga Taksil",
+    "text": "[blue]Kapag nilaro — [Cost: Kalas 1] Mag-special call ng isang Beast o Bird Unit mula sa iyong Heart. Bigyan ito ng Power +5000 hanggang sa pagtatapos ng turno. Sa pagtatapos ng turno, i-Sanib ito.[/blue]"
+  },
+  "babaylan/set-1/thunder-beneath-the-waves": {
+    "name": "Kulog sa Ilalim ng mga Alon",
+    "text": "[blue]Kapag nilaro — [Cost: Kalas 3] I-exhaust ang hanggang dalawang Ally ng kalaban. Kung mayroon kang Andukha 12, bigyan ang isa sa mga ito ng Power -5000 hanggang sa pagtatapos ng turno.[/blue]"
+  },
+  "babaylan/set-1/when-lantoy-wept": {
+    "name": "Nang Lumuha ang Lantoy",
+    "text": "[blue]Kapag nilaro — Pumili ng hanggang dalawang barahang Unit sa iyong Grave at i-Sanib ang mga ito, pagkatapos ay Kalas 1.[/blue]"
+  },
+  "babaylan/set-1/the-river-rises": {
+    "name": "Ang Pagtaas ng Ilog",
+    "text": "[blue]Kapag nilaro — I-Sanib ang 2 baraha sa ibabaw ng iyong deck. Kung mayroon kang Andukha 9, bigyan ang lahat ng iyong Unit ng Power +3000 hanggang sa pagtatapos ng turno.[/blue]"
+  },
+  "babaylan/set-1/six-moons-lost": {
+    "name": "Anim na Nawalang Buwan",
+    "text": "[blue]Kapag nilaro — [Cost: Kalas 6] Ibalik ang hanggang dalawang exhausted na Ally ng kalaban sa kamay ng kanilang may-ari. Kung anim o higit pang Kaluluwa token ang na-Kalas, bumunot ng 1 baraha.[/blue]"
+  },
+  "babaylan/set-1/return-our-moon": {
+    "name": "Ibalik ang Aming Buwan",
+    "text": "[blue]Magbalik ng isang Unit mula sa iyong Heart papunta sa iyong kamay. Kung Divine ito, maaari mong i-Sanib ang baraha sa ibabaw ng iyong deck. Kung Beast o Bird ito, bumunot ng 1 baraha, pagkatapos ay bumitaw ng 1 baraha.[/blue]"
+  },
+  "babaylan/set-1/the-covenant-renewed": {
+    "name": "Muling Pinagtibay ang Kasunduan",
+    "text": "[blue]Kapag nilaro — I-Sanib ang hanggang dalawang barahang Unit mula sa iyong Grave. Kung mayroon kang Andukha 12 pagkatapos ng effect na ito, bigyan ang iyong Persona ng Power +10000 hanggang sa pagtatapos ng turno.[/blue]"
+  },
+  "babaylan/set-1/sovereign-heights-mount-lantoy": {
+    "name": "Kaitaasan ng Pinuno, Bundok Lantoy",
+    "text": "Auto-switch — Bago ka bumunot, kung mas marami ang Barrier ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\n1/Turn: Codex skill — Kapag napakawalan ang iyong State, bigyan ang lahat ng iyong Unit ng Power +1000 hanggang sa pagtatapos ng turno."
+  },
+  "babaylan/set-1/silent-threshold-kabulaw": {
+    "name": "Tahimik na Bukana, Kabulaw",
+    "text": "Auto-switch — Bago ka mag-Personify, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\nCodex skill — Sa halip na mag-Personify mula sa iyong kamay, tingnan ang 5 baraha sa ibabaw ng iyong deck at mag-Personify bilang isang Level 3 Unit mula sa mga ito. Ilagay ang natitira sa ilalim ng iyong deck."
+  },
+  "babaylan/set-1/unseen-passage-argao-river": {
+    "name": "Di-Nakikitang Daan, Ilog Argao",
+    "text": "Auto-switch — Bago ka bumunot, kung mas marami ang baraha sa kamay ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\n1/Turn: Codex skill — Kapag naging aktibo ang Codex na ito, mag-Kalas ng anumang bilang ng baraha. Bumunot ng 1 baraha para sa bawat 5 barahang na-Kalas sa ganitong paraan."
+  },
+  "babaylan/set-1/fields-under-watch-tabayag": {
+    "name": "Mga Bukiring Binabantayan, Tabayag",
+    "text": "Auto-switch — Sa simula ng iyong Main Phase, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\n1/Turn: Codex skill — Sa simula ng iyong Main Phase, i-Sanib ang baraha sa ibabaw ng iyong deck. Kung Unit iyon, lumikha ng isang Kaluluwa token sa iyong Heart."
+  },
+  "babaylan/set-1/living-sanctuary-dingayop-spring": {
+    "name": "Buhay na Kanlungan, Bukal ng Dingayop",
+    "text": "Auto-switch — Kapag inaatake ang iyong Persona, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\n1/Turn: Codex skill — Kapag nag-check ka ng Barrier at hindi ito Force, lumikha ng 2 Kaluluwa token sa iyong Heart, pagkatapos ay bumitaw ng 1 baraha."
+  },
+  "babaylan/set-1/hidden-court-dingayop-cavern": {
+    "name": "Lihim na Korte, Yungib ng Dingayop",
+    "text": "Auto-switch — Bago ka bumunot, kung mas marami ang Unit ng kalaban kaysa sa iyo, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\nCodex skill — Habang aktibo ito, sa tuwing mag-Sanib ka ng Unit mula sa iyong field o deck sa iyong Main Phase, lumikha rin ng isang Kaluluwa token sa iyong Heart."
+  },
+  "babaylan/set-1/champion-s-trial-danao-highlands": {
+    "name": "Pagsubok ng Kampeon, Kabundukan ng Danao",
+    "text": "Auto-switch — Kapag umatake ang iyong Persona, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\nCodex skill — Kapag umatake ang iyong Persona, bigyan ito ng Power +1000 para sa bawat Kaluluwa token sa iyong Heart. Sa pagtatapos ng iyong turno, Kalas 3."
+  },
+  "babaylan/set-1/turning-pursuit-bantayan-waters": {
+    "name": "Pagliko ng Pagtugis, Katubigan ng Bantayan",
+    "text": "Auto-switch — Kapag nabasag ang iyong Barrier sa turno ng kalaban, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\nCodex skill — 1/Turn: Sa susunod na pag-atake sa iyong Persona, bigyan ito ng Power +1000 para sa bawat Kaluluwa token sa iyong Heart hanggang sa pagtatapos ng laban."
+  },
+  "babaylan/set-1/faithless-prison-tanon-strait": {
+    "name": "Bilangguan ng mga Taksil, Kipot ng Tañon",
+    "text": "Auto-switch — Bago ka bumunot, kung mayroon kang 2 o mas kaunting Barrier, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\n1/Turn: Codex skill — Kapag naging aktibo ang Codex na ito, Kalas 2. Pumili ng isa sa mga barahang na-Kalas sa ganitong paraan at i-special call ito sa isang bakanteng Ally Zone; i-exile ang isa pa."
+  },
+  "babaylan/set-1/great-calling-moonwake-shore": {
+    "name": "Dakilang Panawagan, Baybayin ng Moonwake",
+    "text": "Auto-switch — Bago ka bumunot, maaari kang lumipat sa Codex na ito nang walang bayad.\nState — Andukha: Pakawalan habang may 6 o higit pang baraha sa iyong Heart.\nCodex skill — Sa halip na bumunot, lumikha ng 2 Kaluluwa token sa iyong Heart. Kung napakawalan ang Andukha, bumunot ng 1 baraha."
+  }
+}

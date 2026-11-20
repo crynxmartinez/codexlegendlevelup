@@ -1,0 +1,2942 @@
+{
+  "revision": "codex-illana-offer-2026-10-03",
+  "cards": [
+    {
+      "id": "agta/sierra-watchkeeper-banoy",
+      "name": "Sierra Watchkeeper, Banoy",
+      "region": "Luzon",
+      "type": "Sentry",
+      "text": "[yellow][Sentry] When your Persona is attacked, reveal this card and exile it face down to nullify that attack. Then Sipol 1.[/yellow]",
+      "effects": [
+        {
+          "id": "agta/sierra-watchkeeper-banoy:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Hand"
+          ],
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/warden-of-the-twelfth-tide-bituon",
+      "name": "Warden of the Twelfth Tide, Bituon",
+      "region": "Visayas",
+      "type": "Sentry",
+      "text": "[yellow][Sentry] When your Persona is attacked, reveal this card and exile it face down to nullify that attack. Create 1 Kaluluwa in your Heart, or 2 if Andukha 9 is active when you activate this card.[/yellow]",
+      "effects": [
+        {
+          "id": "babaylan/warden-of-the-twelfth-tide-bituon:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Hand"
+          ],
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/kuta-wato-oath-shield-panglima-sabir",
+      "name": "Kuta Wato Oath-shield, Panglima Sabir",
+      "region": "Mindanao",
+      "type": "Sentry",
+      "text": "[Sentry]: When your Persona is taking damage, [Cost: Reveal this card] nullify that damage, then exile this card face down.",
+      "effects": [
+        {
+          "id": "maguindanao/kuta-wato-oath-shield-panglima-sabir:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Hand"
+          ],
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/wind-heart-rescuer-taguwasi",
+      "name": "Wind-Heart Rescuer, Taguwasi",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Persona] At the start of your Main Phase, look at the top 3 cards of your deck and put them back on top in any order.[/green]\n[green][Bayanihan][Persona] 1/Turn: When this Unit attacks, Sipol 1.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/wind-heart-rescuer-taguwasi:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "startOfMain",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "agta/set-1/wind-heart-rescuer-taguwasi:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "state": "Bayanihan",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/fifth-sky-tyrant-kalimangalnuk",
+      "name": "Fifth-Sky Tyrant, Kalimangalnuk",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[blue][Persona] 1/Turn: Sipol 1, then this Unit gets Power equal to the Power of the Unit called, until end of turn.[/blue]\n[green][Bayanihan][Persona] During your turn, all of your Units get Power +2000.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/fifth-sky-tyrant-kalimangalnuk:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "agta/set-1/fifth-sky-tyrant-kalimangalnuk:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/life-breath-mother-nanolay",
+      "name": "Life-Breath Mother, Nanolay",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Persona] 1/Turn: When this Unit attacks, draw 1, then this Unit gets Power +3000 until end of turn.[/green]\n[green][Bayanihan][Ally] 1/Turn: If this Unit was specially called during a Battle Phase, after your Persona attacks, [Cost: Discard 2 cards] Personify into this Unit, charged.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/life-breath-mother-nanolay:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "agta/set-1/life-breath-mother-nanolay:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "attackResolved",
+          "state": "Bayanihan",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/fallen-sky-challenger-talimanog",
+      "name": "Fallen Sky-Challenger, Talimanog",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When specially called, Sumipat 1. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/fallen-sky-challenger-talimanog:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/months-of-battle-warrior-ammani",
+      "name": "Months-Of-Battle Warrior, Ammani",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When specially called, reveal the top card of your deck. If it is not a Unit, put it on the bottom and put this Unit on top of your deck. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/months-of-battle-warrior-ammani:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/relentless-third-brother-annibo",
+      "name": "Relentless Third Brother, Annibo",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When your Persona attacks, put this Unit on top of your deck. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/relentless-third-brother-annibo:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/river-calling-sister-alig",
+      "name": "River-Calling Sister, Alig",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When a card is placed into an Ally Zone from your deck or your hand, this Unit gets Power +2000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/river-calling-sister-alig:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/maiden-taking-raptor-ammalabukkaw",
+      "name": "Maiden-Taking Raptor, Ammalabukkaw",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When specially called, Sipol 1. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/maiden-taking-raptor-ammalabukkaw:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/golden-threshold-warden-nagdombilan",
+      "name": "Golden-Threshold Warden, Nagdombilan",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When specially called, put 1 card from your hand on top of your deck, then Sipol 1. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/golden-threshold-warden-nagdombilan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/wedding-war-chief-namandiyanin",
+      "name": "Wedding-War Chief, Namandiyanin",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When specially called, Sumipat 3. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/wedding-war-chief-namandiyanin:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/moon-bright-captive-innawagan",
+      "name": "Moon-Bright Captive, Innawagan",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When placed from your hand, put this Unit on top of your deck. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/moon-bright-captive-innawagan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/barbed-sky-messenger-dalewasan",
+      "name": "Barbed-Sky Messenger, Dalewasan",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When placed, choose two of your Units; they each get Power +2000 until end of turn. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/barbed-sky-messenger-dalewasan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000",
+            "Choose two Units for Power +2000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/keeper-at-sunrise-sinag",
+      "name": "Keeper At Sunrise, Sinag",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When placed from your hand, discard 1 card, then draw 1 card. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/keeper-at-sunrise-sinag:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/returning-sky-captain-darawan",
+      "name": "Returning Sky Captain, Darawan",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When a Unit is placed from your deck, this Unit gets Power +3000 until end of turn. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/returning-sky-captain-darawan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/wedding-pact-elder-amuray",
+      "name": "Wedding-Pact Elder, Amuray",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[blue][Hand] 1/Turn: Put this card on top of your deck.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/wedding-pact-elder-amuray:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Hand"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/nightfall-raider-kallan",
+      "name": "Nightfall Raider, Kallan",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[blue][Hand] 1/Turn: Discard this card, then draw 1 card.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/nightfall-raider-kallan:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Hand"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/night-feast-defender-tamin",
+      "name": "Night-Feast Defender, Tamin",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[blue][Ally] 1/Turn: [Cost: put this Unit on the bottom of your deck] Choose one of your Units and put it on top of your deck. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/night-feast-defender-tamin:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Ally"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000",
+            "Put one of your Units on top of your deck"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/fifth-sky-sentinel-ulagan",
+      "name": "Fifth-Sky Sentinel, Ulagan",
+      "region": "Luzon",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn: When this Unit supports an attack, it gets Power +3000 until end of turn. When Bayanihan is released and this Unit is on the field or when placed, its skill becomes: choose one of your Units; it gets Power +3000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/fifth-sky-sentinel-ulagan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/path-turning-warden-tumatanan",
+      "name": "Path-Turning Warden, Tumatanan",
+      "region": "Luzon",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Sipol 1.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "agta/set-1/path-turning-warden-tumatanan:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "agta/set-1/path-turning-warden-tumatanan:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/beast-spirit-healer-subkal",
+      "name": "Beast-Spirit Healer, Subkal",
+      "region": "Luzon",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Draw 1, then discard 1.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "agta/set-1/beast-spirit-healer-subkal:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "agta/set-1/beast-spirit-healer-subkal:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/healer-s-spirit-friend-bunog",
+      "name": "Healer's Spirit-Friend, Bunog",
+      "region": "Luzon",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: One of your Units gets Power +3000 until end of turn.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "agta/set-1/healer-s-spirit-friend-bunog:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "agta/set-1/healer-s-spirit-friend-bunog:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": [
+            "Choose a Unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/restless-wandering-dead-belet",
+      "name": "Restless Wandering Dead, Belet",
+      "region": "Luzon",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Look at the top card; you may put it on the bottom.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "agta/set-1/restless-wandering-dead-belet:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "agta/set-1/restless-wandering-dead-belet:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/innawagan-s-abduction",
+      "name": "Innawagan's Abduction",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Look at the top 3; call up to 1 Unit to an open Ally Zone. Bottom the rest in any order.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/innawagan-s-abduction:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/the-three-brothers-ascend",
+      "name": "The Three Brothers Ascend",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Look at the top 5; call up to 2 Level 2 or lower Units to open Ally Zones. Bottom the rest in any order.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/the-three-brothers-ascend:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/dalewasan-crosses-the-barbed-sky",
+      "name": "Dalewasan Crosses The Barbed Sky",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Look at the top card; you may bottom it. Then draw 1 and discard 1.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/dalewasan-crosses-the-barbed-sky:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/sinag-reveals-the-rescuer",
+      "name": "Sinag Reveals The Rescuer",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Look at the top 5; reveal a Level 3 Unit among them and add it to hand. Bottom the rest in any order.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/sinag-reveals-the-rescuer:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/taguwasi-answers-the-plea",
+      "name": "Taguwasi Answers The Plea",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Sipol 1. Then, if Bayanihan is released, one of your Units gets Power +5000 this turn.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/taguwasi-answers-the-plea:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/talimanog-falls-as-the-gate-breaks",
+      "name": "Talimanog Falls As The Gate Breaks",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Bottom one of your Allies. If you do, destroy an opposing Level 2 or lower Ally, then Sipol 1.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/talimanog-falls-as-the-gate-breaks:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Return an Ally to the bottom of your deck",
+            "Destroy an opposing Level 2 or lower Ally"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/taguwasi-tears-open-heaven",
+      "name": "Taguwasi Tears Open Heaven",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Look at the top 5; call up to 1 Unit to an open Ally Zone with Power +5000 this turn. Bottom the rest. If Bayanihan is released, your Persona gets Power +5000 this turn.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/taguwasi-tears-open-heaven:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/kalimangalnuk-s-final-defeat",
+      "name": "Kalimangalnuk's Final Defeat",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] With Bayanihan: destroy an opposing Ally. Your Persona gets Power +5000 this turn.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/kalimangalnuk-s-final-defeat:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Destroy an opposing Ally"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/alig-restores-her-brothers",
+      "name": "Alig Restores Her Brothers",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Return a Level 2 or lower Unit from your Grave to your hand.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/alig-restores-her-brothers:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Recover a Unit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/the-wedding-becomes-a-battlefield",
+      "name": "The Wedding Becomes A Battlefield",
+      "region": "Luzon",
+      "type": "Action",
+      "text": "[blue][Action] Your Units get Power +3000 this turn, or +5000 if Bayanihan is released.[/blue]",
+      "effects": [
+        {
+          "id": "agta/set-1/the-wedding-becomes-a-battlefield:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/dawnward-country-arawen",
+      "name": "Dawnward Country, Arawen",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch before you draw, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]Instead of drawing, look at the top 3 cards of your deck and put them back on top in any order. Then Sipol 1.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/dawnward-country-arawen:codex",
+          "kind": "replacement",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/barbed-sky-passage-salikan",
+      "name": "Barbed Sky Passage, Salikan",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch before you Personify, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]Instead of Personifying from your hand, look at the top 5 cards of your deck and Personify one Level 3 Unit among them. Put the rest on the bottom in any order.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/barbed-sky-passage-salikan:codex",
+          "kind": "replacement",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/fifth-heaven-ularan",
+      "name": "Fifth Heaven, Ularan",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch when your Persona attacks, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]1/Turn: When your Persona attacks, Sipol 1.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/fifth-heaven-ularan:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/brothers-refuge-taliman",
+      "name": "Brothers' Refuge, Taliman",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch when your Barrier breaks during your opponent's turn, and the check is not a Force, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]1/Turn: When you check a Barrier and it is not a Force, discard 1 card, then Sipol 1.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/brothers-refuge-taliman:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/healing-house-aligan",
+      "name": "Healing House, Aligan",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch before you draw, if you have 2 or fewer Barriers, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]While this is active, if you would Sipol during your Main Phase, look at the top 2 instead and choose one for the Sipol. Exile the other.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/healing-house-aligan:codex",
+          "kind": "continuous",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/wedding-clearing-amuran",
+      "name": "Wedding Clearing, Amuran",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch before you draw, if your opponent has more Units than you, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]1/Turn: When this Codex becomes active, [Cost: Discard 1 card] Sipol 3.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/wedding-clearing-amuran:codex",
+          "kind": "auto",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/golden-threshold-nagdan",
+      "name": "Golden Threshold, Nagdan",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch at the start of your Main Phase, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]1/Turn: At the start of your Main Phase, if you have fewer Units than your opponent, Sipol 2.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/golden-threshold-nagdan:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/heaven-s-rift-siwangan",
+      "name": "Heaven's Rift, Siwangan",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch when your Persona is under attack, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]1/Turn: When your Persona is under attack, if you Sipol’d 3 or more times during your last turn, your Persona gets Power +5000 until end of turn.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/heaven-s-rift-siwangan:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/mystic-sky-river-dalunan",
+      "name": "Mystic Sky River, Dalunan",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch before you draw, if your opponent has more cards in hand than you, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]While this is active, if you would Sipol during your Main Phase, put the card into your hand instead of calling it.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/mystic-sky-river-dalunan:codex",
+          "kind": "continuous",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "agta/set-1/storm-court-kaliman",
+      "name": "Storm Court, Kaliman",
+      "region": "Luzon",
+      "type": "Codex",
+      "text": "[Codex] Auto-switch before you draw, if your opponent has more Barriers than you, if you did not switch Codex during your previous turn and have not switched this turn.\n[Bayanihan] Released while all four Ally Zones contain Luzon Arch Units.\n[green]While Bayanihan is released, your Units get Power +1000.[/green]",
+      "effects": [
+        {
+          "id": "agta/set-1/storm-court-kaliman:codex",
+          "kind": "continuous",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/mountain-sovereign-maria-cacao",
+      "name": "Mountain Sovereign, Maria Cacao",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[blue][Persona] 1/Turn: [Cost: Essence the top 2 cards of your deck] special call a Level 2 or lower Divine Unit from your Heart. It gets Power +5000 until end of turn. Essence it at the end of the turn.\n[green][Andukha 6][Persona] 1/Turn: When a Unit is Essenced during your turn, create 1 Kaluluwa in your Heart.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/mountain-sovereign-maria-cacao:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/mountain-sovereign-maria-cacao:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "essenced",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/harvest-warden-mangaw",
+      "name": "Harvest Warden, Mangaw",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Persona]: At the start of your Main Phase, Essence the top card of your deck. Then you may create 2 Kaluluwa in your Heart.\n[green][Andukha 9][Persona]: During your turn, this Unit gets Power +1000 for each card you Essenced this turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/harvest-warden-mangaw:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "startOfMain",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/harvest-warden-mangaw:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/thunder-sovereign-kaptan",
+      "name": "Thunder Sovereign, Kaptan",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Persona] 1/Turn: When this Unit attacks, [Cost: Essence one card from your hand] draw 1 card. This Unit gets Power +3000 until end of turn.\n[blue][Andukha 9][Persona] 1/Turn: Look at the top 5 cards of your deck. Essence up to one Divine Unit from among them and put the rest on the bottom in any order. This Unit gets Power +5000 until end of turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/thunder-sovereign-kaptan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/thunder-sovereign-kaptan:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/ocean-sovereign-maguayan",
+      "name": "Ocean Sovereign, Maguayan",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Persona] 1/Turn: When a Unit is special called from your Heart, draw 1 card, then Essence 1 card from your hand.\n[green][Andukha 9][Persona] 1/Turn: When this Unit attacks, [Cost: Essence 1 of your Allies] add that Ally's current Power to this Unit's Power for that battle.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/ocean-sovereign-maguayan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/ocean-sovereign-maguayan:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/abyssal-revolt-sinogo",
+      "name": "Abyssal Revolt, Sinogo",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Persona] 1/Turn: When this Unit attacks, [Cost: Vent 5] special call a Beast or Bird Unit from your deck. Essence that Unit at the end of your turn.\n[green][Andukha 12][Persona]: Your Beast and Bird Units' numeric Vent costs are reduced by 2, to a minimum of 0.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/abyssal-revolt-sinogo:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/abyssal-revolt-sinogo:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/last-moon-devourer-bakunawa",
+      "name": "Last Moon Devourer, Bakunawa",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Persona] 1/Turn: When this Unit attacks your opponent's Persona, [Cost: Vent 6] this Unit gets Power +10000 for that battle. Your opponent cannot use Level 2 or higher cards to defend this battle. If six or more Kaluluwa tokens were Vented for this cost, draw 1 card.\n[green][Andukha 9][Persona]: At the end of a battle in which this Unit attacked, if its attack did not hit, Essence up to three cards from your Grave.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/last-moon-devourer-bakunawa:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/last-moon-devourer-bakunawa:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "battleFinished",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Essence up to three cards from your Grave"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/unbroken-invocation-amara",
+      "name": "Unbroken Invocation, Amara",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Persona] 1/Turn: When this Unit is Essenced from the Persona Zone, special call one Unit from your Heart.\n[blue][Andukha 9][Heart] 1/Turn: [Cost: Vent this card] search your deck for a Level 2 or lower Babaylan Unit other than Unbroken Invocation, Amara. Essence it, then special call a Babaylan Unit from your Heart. Shuffle your deck. The called Unit gets Power +5000 until end of turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/unbroken-invocation-amara:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "essenced",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a Unit to special call"
+          ]
+        },
+        {
+          "id": "babaylan/set-1/unbroken-invocation-amara:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Heart"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/heaven-s-pursuit-dalagan",
+      "name": "Heaven's Pursuit, Dalagan",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally]: When this Unit is placed, Essence the top card of your deck, then create 1 Kaluluwa in your Heart.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/heaven-s-pursuit-dalagan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/unyielding-pursuer-guidala",
+      "name": "Unyielding Pursuer, Guidala",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally]: When this Unit is placed, Essence the top card of your deck. Then, once per turn per copy, you may special call a Unit from your hand. If you do, Essence this Unit and the called Unit at the end of your turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/unyielding-pursuer-guidala:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/unseen-defender-tata-cero",
+      "name": "Unseen Defender, Tata Cero",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn per copy: When this Unit attacks, it gets Power +1000 for each Kaluluwa in your Heart for that battle.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/unseen-defender-tata-cero:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/leafborne-champion-kapitan-dyano",
+      "name": "Leafborne Champion, Kapitan Dyano",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally]: When this Unit is placed, it gets Power +3000 until end of turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/leafborne-champion-kapitan-dyano:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/spring-sentinel-ulango",
+      "name": "Spring Sentinel, Ulango",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Heart]: When this Unit is Vented, draw 1 card.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/spring-sentinel-ulango:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Heart"
+          ],
+          "trigger": "vented",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/shadow-prowler-sagwil",
+      "name": "Shadow Prowler, Sagwil",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Heart]: When this Unit is Vented, choose one opposing Ally Unit and damage it.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/shadow-prowler-sagwil:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Heart"
+          ],
+          "trigger": "vented",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose an opposing Ally to damage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/nightfall-hunter-wakira",
+      "name": "Nightfall Hunter, Wakira",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Heart]: When this Unit is Vented, choose up to two of your Units. Each gets Power +3000 until end of turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/nightfall-hunter-wakira:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Heart"
+          ],
+          "trigger": "vented",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose up to two Units for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/reef-enchanter-lawira",
+      "name": "Reef Enchanter, Lawira",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally]: At the end of your turn, Essence this Unit.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/reef-enchanter-lawira:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "endOfTurn",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/answering-voice-aday",
+      "name": "Answering Voice, Aday",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally]: This Unit gets Power +1000 for each card you Essenced this turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/answering-voice-aday:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Ally"
+          ],
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/first-invocation-luning",
+      "name": "First Invocation, Luning",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn across all cards with this name: When Kaluluwa are created, you may create 1 additional Kaluluwa in your Heart. The additional token does not trigger this skill again.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/first-invocation-luning:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "kaluluwaCreated",
+          "limit": 1,
+          "useScope": "name",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/spirit-mediator-iday",
+      "name": "Spirit Mediator, Iday",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Hand/Ally] 1/Turn per copy: When you Essence a card, [Cost: Essence this card] choose one of your Units. It gets Power +5000 until end of turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/spirit-mediator-iday:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Hand",
+            "Ally"
+          ],
+          "trigger": "essenced",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a Unit for Power +5000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/hidden-affliction-doro",
+      "name": "Hidden Affliction, Doro",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[blue][Ally] 1/Turn: this Unit gets Power +5000 until end of turn. At the end of your turn, choose one of your other Allies or one card from your hand. Essence this Unit and the chosen card.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/hidden-affliction-doro:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Ally"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/floodwatch-runner-sali",
+      "name": "Floodwatch Runner, Sali",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn per copy: When you Vent, you may give this Unit Power +5000 until end of turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/floodwatch-runner-sali:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "vented",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/promise-bearer-nardo",
+      "name": "Promise Bearer, Nardo",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Ally]: The first time you Essence a card each turn, you may draw 1 card.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/promise-bearer-nardo:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "essenced",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/small-deliverer-silak",
+      "name": "Small Deliverer, Silak",
+      "region": "Visayas",
+      "type": "Unit",
+      "text": "[green][Heart]: When this Unit is Vented, draw 1 card, then Essence 1 card from your hand.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/small-deliverer-silak:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Heart"
+          ],
+          "trigger": "vented",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/field-blessing-banira",
+      "name": "Field Blessing, Banira",
+      "region": "Visayas",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Essence the top card of your deck.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/field-blessing-banira:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/field-blessing-banira:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/quiet-crossing-salumi",
+      "name": "Quiet Crossing, Salumi",
+      "region": "Visayas",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Vent 1. If you do, draw 1 card.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/quiet-crossing-salumi:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/quiet-crossing-salumi:force-hand",
+          "kind": "response",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/kindly-neighbor-silaya",
+      "name": "Kindly Neighbor, Silaya",
+      "region": "Visayas",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Draw 1 card, then Essence 1 card from your hand.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/kindly-neighbor-silaya:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/kindly-neighbor-silaya:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/hidden-passage-kawili",
+      "name": "Hidden Passage, Kawili",
+      "region": "Visayas",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Special call a Level 1 Unit from your Heart to an open Ally Zone, exhausted.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/hidden-passage-kawili:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "babaylan/set-1/hidden-passage-kawili:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/the-elders-answer",
+      "name": "The Elders Answer",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - Look at the top 3 cards of your deck. Essence one Unit from among them and place the rest on the bottom in any order.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/the-elders-answer:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/a-promise-broken",
+      "name": "A Promise Broken",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - [Cost: Vent 2] Draw 2 cards, then discard 1 card.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/a-promise-broken:action",
+          "kind": "action",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/the-mountain-withdraws",
+      "name": "The Mountain Withdraws",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - [Cost: Essence one of your Allies] special call a different Unit of equal or lower Level from your Heart. It gets Power +5000 until end of turn.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/the-mountain-withdraws:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Choose an Ally to Essence"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/flight-of-the-faithless",
+      "name": "Flight of the Faithless",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - [Cost: Vent 1] special call a Beast or Bird Unit from your Heart. It gets Power +5000 until end of turn. At the end of turn, Essence it.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/flight-of-the-faithless:action",
+          "kind": "action",
+          "payment": true,
+          "targets": [
+            "Choose a Unit to special call"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/thunder-beneath-the-waves",
+      "name": "Thunder Beneath the Waves",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - [Cost: Vent 3] Exhaust up to two opposing Allies. If you have Andukha 12, one of them gets Power -5000 until end of turn.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/thunder-beneath-the-waves:action",
+          "kind": "action",
+          "payment": true,
+          "targets": [
+            "Exhaust up to two opposing Allies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/when-lantoy-wept",
+      "name": "When Lantoy Wept",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - Choose up to two Unit cards in your Grave and Essence them, then Vent 1.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/when-lantoy-wept:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Essence up to 2 Units from Grave"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/the-river-rises",
+      "name": "The River Rises",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - Essence the top 2 cards of your deck. If you have Andukha 9, all your Units get Power +3000 until end of turn.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/the-river-rises:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/six-moons-lost",
+      "name": "Six Moons Lost",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - [Cost: Vent 6] Return up to two exhausted opposing Allies to their owner's hand. If six or more Kaluluwa tokens were Vented, draw 1 card.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/six-moons-lost:action",
+          "kind": "action",
+          "payment": true,
+          "targets": [
+            "Return up to two exhausted opposing Allies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/return-our-moon",
+      "name": "Return Our Moon",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Return one Unit from your Heart to your hand. If it is Divine, you may Essence the top card of your deck. If it is a Beast or Bird, draw 1 card, then discard 1 card.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/return-our-moon:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Choose a Unit to return to hand"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/the-covenant-renewed",
+      "name": "The Covenant Renewed",
+      "region": "Visayas",
+      "type": "Action",
+      "text": "[blue]Play with - Essence up to two Unit cards from your Grave. If you have Andukha 12 after this effect, your Persona gets Power +10000 until end of turn.[/blue]",
+      "effects": [
+        {
+          "id": "babaylan/set-1/the-covenant-renewed:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Essence up to 2 Units from Grave"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/sovereign-heights-mount-lantoy",
+      "name": "Sovereign Heights, Mount Lantoy",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if your opponent has more Barriers than you, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — When your State is released, all of your Units get Power +1000 until end of turn.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/sovereign-heights-mount-lantoy:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/silent-threshold-kabulaw",
+      "name": "Silent Threshold, Kabulaw",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — before you Personify, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — Instead of Personifying from your hand, look at the top 5 cards of your deck and Personify one Level 3 Unit among them. Put the rest on the bottom of your deck.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/silent-threshold-kabulaw:codex",
+          "kind": "replacement",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/unseen-passage-argao-river",
+      "name": "Unseen Passage, Argao River",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if your opponent has more cards in hand than you, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — When this Codex becomes active, Vent any number of cards. Draw 1 card for every 5 cards vented this way.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/unseen-passage-argao-river:codex",
+          "kind": "auto",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/fields-under-watch-tabayag",
+      "name": "Fields Under Watch, Tabayag",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — at the start of your Main Phase, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — At the start of your Main Phase, Essence the top card of your deck. If it was a Unit, create a Kaluluwa token in your Heart.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/fields-under-watch-tabayag:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/living-sanctuary-dingayop-spring",
+      "name": "Living Sanctuary, Dingayop Spring",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — when your Persona is under attack, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — When you check a Barrier and it is not a Force, create 2 Kaluluwa tokens in your Heart, then discard 1 card.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/living-sanctuary-dingayop-spring:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/hidden-court-dingayop-cavern",
+      "name": "Hidden Court, Dingayop Cavern",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if your opponent has more Units than you, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — While this is active, whenever you Essence a Unit from your field or your deck during your Main Phase, create a Kaluluwa token in your Heart as well.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/hidden-court-dingayop-cavern:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/champion-s-trial-danao-highlands",
+      "name": "Champion's Trial, Danao Highlands",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — when your Persona attacks, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — When your Persona attacks, it gets Power +1000 for each Kaluluwa token in your Heart. At the end of your turn, Vent 3.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/champion-s-trial-danao-highlands:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/turning-pursuit-bantayan-waters",
+      "name": "Turning Pursuit, Bantayan Waters",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — when your Barrier breaks during your opponent's turn, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — 1/Turn: The next time your Persona is attacked, it gets Power +1000 for each Kaluluwa token in your Heart until end of battle.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/turning-pursuit-bantayan-waters:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/faithless-prison-tanon-strait",
+      "name": "Faithless Prison, Tañon Strait",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if you have 2 or fewer Barriers, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\n1/Turn: Codex skill — When this Codex becomes active, Vent 2. Choose one of the cards vented this way and special call it to an open Ally Zone; exile the other.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/faithless-prison-tanon-strait:codex",
+          "kind": "auto",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "babaylan/set-1/great-calling-moonwake-shore",
+      "name": "Great Calling, Moonwake Shore",
+      "region": "Visayas",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Andukha: released while your Heart holds 6 or more cards.\nCodex skill — Instead of drawing, create 2 Kaluluwa tokens in your Heart. If Andukha is released, draw 1 card.",
+      "effects": [
+        {
+          "id": "babaylan/set-1/great-calling-moonwake-shore:codex",
+          "kind": "replacement",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong",
+      "name": "Nonok-Veiled Guardian, Apo a Bekong",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Persona] 1/turn: Whenever another of your Allies is Offered, choose one of your units. It gets Power +3000 until end of turn.\n[green][Garahana][Persona] Whenever one of your shields breaks, this unit permanently gets Power +1000.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "unitOffered",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +3000"
+          ]
+        },
+        {
+          "id": "maguindanao/set-1/nonok-veiled-guardian-apo-a-bekong:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "barrierBroken",
+          "state": "Garahana",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut",
+      "name": "Beneath-Water Ancestress, Potri Rainalaut",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[blue][Persona] 1/turn: [Cost: Offer 1 of your Allies] special call a Level 1 Maguindanaon unit from your Grave. It enters charged.\n[blue][Garahana][Persona] 1/turn: draw 1 card. This unit gets Power +2000 for each unit Offered this turn until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose a unit to special call"
+          ]
+        },
+        {
+          "id": "maguindanao/set-1/beneath-water-ancestress-potri-rainalaut:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/boat-watching-tonong-tomitay",
+      "name": "Boat-Watching Tonong, Tomitay",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Allies] look at the top 3 cards of your deck and arrange them on top in any order.\n[green][Garahana][Persona] 1/turn: When your attack check reveals a Force, draw 1 card and charge one of your Allies.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/boat-watching-tonong-tomitay:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/boat-watching-tonong-tomitay:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "forceResolved",
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose an Ally to charge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/sun-darkening-scourge-pah",
+      "name": "Sun-Darkening Scourge, Pah",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[blue][Persona] 1/turn: [Cost: Offer 2 of your Allies] this unit gets Power +5000 until end of turn. If you have 2 or fewer Barriers, it gets +10000 instead.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] charge this unit and it gets Power +5000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/sun-darkening-scourge-pah:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/sun-darkening-scourge-pah:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attackResolved",
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/rattan-haunt-scourge-kurita",
+      "name": "Rattan-Haunt Scourge, Kurita",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your Allies] damage one of your opponent's Allies, and this unit gets Power +5000 for that battle.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 1 of your other Allies] damage one of your opponent's Allies.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/rattan-haunt-scourge-kurita:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose an Ally to damage"
+          ]
+        },
+        {
+          "id": "maguindanao/set-1/rattan-haunt-scourge-kurita:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attackResolved",
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose an Ally to damage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/matutun-branch-devourer-tarabusaw",
+      "name": "Matutun Branch-Devourer, Tarabusaw",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[blue][Persona] 1/turn: Before this unit's first attack this turn, [Cost: Offer 2 of your other Allies] its first attack this turn gets one extra attack check.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 2] charge this unit. Do not perform an attack check for its next attack this turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/matutun-branch-devourer-tarabusaw:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/matutun-branch-devourer-tarabusaw:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attackResolved",
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/land-restoring-raja-indarapatra",
+      "name": "Land-Restoring Raja, Indarapatra",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[blue][Persona] 1/turn: search your deck for a Level 2 or lower Maguindanaon unit and special call it. It enters charged.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] search your deck for two Level 2 or lower Maguindanaon units and special call them. Each gets Power +5000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/land-restoring-raja-indarapatra:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/land-restoring-raja-indarapatra:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attackResolved",
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/gurayen-wrath-mate-maka-ogis",
+      "name": "Gurayen Wrath-Mate, Maka-Ogis",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 1 of your other Allies] add that Ally's current Power to this unit's Power for that battle.\n[green][Garahana][Persona] During your turn, if you Offered 2 or more this turn, this unit gets Power +5000.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/gurayen-wrath-mate-maka-ogis:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/gurayen-wrath-mate-maka-ogis:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "state": "Garahana",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/three-scourge-champion-sulayman",
+      "name": "Three-Scourge Champion, Sulayman",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[blue][Persona] 1/turn: [Cost: Offer 1 of your Allies] search your deck for a Maguindanaon unit and special call it. It enters charged. This unit and the called unit each get Power +3000 until end of turn.\n[green][Garahana][Persona] 1/turn: When this unit attacks, [Cost: Offer 3] damage up to two of your opponent's Allies. This unit gets Power +10000 for that battle and gains \"When this attack hits, draw 1 card.\"",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/three-scourge-champion-sulayman:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Persona"
+          ],
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/three-scourge-champion-sulayman:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": [
+            "Choose up to two opposing Allies to damage"
+          ]
+        },
+        {
+          "id": "maguindanao/set-1/three-scourge-champion-sulayman:ability:2",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attackHit",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/house-shell-shadow-pahira",
+      "name": "House-Shell Shadow, Pahira",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath]: When this unit is Offered, look at the top 5 cards of your deck. You may reveal one Beast or Bird card from among them and put it into your hand. Put the rest on the bottom in any order.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/house-shell-shadow-pahira:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/rattan-marsh-stalker-kuritan",
+      "name": "Rattan-Marsh Stalker, Kuritan",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Ally]: When this unit is placed, if you Offered an Ally this turn, this unit gets Power +5000 until end of turn.\n[green][Ally]: At the end of your turn, Offer this unit.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/rattan-marsh-stalker-kuritan:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/rattan-marsh-stalker-kuritan:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Ally"
+          ],
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/matutun-branch-hurler-tarabuk",
+      "name": "Matutun Branch Hurler, Tarabuk",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Ally] 1/turn: After this unit attacks, [Cost: Offer 1 of your other Allies] charge this unit. It gets Power +3000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/matutun-branch-hurler-tarabuk:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "attackResolved",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/dread-night-caller-balbal",
+      "name": "Dread-Night Caller, Balbal",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Ally] 1/Turn per copy: When this unit is placed, send the top 3 cards of your deck to your Grave. This unit gets Power +3000 until end of turn for each unit card sent this way.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/dread-night-caller-balbal:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "placed",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/balete-laughing-spirit-ba-i-a-salendagao",
+      "name": "Balete-Laughing Spirit, Ba-i a Salendagao",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Garahana][Ally]: Whenever another of your Allies is Offered, choose one of your units. It gets Power +5000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/balete-laughing-spirit-ba-i-a-salendagao:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "state": "Garahana",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +5000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/heaven-sheltered-survivor-lanao-sprite",
+      "name": "Heaven-Sheltered Survivor, Lanao Sprite",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath] 1/Turn per copy: When this unit is Offered, your Persona gets Power +2000 until the end of your opponent's turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/heaven-sheltered-survivor-lanao-sprite:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/current-borne-ancestor-crocodile-form-apu",
+      "name": "Current-Borne Ancestor, Crocodile-Form Apu",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Garahana][Grave]: The first time one of your Allies is Offered each turn, special call this unit. At the end of your turn, if this unit was called by this effect, Offer it.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/current-borne-ancestor-crocodile-form-apu:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Grave"
+          ],
+          "trigger": "unitOffered",
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/smoke-split-hunter-salimbadut",
+      "name": "Smoke-Split Hunter, Salimbadut",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Ally] 1/turn: After this unit attacks, if you Offered an Ally this turn, damage one of your opponent's exhausted Allies.\n[green][Ally]: At the end of your turn, Offer this unit.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/smoke-split-hunter-salimbadut:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "attackResolved",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose an Ally to damage"
+          ]
+        },
+        {
+          "id": "maguindanao/set-1/smoke-split-hunter-salimbadut:ability:1",
+          "kind": "manual",
+          "scope": [
+            "Ally"
+          ],
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/first-son-of-the-returned-land-rinamuntaw",
+      "name": "First Son of the Returned Land, Rinamuntaw",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may draw 1 card, then discard 1 card.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/first-son-of-the-returned-land-rinamuntaw:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/first-daughter-of-the-returned-land-rinayung",
+      "name": "First Daughter of the Returned Land, Rinayung",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn across all cards with this name, you may search your deck for a Level 1 Maguindanaon unit and special call it, charged.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/first-daughter-of-the-returned-land-rinayung:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/hollow-tree-guide-the-old-woman",
+      "name": "Hollow-Tree Guide, the Old Woman",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may look at the top 5 cards of your deck. You may reveal one Maguindanaon unit from among them and put it into your hand. Put the rest on the bottom in any order.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/hollow-tree-guide-the-old-woman:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/last-witness-of-the-old-words-alad",
+      "name": "Last Witness of the Old Words, Alad",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Grave]: This card is treated as 2 cards in your Grave.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/last-witness-of-the-old-words-alad:ability:0",
+          "kind": "manual",
+          "scope": [
+            "Grave"
+          ],
+          "useScope": "copy",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/elder-of-the-old-telling-maharaja-layla",
+      "name": "Elder of the Old Telling, Maharaja Layla",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may send the top card of your deck to the Grave.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/elder-of-the-old-telling-maharaja-layla:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/voice-beneath-the-current-water-tunung",
+      "name": "Voice Beneath the Current, Water Tunung",
+      "region": "Mindanao",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Return one Level 1 Maguindanaon Unit from your Grave to your hand.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/voice-beneath-the-current-water-tunung:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/voice-beneath-the-current-water-tunung:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": [
+            "Return a card from your Grave to hand"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/prayer-above-the-storm-sky-tunung",
+      "name": "Prayer Above the Storm, Sky Tunung",
+      "region": "Mindanao",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Draw 1 card, then discard 1 card.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/prayer-above-the-storm-sky-tunung:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/prayer-above-the-storm-sky-tunung:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/keeper-of-the-account-datu-kali-adam",
+      "name": "Keeper of the Account, Datu Kali Adam",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may choose one of your other units. It gets Power +3000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/keeper-of-the-account-datu-kali-adam:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/warden-within-the-ridge-mountain-tunung",
+      "name": "Warden Within the Ridge, Mountain Tunung",
+      "region": "Mindanao",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Charge one of your Ally Units.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/warden-within-the-ridge-mountain-tunung:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/warden-within-the-ridge-mountain-tunung:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": [
+            "Choose an Ally to charge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/listener-among-the-roots-tree-tunung",
+      "name": "Listener Among the Roots, Tree Tunung",
+      "region": "Mindanao",
+      "type": "Force",
+      "text": "[yellow][Force] From your hand, during your Main Phase or either player's Battle Phase: Send the top 2 cards of your deck to your Grave.\nOn an attack or Barrier check: choose one of your Units; it gets Power +5000 until end of turn, free.[/yellow]",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/listener-among-the-roots-tree-tunung:force-check",
+          "kind": "check",
+          "payment": false,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/listener-among-the-roots-tree-tunung:force-hand",
+          "kind": "response",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/the-four-scourges-came",
+      "name": "The Four Scourges Came",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — special call up to one Level 2 or lower Beast and up to one Level 2 or lower Bird from your Grave. They enter charged. At the end of your turn, Offer the units called by this effect that remain in an Ally Zone.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/the-four-scourges-came:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Choose a Beast to special call",
+            "Choose a Bird to special call"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/a-vow-carried-by-the-wind",
+      "name": "A Vow Carried by the Wind",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — search your deck for a Level 1 Maguindanaon unit and special call it. It enters charged. At the end of your turn, Offer that unit if it remains in an Ally Zone.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/a-vow-carried-by-the-wind:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/kabalalan-shook-from-below",
+      "name": "Kabalalan Shook From Below",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — [Cost: Offer 1 of your Allies] exhaust up to two of your opponent's Allies. If Garahana is released, you may damage one of those Allies that was already exhausted before this Action resolved.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/kabalalan-shook-from-below:action",
+          "kind": "action",
+          "payment": true,
+          "targets": [
+            "Choose up to two opposing Allies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/until-tarabusaw-tired",
+      "name": "Until Tarabusaw Tired",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — choose one Beast Ally. The first time it finishes an attack this turn, you may Offer one of your other Allies. If you do, charge the chosen Beast and it gets Power +3000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/until-tarabusaw-tired:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Choose a Beast Ally for one additional attack"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/the-price-of-the-third-victory",
+      "name": "The Price of the Third Victory",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — play only if you Offered 3 or more this turn. Draw 2 cards, then discard 1 card. If Garahana is released, your Persona gets Power +3000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/the-price-of-the-third-victory:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/day-became-night",
+      "name": "Day Became Night",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — exhaust up to two of your opponent's Allies. If you Offered 3 or more this turn, damage one exhausted opponent Ally instead of exhausting the second unit.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/day-became-night:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/when-the-life-sign-withered",
+      "name": "When the Life-Sign Withered",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — [Cost: Offer 1 of your Allies] your opponent chooses one of their Allies and damages it. If your opponent has no Allies, draw 1 card instead.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/when-the-life-sign-withered:action",
+          "kind": "action",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/the-brother-awakened",
+      "name": "The Brother Awakened",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — search your deck and Grave for up to one Rinamuntaw and up to one Rinayung, then special call them to separate Ally Zones. They enter charged. At the end of your turn, Offer each one that remains in an Ally Zone.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/the-brother-awakened:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/seven-heads-before-one-king",
+      "name": "Seven Heads Before One King",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — choose your Persona. Until end of turn, when it attacks, it gets Power +1000 for each unit card in your Grave, up to +10000. If seven or more of those cards are Maguindanaon units, damage one exhausted opponent Ally after that attack.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/seven-heads-before-one-king:action",
+          "kind": "action",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/the-lowlands-rose-again",
+      "name": "The Lowlands Rose Again",
+      "region": "Mindanao",
+      "type": "Action",
+      "text": "Action — choose up to two Level 1 Maguindanaon units in your Grave. Put one into your hand and put the other on the bottom of your deck. If you chose only one, put it into your hand.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/the-lowlands-rose-again:action",
+          "kind": "action",
+          "payment": false,
+          "targets": [
+            "Choose up to two Level 1 Maguindanaon units"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/spring-veiled-heiress-dayang-amina",
+      "name": "Spring-Veiled Heiress, Dayang Amina",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn per copy, you may choose one of your opponent's Ally units and damage it.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/spring-veiled-heiress-dayang-amina:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/seven-sight-final-scourge-gurayn",
+      "name": "Seven-Sight Final Scourge, Gurayn",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Persona] 1/turn: When this unit attacks, [Cost: Offer 2 of your other Allies] look at the top 7 cards of your deck. Special call up to two Beasts or Birds from among them. Put the remaining cards on the bottom in any order.\n[green][Garahana][Persona] 1/turn: After this unit attacks, [Cost: Offer 3] choose a Seven-Sight Final Scourge, Gurayn from your hand and Personify into it, charged.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/seven-sight-final-scourge-gurayn:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attack",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        },
+        {
+          "id": "maguindanao/set-1/seven-sight-final-scourge-gurayn:ability:1",
+          "kind": "triggered",
+          "scope": [
+            "Persona"
+          ],
+          "trigger": "attackResolved",
+          "state": "Garahana",
+          "limit": 1,
+          "useScope": "copy",
+          "payment": true,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/keeper-of-the-last-refuge-datu-karim",
+      "name": "Keeper of the Last Refuge, Datu Karim",
+      "region": "Mindanao",
+      "type": "Unit",
+      "text": "[green][Last Oath]: When this unit is Offered, choose one of your Allies. It gets Power +3000 until end of turn. Then, once per turn across all cards with this name, you may search your deck for another Keeper of the Last Refuge, Datu Karim and special call it, charged.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/keeper-of-the-last-refuge-datu-karim:ability:0",
+          "kind": "triggered",
+          "scope": [
+            "Ally"
+          ],
+          "trigger": "unitOffered",
+          "useScope": "copy",
+          "payment": false,
+          "targets": [
+            "Choose a unit for Power +3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/city-beyond-the-sunset-mantapuli",
+      "name": "City Beyond the Sunset, Mantapuli",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\nCodex skill — Instead of drawing, Offer 1 Ally or send the top card of your deck to your Grave. Then, if Garahana is released, draw 1 card.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/city-beyond-the-sunset-mantapuli:codex",
+          "kind": "replacement",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/forest-of-broken-branches-mount-matutun",
+      "name": "Forest of Broken Branches, Mount Matutun",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — at the start of your Main Phase, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — At the start of your Main Phase, send the top card of your deck to your Grave. If it was a Unit, one of your Units gets Power +5000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/forest-of-broken-branches-mount-matutun:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/throne-of-the-sun-shadow-mount-bita",
+      "name": "Throne of the Sun-Shadow, Mount Bita",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — when your Persona attacks, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When your Persona attacks, it gets Power +3000 for each card Offered this turn, until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/throne-of-the-sun-shadow-mount-bita:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/the-rattan-haunt-mount-kabalalan",
+      "name": "The Rattan Haunt, Mount Kabalalan",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if you have 2 or fewer Barriers, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When you Offer a Unit during your turn, search your deck for a Unit other than the one you Offered and special call it.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/the-rattan-haunt-mount-kabalalan:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/peak-of-seven-sights-mount-gurayn",
+      "name": "Peak of Seven Sights, Mount Gurayn",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — before you Personify, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\nCodex skill — Instead of Personifying from your hand, look at the top 5 cards of your deck and Personify one Level 3 Unit among them. Put the rest on the bottom of your deck.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/peak-of-seven-sights-mount-gurayn:codex",
+          "kind": "replacement",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/mirror-of-the-giant-war-lake-lanao",
+      "name": "Mirror of the Giant War, Lake Lanao",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if your opponent has more Barriers than you, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When your State is released, all of your Units get Power +1000 until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/mirror-of-the-giant-war-lake-lanao:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/reach-of-the-ridge-giants-illana-bay",
+      "name": "Reach of the Ridge Giants, Illana Bay",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if your opponent has more Units than you, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — Before paying an Offer cost, if you have not Offered a Unit this turn, you may activate this skill in its own response chain. After it resolves, the first Unit you Offer this turn counts as 2 Offers, regardless of subtype.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/reach-of-the-ridge-giants-illana-bay:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/cave-beneath-the-earth-the-last-refuge",
+      "name": "Cave Beneath the Earth, the Last Refuge",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — when your Barrier breaks during your opponent's turn, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When your Barrier breaks, your Persona gets Power +1000 for each of your broken Barriers, until end of turn.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/cave-beneath-the-earth-the-last-refuge:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/the-sea-withdrawn-lowlands-restored-magindanao",
+      "name": "The Sea-Withdrawn Lowlands, Restored Magindanao",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — when your Persona is under attack, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When you check a Barrier and it is not a Force, special call 1 Unit from your deck, then discard 1 card.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/the-sea-withdrawn-lowlands-restored-magindanao:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    },
+    {
+      "id": "maguindanao/set-1/shore-of-the-broken-hills-cape-timbalangan",
+      "name": "Shore of the Broken Hills, Cape Timbalangan",
+      "region": "Mindanao",
+      "type": "Codex",
+      "text": "Auto-switch — before you draw, if your opponent has more cards in hand than you, if you did not switch Codex during your previous turn and have not switched this turn.\nState — Garahana: released while your Grave contains 5 or more Maguindanaon unit cards.\n1/Turn: Codex skill — When this Codex becomes active, draw 2 cards, then discard 1 card.",
+      "effects": [
+        {
+          "id": "maguindanao/set-1/shore-of-the-broken-hills-cape-timbalangan:codex",
+          "kind": "auto",
+          "payment": false,
+          "targets": []
+        }
+      ]
+    }
+  ]
+}

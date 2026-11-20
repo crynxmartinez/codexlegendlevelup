@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Continue regression checks</title><link rel="stylesheet" href="/src/ui/style.css"><style>body{padding:80px 16px}#results{white-space:pre-wrap}</style></head><body>
+<button id="run">Run checks</button><button id="game">Unrelated game action</button><pre id="results">Ready</pre>
+<script type="module">
+import {DuelHud} from '/src/ui/duel-hud.ts';
+import {openCardChoice} from '/src/ui/card-choice.ts';
+const $=s=>document.querySelector(s),frame=()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+const step={important:true,event:{id:1,group:1,turn:1,phase:'battle',actor:0,type:'barrierBroken',sourceUids:[],targetUids:[],visibility:'public',message:'A Barrier broke. Four shields remain.'}};
+$('#run').onclick=async()=>{
+ const results=[];const check=(name,ok)=>{results.push(`${ok?'PASS':'FAIL'} ${name}`);$('#results').textContent=results.join('\n');if(!ok)throw new Error(name);};
+ const hud=new DuelHud({nodeFor:()=>null,nameOf:()=>'',thumbOf:()=>null});let actions=0;$('#game').onclick=()=>actions++;
+ const choice=openCardChoice({title:'Choose a card',instruction:'Keep this choice open.',cards:[{uid:'a',name:'Test card',image:'',type:'Unit',detail:'',stats:''}],max:1,decline:'Skip'});
+ $('[data-choice]').click();let acknowledged=false;
+ let hold=hud.acknowledge(step).then(()=>{acknowledged=true;});
+ $('.dh-ack').click();await frame();
+ check('Continue dismisses its hold while a decision panel is open',acknowledged&&!$('.dh-ack-wrap'));
+ check('Continue preserves the pending choice and selected card',!!$('.cc-dialog')&&$('.cc-selected-count').textContent==='1 / 1 selected');
+ $('#game').click();check('Unrelated game actions remain blocked',actions===0);
+ $('.duel-controls button:last-child').click();acknowledged=false;
+ hold=hud.acknowledge(step).then(()=>{acknowledged=true;});$('.dh-ack').click();await frame();
+ check('Continue also works with a minimized panel',acknowledged&&!$('.dh-ack-wrap')&&!!$('.duel-minimized'));
+ $('.duel-restore').click();acknowledged=false;hold=hud.acknowledge(step).then(()=>{acknowledged=true;});
+ $('.cc-actions .primary').focus();$('.cc-actions .primary').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}));await frame();
+ check('Keyboard input in a decision does not dismiss another hold',!acknowledged&&!!$('.dh-ack-wrap'));
+ $('.dh-ack').focus();$('.dh-ack').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}));await frame();
+ check('Enter on Continue acknowledges only that hold',acknowledged&&!!$('.cc-dialog'));
+ acknowledged=false;hold=hud.acknowledge(step).then(()=>{acknowledged=true;});hud.clear();await frame();
+ check('Clearing the HUD releases its hold and removes the prompt',acknowledged&&!$('.dh-ack-wrap'));
+ $('.cc-actions .primary').click();check('The original selection can still be submitted',(await choice)[0]==='a');
+ hud.destroy();$('#results').textContent+=`\n${results.length} Continue checks passed.`;
+};
+</script></body></html>

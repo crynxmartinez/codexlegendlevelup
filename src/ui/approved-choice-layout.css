@@ -1,0 +1,133 @@
+/* Approved decision layouts 1 and 3 only. The native hand and Barriers are untouched. */
+.cc-approved-heading,.cc-approved-rail {display:contents}
+.cc-comparison,.cc-approved-destination,.cc-incoming-label,.cc-approved-selected {display:none}
+.duel-panel.cc-approved.duel-minimized .cc-dialog {display:none!important}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-dialog {
+ position:absolute;inset:0;width:var(--duel-vw,100vw)!important;height:100%!important;max-width:none!important;max-height:none!important;
+ margin:0;padding:0!important;border:0;border-radius:0;background:transparent;box-shadow:none;
+ overflow:visible!important;pointer-events:none;display:block;
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-heading {
+ display:block;position:absolute;left:25%;top:14px;width:43%;max-height:var(--approved-heading-max-height,110px);
+ overflow:auto;box-sizing:border-box;padding:8px 18px 10px 22px;pointer-events:auto;
+ background:linear-gradient(110deg,#12334bf7,#06182ef7);border:1px solid #92b4c7;border-bottom:3px solid #45dff4;
+ clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);color:#e4f4ff;
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head {
+ margin:0;padding:0;position:static;background:transparent;border:0;gap:6px;flex-wrap:nowrap;
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head::before,
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head::after {display:none}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head h3 {
+ flex:1 1 auto;font:900 italic 23px/1.15 Roboto,Arial,sans-serif;text-transform:none;margin:0;min-width:0;
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head .cc-selected-count {display:none}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head button {min-width:44px;min-height:44px;padding:5px 8px;font-size:11px;flex:none}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .duel-controls {margin:0;gap:4px}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-instruction {display:block;font-size:13px;line-height:1.3;margin:5px 0 0;max-height:none;color:#bdd5e2}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-content,
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-toolbar {display:none}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-rail {
+ display:block;position:absolute;left:var(--approved-rail-left);top:var(--approved-rail-top);width:var(--approved-rail-width);
+ max-height:var(--approved-rail-max-height);box-sizing:border-box;overflow:auto;pointer-events:auto;padding:12px;
+ color:#e6f5ff;background:linear-gradient(135deg,#153347f9,#071b2afc 60%);border:8px solid transparent;
+ border-image:url('/ui/anime-v1/player-silver-frame.svg') 24 / 8px / 0 stretch;border-radius:0;
+ clip-path:polygon(8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px),0 8px);
+ box-shadow:0 4px 15px #0005;scrollbar-width:thin;
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-rail:has(.cc-comparison) {padding:0}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-comparison {display:block}
+.cc-comparison-stage {padding:10px 13px;background:#071a2d;color:#b7d4e2;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px}
+.cc-comparison-score {padding:12px 13px;display:grid;gap:5px;border-left:3px solid #f39bac}
+.cc-comparison-score.defense {border-left-color:#83e5f5;border-top:1px solid #486677;background:#0d344055}
+.cc-comparison-score>span {font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px}
+.cc-comparison-score>strong {font:900 italic 38px/1 Roboto,Arial,sans-serif;font-variant-numeric:tabular-nums;color:#ffb1bf}
+.cc-comparison-score.defense>strong {color:#adf4ff}
+.cc-comparison-score>small {font-size:11px;line-height:1.3;color:#bdd0de}
+.cc-comparison-outcome {padding:11px 13px;border-top:1px solid #476374;background:#061827;color:#f5d39a;font-size:13px;font-weight:700;line-height:1.3}
+.cc-comparison-outcome>small {display:block;margin-top:5px;font-size:11px;font-weight:400;color:#c8dae4}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-footer {
+ position:absolute!important;left:var(--approved-rail-left);bottom:var(--approved-footer-bottom,12px);width:var(--approved-footer-width,var(--approved-rail-width));
+ box-sizing:border-box;margin:0;padding:0;border:0;background:transparent;pointer-events:auto;
+ display:flex;flex-direction:column;max-height:none;overflow:visible;align-items:stretch;gap:0;
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-summary {display:none}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions {display:flex;flex-direction:column-reverse;gap:7px;width:100%}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions button {
+ width:100%;min-width:0;min-height:60px;flex:none;box-sizing:border-box;padding:10px 22px;font-size:18px;line-height:20px;text-wrap:balance;
+ border:0;border-radius:0;background:url('/ui/anime-v1/button-silver.svg') center/100% 100% no-repeat;box-shadow:none;
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions button.primary {background-image:url('/ui/anime-v1/button-cyan.svg')}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-selected {display:block;color:#b0f4df;text-align:center;font-size:12px;font-weight:bold;padding:0 0 9px}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-context {display:flex;margin:0 0 10px;padding:0 0 10px;background:transparent;border:0;border-bottom:1px solid #486574;border-radius:0;gap:8px;max-height:none;overflow:visible}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-source img {width:40px;height:56px}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-source {flex:none}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-text {font-size:12px;line-height:1.35}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-source-details summary {min-height:44px;font-weight:700;cursor:pointer}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-text>p {font-size:11px}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-incoming-label {display:block;text-transform:uppercase;letter-spacing:1px;color:#b6d1df;font-weight:bold;font-size:10px;margin:8px 0}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-incoming {display:flex!important;flex-direction:column;gap:8px!important;width:100%;padding:0!important;background:transparent;border:0;border-radius:0;color:#f0f9ff;box-shadow:none;font:700 italic 14px/1.3 Roboto,Arial,sans-serif;letter-spacing:0;text-transform:none;text-align:left!important;--incoming-width:90px;--incoming-height:126px}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-incoming>span:not(.cc-approved-incoming-art) {order:-1}
+.cc-approved-incoming-art {position:relative;display:block;flex:none}
+.cc-approved-incoming-art .card-stat {font-size:16px}
+.cc-approved-incoming-art .card-stat-label {font-size:8px;letter-spacing:0}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-destination {display:block;border-top:1px solid #486574;margin-top:12px;padding-top:10px;font-size:12px;line-height:1.3;font-weight:bold;color:#a5e8f7}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active :focus-visible {outline:3px dashed #fff;outline-offset:1px}
+@media(max-width:1000px),(max-height:600px) {
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-heading {top:3px;left:23%;width:49%;padding:6px 14px 6px 17px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head h3 {font-size:15px;line-height:1.2}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head {gap:4px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-instruction {font-size:11px;line-height:1.2;margin:2px 0 0}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-head .cc-list-toggle {font-size:9px;max-width:49px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-rail {padding:8px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-rail:has(.cc-comparison) {border-width:4px;border-image-width:4px}
+ .cc-comparison-stage {padding:2px 5px;font-size:9px;line-height:10px;letter-spacing:0}
+ .cc-comparison-score {padding:2px 5px;gap:1px}.cc-comparison-score>span {font-size:9px;line-height:10px;letter-spacing:0}.cc-comparison-score>strong {font-size:23px}.cc-comparison-score>small {display:none}
+ .cc-comparison-outcome {padding:2px 5px;font-size:10px;line-height:12px}.cc-comparison-outcome>small {font-size:9px;line-height:10px;margin-top:2px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-footer {bottom:var(--approved-footer-bottom,5px)}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions {gap:4px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions button {min-height:48px;padding:7px 8px;font-size:12px;line-height:1.2}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-selected {font-size:9px;padding-bottom:5px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-context {gap:5px;margin-bottom:6px;padding-bottom:6px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-source img {width:24px;height:34px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-text {font-size:10px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-response-text>p {font-size:10px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-incoming-label {font-size:8px;letter-spacing:0;margin:6px 0}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-incoming {font-size:11px;--incoming-width:52px;--incoming-height:73px}
+ .cc-approved-incoming-art .card-stat {font-size:11px;padding:1px 2px;min-width:0}
+ .cc-approved-incoming-art .card-stat-label {font-size:6px}
+ body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-approved-destination {font-size:10px;margin-top:7px;padding-top:7px}
+}
+/* Existing board totals return when this decision closes or is minimized. */
+body:has(.cc-approved-active[data-presentation="defense"]:not(.duel-minimized):not(.duel-suspended)) .defense-zone .bb-side {visibility:hidden}
+body:has(.cc-approved-active:not(.duel-minimized):not(.duel-suspended)) .turn-btn {visibility:hidden}
+.approved-combat-marker{display:none;position:absolute;left:50%;top:-23px;transform:translateX(-50%);padding:3px 7px;border:1px solid #83ccd9;border-radius:3px;color:#caf6ff;background:#071c29;font:bold 10px Arial;letter-spacing:.5px;white-space:nowrap;pointer-events:none;z-index:40}
+.approved-combat-marker[data-combat-role="ATTACKER"]{border-color:#d38d9c;color:#ffc7d2}
+body:has(.cc-approved-active[data-presentation="defense"]:not(.duel-minimized):not(.duel-suspended)) .approved-combat-marker{display:block}
+body:has(.cc-approved-active[data-presentation="defense"]:not(.duel-minimized):not(.duel-suspended)) .combat-source{outline-color:#e69aaa}
+body:has(.cc-approved-active[data-presentation="defense"]:not(.duel-minimized):not(.duel-suspended)) .combat-target{outline-color:#99e6ef}
+
+/* Utilities sit at the middle-right edge. A foreground decision can cover
+   them; Minimize restores access without committing or losing a selection. */
+body.anime-battlefield:has(#app > .board-wrap) .rail {top:50%;bottom:auto;right:1%;transform:translateY(-50%)}
+body.anime-battlefield:has(#app > .board-wrap) .rail.open {top:50%;bottom:auto;max-height:calc(100dvh - 24px)}
+
+/* The SVG button's alpha supplies the slanted glow silhouette. Disabled
+   actions stay quiet; focus and selected-card checks remain separate cues. */
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions button:not(:disabled),
+body.anime-battlefield #app .turn-btn:not(:disabled) {
+ filter:drop-shadow(0 0 4px #47dfff99) drop-shadow(0 0 9px #21cfee55);
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions button.primary:not(:disabled) {
+ filter:drop-shadow(0 0 5px #55eeffcc) drop-shadow(0 0 12px #15cfff77);
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions button:hover:not(:disabled) {
+ filter:brightness(1.15) drop-shadow(0 0 6px #7af3ffcc) drop-shadow(0 0 14px #2cdfff88);
+}
+body .modal-bg.duel-panel.modal-v2.cc-managed.board-decision.cc-approved-active .cc-actions button:disabled {filter:none}
+body.anime-battlefield:has(.cc-approved[data-presentation="defense"]:not(.duel-minimized):not(.duel-suspended)):not(:has(.inspect-bg)) #app .hand-card.decision-target:not(.decision-selected) {
+ box-shadow:0 0 0 2px #9ff5ff,0 0 10px #20d9ff99,0 0 20px #20d9ff55!important;
+}
+body.anime-battlefield:has(.cc-approved[data-presentation="defense"]:not(.duel-minimized):not(.duel-suspended)):not(:has(.inspect-bg)) #app .hand-card.decision-selected {
+ box-shadow:0 0 0 2px #f6d878,0 0 10px #f4cf7299,0 0 18px #f4cf7244!important;
+}

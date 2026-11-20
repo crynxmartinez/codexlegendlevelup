@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chain presentation preview</title>
+<link rel="stylesheet" href="/src/ui/style.css"><link rel="stylesheet" href="/src/ui/duel-panel.css"><link rel="stylesheet" href="/src/ui/game-polish.css">
+<style>body{margin:0;background:#08141b url('/ui/fullscreen-fractured-v1.webp') center/cover;min-height:100dvh}.preview-tools{position:fixed;z-index:2000;top:8px;left:8px;display:flex;gap:6px;flex-wrap:wrap}.preview-tools button{padding:8px;font-size:12px;min-height:36px}.preview-mat{position:absolute;left:20%;width:60%;height:36%;border:1px solid #9f874c88;border-radius:12px;background:url('/ui/game-mat-fractured-v1.webp') center/100% 100%;opacity:.65}.preview-mat:first-of-type{top:10%;transform:rotate(180deg)}.preview-mat:nth-of-type(2){bottom:10%}#results{position:fixed;bottom:5px;left:8px;z-index:2000;color:#d5f8ef;font:12px system-ui;max-width:80vw}</style></head>
+<body><section class="preview-mat"></section><section class="preview-mat"></section>
+<nav class="preview-tools"><button id="build">Build chain</button><button id="resolve">Resolve 3 → 2 → 1</button><button id="long">Chain 16</button><button id="reduced">Reduced motion</button><button id="clear">Clear</button></nav><output id="results">Preview uses the real chain presentation.</output>
+<script type="module">
+import {presentChainCue,clearChainCues} from '/src/ui/chain-cue.ts';
+import {ALL_CARDS} from '/src/data/loader.ts';
+import {boardUrl} from '/src/ui/assets.ts';
+const records=Object.values(ALL_CARDS);
+const names=['Sulayman','Salendagao','Rinayung'];
+const links=names.map((name,i)=>{const card=records.find(c=>c.name.includes(name));return {name:card.name,image:boardUrl(card.art),ordinal:i+1,opponent:i===1};});
+await Promise.all(links.map(card=>new Promise(resolve=>{const img=new Image();img.onload=img.onerror=resolve;img.src=card.image;})));
+const out=document.querySelector('#results');let epoch=0;
+function clear(){epoch++;clearChainCues();document.querySelectorAll('.chain-preview-still').forEach(n=>n.remove());}
+async function show(card,all,stage){
+ const pending=presentChainCue({...card,links:all,total:all.length,stage});
+ const cue=document.querySelector('.chain-cue');
+ const caption=cue.querySelector('.chain-cue-caption').textContent;
+ const tiles=[...cue.querySelectorAll('.chain-cue-card')];
+ const fit=tiles.every(n=>{const r=n.getBoundingClientRect();return r.left>=0&&r.top>=0&&r.right<=innerWidth&&r.bottom<=innerHeight;});
+ const still=cue.cloneNode(true);still.classList.add('chain-preview-still');still.setAttribute('aria-hidden','true');
+ await pending;
+ out.textContent=`${fit?'PASS':'FAIL'} ${caption} · ${tiles.length} cards · ${innerWidth}×${innerHeight} · ${document.querySelectorAll('.chain-cue').length} live cues after cleanup`;
+ return still;
+}
+async function run(mode){clear();const start=epoch;document.documentElement.dataset.duelPace='learning';let still;
+ if(mode==='long'){const all=Array.from({length:16},(_,i)=>({...links[i%3],ordinal:i+1}));still=await show(all[15],all,'activated');}
+ else if(mode==='resolve'){for(const card of [...links].reverse()){if(start!==epoch)return;still=await show(card,links,'resolving');}}
+ else {for(const card of links){if(start!==epoch)return;still=await show(card,links.filter(l=>l.ordinal<=card.ordinal),'activated');}}
+ if(start===epoch&&still)document.body.append(still);
+}
+document.querySelector('#build').onclick=()=>run('build');document.querySelector('#resolve').onclick=()=>run('resolve');document.querySelector('#long').onclick=()=>run('long');
+document.querySelector('#reduced').onclick=()=>{document.documentElement.dataset.animationIntensity='minimal';run('build');};
+document.querySelector('#clear').onclick=clear;
+addEventListener('resize',clear);
+</script></body></html>

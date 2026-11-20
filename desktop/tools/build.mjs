@@ -1,0 +1,32 @@
+import fs from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';import sharp from 'sharp';import {build} from 'vite';
+const root=process.cwd(),evidence=path.join(root,'docs/desktop/evidence');await fs.mkdir(evidence,{recursive:true});
+const check=spawnSync(process.execPath,['node_modules/typescript/bin/tsc','-p','desktop/tsconfig.json'],{encoding:'utf8'});await fs.writeFile(path.join(evidence,'typecheck.log'),check.stdout+check.stderr);if(check.status!==0)throw new Error('Type check failed; see typecheck.log');
+await build({configFile:path.join(root,'vite.desktop.config.ts')});
+// Vite preserves the HTML input's directory. The custom origin opens /index.html.
+await fs.rename('dist-desktop/desktop/index.html','dist-desktop/index.html');
+const entryHtml=await fs.readFile('dist-desktop/index.html','utf8');
+if(!entryHtml.includes('type="module"')||/googletagmanager|gtag\(/.test(entryHtml))throw new Error('Invalid desktop entry HTML');
+const inputs=new Set(JSON.parse(await fs.readFile('tools/runtime-ui-assets.json','utf8')));
+const records=[...JSON.parse(await fs.readFile('src/data/cards.json','utf8')),...JSON.parse(await fs.readFile('src/data/set-1.json','utf8'))],art=JSON.parse(await fs.readFile('src/data/card-art-v2.json','utf8'));
+for(const c of [...records,...Object.values(art)])for(const name of [c.art,c.thumb,c.art?.replace('/web/','/board/')])if(name)inputs.add(name);
+for(const dir of ['audio','music','fonts'])for(const name of await fs.readdir('assets/'+dir))inputs.add(`assets/${dir}/${name}`);
+for(const name of ['ui/card-back.webp','ui/game-mat-fractured-v1.webp','ui/fullscreen-fractured-v1.webp','ui/logo.png',...['luzon','visayas','mindanao'].map(r=>`ui/philippines-${r}.webp`)])inputs.add('assets/'+name);
+for(const name of await fs.readdir('assets/ui/cutscenes'))if(/\.(webm|mp4)$/.test(name))inputs.add('assets/ui/cutscenes/'+name);
+async function walk(dir){const out=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())out.push(...await walk(f));else out.push(f);}return out;}
+for(const name of (await walk('src')).filter(f=>/\.(ts|css)$/.test(f)&&!f.endsWith('.test.ts'))){const source=await fs.readFile(name,'utf8');for(const m of source.matchAll(/["'`]\/(ui|music|fonts|audio|cards)\/([^"'`\n]+)["'`]/g))if(!m[2].includes('${')&&/\.(webp|png|jpg|svg|m4a|mp3|wav|woff2|ttf|txt)$/.test(m[2]))inputs.add(`assets/${m[1]}/${m[2]}`);}
+const rows=[];for(const name of [...inputs].sort()){if(!/^assets\/(cards\/(web|board|thumb)\/|ui\/|effects\/boss-attacks-v2\/|audio\/|music\/|fonts\/)/.test(name)||name.includes('..'))throw new Error('Unreviewed package input: '+name);const bytes=await fs.readFile(name);const dest=path.join('dist-desktop',name.slice(7));await fs.mkdir(path.dirname(dest),{recursive:true});await fs.writeFile(dest,bytes);rows.push({path:name,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex')});}
+// Adapt only the staged menu model; the approved browser assets stay untouched.
+const modelPath='dist-desktop/ui/menu-v1/model.mjs';let model=await fs.readFile(modelPath,'utf8');model += `\nconst offlineFriends=menus.fight.find(item=>item[0]==='friends');if(offlineFriends){offlineFriends[3]='Online play is unavailable in this offline edition.';offlineFriends[4]=true;}\n`;await fs.writeFile(modelPath,model);
+// Create a separate staging app. Only approved inputs, compiled renderer and shell are copied.
+const app=path.resolve('desktop-dist/app');if(!app.startsWith(root+path.sep)||app!==path.join(root,'desktop-dist','app'))throw new Error('Unsafe staging directory');await fs.rm(app,{recursive:true,force:true});await fs.mkdir(path.join(app,'shell'),{recursive:true});await fs.cp('dist-desktop',path.join(app,'renderer'),{recursive:true});
+for(const name of ['main.cjs','preload.cjs','protocol.cjs','store.cjs'])await fs.copyFile('desktop/'+name,path.join(app,'shell',name));
+const png=await sharp('assets/ui/menu-v1/logo-approved.png').resize(256,256,{fit:'contain',background:'#071329'}).png().toBuffer();const ico=Buffer.alloc(22);ico.writeUInt16LE(1,2);ico.writeUInt16LE(1,4);ico.writeUInt16LE(1,10);ico.writeUInt16LE(32,12);ico.writeUInt32LE(png.length,14);ico.writeUInt32LE(22,18);await fs.writeFile(path.join(app,'shell/icon.ico'),Buffer.concat([ico,png]));
+await fs.writeFile(path.join(app,'package.json'),JSON.stringify({name:'codex-legend-desktop',version:'1.0.2',description:'Codex Legend offline trading card game',author:'Codex Legend',private:true,main:'shell/main.cjs'},null,2));
+const licenseDir=path.join(app,'licenses');await fs.mkdir(licenseDir,{recursive:true});
+// Include dependency notices from the installed lockfile graph, including transitive renderer dependencies.
+const lock=JSON.parse(await fs.readFile('package-lock.json','utf8'));const notices=[];
+for(const [folder,pkg]of Object.entries(lock.packages)){if(!folder||pkg.dev)continue;let names;try{names=await fs.readdir(folder);}catch{continue;}const documents=names.filter(n=>/^(licen[cs]e|notice|copying)/i.test(n));for(const n of documents){const source=path.join(folder,n);if(!(await fs.stat(source)).isFile())continue;const dest=folder.replaceAll('/','_')+'_'+n;await fs.copyFile(source,path.join(licenseDir,dest));}notices.push({package:folder,version:pkg.version,license:pkg.license,documents});}
+await fs.writeFile(path.join(licenseDir,'dependencies.json'),JSON.stringify(notices,null,2));
+await fs.writeFile(path.join(evidence,'desktop-assets.json'),JSON.stringify({createdAt:new Date().toISOString(),count:rows.length,bytes:rows.reduce((n,r)=>n+r.bytes,0),files:rows},null,2));
+const payload=[];for(const file of await walk(app)){const b=await fs.readFile(file);payload.push({path:path.relative(app,file).replaceAll('\\','/'),bytes:b.length,sha256:crypto.createHash('sha256').update(b).digest('hex')});}await fs.writeFile(path.join(evidence,'staged-payload.json'),JSON.stringify({at:new Date().toISOString(),kind:'Electron app inputs only; runtime not packaged',files:payload},null,2));
+await fs.writeFile(path.join(evidence,'renderer-build.json'),JSON.stringify({at:new Date().toISOString(),typecheck:true,renderer:true,assets:rows.length,windowsExecutable:false,gameLaunched:false},null,2));console.log(`Staged desktop renderer and ${rows.length} assets. Windows packaging is a separate step.`);

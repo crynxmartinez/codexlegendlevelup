@@ -1,0 +1,78 @@
+{
+  "name": "Luzon — Tutorial deck",
+  "persona": "agta/set-1/life-breath-mother-nanolay",
+  "main": [
+    {
+      "id": "agta/set-1/moon-bright-captive-innawagan",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/barbed-sky-messenger-dalewasan",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/keeper-at-sunrise-sinag",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/returning-sky-captain-darawan",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/wedding-pact-elder-amuray",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/fallen-sky-challenger-talimanog",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/months-of-battle-warrior-ammani",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/relentless-third-brother-annibo",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/river-calling-sister-alig",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/life-breath-mother-nanolay",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/fifth-sky-tyrant-kalimangalnuk",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/path-turning-warden-tumatanan",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/beast-spirit-healer-subkal",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/healer-s-spirit-friend-bunog",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/restless-wandering-dead-belet",
+      "copies": 3
+    },
+    {
+      "id": "agta/set-1/alig-restores-her-brothers",
+      "copies": 3
+    },
+    {
+      "id": "agta/sierra-watchkeeper-banoy",
+      "copies": 2
+    }
+  ],
+  "codex": [
+    "agta/set-1/dawnward-country-arawen",
+    "agta/set-1/barbed-sky-passage-salikan"
+  ]
+}

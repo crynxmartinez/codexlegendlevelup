@@ -1,0 +1,21 @@
+import type { Patch } from './patches.js';
+export const FORCE_RESPONSE_PATCH: Patch = {
+  id: '1.15', title: 'Forces answer back', date: 'October 2026', regions: ['luzon', 'visayas', 'mindanao'],
+  summary: 'All twelve Forces now answer enemy abilities, Special Call effects, or attacks. Reveal and discard to respond on either player’s turn.',
+  nerfs: [], buffs: [], adjusted: [], newCards: [],
+  systems: [
+    { title: 'Know your next move', note: 'State buttons show progress and the cards that count. Remaining Plays are visible on both turns. Draft activations can be cancelled while choosing targets, before payment; optional targets keep a separate Choose none choice. Attack previews compare Power and show the support contribution. Effect results and selectable history explain what happened. Play stays first on the title screen, with Tutorial and About, music and font credits available.' },
+    { title: 'Maguindanao creature identity', note: 'Maguindanao cards retain their Bird, Beast or Divine types and also carry the Maguindanaon tag. Their Units now count toward Garahana and qualify for Maguindanaon card effects. Alad still counts as two in the Grave; Garahana still requires five.' },
+    { title: 'Chain light, negation and Barrier glass', note: 'New chain links appear unlit. Resolving links pulse a growing light outward and back while the card stays steady. Negated links take one electric discharge in the chain, show NEGATED, and turn grayscale without an activation glow or lift. Broken Barriers burst into larger glass fragments before their check. Effects support Fast pace, reduced motion and landscape screens, with no Continue prompts.' },
+    { title: 'Read, choose, then commit', note: 'Card choices have a separate read button with a larger landscape touch area. Selecting or reading a card never commits it. Field confirmations identify the exact Unit by name and position, including Offer costs.' },
+    { title: 'Visible skill availability', note: 'Manual skill menus show unavailable skills with their reason, such as a locked State or a skill already used this turn. Unavailable skills remain readable and cannot be activated.' },
+    { title: 'Follow the effect', note: 'Granted attack skills share the violet + marker, with their source and expiry in the inspector. New grants briefly say Skill added on the recipient. Resolving chains highlight valid field targets; negated activations and unavailable targets get different messages. These notices need no Continue button.' },
+    { title: 'Compact chain progress', note: 'Response choices show whose response it is and the newest-first order. The existing turn indicator shows remaining links while resolving. Private matches receive only public field targets, with field-entry checks to avoid highlighting an old copy.' },
+    { title: 'Clear targets and granted skills', note: 'Field choices identify each copy by position, Power and charge status. Until Tarabusaw Tired marks its chosen Unit with a violet +: hover for the granted skill, or tap to inspect it. The marker expires with the effect.' },
+    { title: 'Codex viewer clarity', note: 'Repeated Main-phase switches still cost 1 play each. The viewer shows remaining plays and explains blocked switching. Opening another zone replaces the previous viewer without answering a pending game decision.' },
+    { title: 'Four responses in every archipelago', note: 'Each region has Rally both Units, negate an activation, draw 2 against a Special Call effect, and +5000 for one attack with draw 1.' },
+    { title: 'Reveal, discard, then respond', note: 'The Force is publicly committed and discarded before the other player responds. Negating it does not refund the card. Responses cost no plays and resolve newest first.' },
+    { title: 'Clear timing', note: 'The draw-2 response is offered before a Special Call effect resolves, even if that call is later negated. It never interrupts a resolving chain. Rally does not negate an already activated ability.' },
+    { title: 'Checks and lessons', note: 'Attack and Barrier checks keep their +5000 check effect. Journey lessons now teach attack responses and counter-negates using the revised cards.' },
+  ],
+};
