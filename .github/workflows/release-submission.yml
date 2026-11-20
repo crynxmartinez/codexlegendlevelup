@@ -35,15 +35,29 @@ jobs:
           test "$GITHUB_REPOSITORY" = 'crynxmartinez/codexlegendlevelup'
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
           python3 - <<'PY'
-          import os, urllib.error, urllib.request
+          import json, os, urllib.error, urllib.request
           repo = os.environ['GITHUB_REPOSITORY']
           tag = os.environ['TAG']
-          for path in (f'releases/tags/{tag}', f'git/ref/tags/{tag}'):
+          headers = {'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                     'Accept': 'application/vnd.github+json',
+                     'User-Agent': 'Codex-Legend-submission'}
+          page = 1
+          while True:
+              request = urllib.request.Request(
+                  f'https://api.github.com/repos/{repo}/releases?per_page=100&page={page}',
+                  headers=headers)
+              with urllib.request.urlopen(request) as response:
+                  releases = json.load(response)
+              assert isinstance(releases, list), 'Unexpected release-list response'
+              if any(release['tag_name'] == tag for release in releases):
+                  raise SystemExit(f'Refusing to overwrite existing published or draft release {tag}')
+              if len(releases) < 100:
+                  break
+              page += 1
+          for path in (f'git/ref/tags/{tag}',):
               request = urllib.request.Request(
                   f'https://api.github.com/repos/{repo}/{path}',
-                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
-                           'Accept': 'application/vnd.github+json',
-                           'User-Agent': 'Codex-Legend-submission'})
+                  headers=headers)
               try:
                   with urllib.request.urlopen(request) as response:
                       raise SystemExit(f'Refusing to overwrite existing {path}: HTTP {response.status}')
@@ -118,14 +132,29 @@ jobs:
           Start with README.md or START-HERE.md for browser, server and desktop instructions. Existing source/asset rights and third-party notices remain unchanged.
           NOTES
           printf '\nSubmission commit: `%s`\n' "$GITHUB_SHA" >> "$RUNNER_TEMP/levelup-release/RELEASE-NOTES.md"
-          gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
-            --title 'Codex Legend TCG 1.0.2 — Level Up submission' \
-            --notes-file "$RUNNER_TEMP/levelup-release/RELEASE-NOTES.md" --draft
+          python3 - <<'PY'
+          import json, os, pathlib
+          folder = pathlib.Path(os.environ['RUNNER_TEMP']) / 'levelup-release'
+          request = {
+              'tag_name': os.environ['TAG'],
+              'target_commitish': os.environ['GITHUB_SHA'],
+              'name': 'Codex Legend TCG 1.0.2 — Level Up submission',
+              'body': (folder / 'RELEASE-NOTES.md').read_text(),
+              'draft': True,
+              'prerelease': False,
+          }
+          (folder / 'release-request.json').write_text(json.dumps(request))
+          PY
+          gh api --method POST "repos/$GITHUB_REPOSITORY/releases" \
+            --input "$RUNNER_TEMP/levelup-release/release-request.json" \
+            > "$RUNNER_TEMP/levelup-release/created-release.json"
+          release_id="$(python3 -c 'import json, os, pathlib; print(json.loads((pathlib.Path(os.environ["RUNNER_TEMP"]) / "levelup-release/created-release.json").read_text())["id"])')"
+          [[ "$release_id" =~ ^[1-9][0-9]*$ ]]
           gh release upload "$TAG" --repo "$GITHUB_REPOSITORY" \
             "$RUNNER_TEMP/levelup-release/$INSTALLER_NAME" \
             "$RUNNER_TEMP/levelup-release/$SOURCE_NAME" \
             "$RUNNER_TEMP/levelup-release/SHA256SUMS-1.0.2.txt"
-          gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" > "$RUNNER_TEMP/levelup-release/release.json"
+          gh api "repos/$GITHUB_REPOSITORY/releases/$release_id" > "$RUNNER_TEMP/levelup-release/release.json"
           python3 - <<'PY'
           import hashlib, json, os, pathlib
           folder = pathlib.Path(os.environ['RUNNER_TEMP']) / 'levelup-release'
@@ -144,4 +173,5 @@ jobs:
               assert assets[name]['digest'] == 'sha256:' + digest, 'Uploaded hash mismatch: ' + name
           print('All three uploaded assets match local sizes and SHA-256 hashes.')
           PY
-          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+          gh api --method PATCH "repos/$GITHUB_REPOSITORY/releases/$release_id" \
+            -F draft=false -f make_latest=true --jq '{id, url: .html_url, draft, tag_name}'

@@ -1,7 +1,7 @@
 {
   "version": "1.0.2",
   "gameSourceCommit": "8622fbd7c8940daab927c218584a63eca299b153",
-  "createdAt": "2026-11-20T06:27:03.484Z",
+  "createdAt": "2026-11-20T06:47:32.810Z",
   "rootFolder": "Codex-Legend-Source",
   "purpose": "Public Level Up submission snapshot",
   "provenance": {
@@ -33,8 +33,8 @@
     },
     {
       "path": ".github/workflows/release-submission.yml",
-      "bytes": 8376,
-      "sha256": "2c7d57f2dcf8da0acb5191d19143c199992a9c1a0f6186713fa73a88e8e16ce7"
+      "bytes": 9914,
+      "sha256": "12e33d4d2edadac05fefc9f2d1992e7fbac04411611b44879cf208788c0793d4"
     },
     {
       "path": ".gitignore",
